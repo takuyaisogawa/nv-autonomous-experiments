@@ -4,3 +4,9 @@ description: >
   Completed aligned-NV and T2star case study. The sanitized cold-archive
   project folder is available under project.
 live_hardware_execution: disabled
+agent_model_provenance:
+  project_execution_agent: nv-researcher
+  model: openai-codex/gpt-5.5
+  thinking_level: xhigh
+  project_json_model_fields: present_under_research_architecture
+  source: docs/model_and_agent_configuration.md

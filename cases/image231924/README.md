@@ -23,6 +23,19 @@ trackability, passed a strong-pi pODMR alignment screen, refined the microwave
 center with weak-pi pODMR, and used a corrected-center Ramsey repeat as the
 closeout dataset.
 
+## Model Provenance
+
+| Field | Value |
+| --- | --- |
+| Project-execution agent | `nv-researcher` |
+| Model | `openai-codex/gpt-5.5` |
+| Thinking level | `xhigh` |
+
+The archived `project.json` for this case includes
+`project_execution_agent_model` and `project_execution_agent_thinking` under
+`research_architecture`. See
+[model and agent configuration](../../docs/model_and_agent_configuration.md).
+
 The final closeout report is
 [closeout_20260512_0525.pdf](project/summaries/closeout_20260512_0525.pdf).
 

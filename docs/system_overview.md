@@ -28,6 +28,9 @@ bridge/result artifacts -> evidence ledger -> updated project state
 
 ## Core Objects
 
+`project-execution agent` is the LLM research role for these cases. Its public
+configuration is recorded in `docs/model_and_agent_configuration.md`.
+
 `project state` is the compact current truth for a project. In the case
 copies, the readable form is `work/state.md`; machine state and audit records
 live under `.manager/`.
@@ -67,6 +70,7 @@ audit.
 ## Where To Look
 
 - OpenClaw/NV execution source: `python/openclaw_nv_execution_source/`
+- Model and agent configuration: `docs/model_and_agent_configuration.md`
 - Python runtime helpers: `python/openclaw_runtime/`
 - NV research memory: `docs/nv_research_memory.md`
 - NV knowledge index/excerpt: `docs/nv_research_knowledge_index.md`,

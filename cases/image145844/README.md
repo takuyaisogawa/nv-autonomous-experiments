@@ -24,6 +24,19 @@ raw/readout-aware pODMR reviews did not show clear usable resonances. It
 accepted `r03` after strong-pi and weak-pi pODMR evidence, then ran multiple
 Ramsey branches with changed measurement conditions rather than blind repeats.
 
+## Model Provenance
+
+| Field | Value |
+| --- | --- |
+| Project-execution agent | `nv-researcher` |
+| Model | `openai-codex/gpt-5.5` |
+| Thinking level | `xhigh` |
+
+The archived `project.json` for this case uses an earlier startup metadata
+shape, so the explicit model fields are recorded here and in `case.yaml` for
+the public release. See
+[model and agent configuration](../../docs/model_and_agent_configuration.md).
+
 The final revised closeout is
 [image145844_reimage_r03_shifted_sideband_recloseout_report_20260514_1320.pdf](project/work/artifacts/reports/20260514_1320_r03_shifted_sideband_recloseout/image145844_reimage_r03_shifted_sideband_recloseout_report_20260514_1320.pdf).
 

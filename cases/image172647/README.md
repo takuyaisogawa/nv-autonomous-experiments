@@ -31,6 +31,20 @@ The accepted branch then proceeded through weak-pi pODMR center refinement,
 three Ramsey datasets at different programmed detunings, and a CPMG N=8 tau
 scan designed as an independent discriminator for the weak 13C-like candidate.
 
+## Model Provenance
+
+| Field | Value |
+| --- | --- |
+| Project-execution agent | `nv-researcher` |
+| Model | `openai-codex/gpt-5.5` |
+| Thinking level | `xhigh` |
+
+The archived `project.json` records the `nv-researcher` project-execution route
+but does not preserve the explicit model fields in the same shape as newer
+metadata. Those fields are recorded here and in `case.yaml` for the public
+release. See
+[model and agent configuration](../../docs/model_and_agent_configuration.md).
+
 Final claim boundary: aligned `reimage1804_c02` found; T2star is supported as a
 short/few-us order, about `2-3 us` but method-sensitive; the data support a
 likely weak/moderate nearby-13C-like signature from det-shift Ramsey plus CPMG

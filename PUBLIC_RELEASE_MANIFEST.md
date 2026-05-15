@@ -23,6 +23,8 @@ case-study release.
   direct enqueue helpers, with CLI execution disabled.
 - Public agent prompt-context summary derived from the `nv-project-manager`
   skill prompt.
+- Public model and agent configuration note for the `nv-researcher`
+  project-execution agent.
 - Minimal Python dependency list in `requirements.txt`.
 - Public scope statement for the execution-source release.
 - Memory/knowledge design note for the self-updating agent loop.

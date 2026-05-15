@@ -24,12 +24,13 @@ See [docs/public_scope.md](docs/public_scope.md) for the exact public boundary.
 For a quick review, read these in order:
 
 1. [System overview](docs/system_overview.md)
-2. [Case walkthrough](docs/case_walkthrough.md)
-3. [image172647 case README](cases/image172647/README.md)
-4. [image145844 case README](cases/image145844/README.md)
-5. [image231924 case README](cases/image231924/README.md)
-6. [Code inventory](docs/code_inventory.md)
-7. [Safety boundary](docs/safety_boundary.md)
+2. [Model and agent configuration](docs/model_and_agent_configuration.md)
+3. [Case walkthrough](docs/case_walkthrough.md)
+4. [image172647 case README](cases/image172647/README.md)
+5. [image145844 case README](cases/image145844/README.md)
+6. [image231924 case README](cases/image231924/README.md)
+7. [Code inventory](docs/code_inventory.md)
+8. [Safety boundary](docs/safety_boundary.md)
 
 ## What This Repository Shows
 
@@ -39,6 +40,20 @@ For a quick review, read these in order:
 - pODMR, Ramsey, CPMG, drift, and model-comparison analyses from completed runs.
 - Three completed case studies: `image145844`, `image172647`, and
   `image231924`.
+
+## Agent / Model Configuration
+
+The included case studies are documented as `nv-researcher`
+project-execution runs using `openai-codex/gpt-5.5` with `xhigh` thinking.
+
+The direct-chat `main` agent and the project-execution `nv-researcher` agent
+are separate sessions. Scientific reasoning, experiment design, evidence
+synthesis, and claim-boundary decisions belong to the agent role; deterministic
+Python/MATLAB layers handle durable state, queue checks, audit records, bridge
+validation, and hardware safety boundaries.
+
+See [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md)
+for case-level model provenance.
 
 ## Case Studies
 
@@ -87,6 +102,7 @@ python -m pip install -r requirements.txt
 | --- | --- |
 | Public boundary | [docs/public_scope.md](docs/public_scope.md) |
 | System architecture | [docs/system_overview.md](docs/system_overview.md), [docs/runtime_architecture.md](docs/runtime_architecture.md) |
+| Model and agent configuration | [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md), [docs/agent_prompt_context.md](docs/agent_prompt_context.md) |
 | Case guide | [docs/case_walkthrough.md](docs/case_walkthrough.md), [cases/README.md](cases/README.md) |
 | Memory and knowledge | [docs/memory_knowledge.md](docs/memory_knowledge.md), [docs/nv_research_memory.md](docs/nv_research_memory.md), [docs/nv_research_knowledge_index.md](docs/nv_research_knowledge_index.md), [docs/nv_research_knowledge_excerpt.md](docs/nv_research_knowledge_excerpt.md) |
 | Agent prompt context | [docs/agent_prompt_context.md](docs/agent_prompt_context.md) |

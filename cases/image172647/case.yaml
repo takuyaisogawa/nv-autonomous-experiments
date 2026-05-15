@@ -4,3 +4,9 @@ description: >
   Completed aligned-NV, short-T2star, and weak/moderate nearby-13C-like
   case study. The sanitized project folder is available under project.
 live_hardware_execution: disabled
+agent_model_provenance:
+  project_execution_agent: nv-researcher
+  model: openai-codex/gpt-5.5
+  thinking_level: xhigh
+  project_json_model_fields: route_present_explicit_model_fields_not_present
+  source: docs/model_and_agent_configuration.md

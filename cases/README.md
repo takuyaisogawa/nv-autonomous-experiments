@@ -5,10 +5,17 @@ for one completed autonomous-agent experiment. Case data, figures, reports,
 bridge records, and analysis artifacts are kept inside the sanitized
 `project/` tree.
 
+All three included cases are documented as `nv-researcher`
+project-execution runs using `openai-codex/gpt-5.5` with `xhigh` thinking.
+The deterministic Python/MATLAB layers handled state, queue, audit, bridge
+validation, and hardware safety boundaries.
+
 Start with:
 
 - [../docs/case_walkthrough.md](../docs/case_walkthrough.md) for a cross-case
   reader guide.
+- [../docs/model_and_agent_configuration.md](../docs/model_and_agent_configuration.md)
+  for model, thinking-level, and agent-role provenance.
 - [image145844/README.md](image145844/README.md) for the image145844 case
   entry point.
 - [image172647/README.md](image172647/README.md) for the image172647 case
