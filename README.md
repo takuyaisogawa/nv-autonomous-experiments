@@ -1,17 +1,17 @@
 # OpenClaw NV Autonomous Experiments
 
-Public case-study release for auditable LLM-agent workflows in NV-center
-experiments.
+Public release for auditable LLM-agent workflows in NV-center experiments.
 
-This repository is organized around sanitized copies of completed OpenClaw
-project folders, together with the MATLAB/Python analysis code and data needed
-to inspect the runs. The release preserves agent state, bridge records,
-evidence, figures, reports, and analysis artifacts from completed
-autonomous-agent runs.
+This repository has two parallel parts:
 
-It also includes a pODMR resonance-classification benchmark that tests whether
-explicit model-first prompting reduces false-positive judgments on raw NV
-measurements.
+- **Case studies:** sanitized completed OpenClaw project folders from real
+  autonomous-agent NV experiments.
+- **Benchmarks:** offline pODMR resonance-classification tests that evaluate
+  how prompt context changes agent judgment on raw NV measurements.
+
+The release preserves project state, evidence logs, bridge records, figures,
+reports, analysis artifacts, benchmark inputs, labels, predictions, and scoring
+scripts needed to inspect the results.
 
 ## Public Scope
 
@@ -25,44 +25,30 @@ See [docs/public_scope.md](docs/public_scope.md) for the exact public boundary.
 
 ## Start Here
 
-For a quick review, read these in order:
+For a quick review:
 
-1. [System overview](docs/system_overview.md)
-2. [Model and agent configuration](docs/model_and_agent_configuration.md)
-3. [Case walkthrough](docs/case_walkthrough.md)
-4. [image172647 case README](cases/image172647/README.md)
-5. [image145844 case README](cases/image145844/README.md)
-6. [image231924 case README](cases/image231924/README.md)
-7. [pODMR model-first benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md)
-8. [Code inventory](docs/code_inventory.md)
-9. [Safety boundary](docs/safety_boundary.md)
+| Area | Entry point |
+| --- | --- |
+| System overview | [docs/system_overview.md](docs/system_overview.md) |
+| Agent/model configuration | [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md) |
+| Case studies | [cases/README.md](cases/README.md), [docs/case_walkthrough.md](docs/case_walkthrough.md) |
+| Benchmarks | [benchmarks/podmr-model-first-resonance-2026-05/README.md](benchmarks/podmr-model-first-resonance-2026-05/README.md) |
+| Code inventory | [docs/code_inventory.md](docs/code_inventory.md) |
+| Safety boundary | [docs/safety_boundary.md](docs/safety_boundary.md) |
 
-## What This Repository Shows
+## Repository Contents
 
-- A safety-bounded LLM research agent operating real NV-center experiments.
-- Deterministic MATLAB bridge records for experiment validation and execution.
-- Human-readable project state, evidence logs, and closeout reports.
-- pODMR, Ramsey, CPMG, drift, and model-comparison analyses from completed runs.
-- Three completed case studies: `image145844`, `image172647`, and
-  `image231924`.
-- A 96-case pODMR benchmark comparing XML-only, domain-facts, and model-first
-  prompt conditions on raw export JSON files and raw-readout figures.
-
-## Agent / Model Configuration
-
-The included case studies are documented as `nv-researcher`
-project-execution runs using `openai-codex/gpt-5.5` with `xhigh` thinking.
-
-The direct-chat `main` agent and the project-execution `nv-researcher` agent
-are separate sessions. Scientific reasoning, experiment design, evidence
-synthesis, and claim-boundary decisions belong to the agent role; deterministic
-Python/MATLAB layers handle durable state, queue checks, audit records, bridge
-validation, and hardware safety boundaries.
-
-See [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md)
-for case-level model provenance.
+| Part | What It Shows | Main Artifacts |
+| --- | --- | --- |
+| Case studies | A safety-bounded LLM research agent operating real NV-center experiments | Project state, evidence logs, bridge records, figures, reports, pODMR/Ramsey/CPMG analyses |
+| Benchmarks | How prompt context affects pODMR resonance judgments | Raw export JSON, raw-readout figures, prompts, labels, predictions, analysis notes, scoring scripts |
+| Source and docs | Public audit boundary for OpenClaw/NV project management and analysis | Python/MATLAB analysis code, public runtime source, system docs, safety notes |
 
 ## Case Studies
+
+The case studies are completed OpenClaw/NV project runs. They are intended to
+show what the agent saw, what it decided, which artifacts it wrote, and how the
+final scientific conclusions were bounded by the evidence.
 
 | Case | Summary | Status |
 | --- | --- | --- |
@@ -71,6 +57,10 @@ for case-level model provenance.
 | [image231924](cases/image231924/README.md) | Aligned NV selection, pODMR center refinement, corrected-center Ramsey, T2star closeout | Completed |
 
 ## Benchmarks
+
+The benchmark is an offline resonance-classification test built from pODMR data.
+It asks the agent to decide whether a resonance is present from one case at a
+time using raw export JSON files, raw-readout figures, and prompt context.
 
 | Benchmark | Summary |
 | --- | --- |
@@ -89,6 +79,20 @@ The included benchmark summary reports:
 | XML only | 75.3% | 32.9% | 0.0% |
 | Domain facts | 93.1% | 9.3% | 0.0% |
 | Model-first | 99.7% | 0.46% | 0.0% |
+
+## Agent / Model Configuration
+
+The included case studies are documented as `nv-researcher`
+project-execution runs using `openai-codex/gpt-5.5` with `xhigh` thinking.
+
+The direct-chat `main` agent and the project-execution `nv-researcher` agent
+are separate sessions. Scientific reasoning, experiment design, evidence
+synthesis, and claim-boundary decisions belong to the agent role; deterministic
+Python/MATLAB layers handle durable state, queue checks, audit records, bridge
+validation, and hardware safety boundaries.
+
+See [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md)
+for case-level model provenance.
 
 ## Repository Layout
 
