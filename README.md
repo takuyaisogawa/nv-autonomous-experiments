@@ -1,5 +1,7 @@
 # OpenClaw NV Autonomous Experiments
 
+## Overview
+
 Public release for auditable LLM-agent workflows in NV-center experiments.
 
 This repository has two parallel parts:
@@ -30,9 +32,9 @@ For a quick review:
 | Area | Entry point |
 | --- | --- |
 | System overview | [docs/system_overview.md](docs/system_overview.md) |
-| Agent/model configuration | [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md) |
 | Case studies | [cases/README.md](cases/README.md), [docs/case_walkthrough.md](docs/case_walkthrough.md) |
 | Benchmarks | [benchmarks/podmr-model-first-resonance-2026-05/README.md](benchmarks/podmr-model-first-resonance-2026-05/README.md) |
+| Model and agent configuration | [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md) |
 | Code inventory | [docs/code_inventory.md](docs/code_inventory.md) |
 | Safety boundary | [docs/safety_boundary.md](docs/safety_boundary.md) |
 
@@ -80,20 +82,6 @@ The included benchmark summary reports:
 | Domain facts | 93.1% | 9.3% | 0.0% |
 | Model-first | 99.7% | 0.46% | 0.0% |
 
-## Agent / Model Configuration
-
-The included case studies are documented as `nv-researcher`
-project-execution runs using `openai-codex/gpt-5.5` with `xhigh` thinking.
-
-The direct-chat `main` agent and the project-execution `nv-researcher` agent
-are separate sessions. Scientific reasoning, experiment design, evidence
-synthesis, and claim-boundary decisions belong to the agent role; deterministic
-Python/MATLAB layers handle durable state, queue checks, audit records, bridge
-validation, and hardware safety boundaries.
-
-See [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md)
-for case-level model provenance.
-
 ## Repository Layout
 
 ```text
@@ -118,17 +106,6 @@ requirements.txt
 docs/
 ```
 
-The project folders were copied from the local cold archive with
-[tools/copy_sanitized_project.ps1](tools/copy_sanitized_project.ps1); copied
-sources and treatments are tracked in
-[SOURCE_PROVENANCE.md](SOURCE_PROVENANCE.md).
-
-Install the Python analysis dependencies with:
-
-```powershell
-python -m pip install -r requirements.txt
-```
-
 ## Documentation Map
 
 | Topic | Entry point |
@@ -141,33 +118,7 @@ python -m pip install -r requirements.txt
 | Agent prompt context | [docs/agent_prompt_context.md](docs/agent_prompt_context.md) |
 | Project state and intents | [docs/project_state_template.md](docs/project_state_template.md), [docs/experiment_intent_schema.md](docs/experiment_intent_schema.md) |
 | Code and safety | [docs/code_inventory.md](docs/code_inventory.md), [docs/source_release_boundary.md](docs/source_release_boundary.md), [docs/safety_boundary.md](docs/safety_boundary.md) |
-
-## Safety Boundary
-
-Public code paths are analysis-only by default. Instrument control, stage
-motion, microwave output, and live bridge queue mutation are not included as
-public execution entry points.
-
-Hardware credentials, private laboratory configuration, and queue execution
-settings are intentionally excluded.
-
-The included `python/openclaw_nv_execution_source` directory exposes the
-case-referenced project-management execution source for audit. Direct execution
-entry points are disabled in the public release. The live MATLAB lab backend
-source is not included; historical bridge records are included as case
-artifacts.
-
-Project folders are intended to be close mirrors of the original public
-case-study folders. Redactions are limited to safety/privacy sanitization and
-redistribution constraints.
-
-Before publishing or pushing new case artifacts, run:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File .\tools\check_public_release_redactions.ps1
-```
-
-Copied artifacts should be recorded in `SOURCE_PROVENANCE.md`.
+| Source provenance | [SOURCE_PROVENANCE.md](SOURCE_PROVENANCE.md) |
 
 ## License
 
