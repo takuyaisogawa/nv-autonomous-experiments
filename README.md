@@ -9,6 +9,9 @@ to inspect the runs. The release preserves agent state, bridge records,
 evidence, figures, reports, and analysis artifacts from completed
 autonomous-agent runs.
 
+It also includes a pODMR resonance-classification benchmark for testing whether
+model-first prompting reduces false-positive judgments.
+
 ## Public Scope
 
 The case-referenced OpenClaw/NV project-management source is public for audit.
@@ -29,8 +32,9 @@ For a quick review, read these in order:
 4. [image172647 case README](cases/image172647/README.md)
 5. [image145844 case README](cases/image145844/README.md)
 6. [image231924 case README](cases/image231924/README.md)
-7. [Code inventory](docs/code_inventory.md)
-8. [Safety boundary](docs/safety_boundary.md)
+7. [pODMR model-first benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md)
+8. [Code inventory](docs/code_inventory.md)
+9. [Safety boundary](docs/safety_boundary.md)
 
 ## What This Repository Shows
 
@@ -40,6 +44,8 @@ For a quick review, read these in order:
 - pODMR, Ramsey, CPMG, drift, and model-comparison analyses from completed runs.
 - Three completed case studies: `image145844`, `image172647`, and
   `image231924`.
+- A 96-case pODMR benchmark comparing XML-only, domain-facts, and model-first
+  prompt conditions.
 
 ## Agent / Model Configuration
 
@@ -63,6 +69,12 @@ for case-level model provenance.
 | [image172647](cases/image172647/README.md) | Fresh re-image recovery, pODMR candidate rejection/acceptance, multi-detuning Ramsey, CPMG N=8 nearby-13C-like corroboration | Completed |
 | [image231924](cases/image231924/README.md) | Aligned NV selection, pODMR center refinement, corrected-center Ramsey, T2star closeout | Completed |
 
+## Benchmarks
+
+| Benchmark | Summary |
+| --- | --- |
+| [pODMR model-first resonance benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md) | 96 single-case pODMR classifications with prompts, inputs, labels, predictions, analysis notes, and scoring scripts |
+
 ## Repository Layout
 
 ```text
@@ -73,6 +85,8 @@ cases/
     project/
   image231924/
     project/
+benchmarks/
+  podmr-model-first-resonance-2026-05/
 python/
   openclaw_runtime/
   openclaw_nv_execution_source/
