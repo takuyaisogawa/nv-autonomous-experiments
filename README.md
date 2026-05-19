@@ -9,8 +9,9 @@ to inspect the runs. The release preserves agent state, bridge records,
 evidence, figures, reports, and analysis artifacts from completed
 autonomous-agent runs.
 
-It also includes a pODMR resonance-classification benchmark for testing whether
-model-first prompting reduces false-positive judgments.
+It also includes a pODMR resonance-classification benchmark that tests whether
+explicit model-first prompting reduces false-positive judgments on raw NV
+measurements.
 
 ## Public Scope
 
@@ -45,7 +46,7 @@ For a quick review, read these in order:
 - Three completed case studies: `image145844`, `image172647`, and
   `image231924`.
 - A 96-case pODMR benchmark comparing XML-only, domain-facts, and model-first
-  prompt conditions.
+  prompt conditions on raw export JSON files and raw-readout figures.
 
 ## Agent / Model Configuration
 
@@ -73,7 +74,21 @@ for case-level model provenance.
 
 | Benchmark | Summary |
 | --- | --- |
-| [pODMR model-first resonance benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md) | 96 single-case pODMR classifications with prompts, inputs, labels, predictions, analysis notes, and scoring scripts |
+| [pODMR model-first resonance benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md) | 96 single-case pODMR classifications with prompts, raw inputs, labels, predictions, analysis notes, and scoring scripts |
+
+The pODMR benchmark contains 24 resonance-present and 72 resonance-absent
+strong-pi measurements. Each prompt condition was run for three GPT-5.5 medium
+replicates. The model-first condition adds a requirement to establish the
+expected physical signal with a simulation or explicit quantitative model
+calculation before deciding whether a resonance is present.
+
+The included benchmark summary reports:
+
+| Condition | Accuracy | False-positive rate | False-negative rate |
+| --- | ---: | ---: | ---: |
+| XML only | 75.3% | 32.9% | 0.0% |
+| Domain facts | 93.1% | 9.3% | 0.0% |
+| Model-first | 99.7% | 0.46% | 0.0% |
 
 ## Repository Layout
 
