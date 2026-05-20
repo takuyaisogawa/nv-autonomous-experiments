@@ -89,6 +89,8 @@ negatives in this dataset. Full predictions, per-run analysis notes, and scoring
 tables are included under
 [benchmarks/podmr-model-first-resonance-2026-05/results](benchmarks/podmr-model-first-resonance-2026-05/results).
 
+![Reasoning-effort sweep for pODMR resonance classification](benchmarks/podmr-model-first-resonance-2026-05/results/figures/podmr_reasoning_sweep.png)
+
 | Reasoning | XML-only FPR | Domain-facts FPR | Model-first FPR |
 | --- | ---: | ---: | ---: |
 | low | 14.81% | 6.94% | 3.70% |

@@ -16,6 +16,8 @@ reasoning-effort settings: `low`, `medium`, `high`, and `xhigh`.
 The full reasoning-effort sweep is summarized in
 `results/reasoning_effort_sweep_summary.md`.
 
+![Reasoning-effort sweep for pODMR resonance classification](results/figures/podmr_reasoning_sweep.png)
+
 | Reasoning | Condition | TP | TN | FP | FN | Accuracy | False-positive rate | False-negative rate |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | low | XML only | 72 | 184 | 32 | 0 | 88.9% | 14.81% | 0.00% |
@@ -43,6 +45,7 @@ condition suppresses false positives across reasoning-effort settings.
 - `inputs/`: agent-visible raw export JSON files and raw-readout figures.
 - `labels/`: human resonance labels used for scoring.
 - `prompts/`: exact prompt condition text.
+- `results/figures/`: benchmark summary figure as PNG and PDF.
 - `results/`: GPT-5.5 predictions, summaries, and per-run analysis notes for
   `low`, `medium`, `high`, and `xhigh` reasoning efforts.
 - `scripts/`: scoring and package verification helpers.
