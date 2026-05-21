@@ -5,7 +5,7 @@ Each run asks GPT-5.5 to classify one pODMR measurement as
 
 The three prompt conditions form an ablation:
 
-1. `context_0_xml_only`: NV pODMR context plus XML inspection.
+1. `context_0_protocol_only`: NV pODMR context plus protocol/XML inspection.
 2. `context_A_domain_facts`: XML inspection plus contrast/Rabi/average facts.
 3. `context_B_model_first`: same domain facts plus explicit quantitative
    expected-signal modeling before judgment.
@@ -25,7 +25,7 @@ Result folders are organized in parallel by reasoning effort:
 - `results/gpt-5.5-high/`
 - `results/gpt-5.5-xhigh/`
 
-Each reasoning-effort folder contains `context_0_xml_only/` and
+Each reasoning-effort folder contains `context_0_protocol_only/` and
 `domain_facts_vs_model_first/` subfolders with joined predictions, summary
 tables, false-positive/false-negative case lists, and all per-run analysis
 notes.

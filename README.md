@@ -78,7 +78,7 @@ The three prompt conditions are:
 
 | Condition | Description |
 | --- | --- |
-| XML only | Uses the raw export, raw-readout figure, and sequence XML. |
+| Protocol only | Uses the raw export, raw-readout figure, and sequence XML. |
 | Domain facts | Adds compact NV-domain facts such as contrast scale, mod-depth/Rabi scaling, and average interpretation. |
 | Model-first | Adds a requirement to establish the expected signal with a simulation or explicit quantitative model calculation before judging resonance presence. |
 
@@ -97,7 +97,7 @@ reference and signal readouts for each case.
 
 ![Raw pODMR resonance-present and resonance-absent examples](benchmarks/podmr-model-first-resonance-2026-05/results/figures/podmr_present_absent_examples.png)
 
-| Reasoning | XML-only FPR | Domain-facts FPR | Model-first FPR |
+| Reasoning | Protocol-only FPR | Domain-facts FPR | Model-first FPR |
 | --- | ---: | ---: | ---: |
 | low | 14.81% | 6.94% | 3.70% |
 | medium | 32.87% | 9.26% | 0.46% |

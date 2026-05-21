@@ -30,7 +30,10 @@ $baseArgs = @(
     "--hidden",
     "--glob", "!/.git/*",
     "--glob", "!tools/check_public_release_redactions.ps1",
-    "--glob", "!tools/copy_sanitized_project.ps1"
+    "--glob", "!tools/copy_sanitized_project.ps1",
+    # Benchmark verifier intentionally contains private-path and secret keyword
+    # regexes as test patterns; it does not contain actual private values.
+    "--glob", "!benchmarks/podmr-model-first-resonance-2026-05/scripts/verify_public_package.py"
 )
 
 $pathPatterns = @(
