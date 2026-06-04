@@ -1,12 +1,14 @@
-# OpenClaw NV Autonomous Experiments
+# NV Autonomous Experiments
 
 ## Overview
 
 Public release for auditable LLM-agent workflows in NV-center experiments.
+The completed workflows used the OpenClaw platform as the agent and
+project-management layer around the NV instrument-control stack.
 
 This repository has two parallel parts:
 
-- **Case studies:** sanitized completed OpenClaw project folders from real
+- **Case studies:** sanitized completed project folders from real
   autonomous-agent NV experiments.
 - **Benchmarks:** offline pODMR resonance-classification tests that evaluate
   how prompt context and reasoning effort change agent judgment on raw NV
@@ -14,11 +16,12 @@ This repository has two parallel parts:
 
 The release preserves project state, evidence logs, bridge records, figures,
 reports, analysis artifacts, benchmark inputs, labels, predictions, per-run
-analysis notes, and scoring scripts needed to inspect the results.
+analysis notes, and scoring scripts needed to inspect the results. It is a
+sanitized audit release, not the full live OpenClaw backend.
 
 ## Public Scope
 
-The case-referenced OpenClaw/NV project-management source is public for audit.
+The case-referenced NV project-management source is public for audit.
 
 This repository cannot control hardware.
 
@@ -45,11 +48,11 @@ For a quick review:
 | --- | --- | --- |
 | Case studies | A safety-bounded LLM research agent operating real NV-center experiments | Project state, evidence logs, bridge records, figures, reports, pODMR/Ramsey/CPMG analyses |
 | Benchmarks | How prompt context and reasoning effort affect pODMR resonance judgments | Raw export JSON, raw-readout figures, prompts, labels, predictions, analysis notes, scoring scripts |
-| Source and docs | Public audit boundary for OpenClaw/NV project management and analysis | Python/MATLAB analysis code, public runtime source, system docs, safety notes |
+| Source and docs | Public audit boundary for NV project management and analysis | Python/MATLAB analysis code, public runtime source, system docs, safety notes |
 
 ## Case Studies
 
-The case studies are completed OpenClaw/NV project runs. They are intended to
+The case studies are completed autonomous NV project runs. They are intended to
 show what the agent saw, what it decided, which artifacts it wrote, and how the
 final scientific conclusions were bounded by the evidence.
 
@@ -67,7 +70,7 @@ time using raw export JSON files, raw-readout figures, and prompt context.
 
 | Benchmark | Summary |
 | --- | --- |
-| [pODMR model-first resonance benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md) | 96 single-case pODMR classifications with prompts, raw inputs, labels, predictions, analysis notes, and scoring scripts |
+| [pODMR calculation-guided resonance benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md) | 96 single-case pODMR classifications with prompts, raw inputs, labels, predictions, analysis notes, and scoring scripts |
 
 The pODMR benchmark contains 24 resonance-present and 72 resonance-absent
 strong-pi measurements. Each prompt condition was run for three replicates with
@@ -80,10 +83,10 @@ The three prompt conditions are:
 | --- | --- |
 | Protocol only | Uses the raw export, raw-readout figure, and sequence XML. |
 | Domain facts | Adds compact NV-domain facts such as contrast scale, mod-depth/Rabi scaling, and average interpretation. |
-| Model-first | Adds a requirement to establish the expected signal with a simulation or explicit quantitative model calculation before judging resonance presence. |
+| Calculation-guided | Adds a requirement to establish the expected signal with a simulation or explicit quantitative model calculation before judging resonance presence. |
 
 The main trend is that higher reasoning effort alone can increase
-false-positive resonance calls, while the model-first condition suppresses
+false-positive resonance calls, while the calculation-guided condition suppresses
 false positives across reasoning-effort settings without introducing false
 negatives in this dataset. Full predictions, per-run analysis notes, and scoring
 tables are included under
@@ -97,7 +100,7 @@ reference and signal readouts for each case.
 
 ![Raw pODMR resonance-present and resonance-absent examples](benchmarks/podmr-model-first-resonance-2026-05/results/figures/podmr_present_absent_examples.png)
 
-| Reasoning | Protocol-only FPR | Domain-facts FPR | Model-first FPR |
+| Reasoning | Protocol-only FPR | Domain-facts FPR | Calculation-guided FPR |
 | --- | ---: | ---: | ---: |
 | low | 14.81% | 6.94% | 3.70% |
 | medium | 32.87% | 9.26% | 0.46% |

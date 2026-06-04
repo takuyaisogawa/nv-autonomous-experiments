@@ -1,7 +1,7 @@
 # NV Research Knowledge Excerpt
 
 This file contains representative public excerpts from the reusable NV research
-knowledge used by OpenClaw. It is not the complete live knowledge file. Full
+knowledge used by the project-execution agent. It is not the complete live knowledge file. Full
 wake-local copies are preserved in the case wake records.
 
 The purpose of this excerpt is to show the kind of reusable lessons that the
@@ -104,7 +104,7 @@ STOP.
   sideband locations from the actual resonance center and re-check advisory and
   drift limits before execute.
 
-## OpenClaw Project Operation
+## Project Operation
 
 Section strength: hard for queue/verifier/execute/state handoffs; default for
 pacing, reporting, and bridge-free work.

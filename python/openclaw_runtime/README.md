@@ -1,6 +1,6 @@
-# OpenClaw Runtime Helpers
+# Runtime Helpers
 
-Sanitized OpenClaw-side helper scripts retained because they are referenced by
+Sanitized helper scripts retained because they are referenced by
 the two public cases or required by retained case-referenced source files.
 
 Included helper groups:

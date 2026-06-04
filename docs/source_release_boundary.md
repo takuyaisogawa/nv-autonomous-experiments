@@ -1,7 +1,7 @@
 # Source Copy Boundary
 
 This release includes the case-referenced project-management source needed to
-audit the two OpenClaw/NV workflow records, while keeping direct laboratory
+audit the autonomous NV workflow records, while keeping direct laboratory
 execution disabled.
 
 ## Included Source

@@ -1,6 +1,6 @@
 # Case Walkthrough
 
-This document is a reader guide for the completed OpenClaw NV-center case
+This document is a reader guide for the completed autonomous NV-center case
 studies. It focuses on what the agent read, what it decided, and which artifacts
 it left behind.
 

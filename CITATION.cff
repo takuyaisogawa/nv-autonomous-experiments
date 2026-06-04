@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite it as below."
 type: software
-title: "OpenClaw NV Autonomous Experiments"
+title: "NV Autonomous Experiments"
 authors:
   - name: "Takuya"
 version: "0.1.0"

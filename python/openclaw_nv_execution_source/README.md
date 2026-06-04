@@ -1,6 +1,6 @@
-# OpenClaw Production Copy
+# Production Source Copy
 
-This directory contains sanitized source copies from the OpenClaw/NV project
+This directory contains sanitized source copies from the NV project
 execution path that are referenced by the two public cases: project manager,
 batch runner, bridge runtime watcher, and direct enqueue helpers.
 

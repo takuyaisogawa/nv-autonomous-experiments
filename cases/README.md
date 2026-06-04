@@ -1,6 +1,6 @@
 # Case Studies
 
-Each case directory is centered on a sanitized OpenClaw project-folder copy
+Each case directory is centered on a sanitized project-folder copy
 for one completed autonomous-agent experiment. Case data, figures, reports,
 bridge records, and analysis artifacts are kept inside the sanitized
 `project/` tree.

@@ -1,6 +1,6 @@
 # Runtime Architecture
 
-The public release exposes the current OpenClaw/NV project-management path and
+The public release exposes the OpenClaw-based NV project-management path and
 completed case records for audit.
 
 ## Python Side
@@ -24,7 +24,7 @@ The live MATLAB lab backend source is not included in this public release.
 
 ## Prompt Surface
 
-`docs/agent_prompt_context.md` summarizes the retained NV/OpenClaw
+`docs/agent_prompt_context.md` summarizes the retained NV project-manager
 project-manager prompt context used for long-running project wake context. The
 runtime skill folder and thin wrapper script are omitted from the public source
 tree to avoid confusing them with the real project-manager implementation.

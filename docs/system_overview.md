@@ -1,8 +1,9 @@
 # System Overview
 
-OpenClaw is organized as an auditable autonomous-experiment loop. The public
-release exposes the current project-management source and completed project
-records.
+This release is organized around an auditable autonomous-experiment loop. The
+completed NV runs used the OpenClaw platform as the agent/project-management
+layer, and this repository exposes the case-referenced source and completed
+project records needed to inspect those runs.
 
 ```text
 human request / project brief
@@ -54,7 +55,7 @@ bridge results, notes, and reports to the claims they support or reject.
 The scheduler inspects project state, bridge/result activity, backlog, and
 recent agent-run records. If work is actionable, it writes a wake record and
 dispatches the project agent. The public cases preserve the wake records and
-the retained project-manager source at
+the retained OpenClaw project-manager source at
 `python/openclaw_nv_execution_source/nv_project_manager.py`; scheduler startup
 wiring is outside this focused public subset.
 
@@ -69,7 +70,7 @@ audit.
 
 ## Where To Look
 
-- OpenClaw/NV execution source: `python/openclaw_nv_execution_source/`
+- NV execution source copy: `python/openclaw_nv_execution_source/`
 - Model and agent configuration: `docs/model_and_agent_configuration.md`
 - Python runtime helpers: `python/openclaw_runtime/`
 - NV research memory: `docs/nv_research_memory.md`

@@ -15,6 +15,6 @@ only for offline scoring and are not present in the agent-visible input folder.
 
 Each case provides:
 
-- an OpenClaw-style raw export JSON file
+- a raw export JSON file
 - a raw-readout diagnostic PNG with combined and per-average raw readouts
 - embedded sequence XML and runtime variable values inside the raw export JSON

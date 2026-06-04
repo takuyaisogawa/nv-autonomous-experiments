@@ -1,6 +1,6 @@
 # Code Inventory
 
-This repository publishes the audit-relevant OpenClaw/NV code paths as close to
+This repository publishes the audit-relevant NV automation code paths as close to
 the operating system as is reasonable for a public release. The boundary is that
 source inspection, case-data inspection, validation, and analysis review are
 public, while direct laboratory execution remains outside this release.
@@ -9,7 +9,7 @@ public, while direct laboratory execution remains outside this release.
 
 | Public path | Role | Production relationship |
 | --- | --- | --- |
-| `python/openclaw_runtime/` | Case-referenced runtime and analysis helpers copied from the OpenClaw/NV workspace: MATLAB MAT parsing, MATLAB wrapper support, project schema / submit-spec support, sequence design, and report build helpers. | Closest public Python layer needed by the retained case source. Local defaults are represented by environment variables or placeholders. |
+| `python/openclaw_runtime/` | Case-referenced runtime and analysis helpers copied from the live NV automation workspace: MATLAB MAT parsing, MATLAB wrapper support, project schema / submit-spec support, sequence design, and report build helpers. | Closest public Python layer needed by the retained case source. Local defaults are represented by environment variables or placeholders. |
 | `python/openclaw_nv_execution_source/` | Sanitized production source copy for the case-referenced path: project manager, batch runner, bridge runtime watcher, and direct enqueue helpers. | Source-inspection copy of the retained operating layer. Direct CLI execution is disabled in the public release. |
 | `cases/*/project/work/artifacts/analysis/` | Case-specific analysis scripts captured with each completed project. | Historical scripts used or retained by the project artifacts, patched only where needed to resolve public runtime helpers inside this repository. |
 

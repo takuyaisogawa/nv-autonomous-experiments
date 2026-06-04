@@ -1,7 +1,7 @@
 # Memory And Knowledge
 
-OpenClaw separates `memory` and `knowledge` so that a self-updating research
-agent can remain auditable as it accumulates experience.
+The autonomous NV workflow separates `memory` and `knowledge` so that a
+self-updating research agent can remain auditable as it accumulates experience.
 
 ## Memory
 

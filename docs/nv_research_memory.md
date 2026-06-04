@@ -1,7 +1,7 @@
 # NV Research Memory
 
 This is a public, sanitized copy of the compact every-wake contract used by
-OpenClaw NV project-execution agents.
+the NV project-execution agent.
 
 In the live system, this file is read at the beginning of every NV project wake.
 Detailed practice guidance lives in `NV_RESEARCH_KNOWLEDGE.md` and is read by
@@ -175,7 +175,7 @@ Use this router for the knowledge file:
   count/tracking interpretation.
 - `Shot Budget And Data Quality`: shot credit, SEM scaling, stored averages,
   visual review, fit validity, snake scan, recent-average drift.
-- `OpenClaw Project Operation`: route policy, same-wake work, running-execute
+- `Project Operation`: route policy, same-wake work, running-execute
   bridge-free work, project layout, advice inbox, verifier verdicts, canonical
   state, Imaging/TrackCenter helpers, queue staging, completion markers, code
   auto-resume, progress reports/media.

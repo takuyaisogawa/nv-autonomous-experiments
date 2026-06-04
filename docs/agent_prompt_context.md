@@ -1,7 +1,7 @@
 # Agent Prompt Context
 
 This document summarizes the project-manager prompt context used by the
-OpenClaw NV project agent. The original runtime skill wrapper is not included
+NV project agent. The original runtime skill wrapper is not included
 as public source because it was only a thin launcher around the real project
 manager source in `python/openclaw_nv_execution_source/nv_project_manager.py`.
 

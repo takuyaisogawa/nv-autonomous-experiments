@@ -1,11 +1,9 @@
-OpenClaw NV Autonomous Experiments Licensing
+NV Autonomous Experiments Licensing
 
 This repository uses a split public license:
 
 - Code in `python/`, `matlab/`, and `tools/` is licensed under the MIT License
   below.
-- Code and prompt artifacts in `openclaw_skills/` are licensed under the MIT
-  License below.
 - Documentation, public case-study copies, included data exports,
   generated figures, reports, and analysis artifacts are licensed under the
   Creative Commons Attribution 4.0 International License (CC BY 4.0):

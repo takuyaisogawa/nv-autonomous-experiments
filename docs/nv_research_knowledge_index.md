@@ -1,7 +1,7 @@
 # NV Research Knowledge Index
 
 This is the public index for the reusable NV research knowledge used by
-OpenClaw project-execution agents.
+the project-execution agent.
 
 The full live knowledge file is long and accumulates dated lessons. In this
 release, full wake-local copies are preserved inside case wake records under
@@ -28,7 +28,7 @@ This is the core memory/knowledge split:
 | `Experiment Defaults` | Mostly `DEFAULT`; caveats often `SOFT` | Sequence defaults, strong-pi/weak-pi pulsed ODMR, resonance validity, Rabi, CPMG/Hahn/XY8/DDRF, XML/protocol inspection, weak-signal follow-up. |
 | `Drift, Tracking, And Environment` | Mostly `PROVENANCE` / `SOFT`; hard only for tracking loss, count collapse, safety uncertainty, or explicit stop conditions | Imaging, TrackCenter, usual NV/NV23 identity, nearby-NV recovery, position freshness, environment drift, count/tracking interpretation. |
 | `Shot Budget And Data Quality` | `DEFAULT` analysis practice plus `SOFT` interpretation guidance | Shot credit, SEM scaling, stored averages, visual review, fit validity, snake scan, recent-average drift. |
-| `OpenClaw Project Operation` | Hard for queue/verifier/execute/state handoffs; default for pacing and bridge-free work | Route policy, same-wake work, running-execute bridge-free work, project layout, advice inbox, verifier verdicts, canonical state, queue staging, completion markers. |
+| `Project Operation` | Hard for queue/verifier/execute/state handoffs; default for pacing and bridge-free work | Route policy, same-wake work, running-execute bridge-free work, project layout, advice inbox, verifier verdicts, canonical state, queue staging, completion markers. |
 | `Research Practice And Closeout` | `DEFAULT` for synthesis and closeout | Literature/prior-result comparison, non-experiment findings that affect design, closeout reports, manual experiment evidence. |
 
 ## How The Agent Uses The Index

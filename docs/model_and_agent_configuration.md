@@ -1,7 +1,7 @@
 # Model And Agent Configuration
 
 This release records the model and role configuration used for the
-project-execution agent in the included OpenClaw/NV case studies.
+project-execution agent in the included autonomous NV case studies.
 
 ## Project-Execution Agent
 
@@ -58,7 +58,7 @@ The public execution-source copy also records these defaults in
 When citing these cases, describe the autonomy stack as:
 
 ```text
-OpenClaw NV project-execution agent: nv-researcher
+NV project-execution agent: nv-researcher
 model: openai-codex/gpt-5.5
 thinking level: xhigh
 deterministic boundary: Python state/queue/audit layer plus MATLAB bridge validation

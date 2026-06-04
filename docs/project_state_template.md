@@ -1,7 +1,7 @@
 # Project State Template
 
 This document shows the public version of the template used to initialize
-`work/state.md` for OpenClaw NV projects.
+`work/state.md` for autonomous NV projects.
 
 `work/state.md` is the main readable state surface for the project agent. It is
 short, current, and evidence-oriented. Detailed derivations, failed ideas, and

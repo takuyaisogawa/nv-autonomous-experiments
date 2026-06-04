@@ -13,12 +13,12 @@ case-study release.
 - Processed JSON/HDF5 exports derived from raw MATLAB files.
 - MATLAB and Python analysis code used for pODMR, Ramsey, drift, figure, and
   report generation, including the CPMG analysis path used by `image172647`.
-- Case-referenced Python runtime helpers from the live OpenClaw/NV workspace
+- Case-referenced Python runtime helpers from the live NV automation workspace
   for MAT parsing, sequence design, report building, submit-spec support, and
   the MATLAB wrapper boundary used by the retained enqueue source.
 - Public MATLAB helpers for savedexperiment export, savedexperiment summary,
   saved scan analysis, and image-axis normalization.
-- Sanitized production Python source copy for the case-referenced OpenClaw/NV
+- Sanitized production Python source copy for the case-referenced NV automation
   execution path: project manager, batch runner, bridge runtime watcher, and
   direct enqueue helpers, with CLI execution disabled.
 - Public agent prompt-context summary derived from the `nv-project-manager`
