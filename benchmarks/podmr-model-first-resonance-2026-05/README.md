@@ -8,6 +8,13 @@ The dataset contains 96 strong-pi pODMR measurements:
 - 24 resonance-present cases
 - 72 resonance-absent cases
 
+The labels are defined by the physical measurement configuration.  The
+resonance-present cases use aligned NV centers whose targeted transition lies
+inside the scanned frequency window.  The resonance-absent cases use differently
+oriented NV centers whose corresponding transition lies outside that window.
+Failed acquisitions and tracking failures are excluded rather than labeled as
+resonance absent.
+
 Each prompt condition was evaluated with GPT-5.5 for three replicates at four
 reasoning-effort settings: `low`, `medium`, `high`, and `xhigh`.
 
@@ -46,10 +53,13 @@ present. In this dataset, increasing reasoning effort alone increases
 false-positive resonance calls in the protocol-only condition, while the calculation-guided
 condition suppresses false positives across reasoning-effort settings.
 
+Non-LLM signal-processing baselines are summarized in
+`results/non_llm_signal_baseline_summary.md`.
+
 ## Contents
 
 - `inputs/`: agent-visible raw export JSON files and raw-readout figures.
-- `labels/`: human resonance labels used for scoring.
+- `labels/`: physical resonance labels used for scoring.
 - `prompts/`: exact prompt condition text.
 - `results/figures/`: benchmark summary figure as PNG and PDF.
 - `results/`: GPT-5.5 predictions, summaries, and per-run analysis notes for

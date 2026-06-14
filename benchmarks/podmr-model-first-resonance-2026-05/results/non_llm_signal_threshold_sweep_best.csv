@@ -1,0 +1,9 @@
+feature,selection,threshold,TP,TN,FP,FN,accuracy,fpr,fnr
+depth,best_accuracy,0.128,24,72,0,0,1.0,0.0,0.0
+depth,zero_fn_min_fp,0.154,24,72,0,0,1.0,0.0,0.0
+detrended_snr,best_accuracy,2.9000000000000004,21,70,2,3,0.9479166666666666,0.027777777777777776,0.125
+detrended_snr,zero_fn_min_fp,2.1,24,47,25,0,0.7395833333333334,0.3472222222222222,0.0
+gaussian_delta_bic,best_accuracy,4.0,24,70,2,0,0.9791666666666666,0.027777777777777776,0.0
+gaussian_delta_bic,zero_fn_min_fp,4.0,24,70,2,0,0.9791666666666666,0.027777777777777776,0.0
+lorentzian_delta_bic,best_accuracy,3.5,24,70,2,0,0.9791666666666666,0.027777777777777776,0.0
+lorentzian_delta_bic,zero_fn_min_fp,3.5,24,70,2,0,0.9791666666666666,0.027777777777777776,0.0

@@ -12,7 +12,10 @@ The three prompt conditions form an ablation:
 
 Each condition is run for three replicates over the same 96 cases at four
 reasoning-effort settings: `low`, `medium`, `high`, and `xhigh`. Scoring is
-performed against `labels/gold_labels.csv`.
+performed against `labels/gold_labels.csv`. The labels are defined by the
+physical measurement configuration: aligned NV centers provide
+resonance-present cases within the scanned frequency window, and differently
+oriented NV centers provide resonance-absent cases for this window.
 
 The `analysis_notes/` folders contain model-generated free-form notes written
 for each run before scoring. They are included for auditability and should not

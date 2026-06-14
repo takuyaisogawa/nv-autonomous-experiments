@@ -8,8 +8,18 @@ All cases use `Rabimodulated.xml` with a 100 MHz microwave-frequency sweep,
 
 ## Labels
 
-Labels are human resonance-present / resonance-absent judgments. They are used
-only for offline scoring and are not present in the agent-visible input folder.
+Labels are constructed from the physical measurement configuration, not from
+case-by-case visual inspection of each trace. Resonance-present cases were
+measured on NV centers aligned with the static magnetic field, for which the
+targeted `mS=0 -> +1` transition lies inside the scanned microwave-frequency
+window. Resonance-absent cases were measured on NV centers with a different
+crystallographic orientation, for which the corresponding transition is outside
+the scanned window. Failed acquisitions, tracking failures, and records without
+the intended raw pODMR measurement were excluded rather than labeled as
+resonance absent.
+
+The labels are used only for offline scoring and are not present in the
+agent-visible input folder.
 
 ## Agent-Visible Inputs
 
