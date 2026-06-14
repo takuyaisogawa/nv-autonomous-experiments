@@ -18,6 +18,14 @@ in this dataset.
 | lorentzian_bic_depth | 22 | 70 | 2 | 2 | 95.8% | 2.8% | 8.3% |
 | gaussian_bic_depth | 22 | 71 | 1 | 2 | 96.9% | 1.4% | 8.3% |
 
+## Contrast-depth separation
+
+The contrast-depth feature alone fully separates this dataset.  The largest
+resonance-absent contrast depth is `0.126740947`, and the smallest
+resonance-present contrast depth is `0.154093098`.  Therefore any threshold
+larger than `0.126740947` and no larger than `0.154093098` gives 24 TP, 72 TN,
+0 FP, and 0 FN when the rule is `present` if `depth >= threshold`.
+
 ## Threshold sweep diagnostics
 
 | Feature | Selection | Threshold | TP | TN | FP | FN | Accuracy | FPR | FNR |

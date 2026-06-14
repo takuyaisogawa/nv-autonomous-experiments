@@ -287,6 +287,8 @@ def main() -> None:
         extract_features(case_id, label)
         for case_id, label in sorted(labels.items())
     ]
+    absent_depth_max = max(f.depth for f in features if f.label == "absent")
+    present_depth_min = min(f.depth for f in features if f.label == "present")
 
     feature_rows = [f.__dict__ for f in features]
     write_csv(RESULTS / "non_llm_signal_features.csv", feature_rows)
@@ -357,6 +359,14 @@ def main() -> None:
             )
         )
     lines += [
+        "",
+        "## Contrast-depth separation",
+        "",
+        "The contrast-depth feature alone fully separates this dataset.  The largest",
+        f"resonance-absent contrast depth is `{absent_depth_max:.9f}`, and the smallest",
+        f"resonance-present contrast depth is `{present_depth_min:.9f}`.  Therefore any threshold",
+        f"larger than `{absent_depth_max:.9f}` and no larger than `{present_depth_min:.9f}` gives 24 TP, 72 TN,",
+        "0 FP, and 0 FN when the rule is `present` if `depth >= threshold`.",
         "",
         "## Threshold sweep diagnostics",
         "",
