@@ -1,0 +1,10 @@
+2026-05-13T23:03:46 [INFO] Picked job nv23_ramsey_20260513_230331_auto_ramsey and moved it to running.
+2026-05-13T23:03:46 [INFO] MATLAB command-window diary started at <NV_BRIDGE_ROOT>\running\nv23_ramsey_20260513_230331_auto_ramsey\matlab_command_window.log
+2026-05-13T23:03:46 [INFO] Validated job for recipe xml_generic_v1 in mode execute.
+2026-05-13T23:03:46 [INFO] Bootstrapped 23-C preflight for execute.
+2026-05-13T23:03:46 [INFO] Local lab-only queue execute gate is open via NV_BRIDGE_QUEUE_EXECUTE_OPT_IN. | Job metadata requested queue execute opt-in via metadata.queue_execute_opt_in=true. | Queue execute will prefer a bridge-owned hidden GUI launch when the singleton stack is not already open, and otherwise reuse the existing singleton GUI session. | Legacy landmark-map matching was requested by older metadata, but it is disabled; queue execute will use explicit/reference/registry/current seeds plus TrackCenter instead. | Queue execute auto-align requires Final >= 20.000 kcps before RunExperiment(handles) is allowed to proceed. | TrackCenter will try 3 z-seed positions with offsets [0.000, -0.500, 0.500] um from the current alignment seed.
+2026-05-13T23:03:46 [INFO] Execute started.
+2026-05-14T01:23:47 [INFO] Execute finished; collecting run summary.
+2026-05-14T01:23:47 [INFO] Execute path returned control to the bridge.
+2026-05-14T01:23:48 [INFO] Safe shutdown completed: Issued best-effort bridge cleanup using the active Experiment GUI handles: signal_generator_rf_off, awg_stop, awg_all_channels_off, pulse_blaster_stop, pulse_blaster_reset, counting_task_stop, counting_task_clear, imaging_laser_toggle_off.
+2026-05-14T01:23:48 [INFO] Wrote result.json to <NV_BRIDGE_ROOT>\running\nv23_ramsey_20260513_230331_auto_ramsey\result.json

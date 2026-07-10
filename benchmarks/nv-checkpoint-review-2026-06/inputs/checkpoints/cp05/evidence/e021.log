@@ -1,0 +1,736 @@
+NVBridge MATLAB command-window log started: <NV_BRIDGE_ROOT>\running\nv23_ramsey_20260514_055148_auto_ramsey\matlab_command_window.log
+The total waveform points across the scan is 169166. Peak Siglent waveform uses 0.02563 percent of memory. Estimated time (siglent model) is 12622.332(s)
+Elapsed time for loading sequence: 0.00037633s
+check .Channels(2).Enable 1
+     1
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).Frequency
+   3.8265e+09
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).FreqIQ
+    50000000
+
+obj.interfaceSigGen.Frequency(1)
+   3.8265e+09
+
+check .Channels(2).Enable 5
+check .Channels(2).Enable 5
+     1
+
+num_points
+        3126
+
+nI and nQ
+        3176
+
+        3176
+
+check .Channels(2).Enable 6
+     1
+
+send_waveforms_siglent done
+check .Channels(2).Enable 7
+     1
+
+PB bit 0 (Ch1) rises = 3
+PB bit 1 (Ch2) rises = 1
+PB bit 2 (Ch3) rises = 2
+PB bit 3 (Ch4) rises = 1
+PB bit 4 (Ch5) rises = 0
+PB bit 5 (Ch6) rises = 0
+PB bit 6 (Ch7) rises = 0
+PB bit 7 (Ch8) rises = 0
+Expected gates = 100000
+TSPD_total = 5.200e-07 s
+sendSequence done
+1rep: SPD rises=2 (number_acq=2)
+num (expected samples) = 100000
+length(counts)        = 100000
+nonzero counts        = 1110
+mean(counts)          = 0.0113
+PB done
+DAQ done
+check .Channels(2).Enable 2
+     1
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   598
+
+helper
+    46
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   528
+
+helper
+   40.6154
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+check .Channels(2).Enable 4
+     1
+
+check .Channels(2).Enable 1
+     1
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).Frequency
+   3.8265e+09
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).FreqIQ
+    50000000
+
+obj.interfaceSigGen.Frequency(1)
+   3.8265e+09
+
+check .Channels(2).Enable 5
+check .Channels(2).Enable 5
+     1
+
+num_points
+        3176
+
+nI and nQ
+        3226
+
+        3226
+
+check .Channels(2).Enable 6
+     1
+
+send_waveforms_siglent done
+check .Channels(2).Enable 7
+     1
+
+PB bit 0 (Ch1) rises = 3
+PB bit 1 (Ch2) rises = 1
+PB bit 2 (Ch3) rises = 2
+PB bit 3 (Ch4) rises = 2
+PB bit 4 (Ch5) rises = 0
+PB bit 5 (Ch6) rises = 0
+PB bit 6 (Ch7) rises = 0
+PB bit 7 (Ch8) rises = 0
+Expected gates = 100000
+TSPD_total = 5.200e-07 s
+sendSequence done
+1rep: SPD rises=2 (number_acq=2)
+num (expected samples) = 100000
+length(counts)        = 100000
+nonzero counts        = 1163
+mean(counts)          = 0.0118
+PB done
+DAQ done
+check .Channels(2).Enable 2
+     1
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   603
+
+helper
+   46.3846
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   578
+
+helper
+   44.4615
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+check .Channels(2).Enable 4
+     1
+
+check .Channels(2).Enable 1
+     1
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).Frequency
+   3.8265e+09
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).FreqIQ
+    50000000
+
+obj.interfaceSigGen.Frequency(1)
+   3.8265e+09
+
+check .Channels(2).Enable 5
+check .Channels(2).Enable 5
+     1
+
+num_points
+        3226
+
+nI and nQ
+        3276
+
+        3276
+
+check .Channels(2).Enable 6
+     1
+
+send_waveforms_siglent done
+check .Channels(2).Enable 7
+     1
+
+PB bit 0 (Ch1) rises = 3
+PB bit 1 (Ch2) rises = 1
+PB bit 2 (Ch3) rises = 2
+PB bit 3 (Ch4) rises = 2
+PB bit 4 (Ch5) rises = 0
+PB bit 5 (Ch6) rises = 0
+PB bit 6 (Ch7) rises = 0
+PB bit 7 (Ch8) rises = 0
+Expected gates = 100000
+TSPD_total = 5.200e-07 s
+sendSequence done
+1rep: SPD rises=2 (number_acq=2)
+num (expected samples) = 100000
+length(counts)        = 100000
+nonzero counts        = 1133
+mean(counts)          = 0.0116
+PB done
+DAQ done
+check .Channels(2).Enable 2
+     1
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   601
+
+helper
+   46.2308
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   556
+
+helper
+   42.7692
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+check .Channels(2).Enable 4
+     1
+
+check .Channels(2).Enable 1
+     1
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).Frequency
+   3.8265e+09
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).FreqIQ
+    50000000
+
+obj.interfaceSigGen.Frequency(1)
+   3.8265e+09
+
+check .Channels(2).Enable 5
+check .Channels(2).Enable 5
+     1
+
+num_points
+        3276
+
+nI and nQ
+        3326
+
+        3326
+
+check .Channels(2).Enable 6
+     1
+
+send_waveforms_siglent done
+check .Channels(2).Enable 7
+     1
+
+PB bit 0 (Ch1) rises = 3
+PB bit 1 (Ch2) rises = 1
+PB bit 2 (Ch3) rises = 2
+PB bit 3 (Ch4) rises = 2
+PB bit 4 (Ch5) rises = 0
+PB bit 5 (Ch6) rises = 0
+PB bit 6 (Ch7) rises = 0
+PB bit 7 (Ch8) rises = 0
+Expected gates = 100000
+TSPD_total = 5.200e-07 s
+sendSequence done
+1rep: SPD rises=2 (number_acq=2)
+num (expected samples) = 100000
+length(counts)        = 100000
+nonzero counts        = 1180
+mean(counts)          = 0.012
+PB done
+DAQ done
+check .Channels(2).Enable 2
+     1
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   644
+
+helper
+   49.5385
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   553
+
+helper
+   42.5385
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+check .Channels(2).Enable 4
+     1
+
+check .Channels(2).Enable 1
+     1
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).Frequency
+   3.8265e+09
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).FreqIQ
+    50000000
+
+obj.interfaceSigGen.Frequency(1)
+   3.8265e+09
+
+check .Channels(2).Enable 5
+check .Channels(2).Enable 5
+     1
+
+num_points
+        3326
+
+nI and nQ
+        3376
+
+        3376
+
+check .Channels(2).Enable 6
+     1
+
+send_waveforms_siglent done
+check .Channels(2).Enable 7
+     1
+
+PB bit 0 (Ch1) rises = 3
+PB bit 1 (Ch2) rises = 1
+PB bit 2 (Ch3) rises = 2
+PB bit 3 (Ch4) rises = 2
+PB bit 4 (Ch5) rises = 0
+PB bit 5 (Ch6) rises = 0
+PB bit 6 (Ch7) rises = 0
+PB bit 7 (Ch8) rises = 0
+Expected gates = 100000
+TSPD_total = 5.200e-07 s
+sendSequence done
+1rep: SPD rises=2 (number_acq=2)
+num (expected samples) = 100000
+length(counts)        = 100000
+nonzero counts        = 1119
+mean(counts)          = 0.0114
+PB done
+DAQ done
+check .Channels(2).Enable 2
+     1
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   593
+
+helper
+   45.6154
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   544
+
+helper
+   41.8462
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+check .Channels(2).Enable 4
+     1
+
+check .Channels(2).Enable 1
+     1
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).Frequency
+   3.8265e+09
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).FreqIQ
+    50000000
+
+obj.interfaceSigGen.Frequency(1)
+   3.8265e+09
+
+check .Channels(2).Enable 5
+check .Channels(2).Enable 5
+     1
+
+num_points
+        3376
+
+nI and nQ
+        3426
+
+        3426
+
+check .Channels(2).Enable 6
+     1
+
+send_waveforms_siglent done
+check .Channels(2).Enable 7
+     1
+
+PB bit 0 (Ch1) rises = 3
+PB bit 1 (Ch2) rises = 1
+PB bit 2 (Ch3) rises = 2
+PB bit 3 (Ch4) rises = 2
+PB bit 4 (Ch5) rises = 0
+PB bit 5 (Ch6) rises = 0
+PB bit 6 (Ch7) rises = 0
+PB bit 7 (Ch8) rises = 0
+Expected gates = 100000
+TSPD_total = 5.200e-07 s
+sendSequence done
+1rep: SPD rises=2 (number_acq=2)
+num (expected samples) = 100000
+length(counts)        = 100000
+nonzero counts        = 1232
+mean(counts)          = 0.0125
+PB done
+DAQ done
+check .Channels(2).Enable 2
+     1
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   649
+
+helper
+   49.9231
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   600
+
+helper
+   46.1538
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+check .Channels(2).Enable 4
+     1
+
+check .Channels(2).Enable 1
+     1
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).Frequency
+   3.8265e+09
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).FreqIQ
+    50000000
+
+obj.interfaceSigGen.Frequency(1)
+   3.8265e+09
+
+check .Channels(2).Enable 5
+check .Channels(2).Enable 5
+     1
+
+num_points
+        3426
+
+nI and nQ
+        3476
+
+        3476
+
+check .Channels(2).Enable 6
+     1
+
+send_waveforms_siglent done
+check .Channels(2).Enable 7
+     1
+
+PB bit 0 (Ch1) rises = 3
+PB bit 1 (Ch2) rises = 1
+PB bit 2 (Ch3) rises = 2
+PB bit 3 (Ch4) rises = 2
+PB bit 4 (Ch5) rises = 0
+PB bit 5 (Ch6) rises = 0
+PB bit 6 (Ch7) rises = 0
+PB bit 7 (Ch8) rises = 0
+Expected gates = 100000
+TSPD_total = 5.200e-07 s
+sendSequence done
+1rep: SPD rises=2 (number_acq=2)
+num (expected samples) = 100000
+length(counts)        = 100000
+nonzero counts        = 1178
+mean(counts)          = 0.012
+PB done
+DAQ done
+check .Channels(2).Enable 2
+     1
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   598
+
+helper
+    46
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   597
+
+helper
+   45.9231
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+check .Channels(2).Enable 4
+     1
+
+check .Channels(2).Enable 1
+     1
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).Frequency
+   3.8265e+09
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).FreqIQ
+    50000000
+
+obj.interfaceSigGen.Frequency(1)
+   3.8265e+09
+
+check .Channels(2).Enable 5
+check .Channels(2).Enable 5
+     1
+
+num_points
+        3476
+
+nI and nQ
+        3526
+
+        3526
+
+check .Channels(2).Enable 6
+     1
+
+send_waveforms_siglent done
+check .Channels(2).Enable 7
+     1
+
+PB bit 0 (Ch1) rises = 3
+PB bit 1 (Ch2) rises = 1
+PB bit 2 (Ch3) rises = 2
+PB bit 3 (Ch4) rises = 2
+PB bit 4 (Ch5) rises = 0
+PB bit 5 (Ch6) rises = 0
+PB bit 6 (Ch7) rises = 0
+PB bit 7 (Ch8) rises = 0
+Expected gates = 100000
+TSPD_total = 5.200e-07 s
+sendSequence done
+1rep: SPD rises=2 (number_acq=2)
+num (expected samples) = 100000
+length(counts)        = 100000
+nonzero counts        = 1204
+mean(counts)          = 0.0122
+PB done
+DAQ done
+check .Channels(2).Enable 2
+     1
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   603
+
+helper
+   46.3846
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   620
+
+helper
+   47.6923
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+check .Channels(2).Enable 4
+     1
+
+check .Channels(2).Enable 1
+     1
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).Frequency
+   3.8265e+09
+
+handles.Array_PSeq{helper_scan,aux}.Channels(2).FreqIQ
+    50000000
+
+obj.interfaceSigGen.Frequency(1)
+   3.8265e+09
+
+check .Channels(2).Enable 5
+check .Channels(2).Enable 5
+     1
+
+num_points
+        3526
+
+nI and nQ
+        3576
+
+        3576
+
+check .Channels(2).Enable 6
+     1
+
+send_waveforms_siglent done
+check .Channels(2).Enable 7
+     1
+
+PB bit 0 (Ch1) rises = 3
+PB bit 1 (Ch2) rises = 1
+PB bit 2 (Ch3) rises = 2
+PB bit 3 (Ch4) rises = 2
+PB bit 4 (Ch5) rises = 0
+PB bit 5 (Ch6) rises = 0
+PB bit 6 (Ch7) rises = 0
+PB bit 7 (Ch8) rises = 0
+Expected gates = 100000
+TSPD_total = 5.200e-07 s
+sendSequence done
+1rep: SPD rises=2 (number_acq=2)
+num (expected samples) = 100000
+length(counts)        = 100000
+nonzero counts        = 1194
+mean(counts)          = 0.0121
+PB done
+DAQ done
+check .Channels(2).Enable 2
+     1
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   624
+
+helper
+    48
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+for kcps
+double(sum(counts(s:number_acq:end)))
+   584
+
+helper
+   44.9231
+
+handles.Array_PSeq{helper_scan,1}.Channels(3).RiseDurations(s)
+   2.6000e-07
+
+Repetitions
+       50000
+
+check .Channels(2).Enable 4
+     1
+
+check .Channels(2).Enable 1
+     1
+
+handles.Array_PSeq

@@ -1,0 +1,157 @@
+{
+  "ok": true,
+  "created_at": "2026-05-14T01:44:34.709777-04:00",
+  "project_id": "nv23_aligned_nv_t2star_13c_image145844_20260513_1507",
+  "question": "Design a targeted det-shift Ramsey diagnostic after the high-SNR det=1.0 MHz short-tau run showed a strong empirical ~1.19 MHz component but no claim-grade programmed-carrier/13C model.",
+  "basis": {
+    "terminal_shorttau_review": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_ramsey_shorttau_terminal_review_20260514_0127.json",
+    "terminal_shorttau_result": "det=1.0 MHz short-tau completed safely with no drift flags; top ratio LS component 1.192 MHz, ratio amplitude 0.03631, raw-signal amplitude 1.684 kcps; T2star/13C not promoted because model assignment is ambiguous.",
+    "accepted_candidate": "image145844_reimage_r03",
+    "position_um": [
+      117.31443569593856,
+      117.76164407822792,
+      115.14167937743193
+    ],
+    "fine_podmr_center_hz": 3875900000.0,
+    "latest_final_counts_kcps": 35.122,
+    "sequence_manifest_id": "auto__ramsey",
+    "protocol_inspection": "Live auto__ramsey/ramsey.xml uses full_experiment=0 with readout1 reference and readout2 Ramsey signal; ramsey.m applies second-pi/2 phase det*tau*360 degrees. Same tau grid keeps only programmed det changed."
+  },
+  "hypotheses": {
+    "physical_ramsey_carrier_with_detuning": "If the ~1.192 MHz component is a Ramsey carrier with an effective detuning of 192.0 kHz, increasing det from 1.0 to 1.5 MHz should shift the carrier to ~1.692 MHz and sidebands to ~1.307/2.077 MHz.",
+    "artifact_or_baseline_transient": "If the component is dominated by tau-dependent baseline/protocol artifact, the strongest component may remain near ~1.192 MHz or otherwise fail to track the +0.5 MHz programmed-det shift.",
+    "nearby_13c": "A nearby 13C claim requires sideband structure separated from the physical carrier by about 0.385 MHz and consistent across raw/readout-aware views; the det-shift check can test whether sideband candidates move with the carrier rather than fixed analysis artifacts."
+  },
+  "planned_measurement": {
+    "intent_id": "image145844_reimage_r03_ramsey_det1p5_shiftcheck_shorttau_20260514_0142",
+    "sequence_manifest_id": "auto__ramsey",
+    "scan": {
+      "vary_prop": [
+        "tau"
+      ],
+      "begin": [
+        4.8e-08
+      ],
+      "end": [
+        1.968e-06
+      ],
+      "points": [
+        41
+      ],
+      "tau_step_s": 4.8000000000000006e-08,
+      "tau_step_ns": 48.00000000000001
+    },
+    "acquisition": {
+      "average_continuously": false,
+      "averages": 12,
+      "repetitions": 90000,
+      "total_shots_per_point": 1080000
+    },
+    "float_vars": {
+      "mw_freq": 3875900000.0,
+      "det": 1500000.0,
+      "mod_depth": 1.0,
+      "length_pi_pulse": 5.2e-08,
+      "mw_ampl": -5.0,
+      "ampIQ": 5.0,
+      "freqIQ": 50000000.0,
+      "switch_delay": 1e-07,
+      "delay_wrt_1mus": 2e-07,
+      "wait_time": 2e-06,
+      "full_experiment": 0.0,
+      "sweep_range": 100000000.0,
+      "sweep_time": 1e-06,
+      "sample_rate": 250000000.0
+    },
+    "bool_vars": {
+      "do_adiabatic_inversion": true
+    },
+    "frequency_targets_hz": {
+      "programmed_carrier": 1500000.0,
+      "programmed_low_13C_sideband": 1115422.875,
+      "programmed_high_13C_sideband": 1884577.125,
+      "predicted_physical_carrier_if_1p192MHz_tracks_det": 1692000.0,
+      "predicted_physical_low_13C_if_tracks_det": 1307422.875,
+      "predicted_physical_high_13C_if_tracks_det": 2076577.125,
+      "artifact_control_previous_top": 1192000.0
+    },
+    "sampling": {
+      "span_s": 1.9200000000000003e-06,
+      "nominal_resolution_hz": 520833.33333333326,
+      "nyquist_hz": 10416666.666666666,
+      "cycles_programmed_carrier": 2.8800000000000003,
+      "cycles_predicted_physical_carrier": 3.2486400000000004,
+      "cycles_predicted_physical_low_13C": 2.5102519200000004,
+      "cycles_predicted_physical_high_13C": 3.9870280800000004
+    }
+  },
+  "model_and_resolvability": {
+    "model_family": "Ramsey signal S(t)=baseline + A exp(-t/T2*) cos(2*pi*(det+delta)*t+phi), with possible 13C sidebands at carrier +/- f13C. This run is a det-tracking diagnostic, not a blind repeat.",
+    "expected_effect_size_from_terminal_det1p0": {
+      "ratio_amplitude": 0.0363051110828865,
+      "raw_signal_amplitude_kcps": 1.6838880647923509
+    },
+    "terminal_noise_reference": {
+      "median_ratio_sem": 0.012712306599254248,
+      "median_raw_signal_sem_kcps": 1.1375814748550948
+    },
+    "distinguishability_decision": "The terminal det=1.0 component amplitude is about 2.9x the median ratio SEM and 1.5x the median raw-signal SEM per point, with coherent LS improvement over 41 points. Keeping the same shot budget should distinguish a +0.5 MHz det-tracking shift from a fixed ~1.19 MHz artifact/control component.",
+    "not_a_blind_repeat_reason": "This changes the programmed det to test a specific hypothesis raised by the terminal result while preserving tau grid/SNR/readout conditions for direct comparison."
+  },
+  "post_run_required_review": [
+    "terminal raw export",
+    "scan-order-aware drift",
+    "raw signal and fitted-reference-line normalization",
+    "LS/FFT screens at programmed, det-tracking, 13C-sideband, and previous-artifact-control frequencies",
+    "T2star fit only if a det-tracking Ramsey carrier is supported in raw/readout-aware views"
+  ],
+  "decision_before_advisory": "Proceed to MATLAB advisory and project intent verification only if bridge queue remains idle and project lifecycle is still active.",
+  "submit_spec_path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/bridge_jobs/image145844_reimage_r03_ramsey_det1p5_shiftcheck_submit_spec_20260514_0142.json",
+  "matlab_advisory_preview": {
+    "path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_ramsey_det1p5_shiftcheck_advisory_preview_20260514_0142.json",
+    "wrapper_ok": true,
+    "returncode": 0,
+    "advisory_ok": true,
+    "blockers": [],
+    "estimated_runtime": {
+      "estimator_mode": "siglent",
+      "track_per_avg": true,
+      "averages": 12,
+      "repetitions": 90000,
+      "total_shots": 1080000.0,
+      "num_scan_points": 41,
+      "total_seconds": 6953.07088,
+      "per_average_seconds": 577.33924,
+      "tracking_window_seconds": 577.33924,
+      "drift_planning_window_seconds": 577.33924,
+      "tracking_window_basis": "per_average",
+      "tracking_window_unit": "average",
+      "averages_change_tracking_window": false,
+      "repetitions_change_tracking_window": true,
+      "per_average_overhead_seconds": 512.6683
+    },
+    "tracking_cadence_policy": {
+      "timezone": "MATLAB local time",
+      "daytime_start_hour_local": 9,
+      "nighttime_start_hour_local": 21,
+      "daytime_max_untracked_window_seconds": 600,
+      "nighttime_max_untracked_window_seconds": 900,
+      "effective_period": "nighttime",
+      "effective_max_untracked_window_seconds": 900,
+      "source": "day_night_policy_default",
+      "applies_to": "pre_enqueue_advisory drift_planning_window_seconds / per_average_seconds",
+      "does_not_change": "Imaging GUI or legacy Experiment tracking_period defaults"
+    }
+  },
+  "decision_after_advisory": "Preview parsed; submit only if wrapper_ok/advisory_ok true, blockers empty, tracking window under active cap, project lifecycle active, and bridge queue idle.",
+  "actual_submission": {
+    "job_id": "nv23_ramsey_20260514_015423_auto_ramsey",
+    "batch_id": "nv23_ramsey_20260514_015303",
+    "bridge_state": "running",
+    "status_snapshot_path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/bridge_jobs/nv23_ramsey_20260514_015423_auto_ramsey.status.json",
+    "batch_state_path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/bridge_jobs/nv23_ramsey_20260514_015303.batch_state.json",
+    "started_at_status_local": "2026-05-14T01:54:36",
+    "initial_final_counts_text": "Final = 42.878 kcps",
+    "runtime_monitor_last_error": ""
+  }
+}

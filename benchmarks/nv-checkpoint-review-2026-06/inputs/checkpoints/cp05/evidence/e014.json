@@ -1,0 +1,217 @@
+{
+  "ok": true,
+  "created_at": "2026-05-14T05:48:28.860719-04:00",
+  "project_id": "nv23_aligned_nv_t2star_13c_image145844_20260513_1507",
+  "question": "Design the next targeted r03 Ramsey/T2star/13C measurement after terminal pODMR refresh selected mw_freq=3.8765 GHz.",
+  "basis": {
+    "accepted_candidate": "image145844_reimage_r03",
+    "position_um": [
+      117.31443569593856,
+      117.76164407822792,
+      115.14167937743193
+    ],
+    "terminal_podmr_refresh_review": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_fine_weak_podmr_refresh_after_detshift_terminal_review_20260514_0523.json",
+    "terminal_detshift_review": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_ramsey_det1p5_shiftcheck_terminal_review_20260514_0424.json",
+    "prior_long_8us_review": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_ramsey_det1p0_8us_terminal_review_20260513_2220.json",
+    "refreshed_mw_freq_hz": 3876500000.0,
+    "refreshed_mw_freq_ghz": 3.8765,
+    "center_precision": "0.1 MHz grid-supported, with several-100-kHz uncertainty from per-average spread and point-wise ratio offset.",
+    "why_ramsey_now": "The pODMR refresh supplies a current resonance center; the det-shift branch gave carrier-like but non-claim-grade evidence. A refreshed-center long-span det=1.5 MHz Ramsey tests whether stale mw_freq was suppressing the carrier/decay shape and gives enough span to resolve ~0.385 MHz 13C sidebands.",
+    "protocol_inspection": "Live validated auto__ramsey/ramsey.xml uses full_experiment=0 with readout1 mS=0 reference and readout2 Ramsey signal; ramsey.m applies second pi/2 phase det*tau*360 degrees. Manifest auto__ramsey permits one-dimensional tau scans and mw_freq/det/length_pi_pulse/mod_depth variables.",
+    "literature_context": {
+      "local_literature_index_search": "No local literature/INDEX.md hit for Ramsey/T2*/13C in <OPENCLAW_WORKSPACE>/literature during this wake.",
+      "web_queries": [
+        "Crossref query.title=Quantum register based on individual electronic and nuclear spin qubits in diamond -> Dutt et al., Science 316, 1312-1316 (2007), DOI 10.1126/science.1139831.",
+        "Crossref query.title=Sensing single remote nuclear spins -> Zhao et al., Nature Nanotechnology 7, 657-662 (2012), DOI 10.1038/nnano.2012.152."
+      ],
+      "takeaway_for_this_design": "Nearby 13C/nuclear-spin claims need coherent carrier/sideband or coupling evidence, not isolated FFT peaks. This plan therefore treats 13C as a target-frequency consistency test around the Ramsey carrier and keeps T2star/13C claims separated from signal presence."
+    }
+  },
+  "hypotheses": {
+    "frequency_calibration_failure_mode": "If stale mw_freq contributed to the previous weak/mixed Ramsey evidence, centering at 3.8765 GHz should move the carrier toward the programmed det=1.5 MHz and improve the raw/readout-aware oscillation shape over an 8 us span.",
+    "short_T2star_or_transient_failure_mode": "If the signal is dominated by early-time baseline/transient or T2star is too short, the refreshed long-span data may still fail skip-transient and per-average consistency despite higher shot count; in that case do not fit/promote T2star.",
+    "nearby_13C_test": "At B=359.46 G, expected 13C Larmor is 384.8 kHz. For det=1.5 MHz, sideband targets are 1.115 and 1.885 MHz around the carrier."
+  },
+  "planned_measurement": {
+    "intent_id": "image145844_reimage_r03_ramsey_refreshed_center_det1p5_8us_20x50k_20260514_0540",
+    "sequence_manifest_id": "auto__ramsey",
+    "scan": {
+      "vary_prop": [
+        "tau"
+      ],
+      "begin": [
+        4.8e-08
+      ],
+      "end": [
+        8.048e-06
+      ],
+      "points": [
+        41
+      ],
+      "tau_step_s": 2e-07,
+      "tau_step_us": 0.19999999999999998
+    },
+    "acquisition": {
+      "average_continuously": false,
+      "averages": 20,
+      "repetitions": 50000,
+      "total_shots_per_point": 1000000
+    },
+    "float_vars": {
+      "mw_freq": 3876500000.0,
+      "det": 1500000.0,
+      "mod_depth": 1.0,
+      "length_pi_pulse": 5.2e-08,
+      "mw_ampl": -5.0,
+      "ampIQ": 5.0,
+      "freqIQ": 50000000.0,
+      "switch_delay": 1e-07,
+      "delay_wrt_1mus": 2e-07,
+      "wait_time": 2e-06,
+      "full_experiment": 0.0,
+      "sweep_range": 100000000.0,
+      "sweep_time": 1e-06,
+      "sample_rate": 250000000.0
+    },
+    "bool_vars": {
+      "do_adiabatic_inversion": true
+    },
+    "frequency_targets_hz": {
+      "programmed_carrier_det_1p5MHz": 1500000.0,
+      "expected_low_13C_sideband_det_minus_larmor": 1115193.4821428573,
+      "expected_high_13C_sideband_det_plus_larmor": 1884806.5178571427,
+      "carrier_planning_band_low_from_center_uncertainty": 1200000.0,
+      "carrier_planning_band_high_from_center_uncertainty": 1800000.0,
+      "high_sideband_upper_guard_from_center_uncertainty": 2184806.5178571427,
+      "prior_det1p5_full_span_top": 1623000.0,
+      "prior_det1p5_skip_transient_top": 746000.0
+    },
+    "sampling": {
+      "span_s": 8e-06,
+      "nominal_resolution_hz": 125000.0,
+      "nyquist_hz": 2500000.0,
+      "cycles_programmed_carrier": 12.0,
+      "cycles_low_13C_sideband": 8.921547857142858,
+      "cycles_high_13C_sideband": 15.078452142857142,
+      "sideband_separation_bins_nominal": 3.0784521428571425
+    }
+  },
+  "model_and_resolvability": {
+    "model_family": "Ramsey signal S(t)=baseline + A exp[-(t/T2*)^p] cos(2*pi*(det+delta)*t+phi), with optional nearby-13C modulation/sidebands at carrier +/- gamma_13C*B. Fit T2star only after raw/readout-aware signal presence is supported.",
+    "expected_signal_scale": {
+      "detshift_full_span_programmed_carrier_ratio_amp": 0.023988282182415072,
+      "detshift_full_span_programmed_carrier_raw_amp_kcps": 1.1279290990293935,
+      "same_ratio_times_current_counts_kcps": 0.9690306470408393,
+      "shorttau_empirical_top_ratio_amp": 0.0363051110828865,
+      "shorttau_empirical_top_raw_amp_kcps": 1.6838880647923509,
+      "podmr_raw_dip_kcps_not_direct_ramsey_contrast": 7.42307692307692
+    },
+    "noise_and_visibility": {
+      "prior_8us_median_signal_sem_kcps_at_400k_shots": 1.9173231231537053,
+      "planned_total_shots_per_point": 1000000,
+      "sem_scaled_from_prior_8us_kcps": 1.2126216159346457,
+      "interpretation": "The prior det=1.5 short-tau carrier-like raw amplitude was about 1.13 kcps and the short-tau empirical top was about 1.68 kcps. Scaling the prior 8 us SEM from 400k to 1.0e6 shots gives about 1.21 kcps per point; coherent LS over 41 points should distinguish a stable carrier/sideband pattern if it is comparable to the det-shift evidence, while a null/mixed result remains meaningful."
+    },
+    "scan_resolution_decision": "8.0 us span gives ~125.0 kHz nominal resolution, so the 384.8 kHz 13C separation is about 3.1 nominal bins. The 0.2 us step gives 2.5 MHz Nyquist, covering det=1.5 MHz plus the high sideband and several-hundred-kHz pODMR center uncertainty.",
+    "drift_cadence_decision": "Use 20 even averages under snake-order guidance. Repetitions stay at 50000 so per-average tracking window should be comparable to the earlier 8 us 41-point advisory (~555 s), below the stricter 600 s daytime cap as well as the nighttime 900 s cap; total shots improve from 400k to 1.0e6 without extending each untracked average.",
+    "not_a_blind_repeat_reason": "This changes the microwave frequency to the freshly measured center, uses det=1.5 MHz to move 13C sidebands away from low-frequency transient structure, avoids tau=0, and raises total shots; it directly tests the stale-frequency/weak-carrier failure mode from the previous branch."
+  },
+  "post_run_required_review": [
+    "terminal raw export",
+    "scan-order-aware drift analysis",
+    "raw signal and fitted-reference-line normalization views",
+    "full-span and skip-transient LS/FFT screens at carrier, 13C sidebands, and prior det-shift top/control frequencies",
+    "per-average and SEM review with axis-contract check",
+    "T2star fit only after raw/readout-aware carrier/decay signal presence is supported; 13C conclusion only from consistent sideband/coupling evidence"
+  ],
+  "submit_spec_path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/bridge_jobs/image145844_reimage_r03_ramsey_refreshed_center_det1p5_8us_submit_spec_20260514_0540.json",
+  "decision_before_advisory": "Run MATLAB advisory preview, queue/verify experiment intent, then execute only if advisory/verifier report no blockers and bridge remains idle.",
+  "matlab_advisory_preview": {
+    "path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_ramsey_refreshed_center_det1p5_8us_advisory_preview_20260514_0540.json",
+    "wrapper_ok": true,
+    "returncode": 0,
+    "advisory_ok": true,
+    "blockers": [],
+    "warnings": [
+      "Validation succeeded without touching 23-C hardware paths.",
+      "Execute remains separately gated by bootstrap and local lab validation.",
+      "Applied acquisition settings from job.metadata: averages=20, repetitions=50000, average_continuously=0.",
+      "Forced experiment tracking_period=1 for bridge-configured runs."
+    ],
+    "estimated_runtime": {
+      "estimator_mode": "siglent",
+      "track_per_avg": true,
+      "averages": 20,
+      "repetitions": 50000,
+      "total_shots": 1000000.0,
+      "num_scan_points": 41,
+      "total_seconds": 11122.332,
+      "per_average_seconds": 554.8666000000001,
+      "tracking_window_seconds": 554.8666000000001,
+      "drift_planning_window_seconds": 554.8666000000001,
+      "tracking_window_basis": "per_average",
+      "tracking_window_unit": "average",
+      "averages_change_tracking_window": false,
+      "repetitions_change_tracking_window": true,
+      "per_average_overhead_seconds": 512.7063
+    },
+    "guidance": {
+      "default_max_tracking_window_seconds": 900,
+      "tracking_cadence_policy": {
+        "timezone": "MATLAB local time",
+        "daytime_start_hour_local": 9,
+        "nighttime_start_hour_local": 21,
+        "daytime_max_untracked_window_seconds": 600,
+        "nighttime_max_untracked_window_seconds": 900,
+        "effective_period": "nighttime",
+        "effective_max_untracked_window_seconds": 900,
+        "source": "day_night_policy_default",
+        "applies_to": "pre_enqueue_advisory drift_planning_window_seconds / per_average_seconds",
+        "does_not_change": "Imaging GUI or legacy Experiment tracking_period defaults"
+      },
+      "suggested_max_tracking_window_seconds": 900,
+      "planning_metric": "drift_planning_window_seconds",
+      "tracking_window_basis": "per_average",
+      "tracking_window_exceeds_suggestion": false,
+      "total_runtime_is_for_scheduling_only": true,
+      "target_total_shots": 1000000.0,
+      "shot_preservation_guidance": "When the predicted per-average tracking window is too long, first reduce repetitions per average and compensate by increasing averages so repetitions * averages remains as close as possible to the original total shots. If that is still insufficient, split the acquisition into shorter jobs. Reduce total shots only as a last resort.",
+      "adjustment_priority": [
+        "reduce repetitions per average first",
+        "raise averages to preserve repetitions * averages whenever possible",
+        "split the acquisition into shorter jobs before reducing total shots",
+        "reduce total shots only as a last resort"
+      ],
+      "reduce_total_shots_last_resort": true,
+      "averages_change_tracking_window": false,
+      "repetitions_change_tracking_window": true,
+      "recommended_actions": []
+    }
+  },
+  "decision_after_advisory": "Submit only if wrapper_ok/advisory_ok true, blockers empty, drift_planning_window below 600 s stricter daytime cap, project lifecycle active, and bridge queue idle.",
+  "actual_submission": {
+    "job_id": "nv23_ramsey_20260514_055148_auto_ramsey",
+    "batch_id": "nv23_ramsey_20260514_055021",
+    "bridge_state": "running",
+    "status_snapshot_path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/bridge_jobs/nv23_ramsey_20260514_055148_auto_ramsey.status.json",
+    "batch_state_path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/bridge_jobs/nv23_ramsey_20260514_055021.batch_state.json",
+    "started_at_status_local": "2026-05-14T05:51:56",
+    "runtime_average_index": 1,
+    "runtime_averages_total": 20,
+    "final_counts_text": "Final = 36.759 kcps",
+    "monitor_last_error": "",
+    "stop_requested": false,
+    "expected_runtime_status": {
+      "ok": true,
+      "estimator_mode": "siglent",
+      "total_seconds": 12622.332,
+      "per_average_seconds": 629.8666000000001,
+      "tracking_window_seconds": 629.8666000000001,
+      "averages": 20,
+      "repetitions": 50000,
+      "num_scan_points": 41,
+      "notes": "Siglent per-average overhead is estimated from a fixed track-per-average housekeeping term, an empirically calibrated per-scan-point programming/GUI term, and a weaker average-waveform-length term."
+    },
+    "preview_vs_runtime_estimate_note": "Pre-enqueue advisory estimated 554.9 s per average; initial running status estimates 629.9 s per average. The job was already running, under the active nighttime 900 s cap, and had no hard anomaly; do not stop solely for this modest estimate revision. Record as planning margin provenance."
+  }
+}

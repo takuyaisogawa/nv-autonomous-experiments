@@ -1,0 +1,224 @@
+{
+  "batch_id": "nv23_ramsey_20260513_230232",
+  "batch_spec_path": "<OPENCLAW_WORKSPACE>/.openclaw/single_submit/batch_specs/nv23_ramsey_20260513_230232.json",
+  "status": "running",
+  "started_at": "2026-05-14T03:02:33.118409+00:00",
+  "finished_at": "",
+  "resume_count": 0,
+  "current_item_id": "auto_ramsey",
+  "aux_state": {},
+  "items": [
+    {
+      "id": "auto_ramsey",
+      "status": "running",
+      "attempts": 1,
+      "last_error_code": "",
+      "last_error_message": "",
+      "history": [
+        {
+          "at": "2026-05-14T03:03:01.956474+00:00",
+          "event": "measurement_plan",
+          "message": "Measurement planning disabled; deterministic pre-enqueue advisory recorded.",
+          "request_path": "",
+          "plan_path": "",
+          "hook_ok": false,
+          "timeout_seconds": 0,
+          "pre_enqueue_advisory": {
+            "requested": true,
+            "ok": true,
+            "source": "claw_preview_job_advisory",
+            "job_id": "nv23_ramsey_20260513_230235_auto_ramsey",
+            "sequence": "ramsey",
+            "sequence_name": "ramsey.xml",
+            "acquisition": {
+              "average_continuously": false,
+              "track_per_avg": true,
+              "averages": 12,
+              "repetitions": 90000
+            },
+            "estimated_runtime": {
+              "estimator_mode": "siglent",
+              "track_per_avg": true,
+              "averages": 12,
+              "repetitions": 90000,
+              "total_shots": 1080000.0,
+              "num_scan_points": 41,
+              "total_seconds": 6953.07088,
+              "per_average_seconds": 577.33924,
+              "tracking_window_seconds": 577.33924,
+              "drift_planning_window_seconds": 577.33924,
+              "tracking_window_basis": "per_average",
+              "tracking_window_unit": "average",
+              "averages_change_tracking_window": false,
+              "repetitions_change_tracking_window": true,
+              "per_average_overhead_seconds": 512.6683
+            },
+            "recent_nv_drift": {
+              "sample_count": 0,
+              "recent_started_at": "",
+              "completed_count": 0,
+              "failed_count": 0,
+              "hard_failed_count": 0,
+              "stopped_count": 0,
+              "failed_rate": 0,
+              "final_counts_median_kcps": [],
+              "final_counts_min_kcps": [],
+              "low_final_counts_count": 0,
+              "severe_low_final_counts_count": 0,
+              "below_minimum_final_counts_count": 0,
+              "seed_to_tracked_median_um": [],
+              "seed_to_tracked_max_um": [],
+              "high_seed_drift_count": 0,
+              "used_search_scan_count": 0,
+              "warning_count_total": 0,
+              "risk_level": "low",
+              "suggested_max_tracking_window_seconds": 900,
+              "history_source": "tracking_event_log",
+              "include_routes": [],
+              "exclude_routes": [
+                "manual_imaging_tracking",
+                "manual_experiment_tracking"
+              ]
+            },
+            "guidance": {
+              "default_max_tracking_window_seconds": 900,
+              "tracking_cadence_policy": {
+                "timezone": "MATLAB local time",
+                "daytime_start_hour_local": 9,
+                "nighttime_start_hour_local": 21,
+                "daytime_max_untracked_window_seconds": 600,
+                "nighttime_max_untracked_window_seconds": 900,
+                "effective_period": "nighttime",
+                "effective_max_untracked_window_seconds": 900,
+                "source": "day_night_policy_default",
+                "applies_to": "pre_enqueue_advisory drift_planning_window_seconds / per_average_seconds",
+                "does_not_change": "Imaging GUI or legacy Experiment tracking_period defaults"
+              },
+              "suggested_max_tracking_window_seconds": 900,
+              "planning_metric": "drift_planning_window_seconds",
+              "tracking_window_basis": "per_average",
+              "tracking_window_exceeds_suggestion": false,
+              "total_runtime_is_for_scheduling_only": true,
+              "target_total_shots": 1080000.0,
+              "shot_preservation_guidance": "When the predicted per-average tracking window is too long, first reduce repetitions per average and compensate by increasing averages so repetitions * averages remains as close as possible to the original total shots. If that is still insufficient, split the acquisition into shorter jobs. Reduce total shots only as a last resort.",
+              "adjustment_priority": [
+                "reduce repetitions per average first",
+                "raise averages to preserve repetitions * averages whenever possible",
+                "split the acquisition into shorter jobs before reducing total shots",
+                "reduce total shots only as a last resort"
+              ],
+              "reduce_total_shots_last_resort": true,
+              "averages_change_tracking_window": false,
+              "repetitions_change_tracking_window": true,
+              "recommended_actions": []
+            },
+            "runtime_available": true,
+            "drift_available": true,
+            "warnings": [
+              "Validation succeeded without touching 23-C hardware paths.",
+              "Execute remains separately gated by bootstrap and local lab validation.",
+              "Applied acquisition settings from job.metadata: averages=12, repetitions=90000, average_continuously=0.",
+              "Forced experiment tracking_period=1 for bridge-configured runs."
+            ],
+            "notes": [
+              "Preview uses execute metadata opt-in only.",
+              "Static bootstrap prerequisites are present.",
+              "Static preflight does not auto-launch the legacy GUI stack.",
+              "The hidden/invisible bootstrap path is still unverified on the Win7 lab stack.",
+              "Default execute remains blocked unless the separate lab-only queue gate opens the production bridge route.",
+              "Launched QEG."
+            ],
+            "blockers": [],
+            "error_code": "",
+            "error_message": "",
+            "runner": {
+              "returncode": 0,
+              "timed_out": false,
+              "stdout": "{\"ok\": true, \"preview_only\": true, \"mode\": \"execute\", \"sequence\": \"ramsey\", \"job_id\": \"nv23_ramsey_20260513_230235_auto_ramsey\", \"queue_root\": \"<NV_BRIDGE_ROOT>\", \"submit_spec\": {\"job_id_prefix\": \"nv23_ramsey\", \"job_id_suffix\": \"auto_ramsey\", \"mode\": \"execute\", \"recipe\": \"xml_generic_v1\", \"sample_id\": \"NV23\", \"sequence_manifest_id\": \"auto__ramsey\", \"requested_by\": \"nv-researcher\", \"submission_path\": \"pre_enqueue_advisory_preview\", \"scan\": {\"vary_prop\": [\"tau\"], \"begin\": [4.8e-08], \"end\": [1.968e-06], \"points\": [41]}, \"float_vars\": {\"mw_freq\": 3875900000.0, \"det\": 1000000.0, \"mod_depth\": 1.0, \"length_pi_pulse\": 5.2e-08, \"mw_ampl\": -5.0, \"ampIQ\": 5.0, \"freqIQ\": 50000000.0, \"switch_delay\": 1e-07, \"delay_wrt_1mus\": 2e-07, \"wait_time\": 2e-06, \"full_experiment\": 0.0, \"sweep_range\": 100000000.0, \"sweep_time\": 1e-06, \"sample_rate\": 250000000.0}, \"bool_vars\": {\"do_adiabatic_inversion\": true}, \"limits\": {\"max_mw_power_dbm\": 15.0, \"allow_stage_motion\": false, \"allow_laser_profile\": false}, \"metadata\": {\"project_id\": \"nv23_aligned_nv_t2star_13c_image145844_20260513_1507\", \"target_label\": \"image145844_reimage_r03\", \"target_role\": \"short_tau_high_snr_ramsey_di ...[truncated]",
+              "stderr": ""
+            }
+          },
+          "plan": {}
+        }
+      ],
+      "analysis": {},
+      "last_attempt_at": "2026-05-14T03:03:01.956571+00:00"
+    }
+  ],
+  "events": [],
+  "policy": {
+    "max_attempts_per_item": 3,
+    "retry_delay_seconds": 5.0,
+    "stop_on_aux_resolution_failure": true,
+    "stop_on_fatal_failure": true,
+    "continue_on_analysis_failure": true,
+    "measurement_plan_enabled": false,
+    "measurement_plan_required": false,
+    "measurement_plan_advisory_only": true,
+    "measurement_plan_allow_current_item_overrides": false,
+    "measurement_plan_timeout_seconds": 45.0,
+    "pre_enqueue_advisory_enabled": true,
+    "pre_enqueue_advisory_required": false,
+    "analysis_review_enabled": false,
+    "analysis_review_required": false,
+    "analysis_evidence_only": true,
+    "analysis_auto_run_enabled": false,
+    "analysis_auto_adopt_aux": false,
+    "resume_incomplete_items": true,
+    "agent_recovery_enabled": true,
+    "agent_recovery_required_for_retry": false,
+    "retry_error_codes": [
+      "NVBridge:AlignNVFailed",
+      "NVBridge:RunExperimentFailed",
+      "TIMEOUT"
+    ],
+    "stop_error_codes": [
+      "AUX_RESOLUTION_FAILED",
+      "BOOTSTRAP_PRECHECK_FAILED",
+      "FLOAT_VAR_OUT_OF_RANGE",
+      "INVALID_FLOAT_VARS",
+      "INVALID_LIMITS",
+      "INVALID_SCAN",
+      "INVALID_SEQUENCE_MANIFEST_ID",
+      "MISSING_DATA_PATH",
+      "MODE_NOT_ALLOWED_BY_MANIFEST",
+      "NVBridge:ExecuteNotVerified",
+      "NVBridge:RunControlStopRequested",
+      "NVBridge:RunExperimentAborted",
+      "QUEUE_ROOT_UNAVAILABLE",
+      "SCAN_NOT_ALLOWED_BY_MANIFEST",
+      "SUBMISSION_LOCK_TIMEOUT",
+      "SUBMISSION_LOCK_UNAVAILABLE"
+    ],
+    "retry_error_prefixes": [],
+    "stop_error_prefixes": [
+      "INVALID_",
+      "MISSING_",
+      "SCAN_",
+      "MATLAB:"
+    ],
+    "retry_error_message_substrings": [],
+    "stop_error_message_substrings": [
+      "matlab:serial:fwrite:opfailed",
+      "instrument object obj is an invalid object"
+    ],
+    "default_unknown_error_action": "retry"
+  },
+  "control": {
+    "path": "<OPENCLAW_WORKSPACE>/.openclaw/single_submit/batches/nv23_ramsey_20260513_230232.control.json",
+    "stop_requested": false,
+    "stop_reason": "",
+    "requested_by": "",
+    "updated_at": "2026-05-14T03:02:33.118102+00:00"
+  },
+  "progress": {
+    "completed": 0,
+    "total": 1,
+    "pending": 0,
+    "running": 1,
+    "retrying": 0,
+    "failed": 0,
+    "blocked": 0,
+    "stopped": 0
+  }
+}

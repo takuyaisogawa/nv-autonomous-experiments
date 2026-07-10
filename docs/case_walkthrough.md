@@ -97,7 +97,7 @@ Main entry points:
 | Non-blind Ramsey follow-ups | Second long-span Ramsey, short-tau/high-SNR diagnostic, det-shift diagnostic | Change measurement conditions to test failure modes; do not promote ambiguous components into claims | `work/artifacts/analysis/`, `work/notes/20260513_2220_second_ramsey_terminal_review.md`, `work/notes/20260514_0200_shorttau_terminal_review_and_detshift_start.md` |
 | pODMR refresh | Fine weak-pi pODMR refresh after det-shift branch | Refresh `mw_freq_hz` before final long-span Ramsey; treat pODMR refresh as calibration only | `work/artifacts/analysis/image145844_reimage_r03_fine_weak_podmr_refresh_after_detshift_terminal_review_20260514_0523.json`, `work/notes/20260514_0540_podmr_refresh_review_and_refreshed_center_ramsey_design.md` |
 | Final refreshed-center Ramsey | 20-average refreshed-center Ramsey terminal review and model comparison | Under fixed-carrier interpretation, no unconditional numeric T2star and no fixed 13C sideband claim | `work/artifacts/analysis/image145844_reimage_r03_ramsey_refreshed_center_terminal_review_20260514_0938.json`, `work/artifacts/analysis/image145844_reimage_r03_ramsey_refreshed_center_terminal_model_comparison_20260514_0948.json` |
-| Bridge-free reanalysis | Human advice requesting shifted-sideband analysis only, final Ramsey data, bootstrap/model comparison | Revise the 13C conclusion to plausible shifted-sideband candidate evidence; do not touch the bridge | `work/artifacts/analysis/image145844_reimage_r03_ramsey_refreshed_center_shifted_sideband_reanalysis_20260514_1308.json`, `work/artifacts/analysis/image145844_reimage_r03_shifted_triplet_targeted_bootstrap_20260514_1312.json` |
+| Bridge-free reanalysis | Human advice requesting Ramsey frequency reanalysis, final Ramsey data, bootstrap/model comparison | Revise the Ramsey frequency interpretation after considering a residual calibration offset; do not touch the bridge | `work/artifacts/analysis/image145844_reimage_r03_ramsey_refreshed_center_shifted_sideband_reanalysis_20260514_1308.json`, `work/artifacts/analysis/image145844_reimage_r03_shifted_triplet_targeted_bootstrap_20260514_1312.json` |
 | Closeout | Revised closeout report and work note | Stop automatic bridge work; preserve conservative claim boundaries | `work/artifacts/reports/20260514_1320_r03_shifted_sideband_recloseout/image145844_reimage_r03_shifted_sideband_recloseout_report_20260514_1320.pdf`, `work/notes/20260514_1320_shifted_sideband_reanalysis_and_recloseout.md` |
 
 ### Final Case Reading
@@ -106,8 +106,9 @@ The case shows iterative candidate selection and rejection, explicit separation
 between tracking evidence and resonance evidence, non-blind follow-up design
 after ambiguous Ramsey data, and a bridge-free interpretation update. The final
 claim boundary is deliberately conservative: aligned `r03` found; no
-unconditional claim-grade numeric T2star; plausible nearby-13C shifted-sideband
-candidate evidence conditional on a residual carrier shift.
+unconditional claim-grade numeric T2star; revised Ramsey frequency
+interpretation after considering a residual calibration offset, without an
+independently confirmed nearby-13C coupling claim.
 
 ## image231924
 

@@ -1,0 +1,108 @@
+# Project State: nv23_aligned_nv_t2star_13c_image145844_20260513_1507
+
+This is the main readable project state. Keep it short, current, and useful.
+Keep bridge-execution contracts in `work/bridge_jobs/` or the live bridge queue.
+Put detailed derivations, checks, and failed ideas in `work/notes/` so future wakes
+can look them up without carrying everything in context.
+
+## Objective
+
+Find a magnetic-field-aligned NV from image145844, then obtain a well-supported T2star and 13C conclusion.
+
+## Current Status
+
+- Initial image145844 export was verified as `ImageData_YXZ`, units `kcps`, shape `[81,81,2]`, with ranges `Y=110..120 um`, `X=114..124 um`, `Z=115..116 um`.
+- Original r01 from the saved image tracked once at `38.629 kcps`, but the first pODMR acquired zero averages after a `6.584 kcps` count gate and a retrack failed at `4.224 kcps`. This was treated as count/focus/image-frame shift, not no-resonance evidence.
+- A fresh Imaging scan over the original image145844 region completed. The saved re-image `ImageData` was `[3,61,61]`; the bridge result explicitly recorded permutation `[2 3 1]` to Y-X-Z, so candidate selection used that explicit contract.
+- Fresh top candidates from the re-image were r01 `[114.333333,117.333333,116.0] um`, r02 `[115.833333,118.166667,116.5] um`, and r03 `[117.166667,118.166667,116.0] um`.
+- Fresh r01 tracked at `38.971 kcps`, then completed strong-pi pODMR (`3.825..3.925 GHz`, 21 points, 2 x 40000, `mod_depth=1`, `length_rabi_pulse=52 ns`). Raw/readout-aware review found no clear usable resonance; baseline/drift/average changes dominate, both averages were drift-flagged, and a descriptive dip fit was poor (`R2 ~ 0.20`). r01 is rejected for alignment selection for now.
+- Fresh r02 tracked at `39.367 kcps`, then completed strong-pi pODMR (`3.825..3.925 GHz`, 21 points, 4 x 20000, `mod_depth=1`, `length_rabi_pulse=52 ns`; final text counts `38.776 kcps`). Raw/readout-aware review found no clear usable resonance. The deepest raw signal point is off-center at `3.850 GHz`, point-wise normalization is reference-denominator sensitive, the largest reference-line-normalized residual dip is only about `6%` with comparable fluctuations/peaks, average 4 was drift-flagged with about `31%` common-mode drop, and the descriptive Lorentzian dip fit is boundary/unphysical. r02 is rejected for alignment selection for now.
+- Fresh r03 tracked successfully at `43.535 kcps` at `[117.314436,117.761644,115.141679] um` (selected z attempt 2; no tracker abort).
+- r03 strong-pi pODMR completed (`3.825..3.925 GHz`, 11 points, 4 x 20000, `mod_depth=1`, `length_rabi_pulse=52 ns`). Raw/readout-aware review supports a clear usable resonance at `3.875 GHz`: raw signal, point-wise ratio, and reference-line normalization all have their deepest dip at the 3.875 GHz grid point; raw signal drop is about `16.6%` vs edge median; all 4 stored averages show a center-point drop; scan-order-aware drift analysis flags no averages. Accept r03 as the first magnetic-field-aligned candidate for targeted follow-up.
+- r03 weak-pi pODMR completed (`3.865..3.885 GHz`, 21 points, `mod_depth=0.1`, `length_rabi_pulse=0.57 us`, `4 x 50000`, final counts `43.890 kcps`). Raw/readout-aware review supports a clear usable resonance at `3.876 GHz`: raw signal, point-wise ratio, and reference-line normalization all minimize at 3.876 GHz; all 4 averages have their signal minimum there; raw signal drop is about `14.3%` vs edge median. Scan-order-aware drift flags average 4, but the common dip is present in all averages, so drift is provenance rather than a hard invalidation. Use `mw_freq_hz = 3.876e9` as the grid-supported Ramsey frequency; the descriptive Lorentzian fit is recorded but grid-limited and not used as the hard center.
+- The first Ramsey/T2star scout on accepted r03 completed as `nv23_ramsey_20260513_185505_auto_ramsey` with savedexperiment `1DExp-seq-ramsey-vary-tau-2026-05-13-185521.mat`, `tau = 0..6 us` in 31 points, `mw_freq = 3.876 GHz`, `det = 1.5 MHz`, `4 averages x 50000 repetitions`, and final counts `38.249 kcps`. Raw/readout-aware + FFT review found analyzable data and no scan-order-aware drift flags, but only weak non-claim-grade spectral content: the strongest combined exploratory component is near `0.884 MHz`, not the programmed `1.5 MHz` carrier or expected `1.115/1.885 MHz` 13C sideband positions, and stored averages disagree. Do not claim T2star or 13C from this scout.
+- The fine weak-pi pODMR frequency-refinement follow-up on r03 completed as `nv23_pulsed_odmr_rabimodulated_v1_20260513_195437_pulsed_odmr_rabimodulated_v1` with savedexperiment `1DExp-seq-Rabimodulated-vary-mw_freq-2026-05-13-195452.mat`, `3.8745..3.8775 GHz` in 31 points, `mod_depth=0.1`, `length_rabi_pulse=0.57 us`, `4 x 50000` repetitions, and final counts `39.424 kcps`. Terminal raw/readout-aware review supports a clear refined center at `3.8759 GHz`: combined raw signal, point-wise ratio, and reference-line normalization all minimize there; raw drop is about `11.9%` vs edge median; per-average raw minima are split between `3.8759` and `3.8760 GHz`; scan-order-aware drift flags no averages. Use `mw_freq_hz = 3.8759e9` for the next Ramsey, without claiming sub-grid precision.
+- The second Ramsey/T2star/13C follow-up completed as `nv23_ramsey_20260513_204925_image145844_reimage_r03_ramsey_det1p0_8us_8avg` with savedexperiment `1DExp-seq-ramsey-vary-tau-2026-05-13-204940.mat`, validated `auto__ramsey`, `tau = 0..8 us` in 41 points, `mw_freq = 3.8759 GHz`, `det = 1.0 MHz`, `8 averages x 50000 repetitions`, and final counts `44.184 kcps`. Terminal raw/readout-aware + FFT/least-squares review found no hard anomaly and no scan-order-aware drift flags, but the programmed `1.0 MHz` carrier is weak (`0.00916` ratio LS amplitude, `0.277 kcps` raw-signal amplitude), below/near measured per-point SEM and below the model-plan expected order-`2..6 kcps` raw oscillation scale. The largest combined ratio screen is near `1.178 MHz`, not the carrier or expected `0.615/1.385 MHz` 13C sidebands; per-average frequency screens are inconsistent.
+- The det-shift diagnostic argues against simply promoting the prior non-claim-grade `~0.884 MHz` feature, but it still does not produce a clean det-following carrier/sideband model. Do not claim T2star or nearby 13C from either Ramsey dataset so far. A non-blind redesigned follow-up should focus on whether T2star is very short and whether a carrier appears under short-tau/higher-SNR conditions, or else choose an alternate protocol before branch closeout.
+- A short-tau/high-SNR Ramsey diagnostic is now running as `nv23_ramsey_20260513_230331_auto_ramsey` (generic bridge suffix; metadata links it to verified intent `image145844_reimage_r03_ramsey_shorttau_48ns_1968ns_12x90k_20260513_2257`). It uses validated `auto__ramsey`, `tau = 48 ns..1.968 us` in 41 sample-grid points, `mw_freq = 3.8759 GHz`, `det = 1.0 MHz`, `12 averages x 90000 repetitions` (`1.08e6` shots per tau point), explicit r03 position, and starts after tau=0 to avoid the prior tau=0 artifact. MATLAB preview/advisory had no blockers; running status expected per-average tracking window `652.339 s`, under the active `900 s` nighttime cap. At latest copied status it was running at average `1/12`, phase `run_experiment_scan_point`, monitor `last_error` empty, final-count text `42.367 kcps`, and no stop request. A duplicate relaunch job `nv23_ramsey_20260513_230511_image145844_reimage_r03_ramsey_shorttau_48ns_1968ns_12x90k` was canceled before execution by moving it from `queued/` to `canceled/`; bridge `queued/` is empty and only the intended short-tau job remains running.
+
+## Candidate Findings
+
+- r01: trackable and bright, but no clear usable strong-pi pODMR resonance in the completed raw/readout-aware screen. Do not use r01 for Ramsey/T2star unless future evidence changes the resonance conclusion.
+- r02: trackable and bright, but no clear usable strong-pi pODMR resonance in the completed raw/readout-aware screen. Do not use r02 for Ramsey/T2star unless future evidence changes the resonance conclusion.
+- r03: trackable, bright, accepted as the first aligned candidate after clear strong-pi pODMR resonance evidence, and weak-pi/fine-pODMR calibrated to a grid-supported usable resonance at `3.8759 GHz`. Two completed Ramsey datasets on r03 are analyzable but non-claim-grade: the first det=1.5 MHz scout and the second det=1.0 MHz higher-SNR follow-up both lack a supported programmed-carrier/sideband model. A redesigned short-tau/high-SNR diagnostic is now running to test the specific very-short-T2star/early-time-carrier failure mode. Do not run another blind long-window Ramsey repeat.
+- Later fresh candidates remain available only if r03 follow-up fails through tracking/count/hardware or if later spectroscopy invalidates the r03 alignment conclusion.
+
+## Final Claims
+
+- A magnetic-field-aligned candidate has been established for targeted follow-up: `image145844_reimage_r03` at tracked position `[117.314436,117.761644,115.141679] um`, with supported strong-pi pODMR resonance at the `3.875 GHz` grid point, weak-pi pODMR resonance at the `3.876 GHz` grid point, and fine weak-pi refined grid-supported center at `3.8759 GHz`.
+- No well-supported T2star conclusion has been established yet.
+- No well-supported 13C conclusion has been established yet.
+
+## Decisions
+
+- Use strong-pi pODMR as the alignment screen, with `mod_depth=1.0` and explicit current-pi pulse length, as requested by operator.
+- Do not treat TrackCenter counts as alignment evidence.
+- Do not use point-wise normalization or automatic fit-only evidence as the signal-presence criterion.
+- Because r01 and r02 pODMR lack clear usable resonances, do not plan T2star on either candidate.
+- Because r03 strong-pi and weak-pi pODMR have raw/readout-aware clear resonance evidence, stop broad candidate screening for now and focus targeted follow-up on r03.
+- Use the terminal fine weak-pi pODMR grid minimum `mw_freq_hz = 3.8759e9` for the next Ramsey, but do not over-interpret sub-grid center precision. The fine pODMR tightens the frequency input but does not by itself explain the first Ramsey scout's carrier mismatch.
+- The first Ramsey/T2star scout used validated `auto__ramsey` with a one-dimensional `tau` scan after inspecting the manifest/XML/function. It is evidence that the route can return analyzable data, but not claim-grade T2star or 13C evidence.
+- The second Ramsey/T2star follow-up with `det = 1.0 MHz`, `tau = 0..8 us` in 41 points, and `8 x 50000` shots completed safely and doubled the first scout shot count, but it still did not support a programmed-carrier/sideband model. Do not fit or promote a numeric T2star until a raw/readout-aware carrier/decay shape is supported. The next r03 Ramsey attempt must change measurement conditions to test a specific failure mode such as very short T2star rather than simply accumulating another identical 8 us scan.
+- The current short-tau diagnostic changes the measurement conditions deliberately: it avoids tau=0, concentrates the scan over 48 ns..1.968 us, keeps det fixed at 1.0 MHz to isolate the tau-window/SNR change, and raises total shots to `1.08e6` per tau point. If this remains non-claim-grade, avoid further blind Ramsey repeats on r03; synthesize an alternate protocol or close the r03 Ramsey/13C branch as unsupported under current conditions.
+
+## Next Step
+
+- Monitor running short-tau/high-SNR Ramsey diagnostic `nv23_ramsey_20260513_230331_auto_ramsey` and batch state `nv23_ramsey_20260513_230232.state.json`. It is expected to take about `7853 s` total in the live runtime estimate; while running, queue occupancy blocks further bridge-touching submissions. Use autosave raw export only for anomaly/progress review; do not claim T2star or 13C until terminal raw export, scan-order-aware drift analysis, and raw/readout-aware carrier/decay review are complete.
+- When it completes: copy terminal job/result/status/control and batch state into `work/bridge_jobs/`; complete intent `image145844_reimage_r03_ramsey_shorttau_48ns_1968ns_12x90k_20260513_2257`; raw-export the final savedexperiment; run scan-order-aware drift; review raw signal, fitted-reference-line normalization, skip-tau0/full-window views, and target LS/FFT screens at `1.0 MHz`, `0.615 MHz`, and `1.385 MHz`. Fit T2star only if raw/readout-aware signal presence and data shape support it. If it remains non-claim-grade, avoid further blind Ramsey repeats and decide between alternate protocol or no supported r03 Ramsey/13C conclusion.
+
+## Evidence Pointers
+
+- `image145844_raw_export_20260513_1509`: verified original saved-image export and axis/units.
+- `image145844_candidate_selection_20260513_1509`: ranked original candidates.
+- `preliminary_alignment_t2star_13c_model_20260513_1518`: expected field from 3.875 GHz ms=+1 resonance about 358.6 G, 13C Larmor about 0.384 MHz, strong-pi time about 50 ns.
+- `nv23_image145844_r01_track_20260513_1509_result`: original r01 TrackCenter success.
+- `nv23_pulsed_odmr_rabimodulated_v1_20260513_152753_image145844_r01_strong_podmr_failed_result`: first r01 pODMR count-gate failure.
+- `nv23_image145844_r01_retrack_after_podmr_fail_20260513_1531_failed_result`: first r01 retrack failure.
+- `nv23_image145844_reimage_after_r01_count_collapse_20260513_1536_result`: fresh Imaging result.
+- `image145844_reimage_raw_export_20260513_1548`: fresh re-image export with explicit axis contract.
+- `image145844_reimage_candidate_selection_20260513_1550` and `image145844_reimage_candidate_selection_figure_20260513_1550`: fresh candidate selection.
+- `nv23_image145844_reimage_r01_track_20260513_1551_result`: fresh r01 TrackCenter success.
+- `nv23_pulsed_odmr_rabimodulated_v1_20260513_160009_image145844_reimage_r01_strong_podmr_result`: fresh r01 pODMR completed.
+- `image145844_reimage_r01_strong_podmr_raw_review_20260513_1615`: r01 no-clear-resonance review.
+- `nv23_image145844_reimage_r02_track_20260513_1617_result`: fresh r02 TrackCenter success.
+- `nv23_pulsed_odmr_rabimodulated_v1_20260513_162710_image145844_reimage_r02_strong_podmr_result`: fresh r02 pODMR completed.
+- `image145844_reimage_r02_strong_podmr_raw_review_20260513_1658`: r02 no-clear-resonance review.
+- `nv23_image145844_reimage_r03_track_20260513_1708_result`: fresh r03 TrackCenter success.
+- `bridge_result_20260513_175230_617572_651f4ee33e`: r03 strong-pi pODMR terminal result copied into project.
+- `analysis_20260513_175230_714117_79f2732cb7`: r03 strong-pi pODMR raw/readout-aware review; accepts r03 as first aligned candidate.
+- `image145844_reimage_r03_weak_podmr_model_and_advisory_20260513_1755`: explicit weak-pi pODMR model/resolvability calculation and advisory preview.
+- `nv23_pulsed_odmr_rabimodulated_v1_20260513_180419_image145844_reimage_r03_weak_podmr_job`: weak-pi pODMR job artifacts.
+- `bridge_result_20260513_185733_669383_5965b6e853`: weak-pi pODMR terminal bridge result copied into project.
+- `image145844_reimage_r03_weak_podmr_raw_review_20260513_1838`: weak-pi pODMR raw/readout-aware review; supports 3.876 GHz grid resonance.
+- `image145844_reimage_r03_ramsey_t2star_model_and_advisory_20260513_1849`: Ramsey/T2star model, protocol inspection, initial rejected 8 us/51 point preview, and accepted revised 6 us/31 point advisory.
+- `nv23_ramsey_20260513_185505_image145844_reimage_r03_ramsey_t2star_job`: first Ramsey/T2star scout job artifacts.
+- `image145844_reimage_r03_ramsey_t2star_terminal_20260513_1930`: Ramsey terminal result copied into project.
+- `image145844_reimage_r03_ramsey_t2star_raw_fft_review_20260513_1930`: raw/readout-aware Ramsey + FFT review; analyzable but non-claim-grade, no T2star/13C conclusion.
+- `image145844_reimage_r03_fine_weak_podmr_model_and_advisory_20260513_1950`: fine weak-pi pODMR model/resolvability and advisory preview.
+- `nv23_pulsed_odmr_rabimodulated_v1_20260513_195437_image145844_reimage_r03_fine_weak_podmr_job`: fine weak-pi pODMR frequency-refinement job artifacts.
+- `image145844_reimage_r03_fine_weak_podmr_terminal_20260513_2031`: fine weak-pi pODMR terminal result copied into project.
+- `image145844_reimage_r03_fine_weak_podmr_raw_review_20260513_2031`: terminal fine pODMR raw/readout-aware review; supports grid center `3.8759 GHz`.
+- `image145844_reimage_r03_ramsey_det1p0_8us_8avg_model_and_advisory_20260513_2042`: second Ramsey model/advisory; no blockers, `554.768 s` per average under cap.
+- `nv23_ramsey_20260513_204925_image145844_reimage_r03_ramsey_det1p0_8us_8avg_job`: running second Ramsey/T2star/13C follow-up artifacts.
+- `image145844_reimage_r03_ramsey_det1p0_8us_autosave_sanity_20260513_2124`: in-progress autosave sanity review at 3/8 averages; no hard anomaly and no T2star/13C claim.
+- `image145844_reimage_r03_ramsey_det1p0_8us_autosave_review_20260513_2152`: in-progress autosave opportunity review raw-exported 5/8 stored averages while copied status had advanced to 6/8; no hard anomaly and no T2star/13C claim.
+- `image145844_reimage_r03_ramsey_det1p0_8us_terminal_review_20260513_2220`: terminal second Ramsey raw/readout-aware + drift + FFT/least-squares review; no hard anomaly, no drift flags, no supported T2star/13C claim; recommends a non-blind short-tau/high-SNR diagnostic or alternate protocol.
+- `image145844_reimage_r03_ramsey_shorttau_model_and_advisory_20260513_2257`: quantitative model, submit spec, verified intent, and MATLAB advisory for the short-tau/high-SNR Ramsey diagnostic; no advisory blockers.
+- `nv23_ramsey_20260513_230331_auto_ramsey_shorttau_job_started`: running short-tau Ramsey bridge job artifacts and duplicate queued relaunch cancellation evidence.
+- Notes: `work/notes/20260513_1546_r01_count_collapse_reimage.md`, `work/notes/20260513_1629_reimage_r01_r02_alignment_progress.md`, `work/notes/20260513_1709_r02_review_and_r03_track.md`, `work/notes/20260513_1721_r03_track_and_podmr_start.md`, `work/notes/20260513_1808_r03_acceptance_and_weak_podmr_start.md`, `work/notes/20260513_1858_weak_podmr_review_and_ramsey_start.md`, `work/notes/20260513_1958_ramsey_review_and_fine_podmr_start.md`, `work/notes/20260513_2025_fine_weak_podmr_autosave_review.md`, `work/notes/20260513_2031_fine_weak_podmr_terminal_review.md`, `work/notes/20260513_2124_second_ramsey_autosave_sanity_review.md`, `work/notes/20260513_2152_second_ramsey_autosave_opportunity_review.md`, `work/notes/20260513_2220_second_ramsey_terminal_review.md`, `work/notes/20260513_2257_shorttau_ramsey_design_and_start.md`.
+
+## Note Convention
+
+For each meaningful unit of work, write one short Markdown note under
+`work/notes/` with: question, inputs read, action taken, result, checks
+actually performed, remaining uncertainty, and next pointer.
+
+Bridge-job JSON should contain execution contracts only: sequence/manifest, scan,
+numeric variables, hard limits, queue/execute opt-in, target labels, and Markdown
+note pointers. Scientific interpretation belongs in this file and `work/notes/`.

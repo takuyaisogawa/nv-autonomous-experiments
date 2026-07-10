@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "checkpoint_id": "cp04",
+  "created_at": "2026-05-14T02:20:12",
+  "cutoff_time": "2026-05-14T02:20:12",
+  "cutoff_rule": "future-blind replay may use only prompt, payload, report, and file snapshots captured in this wake record, or explicit current-memory overlay snapshots selected by the evaluator",
+  "agent": {
+    "id": "nv-researcher",
+    "model": "openai-codex/gpt-5.5",
+    "thinking": "xhigh"
+  },
+  "next_action": {
+    "kind": "advance_project",
+    "reason": "execution queue is empty; wake the agent to synthesize or update the research agenda and advance all currently runnable safe project work from objective, evidence, human advice, and safety policy"
+  },
+  "agent_visible_files": {
+    "project": [
+      "project/state.md",
+      "project/brief.md",
+      "project/advice.md"
+    ],
+    "md": [
+      "md/memory.md",
+      "md/knowledge.md"
+    ],
+    "context": [
+      "context.json"
+    ],
+    "evidence": [
+      "evidence/e001.json",
+      "evidence/e002.json",
+      "evidence/e003.json",
+      "evidence/e004.json",
+      "evidence/e005.md",
+      "evidence/e006.json",
+      "evidence/e007.json",
+      "evidence/e008.json",
+      "evidence/e009.py",
+      "evidence/e010.json",
+      "evidence/e011.json",
+      "evidence/e012.json",
+      "evidence/e013.json",
+      "evidence/e014.log",
+      "evidence/e015.log",
+      "evidence/e016.json",
+      "evidence/e017.json",
+      "evidence/e018.json",
+      "evidence/e019.json",
+      "evidence/e020.json",
+      "evidence/e021.json",
+      "evidence/e022.json",
+      "evidence/e023.json",
+      "evidence/e024.json",
+      "evidence/e025.json",
+      "evidence/e026.log",
+      "evidence/e027.log",
+      "evidence/e028.json",
+      "evidence/e029.json",
+      "evidence/e030.json"
+    ],
+    "measurement": [
+      "measurement/m001.json",
+      "measurement/m002.json",
+      "measurement/m003.json",
+      "measurement/m004.json",
+      "measurement/m005.json"
+    ]
+  },
+  "recent_evidence": [
+    {
+      "item": "recent_001",
+      "category": "analysis",
+      "summary": "Updated in-progress autosave review for the running short-tau/high-SNR r03 Ramsey diagnostic after the MAT reached 10 stored averages. The 10-average raw export has 900000 shots per tau point; the job remained healthy with monitor last_error empty and stop_requested=false. A later status snapshot had advanced to 11/12 averages with final-count text 35.122 kcps, still no monitor error or stop request. The early-time signal/ratio transient persists with median signal SEM about 1.06 kcps, and the exploratory ratio LS component remains near 1.187 MHz; this is nonterminal context only and no T2star/13C claim is supported before terminal raw export plus scan-order-aware drift.",
+      "related_claims": [],
+      "tags": [],
+      "timestamp": "2026-05-14T01:20:22",
+      "file_count": 6
+    },
+    {
+      "item": "recent_002",
+      "category": "figure",
+      "summary": "Short-tau Ramsey 10-average autosave refresh: Re-exported the running short-tau r03 Ramsey autosave after 10 stored averages became available. The job remains healthy: 10-average snapshot final-count text 42.469 kcps, later live snapshot advanced to 11/12 with 35.122 kcps, monitor last_error empty, and stop_requested=false. The early-time signal/ratio transient persists with median signal SEM about 1.06 kcps and exploratory ratio LS strongest near 1.187 MHz, but this is nonterminal context only. No T2star or 13C claim is supported before terminal raw export plus scan-order-aware drift.",
+      "related_claims": [],
+      "tags": [],
+      "timestamp": "2026-05-14T01:20:22",
+      "file_count": 1
+    },
+    {
+      "item": "recent_003",
+      "category": "analysis",
+      "summary": "Terminal short-tau/high-SNR r03 Ramsey review for job nv23_ramsey_20260513_230331_auto_ramsey: run completed safely with 12 averages x 90000 repetitions, final counts 35.122 kcps, scan-order-aware drift OK with no flagged averages using snake order. The strongest ratio-screen component is near 1.192 MHz and a descriptive damped sinusoid gives about 1.198 MHz / T2star 6.33 us, but the programmed 1.0 MHz carrier and expected 13C sidebands are not dominant enough for a supported physical model. No well-supported T2star or 13C claim from this run.",
+      "related_claims": [
+        "no_supported_T2star_yet",
+        "no_supported_13C_yet"
+      ],
+      "tags": [
+        "ramsey",
+        "terminal",
+        "short_tau",
+        "t2star",
+        "13c",
+        "r03"
+      ],
+      "timestamp": "2026-05-14T02:02:10",
+      "file_count": 14
+    },
+    {
+      "item": "recent_004",
+      "category": "artifact",
+      "summary": "Started targeted det-shift Ramsey diagnostic on accepted r03 as nv23_ramsey_20260514_015423_auto_ramsey, batch nv23_ramsey_20260514_015303. It keeps the short-tau 48 ns..1.968 us / 41 point grid and 12 x 90000 shots, changes det from 1.0 to 1.5 MHz, and tests whether the terminal ~1.192 MHz component tracks to ~1.692 MHz or remains artifact-like. Pre-enqueue advisory and project intent verification had no blockers; initial runtime status is running at 1/12 averages with final-count text 42.878 kcps and monitor last_error empty.",
+      "related_claims": [
+        "pending_T2star",
+        "pending_13C"
+      ],
+      "tags": [
+        "ramsey",
+        "det_shift",
+        "running",
+        "r03"
+      ],
+      "timestamp": "2026-05-14T02:02:10",
+      "file_count": 12
+    },
+    {
+      "item": "recent_005",
+      "category": "figure",
+      "summary": "Short-tau Ramsey terminal review and det-shift start: Terminal short-tau/high-SNR r03 Ramsey review for job nv23_ramsey_20260513_230331_auto_ramsey: run completed safely with 12 averages x 90000 repetitions, final counts 35.122 kcps, scan-order-aware drift OK with no flagged averages using snake order. The strongest ratio-screen component is near 1.192 MHz and a descriptive damped sinusoid gives about 1.198 MHz / T2star 6.33 us, but the programmed 1.0 MHz carrier and expected 13C sidebands are not dominant enough for a supported physical model. No well-supported T2star or 13C claim from this run. Started targeted det-shift Ramsey diagnostic on accepted r03 as nv23_ramsey_20260514_015423_auto_ramsey, batch nv23_ramsey_20260514_015303. It keeps the short-tau 48 ns..1.968 us / 41 point grid and 12 x 90000 shots, changes det from 1.0 to 1.5 MHz, and tests whether the terminal ~1.192 MHz component tracks to ~1.692 MHz or remains artifact-like. Pre-enqueue advisory and project intent verification had no blockers; initial runtime status is running at 1/12 averages with final-count text 42.878 kcps and monitor last_error empty.",
+      "related_claims": [],
+      "tags": [],
+      "timestamp": "2026-05-14T02:02:10",
+      "file_count": 1
+    }
+  ],
+  "notes": [
+    "Project, memory, knowledge, context, and evidence files are from the launch-time snapshot immediately after the target Ramsey was started.",
+    "The measurement directory contains only later terminal raw data and bridge metadata for that target Ramsey.",
+    "Source artifact names, source wake names, and source paths were removed from this agent-visible context file.",
+    "Use the neutral files in this checkpoint directory as the available evidence."
+  ]
+}

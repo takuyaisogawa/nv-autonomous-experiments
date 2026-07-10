@@ -1,0 +1,308 @@
+{
+  "ok": true,
+  "created_at": "2026-05-13T22:59:17.834247-04:00",
+  "project_id": "nv23_aligned_nv_t2star_13c_image145844_20260513_1507",
+  "question": "Design a non-blind short-tau/high-SNR Ramsey diagnostic after two non-claim-grade r03 Ramsey datasets.",
+  "basis": {
+    "terminal_review": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_ramsey_det1p0_8us_terminal_review_20260513_2220.json",
+    "terminal_second_ramsey_result": "No supported T2star or nearby-13C claim; det=1.0 MHz carrier LS amplitude only 0.00916 ratio / 0.277 kcps raw-signal, top combined screen near 1.178 MHz, no drift flags.",
+    "accepted_mw_freq_hz": 3875900000.0,
+    "accepted_candidate": "image145844_reimage_r03",
+    "position_um": [
+      117.31443569593856,
+      117.76164407822792,
+      115.14167937743193
+    ],
+    "last_terminal_counts_kcps": 44.184,
+    "sequence_manifest_id": "auto__ramsey",
+    "xml": "<MATLAB_23C_ROOT>/SavedSequences/SavedSequences-AWG/ramsey.xml",
+    "function": "<MATLAB_23C_ROOT>/PulseSequencer/Sequence-commands/AWG/ramsey.m",
+    "protocol_inspection": "Live ramsey.xml uses full_experiment=0 with readout1 mS=0 reference and readout2 Ramsey signal; ramsey.m applies second-pi/2 phase det*tau*360 degrees. tau min is 0; the proposed scan starts at 48 ns to avoid the tau=0 artifact seen in the 8 us data and to land on the 250 MHz sample grid."
+  },
+  "planned_measurement": {
+    "intent_id": "image145844_reimage_r03_ramsey_shorttau_48ns_1968ns_12x90k_20260513_2257",
+    "sequence_manifest_id": "auto__ramsey",
+    "scan": {
+      "vary_prop": [
+        "tau"
+      ],
+      "begin": [
+        4.8e-08
+      ],
+      "end": [
+        1.968e-06
+      ],
+      "points": [
+        41
+      ],
+      "tau_step_s": 4.8000000000000006e-08,
+      "tau_step_ns": 48.00000000000001
+    },
+    "acquisition": {
+      "averages": 12,
+      "repetitions": 90000,
+      "average_continuously": false,
+      "total_shots_per_point": 1080000
+    },
+    "float_vars": {
+      "mw_freq": 3875900000.0,
+      "det": 1000000.0,
+      "mod_depth": 1.0,
+      "length_pi_pulse": 5.2e-08,
+      "mw_ampl": -5.0,
+      "ampIQ": 5.0,
+      "freqIQ": 50000000.0,
+      "switch_delay": 1e-07,
+      "delay_wrt_1mus": 2e-07,
+      "wait_time": 2e-06,
+      "full_experiment": 0.0,
+      "sweep_range": 100000000.0,
+      "sweep_time": 1e-06,
+      "sample_rate": 250000000.0
+    },
+    "bool_vars": {
+      "do_adiabatic_inversion": true
+    },
+    "frequency_targets_hz": {
+      "carrier": 1000000.0,
+      "low_13C_sideband": 615422.875,
+      "high_13C_sideband": 1384577.125
+    },
+    "sampling": {
+      "span_s": 1.9200000000000003e-06,
+      "nominal_resolution_hz": 520833.33333333326,
+      "nyquist_hz": 10416666.666666666,
+      "cycles_at_carrier": 1.9200000000000002,
+      "cycles_low_13C": 1.1816119200000001,
+      "cycles_high_13C": 2.6583880800000004
+    }
+  },
+  "quantitative_expectation": {
+    "previous_total_shots_per_point": 400000,
+    "planned_total_shots_per_point": 1080000,
+    "sem_scale_vs_terminal_second_ramsey": 0.6085806194501846,
+    "expected_median_raw_signal_sem_kcps": 1.1668456939750447,
+    "expected_median_ratio_sem": 0.01137609096422493,
+    "model_family": "raw Ramsey signal S(t)=baseline + A exp(-t/T2*) cos(2*pi*det*t+phi); this diagnostic tests the failure mode that T2* is too short for the prior 0..8 us grid and tau=0 artifact/baseline behavior obscured early-time oscillation.",
+    "simulated_cases": [
+      {
+        "initial_raw_amplitude_kcps": 2.0,
+        "assumed_T2star_us": 0.25,
+        "expected_first_0p75us_peak_to_peak_kcps": 1.8994537707840478,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 0.2390772358030357,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 0.20489190390597511,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 1.6278534347701603
+      },
+      {
+        "initial_raw_amplitude_kcps": 2.0,
+        "assumed_T2star_us": 0.4,
+        "expected_first_0p75us_peak_to_peak_kcps": 2.3119135890795817,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 0.38210531320647184,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 0.3274685891883181,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 1.9813361792540725
+      },
+      {
+        "initial_raw_amplitude_kcps": 2.0,
+        "assumed_T2star_us": 0.6,
+        "expected_first_0p75us_peak_to_peak_kcps": 2.6544738817355205,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 0.5625694061325047,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 0.4821283645620896,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 2.2749142371110227
+      },
+      {
+        "initial_raw_amplitude_kcps": 2.0,
+        "assumed_T2star_us": 1.0,
+        "expected_first_0p75us_peak_to_peak_kcps": 3.0480355192410284,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 0.8502573448944629,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 0.728680192492228,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 2.6122010262191675
+      },
+      {
+        "initial_raw_amplitude_kcps": 2.0,
+        "assumed_T2star_us": 2.0,
+        "expected_first_0p75us_peak_to_peak_kcps": 3.425291350436659,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 1.2540823689513634,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 1.074762820334138,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 2.935513554296851
+      },
+      {
+        "initial_raw_amplitude_kcps": 4.0,
+        "assumed_T2star_us": 0.25,
+        "expected_first_0p75us_peak_to_peak_kcps": 3.7989075415680955,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 0.4781544716060714,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 0.40978380781195023,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 3.2557068695403206
+      },
+      {
+        "initial_raw_amplitude_kcps": 4.0,
+        "assumed_T2star_us": 0.4,
+        "expected_first_0p75us_peak_to_peak_kcps": 4.623827178159163,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 0.7642106264129437,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 0.6549371783766362,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 3.962672358508145
+      },
+      {
+        "initial_raw_amplitude_kcps": 4.0,
+        "assumed_T2star_us": 0.6,
+        "expected_first_0p75us_peak_to_peak_kcps": 5.308947763471041,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 1.1251388122650094,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 0.9642567291241791,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 4.549828474222045
+      },
+      {
+        "initial_raw_amplitude_kcps": 4.0,
+        "assumed_T2star_us": 1.0,
+        "expected_first_0p75us_peak_to_peak_kcps": 6.096071038482057,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 1.7005146897889258,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 1.457360384984456,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 5.224402052438335
+      },
+      {
+        "initial_raw_amplitude_kcps": 4.0,
+        "assumed_T2star_us": 2.0,
+        "expected_first_0p75us_peak_to_peak_kcps": 6.850582700873318,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 2.5081647379027268,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 2.149525640668276,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 5.871027108593702
+      },
+      {
+        "initial_raw_amplitude_kcps": 6.0,
+        "assumed_T2star_us": 0.25,
+        "expected_first_0p75us_peak_to_peak_kcps": 5.698361312352143,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 0.7172317075257493,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 0.614675711817889,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 4.88356030431048
+      },
+      {
+        "initial_raw_amplitude_kcps": 6.0,
+        "assumed_T2star_us": 0.4,
+        "expected_first_0p75us_peak_to_peak_kcps": 6.935740767238745,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 1.146315939589249,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 0.9824057675391012,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 5.944008537762218
+      },
+      {
+        "initial_raw_amplitude_kcps": 6.0,
+        "assumed_T2star_us": 0.6,
+        "expected_first_0p75us_peak_to_peak_kcps": 7.963421645206562,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 1.6877082183252459,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 1.4463850936243339,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 6.8247427113330685
+      },
+      {
+        "initial_raw_amplitude_kcps": 6.0,
+        "assumed_T2star_us": 1.0,
+        "expected_first_0p75us_peak_to_peak_kcps": 9.144106557723084,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 2.5507720346536464,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 2.1860405774511946,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 7.836603078657502
+      },
+      {
+        "initial_raw_amplitude_kcps": 6.0,
+        "assumed_T2star_us": 2.0,
+        "expected_first_0p75us_peak_to_peak_kcps": 10.275874051309977,
+        "pure_1MHz_LS_recovered_amplitude_kcps_over_full_window": 3.762247106830987,
+        "raw_LS_amplitude_to_expected_new_median_SEM": 3.224288460982614,
+        "first_0p75us_peak_to_peak_to_expected_new_median_SEM": 8.806540662890553
+      }
+    ],
+    "distinguishability_decision": "With 1.08e6 shots per tau point, the projected median raw SEM is about 1.17 kcps. For A=4-6 kcps and T2*=0.4-1.0 us, the first-0.75-us peak-to-peak contrast is several SEM and should be visibly testable. For A=2 kcps and T2*<=0.25 us, this remains borderline; such a failure after this run would support that r03 has no Ramsey signal measurable under current conditions rather than justify another blind 8 us repeat."
+  },
+  "decision": "Proceed only if verifier and MATLAB advisory are clean and per-average tracking window remains under the active cap. This is not a blind repeat: it changes tau window, starts after tau=0, increases total shots, and targets the specific very-short-T2*/early-time failure mode.",
+  "post_run_required_review": [
+    "terminal raw export",
+    "scan-order-aware drift",
+    "raw signal and fitted-reference-line normalization",
+    "skip-tau0 and full-window views",
+    "LS/FFT target screens at carrier and 13C sidebands",
+    "fit T2star only if raw/readout-aware carrier/decay shape is supported"
+  ],
+  "matlab_advisory_preview": {
+    "path": "<OPENCLAW_WORKSPACE>/.openclaw/matlab_bridge_requests/submit_spec_20260513_225937_wff0eauv/response.json",
+    "ok": true,
+    "validation_ok": true,
+    "blockers": [],
+    "warnings": [
+      "Validation succeeded without touching 23-C hardware paths.",
+      "Execute remains separately gated by bootstrap and local lab validation.",
+      "Applied acquisition settings from job.metadata: averages=12, repetitions=90000, average_continuously=0.",
+      "Forced experiment tracking_period=1 for bridge-configured runs."
+    ],
+    "estimated_runtime": {
+      "estimator_mode": "siglent",
+      "track_per_avg": true,
+      "averages": 12,
+      "repetitions": 90000,
+      "total_shots": 1080000.0,
+      "num_scan_points": 41,
+      "total_seconds": 6953.07088,
+      "per_average_seconds": 577.33924,
+      "tracking_window_seconds": 577.33924,
+      "drift_planning_window_seconds": 577.33924,
+      "tracking_window_basis": "per_average",
+      "tracking_window_unit": "average",
+      "averages_change_tracking_window": false,
+      "repetitions_change_tracking_window": true,
+      "per_average_overhead_seconds": 512.6683
+    },
+    "recent_nv_drift": {
+      "sample_count": 0,
+      "recent_started_at": "",
+      "completed_count": 0,
+      "failed_count": 0,
+      "hard_failed_count": 0,
+      "stopped_count": 0,
+      "failed_rate": 0,
+      "final_counts_median_kcps": [],
+      "final_counts_min_kcps": [],
+      "low_final_counts_count": 0,
+      "severe_low_final_counts_count": 0,
+      "below_minimum_final_counts_count": 0,
+      "seed_to_tracked_median_um": [],
+      "seed_to_tracked_max_um": [],
+      "high_seed_drift_count": 0,
+      "used_search_scan_count": 0,
+      "warning_count_total": 0,
+      "risk_level": "low",
+      "suggested_max_tracking_window_seconds": 900,
+      "history_source": "tracking_event_log",
+      "include_routes": [],
+      "exclude_routes": [
+        "manual_imaging_tracking",
+        "manual_experiment_tracking"
+      ]
+    },
+    "tracking_cadence_policy": {
+      "timezone": "MATLAB local time",
+      "daytime_start_hour_local": 9,
+      "nighttime_start_hour_local": 21,
+      "daytime_max_untracked_window_seconds": 600,
+      "nighttime_max_untracked_window_seconds": 900,
+      "effective_period": "nighttime",
+      "effective_max_untracked_window_seconds": 900,
+      "source": "day_night_policy_default",
+      "applies_to": "pre_enqueue_advisory drift_planning_window_seconds / per_average_seconds",
+      "does_not_change": "Imaging GUI or legacy Experiment tracking_period defaults"
+    },
+    "notes": [
+      "Preview uses execute metadata opt-in only.",
+      "Static bootstrap prerequisites are present.",
+      "Static preflight does not auto-launch the legacy GUI stack.",
+      "The hidden/invisible bootstrap path is still unverified on the Win7 lab stack.",
+      "Default execute remains blocked unless the separate lab-only queue gate opens the production bridge route.",
+      "Launched QEG.",
+      "Forced QEG into simulated PB+AWG mode for pre-enqueue preview.",
+      "Launched Imaging.",
+      "Launched Experiment.",
+      "Legacy QEG/Imaging/Experiment route is available for the bridge scaffold.",
+      "Experiment handles include the structural fields required for bridge payload injection and Setscan.",
+      "Built Experiment GUI payload from the bridge job.",
+      "Pulse mode already matched the selected sequence path (5).",
+      "Applied bridge-derived state to the Experiment handles.",
+      "Setscan completed and populated root appdata PSeq / ExperimentalScan.",
+      "Tracking is configured per average. Judge drift risk from drift_planning_window_seconds / per_average_seconds, not total_seconds. Changing averages does not shorten that window.",
+      "Built pre-enqueue runtime + drift advisory for agent-side acquisition planning."
+    ]
+  },
+  "decision_after_advisory": "Advisory/validation returned ok with no blockers. Estimated per-average drift/tracking window is 577.339 s, under the advisory nighttime cap of 900 s; total runtime 6953.1 s is scheduling only. Queue may proceed if bridge queued/running directories are still empty and experiment intent verifier returns verified."
+}

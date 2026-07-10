@@ -2,7 +2,7 @@
 
 Latest completed case study for an aligned NV candidate selected from the
 `image145844` region, including pODMR screening, Ramsey follow-up, and revised
-13C sideband reanalysis.
+Ramsey frequency reanalysis.
 
 ## Start Here
 
@@ -41,8 +41,9 @@ The final revised closeout is
 [image145844_reimage_r03_shifted_sideband_recloseout_report_20260514_1320.pdf](project/work/artifacts/reports/20260514_1320_r03_shifted_sideband_recloseout/image145844_reimage_r03_shifted_sideband_recloseout_report_20260514_1320.pdf).
 
 Final claim boundary: aligned `r03` found; no unconditional claim-grade numeric
-T2star; plausible nearby-13C shifted-sideband candidate evidence conditional on
-a residual carrier shift, not an independently confirmed coupling claim.
+T2star; the Ramsey frequency interpretation was revised after considering a
+residual calibration offset, but the data do not establish an independently
+confirmed nearby-13C coupling claim.
 
 ## Representative Artifacts
 
@@ -51,4 +52,4 @@ a residual carrier shift, not an independently confirmed coupling claim.
 | [Candidate selection figure](project/work/artifacts/figures/image145844_reimage_candidate_selection_20260513_1550.png) | Shows the re-image candidate map used before r01/r02/r03 screening |
 | [Accepted r03 strong-pi pODMR review](project/work/artifacts/figures/image145844_reimage_r03_strong_podmr_raw_review_20260513_1741.png) | Alignment-screen evidence for the accepted candidate |
 | [Final refreshed-center Ramsey review](project/work/artifacts/figures/image145844_reimage_r03_ramsey_refreshed_center_terminal_review_20260514_0938.png) | Main final Ramsey dataset review |
-| [Shifted-sideband reanalysis figure](project/work/artifacts/figures/image145844_reimage_r03_ramsey_refreshed_center_shifted_sideband_reanalysis_20260514_1308.png) | Revised conditional 13C sideband analysis |
+| [Ramsey reanalysis figure](project/work/artifacts/figures/image145844_reimage_r03_ramsey_refreshed_center_shifted_sideband_reanalysis_20260514_1308.png) | Revised Ramsey frequency interpretation after considering a residual calibration offset |

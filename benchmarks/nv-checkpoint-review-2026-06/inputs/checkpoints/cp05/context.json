@@ -1,0 +1,146 @@
+{
+  "schema_version": 1,
+  "checkpoint_id": "cp05",
+  "created_at": "2026-05-14T06:25:29",
+  "cutoff_time": "2026-05-14T06:25:29",
+  "cutoff_rule": "future-blind replay may use only prompt, payload, report, and file snapshots captured in this wake record, or explicit current-memory overlay snapshots selected by the evaluator",
+  "agent": {
+    "id": "nv-researcher",
+    "model": "openai-codex/gpt-5.5",
+    "thinking": "xhigh"
+  },
+  "next_action": {
+    "kind": "advance_project",
+    "reason": "execution queue is empty; wake the agent to synthesize or update the research agenda and advance all currently runnable safe project work from objective, evidence, human advice, and safety policy"
+  },
+  "agent_visible_files": {
+    "project": [
+      "project/state.md",
+      "project/brief.md",
+      "project/advice.md"
+    ],
+    "md": [
+      "md/memory.md",
+      "md/knowledge.md"
+    ],
+    "context": [
+      "context.json"
+    ],
+    "evidence": [
+      "evidence/e001.json",
+      "evidence/e002.json",
+      "evidence/e003.json",
+      "evidence/e004.py",
+      "evidence/e005.json",
+      "evidence/e006.json",
+      "evidence/e007.json",
+      "evidence/e008.json",
+      "evidence/e009.log",
+      "evidence/e010.log",
+      "evidence/e011.json",
+      "evidence/e012.json",
+      "evidence/e013.json",
+      "evidence/e014.json",
+      "evidence/e015.json",
+      "evidence/e016.json",
+      "evidence/e017.json",
+      "evidence/e018.json",
+      "evidence/e019.json",
+      "evidence/e020.log",
+      "evidence/e021.log",
+      "evidence/e022.json",
+      "evidence/e023.json",
+      "evidence/e024.json"
+    ],
+    "measurement": [
+      "measurement/m001.json",
+      "measurement/m002.json",
+      "measurement/m003.json",
+      "measurement/m004.json",
+      "measurement/m005.json"
+    ]
+  },
+  "recent_evidence": [
+    {
+      "item": "recent_001",
+      "category": "figure",
+      "summary": "Det-shift terminal review and pODMR refresh start: Terminal det=1.5 MHz Ramsey shift-check completed safely (12 x 90000, final 44.796 kcps, no drift flags). It gives useful det-shift evidence but no supported T2star/13C claim. A weak-pi pODMR refresh was designed from the stale-center check, passed advisory/verifier, and is now running as nv23_pulsed_odmr_rabimodulated_v1_20260514_044105_pulsed_odmr_rabimodulated_v1.",
+      "related_claims": [],
+      "tags": [],
+      "timestamp": "2026-05-14T04:47:13",
+      "file_count": 1
+    },
+    {
+      "item": "recent_002",
+      "category": "analysis",
+      "summary": "Terminal weak-pi pODMR refresh completed safely as nv23_pulsed_odmr_rabimodulated_v1_20260514_044105_pulsed_odmr_rabimodulated_v1: 4 x 50000 shots, final counts 40.396 kcps, scan-order-aware drift flagged no averages. Raw signal and fitted-reference-line normalization both minimize at 3.8765 GHz with about 15.3%/15.4% edge-referenced drop; point-wise ratio minimum is offset and treated as denominator-sensitive provenance. Use mw_freq_hz=3876500000.0 for the next Ramsey with grid-supported precision only. This is a frequency calibration, not a T2star or 13C claim.",
+      "related_claims": [
+        "aligned_candidate_r03",
+        "pending_T2star",
+        "pending_13C"
+      ],
+      "tags": [
+        "podmr",
+        "terminal",
+        "weak_pi",
+        "frequency_calibration",
+        "r03"
+      ],
+      "timestamp": "2026-05-14T05:48:28",
+      "file_count": 14
+    },
+    {
+      "item": "recent_003",
+      "category": "artifact",
+      "summary": "Designed refreshed-center r03 Ramsey/T2star/13C follow-up using terminal pODMR center 3.8765 GHz. Plan: auto__ramsey, det=1.5 MHz, tau 48 ns..8.048 us in 41 points, 20 x 50000 shots (1.0e6/tau). Targets: carrier 1.5 MHz, 13C sidebands 1.115/1.885 MHz from f13C=384.8 kHz. Advisory ok=True blockers=[]; verifier verdict=verified.",
+      "related_claims": [
+        "pending_T2star",
+        "pending_13C"
+      ],
+      "tags": [
+        "ramsey",
+        "t2star",
+        "13c",
+        "model",
+        "advisory",
+        "r03"
+      ],
+      "timestamp": "2026-05-14T05:49:02",
+      "file_count": 3
+    },
+    {
+      "item": "recent_004",
+      "category": "figure",
+      "summary": "pODMR refresh review and refreshed-center Ramsey design: Terminal weak-pi pODMR refresh completed safely as nv23_pulsed_odmr_rabimodulated_v1_20260514_044105_pulsed_odmr_rabimodulated_v1: 4 x 50000 shots, final counts 40.396 kcps, scan-order-aware drift flagged no averages. Raw signal and fitted-reference-line normalization both minimize at 3.8765 GHz with about 15.3%/15.4% edge-referenced drop; point-wise ratio minimum is offset and treated as denominator-sensitive provenance. Use mw_freq_hz=3876500000.0 for the next Ramsey with grid-supported precision only. This is a frequency calibration, not a T2star or 13C claim. Designed refreshed-center r03 Ramsey/T2star/13C follow-up using terminal pODMR center 3.8765 GHz. Plan: auto__ramsey, det=1.5 MHz, tau 48 ns..8.048 us in 41 points, 20 x 50000 shots (1.0e6/tau). Targets: carrier 1.5 MHz, 13C sidebands 1.115/1.885 MHz from f13C=384.8 kHz. Advisory ok=True blockers=[]; verifier verdict=verified.",
+      "related_claims": [],
+      "tags": [],
+      "timestamp": "2026-05-14T05:49:03",
+      "file_count": 1
+    },
+    {
+      "item": "recent_005",
+      "category": "artifact",
+      "summary": "Started refreshed-center long-span r03 Ramsey/T2star/13C follow-up as nv23_ramsey_20260514_055148_auto_ramsey, batch nv23_ramsey_20260514_055021. It uses validated auto__ramsey with mw_freq=3.8765 GHz, det=1.5 MHz, tau 48 ns..8.048 us in 41 points, and 20 x 50000 shots. Initial bridge status is running at average 1/20, final-count text Final = 36.759 kcps, monitor last_error='', stop_requested=False. Runtime status estimates 12622.332 s total and 629.8666000000001 s per average; queue occupancy now blocks further bridge-touching submissions.",
+      "related_claims": [
+        "pending_T2star",
+        "pending_13C"
+      ],
+      "tags": [
+        "ramsey",
+        "running",
+        "t2star",
+        "13c",
+        "refreshed_center",
+        "r03"
+      ],
+      "timestamp": "2026-05-14T05:56:13",
+      "file_count": 11
+    }
+  ],
+  "notes": [
+    "Project, memory, knowledge, context, and evidence files are from the launch-time snapshot immediately after the target Ramsey was started.",
+    "The measurement directory contains only later terminal raw data and bridge metadata for that target Ramsey.",
+    "Source artifact names, source wake names, and source paths were removed from this agent-visible context file.",
+    "Use the neutral files in this checkpoint directory as the available evidence."
+  ]
+}

@@ -1,7 +1,7 @@
 # Public Release Manifest
 
 This file tracks what is included, sanitized, or excluded from the public
-case-study release.
+release.
 
 ## Include
 
@@ -35,6 +35,12 @@ case-study release.
 - Code inventory documenting the public Python/MATLAB subset and the
   live-lab boundary.
 - Generated figures and closeout reports.
+- Ramsey checkpoint benchmark package used in the manuscript, including neutral
+  checkpoint inputs, task prompt, scoring guide, selected scripts, manual
+  scoring CSVs, recovered project notes, and figure source data.
+- pODMR data evaluation benchmark package used in the manuscript, including raw
+  inputs, prompt conditions, labels, predictions, per-run notes, tool use audit,
+  deterministic checks, figures, and the appendix batch-comparison summary.
 - License and citation metadata.
 
 ## Sanitize

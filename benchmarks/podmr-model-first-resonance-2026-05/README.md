@@ -1,7 +1,8 @@
-# pODMR Calculation-Guided Resonance Benchmark
+# pODMR Data Evaluation Benchmark
 
-This benchmark evaluates whether calculation-guided prompting reduces
-false-positive pODMR resonance calls for single NV center data.
+This benchmark evaluates whether an agent can judge resonance presence in
+previously acquired pODMR measurements, and how prompt context and reasoning
+effort affect that judgment.
 
 The dataset contains 96 strong-pi pODMR measurements:
 
@@ -33,28 +34,32 @@ reference and signal readouts for each case.
 
 | Reasoning | Condition | TP | TN | FP | FN | Accuracy | False-positive rate | False-negative rate |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| low | Protocol only | 72 | 184 | 32 | 0 | 88.9% | 14.81% | 0.00% |
-| low | Domain facts | 72 | 201 | 15 | 0 | 94.8% | 6.94% | 0.00% |
-| low | Calculation-guided | 72 | 208 | 8 | 0 | 97.2% | 3.70% | 0.00% |
-| medium | Protocol only | 72 | 145 | 71 | 0 | 75.3% | 32.87% | 0.00% |
-| medium | Domain facts | 72 | 196 | 20 | 0 | 93.1% | 9.26% | 0.00% |
-| medium | Calculation-guided | 72 | 215 | 1 | 0 | 99.7% | 0.46% | 0.00% |
-| high | Protocol only | 72 | 120 | 96 | 0 | 66.7% | 44.44% | 0.00% |
-| high | Domain facts | 72 | 190 | 26 | 0 | 91.0% | 12.04% | 0.00% |
-| high | Calculation-guided | 72 | 215 | 1 | 0 | 99.7% | 0.46% | 0.00% |
-| xhigh | Protocol only | 72 | 101 | 115 | 0 | 60.1% | 53.24% | 0.00% |
-| xhigh | Domain facts | 72 | 202 | 14 | 0 | 95.1% | 6.48% | 0.00% |
-| xhigh | Calculation-guided | 72 | 215 | 1 | 0 | 99.7% | 0.46% | 0.00% |
+| low | Sequence | 72 | 184 | 32 | 0 | 88.9% | 14.81% | 0.00% |
+| low | Facts | 72 | 201 | 15 | 0 | 94.8% | 6.94% | 0.00% |
+| low | Expected signal | 72 | 208 | 8 | 0 | 97.2% | 3.70% | 0.00% |
+| medium | Sequence | 72 | 145 | 71 | 0 | 75.3% | 32.87% | 0.00% |
+| medium | Facts | 72 | 196 | 20 | 0 | 93.1% | 9.26% | 0.00% |
+| medium | Expected signal | 72 | 215 | 1 | 0 | 99.7% | 0.46% | 0.00% |
+| high | Sequence | 72 | 120 | 96 | 0 | 66.7% | 44.44% | 0.00% |
+| high | Facts | 72 | 190 | 26 | 0 | 91.0% | 12.04% | 0.00% |
+| high | Expected signal | 72 | 215 | 1 | 0 | 99.7% | 0.46% | 0.00% |
+| xhigh | Sequence | 72 | 101 | 115 | 0 | 60.1% | 53.24% | 0.00% |
+| xhigh | Facts | 72 | 202 | 14 | 0 | 95.1% | 6.48% | 0.00% |
+| xhigh | Expected signal | 72 | 215 | 1 | 0 | 99.7% | 0.46% | 0.00% |
 
-The calculation-guided condition differs from the domain-facts condition by adding a
+The expected signal condition differs from the facts condition by adding a
 requirement to establish the expected physical signal with a simulation or
 explicit quantitative model calculation before deciding whether a resonance is
 present. In this dataset, increasing reasoning effort alone increases
-false-positive resonance calls in the protocol-only condition, while the calculation-guided
+false-positive resonance calls in the sequence condition, while the expected signal
 condition suppresses false positives across reasoning-effort settings.
 
 Non-LLM signal-processing baselines are summarized in
 `results/non_llm_signal_baseline_summary.md`.
+
+The appendix batch comparison, in which all 96 unlabeled measurements were
+provided in one prompt, is summarized in
+`results/batch_context_main_inputs_summary.md`.
 
 ## Contents
 
@@ -63,5 +68,7 @@ Non-LLM signal-processing baselines are summarized in
 - `prompts/`: exact prompt condition text.
 - `results/figures/`: benchmark summary figure as PNG and PDF.
 - `results/`: GPT-5.5 predictions, summaries, and per-run analysis notes for
-  `low`, `medium`, `high`, and `xhigh` reasoning efforts.
+  `low`, `medium`, `high`, and `xhigh` reasoning efforts, plus tool use audit,
+  deterministic baseline summaries, and the batch comparison used in the
+  manuscript appendix.
 - `scripts/`: scoring and package verification helpers.

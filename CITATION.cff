@@ -1,13 +1,29 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite it as below."
 type: software
-title: "NV Autonomous Experiments"
+title: "Large Language Model Reasoning for Autonomous Quantum Sensing Experiments"
 authors:
-  - name: "Takuya"
+  - family-names: "Isogawa"
+    given-names: "Takuya"
+    email: "isogawa@mit.edu"
+    affiliation: "Department of Nuclear Science and Engineering, Massachusetts Institute of Technology"
+  - family-names: "Okabe"
+    given-names: "Ryotaro"
+    email: "rokabe@mit.edu"
+    affiliation: "Department of Chemistry, Massachusetts Institute of Technology"
+  - family-names: "Phadetsuwannukun"
+    given-names: "Nutdech"
+    affiliation: "Department of Physics, Massachusetts Institute of Technology"
+  - family-names: "Li"
+    given-names: "Mingda"
+    affiliation: "Department of Nuclear Science and Engineering, Massachusetts Institute of Technology"
+  - family-names: "Cappellaro"
+    given-names: "Paola"
+    affiliation: "Department of Nuclear Science and Engineering, Massachusetts Institute of Technology; Department of Physics, Massachusetts Institute of Technology"
 version: "0.1.0"
-date-released: 2026-05-15
+date-released: 2026-07-10
 license: "MIT AND CC-BY-4.0"
 abstract: >
-  Public case-study release for auditable LLM-agent workflows in NV-center
-  experiments, including sanitized completed project folders, current
-  execution-path source, and analysis artifacts.
+  Public release for the manuscript, including sanitized autonomous NV
+  experiment case records, the Ramsey checkpoint benchmark, the pODMR data
+  evaluation benchmark, analysis helpers, and figure source data.

@@ -1,0 +1,6 @@
+{
+  "canceled_by": "nv-researcher",
+  "reason": "duplicate queued by relaunch after the intended short-tau Ramsey had already entered running as nv23_ramsey_20260513_230331_auto_ramsey; cancel before execution to avoid duplicate acquisition",
+  "safe_recovery": "job directory moved from queued/ to canceled/; job had not started",
+  "timestamp": "2026-05-13T23:10:30-04:00"
+}

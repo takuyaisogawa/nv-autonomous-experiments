@@ -1,0 +1,7 @@
+outputs/
+*.tmp
+__pycache__/
+results/**/*.log
+results/**/model_outputs*.jsonl
+results/**/scored_outputs*.csv
+results/**/score_summary*.md

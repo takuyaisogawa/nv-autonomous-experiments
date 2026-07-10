@@ -1,0 +1,112 @@
+{
+  "job_id_prefix": "nv23_ramsey",
+  "job_id_suffix": "image145844_reimage_r03_ramsey_det1p5_shiftcheck_shorttau",
+  "mode": "execute",
+  "recipe": "xml_generic_v1",
+  "sample_id": "NV23",
+  "sequence_manifest_id": "auto__ramsey",
+  "requested_by": "nv-researcher",
+  "submission_path": "project_verified_intent_image145844_reimage_r03_ramsey_det1p5_shiftcheck_shorttau_20260514_0142",
+  "intent": "Targeted short-tau Ramsey det-shift diagnostic on accepted r03: change det from 1.0 to 1.5 MHz to test whether the terminal ~1.19 MHz component tracks programmed det or is a baseline/artifact.",
+  "measurement_plan_verified": true,
+  "allow_seed_fallback": false,
+  "scan": {
+    "vary_prop": [
+      "tau"
+    ],
+    "begin": [
+      4.8e-08
+    ],
+    "end": [
+      1.968e-06
+    ],
+    "points": [
+      41
+    ]
+  },
+  "float_vars": {
+    "mw_freq": 3875900000.0,
+    "det": 1500000.0,
+    "mod_depth": 1.0,
+    "length_pi_pulse": 5.2e-08,
+    "mw_ampl": -5.0,
+    "ampIQ": 5.0,
+    "freqIQ": 50000000.0,
+    "switch_delay": 1e-07,
+    "delay_wrt_1mus": 2e-07,
+    "wait_time": 2e-06,
+    "full_experiment": 0.0,
+    "sweep_range": 100000000.0,
+    "sweep_time": 1e-06,
+    "sample_rate": 250000000.0
+  },
+  "bool_vars": {
+    "do_adiabatic_inversion": true
+  },
+  "limits": {
+    "max_mw_power_dbm": 15.0,
+    "allow_stage_motion": false,
+    "allow_laser_profile": false
+  },
+  "metadata": {
+    "project_id": "nv23_aligned_nv_t2star_13c_image145844_20260513_1507",
+    "target_label": "image145844_reimage_r03",
+    "target_role": "short_tau_ramsey_det_shift_check_after_1p19MHz_component",
+    "fresh_track_result": "<NV_BRIDGE_ROOT>/done/nv23_image145844_reimage_r03_track_20260513_1708/result.json",
+    "fresh_counts_kcps": 43.535,
+    "latest_final_counts_kcps": 35.122,
+    "fresh_tracked_position_um": [
+      117.31443569593856,
+      117.76164407822792,
+      115.14167937743193
+    ],
+    "track_evidence_id": "nv23_image145844_reimage_r03_track_20260513_1708_result",
+    "fine_podmr_review_evidence_id": "image145844_reimage_r03_fine_weak_podmr_raw_review_20260513_2031",
+    "shorttau_terminal_review_evidence_path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_ramsey_shorttau_terminal_review_20260514_0127.json",
+    "model_evidence_path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_ramsey_det1p5_shiftcheck_model_plan_20260514_0142.json",
+    "auto_align_nv": false,
+    "require_landmark_match": false,
+    "allow_seed_fallback": false,
+    "minimum_final_kcps": 20,
+    "allow_search_scan": false,
+    "search_scan_on_tracking_failure": false,
+    "local_fine_search_before_tracking": false,
+    "no_auto_align_reason": "Accepted r03 has recent successful TrackCenter and terminal short-tau Ramsey final counts above the 20 kcps execute gate; use explicit tracked position and avoid hidden target reselection.",
+    "analysis_plan": {
+      "kind": "ramsey_short_tau_det_shift_check",
+      "raw_readout_review_required": true,
+      "drift_review_required": true,
+      "fit_after_det_tracking_signal_presence_only": true,
+      "notes": "Compare whether the empirical component shifts by +0.5 MHz relative to the previous det=1.0 MHz short-tau run before any T2star/13C claim."
+    },
+    "requested_by": "nv-researcher",
+    "disable_agent_auto_recovery": true,
+    "frequency_basis": "fine weak-pi pODMR terminal raw/readout review selected grid-supported mw_freq=3.8759 GHz; det-shift diagnostic tests Ramsey carrier tracking, not resonance recentering.",
+    "det_choice_reason": "Change det from 1.0 to 1.5 MHz. A physical Ramsey carrier underlying the prior ~1.192 MHz component should move to ~1.692 MHz; an artifact should not simply track the programmed det.",
+    "tau_window_reason": "Reuse 48 ns..1.968 us / 41 points to isolate det change and avoid tau=0 artifact while resolving ~1.5-2.1 MHz targets below the 10.4 MHz Nyquist limit.",
+    "shot_reason": "Reuse 12 x 90000 = 1.08e6 shots per tau point because the terminal det=1.0 component was just above per-point noise and this shot budget gave analyzable no-drift data.",
+    "even_average_reason": "Use 12 averages under snake/even-average guidance; terminal short-tau drift diagnostic flagged no averages.",
+    "sequence_manifest_status": "validated",
+    "sequence_manifest_scope": "validated",
+    "sequence_manifest_path": "<MATLAB_23C_ROOT>\\claw\\sequence_manifests\\validated\\auto__ramsey.json",
+    "sequence_path": "<MATLAB_23C_ROOT>\\SavedSequences\\SavedSequences-AWG\\ramsey.xml",
+    "acquisition": {
+      "average_continuously": false,
+      "averages": 12,
+      "repetitions": 90000
+    },
+    "queue_execute_opt_in": true,
+    "verified_intent_id": "image145844_reimage_r03_ramsey_det1p5_shiftcheck_shorttau_20260514_0142"
+  },
+  "acquisition": {
+    "average_continuously": false,
+    "averages": 12,
+    "repetitions": 90000
+  },
+  "nv_position": [
+    117.31443569593856,
+    117.76164407822792,
+    115.14167937743193
+  ],
+  "id": "auto_ramsey_det1p5_shiftcheck_shorttau"
+}

@@ -1,0 +1,214 @@
+{
+  "version": 1,
+  "kind": "nv_bridge_run_status",
+  "job_id": "nv23_ramsey_20260513_230331_auto_ramsey",
+  "mode": "execute",
+  "state": "running",
+  "phase": "run_experiment_scan_point",
+  "message": "(10/12) averages completed for 1 scans Autosave is enabled. Once the first average is saved, the in-progress savedexperiment MAT file can be raw-exported with claw_export_savedexperiment_mat_raw to inspect raw readouts before execute completes.",
+  "started_at": "2026-05-13T23:03:46",
+  "updated_at": "2026-05-14T01:08:42",
+  "finished_at": "",
+  "elapsed_seconds": 7496,
+  "requested_by": "nv-researcher",
+  "bridge_version": "0.1.0",
+  "stop_capable": true,
+  "paths": {
+    "job_dir": "<NV_BRIDGE_ROOT>\\running\\nv23_ramsey_20260513_230331_auto_ramsey",
+    "status_path": "<NV_BRIDGE_ROOT>\\running\\nv23_ramsey_20260513_230331_auto_ramsey\\status.json",
+    "control_path": "<NV_BRIDGE_ROOT>\\running\\nv23_ramsey_20260513_230331_auto_ramsey\\control.json",
+    "result_path": "<NV_BRIDGE_ROOT>\\running\\nv23_ramsey_20260513_230331_auto_ramsey\\result.json",
+    "bridge_log_path": "<NV_BRIDGE_ROOT>\\running\\nv23_ramsey_20260513_230331_auto_ramsey\\bridge.log",
+    "matlab_command_log_path": "<NV_BRIDGE_ROOT>\\running\\nv23_ramsey_20260513_230331_auto_ramsey\\matlab_command_window.log"
+  },
+  "control": {
+    "stop_requested": false,
+    "stop_reason": "",
+    "requested_by": "",
+    "requested_at": "",
+    "updated_at": "2026-05-13T23:03:46",
+    "stop_observed_at": "",
+    "stop_applied": false,
+    "stop_applied_at": "",
+    "stop_apply_error": ""
+  },
+  "monitor": {
+    "active": true,
+    "update_period_seconds": 5,
+    "timer_tag": "nv_bridge_runtime_monitor_nv23_ramsey_20260513_230331_auto_ramsey",
+    "started_at": "2026-05-13T23:03:48",
+    "last_tick_at": "2026-05-14T01:08:42",
+    "tick_count": 897,
+    "last_error": "",
+    "stop_requested_observed_at": "",
+    "stop_applied": false,
+    "stop_applied_at": "",
+    "stop_apply_error": ""
+  },
+  "runtime": {
+    "figure_valid": true,
+    "has_experiment_handles": true,
+    "has_aborted": false,
+    "average_index": 11,
+    "averages_total": 10,
+    "average_fraction": 1,
+    "scan_points_total": 41,
+    "repetitions": 90000,
+    "sequence_name": "ramsey.xml",
+    "date_time": "2026-05-13-230350",
+    "experiment_status_text": "(10/12) averages completed for 1 scans",
+    "final_counts_text": "Final = 42.469 kcps",
+    "experiment_data_present": true,
+    "experiment_data_size": [
+      1,
+      1
+    ],
+    "pulse_mode": 4,
+    "autosave_checked": "on",
+    "saved_exp_dir": "<MATLAB_23C_ROOT>\\savedexperiments\\NV1",
+    "autosave_target_path": "<MATLAB_23C_ROOT>\\savedexperiments\\NV1\\1DExp-seq-ramsey-vary-tau-2026-05-13-230350",
+    "autosave_target_exists": false,
+    "live_average_results_possible": true,
+    "live_average_results_available": false,
+    "live_average_results_hint": "Autosave is enabled. Once the first average is saved, the in-progress savedexperiment MAT file can be raw-exported with claw_export_savedexperiment_mat_raw to inspect raw readouts before execute completes."
+  },
+  "expected_runtime": [
+    {
+      "ok": true,
+      "estimator_mode": "siglent",
+      "total_seconds": 7853.07088,
+      "per_average_seconds": 652.33924,
+      "tracking_window_seconds": 652.33924,
+      "averages": 12,
+      "repetitions": 90000,
+      "num_scan_points": 41,
+      "notes": "Siglent per-average overhead is estimated from a fixed track-per-average housekeeping term, an empirically calibrated per-scan-point programming/GUI term, and a weaker average-waveform-length term."
+    },
+    {
+      "ok": true,
+      "estimator_mode": "siglent",
+      "total_seconds": 7853.07088,
+      "per_average_seconds": 652.33924,
+      "tracking_window_seconds": 652.33924,
+      "averages": 12,
+      "repetitions": 90000,
+      "num_scan_points": 41,
+      "notes": "Tracking runs once per average, so drift planning should use per_average_seconds / tracking_window_seconds rather than total_seconds. Changing averages does not shorten the untracked window."
+    }
+  ],
+  "summary": {
+    "sequence_label": "auto__ramsey",
+    "prepare_session": {
+      "ok": true,
+      "prepared": true,
+      "launched": [],
+      "attached": [
+        "QEG",
+        "Imaging",
+        "Experiment"
+      ],
+      "can_setscan": true,
+      "can_run": true,
+      "owner_usageunit": "nvbridge_auto__ramsey_nv23_ramsey_20260513_230331_auto_ramsey",
+      "notes": [
+        "Legacy QEG/Imaging/Experiment route is available for the bridge scaffold.",
+        "Experiment handles include the structural fields required for bridge payload injection and Setscan."
+      ],
+      "blockers": []
+    },
+    "configure_experiment": {
+      "ok": true,
+      "translation_ok": true,
+      "applied": true,
+      "setscan_attempted": true,
+      "setscan_ok": true,
+      "sequence_path": "<MATLAB_23C_ROOT>\\SavedSequences\\SavedSequences-AWG\\ramsey.xml",
+      "sequence_name": "ramsey.xml",
+      "derived_scan": {
+        "begin": 4.8e-08,
+        "step": 4.8000000000000006e-08,
+        "end": 1.968e-06,
+        "points": 41
+      },
+      "effective_controls": {
+        "tracking_enabled": 1,
+        "track_per_avg": 1,
+        "tracking_period": "1",
+        "power_enabled": 0,
+        "power_per_avg": 1,
+        "average_continuously": 0,
+        "averages": "12",
+        "repetitions": "90000"
+      },
+      "notes": [
+        "Built Experiment GUI payload from the bridge job.",
+        "Pulse mode already matched the selected sequence path (4).",
+        "Applied bridge-derived state to the Experiment handles.",
+        "Setscan completed and populated root appdata PSeq / ExperimentalScan."
+      ],
+      "blockers": []
+    },
+    "sequence_path": "<MATLAB_23C_ROOT>\\SavedSequences\\SavedSequences-AWG\\ramsey.xml",
+    "sequence_name": "ramsey.xml",
+    "run_experiment": {
+      "opt_in_requested": true,
+      "gate_name": "lab_run_experiment_opt_in",
+      "called": false,
+      "returned": false,
+      "has_aborted": false,
+      "started_at": "",
+      "finished_at": "",
+      "figure_valid_before": false,
+      "figure_valid_after": false,
+      "saved_experiments_before": {
+        "exists": false,
+        "latest_path": "",
+        "latest_timestamp": ""
+      },
+      "saved_experiments_after": {
+        "exists": false,
+        "latest_path": "",
+        "latest_timestamp": ""
+      },
+      "incomplete": false,
+      "incomplete_reason": "",
+      "incomplete_kind": "",
+      "incomplete_detail": {
+        "kind": "",
+        "final_counts_kcps": [],
+        "low_counts_threshold_kcps": [],
+        "zero_completed_averages": false
+      },
+      "post_run": {
+        "kk": [],
+        "autosave_checked": "",
+        "saved_exp_dir": "",
+        "sequence_name": "",
+        "date_time": "",
+        "experiment_data_present": false,
+        "experiment_data_size": [],
+        "text_final_counts": "",
+        "final_counts_kcps": []
+      },
+      "runtime_monitor": {
+        "enabled": true,
+        "status_path": "<NV_BRIDGE_ROOT>\\running\\nv23_ramsey_20260513_230331_auto_ramsey\\status.json",
+        "control_path": "<NV_BRIDGE_ROOT>\\running\\nv23_ramsey_20260513_230331_auto_ramsey\\control.json",
+        "update_period_seconds": 5
+      },
+      "scheduled_tracking_after_run": {
+        "requested": false,
+        "queued": false,
+        "period_seconds": []
+      },
+      "notes": []
+    }
+  },
+  "warnings": [
+    "QEG is already open but not bridge-owned. Attaching because allow_attach_existing=true.",
+    "Imaging is already open but not bridge-owned. Attaching because allow_attach_existing=true.",
+    "Experiment is already open but not bridge-owned. Attaching because allow_attach_existing=true.",
+    "Applied acquisition settings from job.metadata: averages=12, repetitions=90000, average_continuously=0.",
+    "Forced experiment tracking_period=1 for bridge-configured runs."
+  ]
+}

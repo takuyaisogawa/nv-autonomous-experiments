@@ -1,0 +1,100 @@
+{
+  "ok": true,
+  "created_at": "2026-05-13T18:44:00-04:00",
+  "question": "Design first Ramsey/T2star scout on accepted r03 after weak-pi pODMR supports 3.876 GHz.",
+  "inputs": {
+    "weak_podmr_review": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_weak_podmr_raw_review_20260513_1838.json",
+    "ramsey_manifest": "<MATLAB_23C_ROOT>/claw/sequence_manifests/validated/auto__ramsey.json",
+    "ramsey_xml": "<MATLAB_23C_ROOT>/SavedSequences/SavedSequences-AWG/ramsey.xml",
+    "ramsey_function": "<MATLAB_23C_ROOT>/PulseSequencer/Sequence-commands/AWG/ramsey.m",
+    "local_literature_index": "<OPENCLAW_WORKSPACE>/literature/INDEX.md",
+    "lab_prior_guardrail": "NV_RESEARCH_KNOWLEDGE Shot Budget And Data Quality 2026-05-11 Ramsey FFT sampling guardrail"
+  },
+  "protocol_inspection": {
+    "manifest_status": "validated",
+    "manifest_id": "auto__ramsey",
+    "sequence_file": "SavedSequences/SavedSequences-AWG/ramsey.xml",
+    "scan_axis": "tau",
+    "xml_active_path": "full_experiment=0: readout1 true mS=0 reference, then ramsey(PSeq,...tau,det,...), then readout2 Ramsey signal",
+    "ramsey_function_behavior": "second pi/2 phase is det*tau*360 after a free wait tau; one-dimensional tau scan is a clean T2star/Ramsey scan",
+    "readout_roles": "readout1 reference, readout2 Ramsey signal when full_experiment=0",
+    "bool_vars": {
+      "do_adiabatic_inversion": true,
+      "note": "present but inactive when full_experiment=0; preserve typed boolean path"
+    }
+  },
+  "model": {
+    "mw_freq_hz": 3876000000.0,
+    "B_G_from_ms_plus_resonance_working_model": 359.2857142857143,
+    "gamma_e_hz_per_G_used": 2800000.0,
+    "gamma_13c_hz_per_G_used": 1070.5,
+    "expected_13C_larmor_Hz": 384615.35714285716,
+    "programmed_ramsey_det_Hz": 2000000.0,
+    "expected_fft_carrier_Hz_if_on_resonance": 2000000.0,
+    "expected_13C_sidebands_Hz_if_present": [
+      1615384.6428571427,
+      2384615.3571428573
+    ],
+    "tau_span_s": 8e-06,
+    "points": 51,
+    "tau_step_s": 1.6e-07,
+    "fft_resolution_Hz": 125000.0,
+    "nyquist_Hz": 3125000.0,
+    "nyquist_guard": true,
+    "grid_center_uncertainty_guard_Hz": 500000.0,
+    "nyquist_with_center_uncertainty_Hz_needed": 2884615.3571428573,
+    "weak_podmr_signal_drop_kcps": 6.423076923076927,
+    "weak_podmr_signal_drop_fraction": 0.14279606669516895,
+    "weak_podmr_median_signal_sem_kcps": 1.648919316171232,
+    "expected_ramsey_raw_oscillation_scale_kcps": "order 2-6 kcps; bounded by weak-pODMR contrast and ms=0/+1 PL contrast, with unknown T2star envelope",
+    "resolvability_reason": "51 points over 8 us give 125 kHz FFT bin spacing and 3.125 MHz Nyquist, covering a 2 MHz programmed Ramsey carrier plus the ~0.385 MHz 13C Larmor sideband and +/-0.5 MHz residual center uncertainty. 4x50000 shots matches the weak-pODMR 200k-shot scout quality; weak-pODMR SEM implies a few-kcps Ramsey oscillation should be visible if present."
+  },
+  "planned_measurement": {
+    "sequence_manifest_id": "auto__ramsey",
+    "scan_tau_s": [
+      0.0,
+      6e-06,
+      31
+    ],
+    "acquisition": {
+      "averages": 4,
+      "repetitions": 50000,
+      "average_continuously": false
+    },
+    "total_shots_per_point": 200000,
+    "float_vars": {
+      "mw_freq": 3876000000.0,
+      "det": 1500000.0,
+      "mod_depth": 1.0,
+      "length_pi_pulse": 5.2e-08,
+      "mw_ampl": -5.0,
+      "ampIQ": 5.0,
+      "freqIQ": 50000000.0,
+      "switch_delay": 1e-07,
+      "delay_wrt_1mus": 2e-07,
+      "wait_time": 2e-06,
+      "full_experiment": 0.0,
+      "sweep_range": 100000000.0,
+      "sweep_time": 1e-06,
+      "sample_rate": 250000000.0
+    },
+    "analysis_plan": "Raw/readout-aware Ramsey review first; this 6 us scout can support a finite T2star if the decay is visible, or motivate a longer follow-up if coherence remains at the end. FFT bin spacing is 166.7 kHz, enough for a first 13C sideband check around 0.385 MHz separation."
+  },
+  "decision": "Preview advisory and, if queue/lifecycle/verifier gates pass and tracking window is under current advisory cap, execute this as the first bounded Ramsey/T2star scout on r03.",
+  "advisory_revision": {
+    "initial_preview_path": "<OPENCLAW_WORKSPACE>/.openclaw/projects/nv23_aligned_nv_t2star_13c_image145844_20260513_1507/work/artifacts/analysis/image145844_reimage_r03_ramsey_t2star_advisory_preview_20260513_1844.json",
+    "initial_per_average_seconds": 690.0266,
+    "initial_tracking_cap_seconds": 450,
+    "revised_scan_tau_s": [
+      0.0,
+      6e-06,
+      31
+    ],
+    "revised_det_Hz": 1500000.0,
+    "revised_tau_step_s": 2.0000000000000002e-07,
+    "revised_fft_resolution_Hz": 166666.66666666666,
+    "revised_nyquist_Hz": 2500000.0,
+    "revised_guard_needed_Hz": 2384615.3571428573,
+    "reason": "Reduce scan points/span so the advisory tracking window can fall below cap while preserving enough Nyquist margin for det + 13C sideband + pODMR center uncertainty."
+  }
+}

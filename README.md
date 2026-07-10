@@ -10,8 +10,8 @@ This repository has two parallel parts:
 
 - **Case studies:** sanitized completed project folders from real
   autonomous-agent NV experiments.
-- **Benchmarks:** offline pODMR resonance-classification tests that evaluate
-  how prompt context and reasoning effort change agent judgment on raw NV
+- **Benchmarks:** offline Ramsey and pODMR tasks that evaluate how reasoning
+  effort changes agent judgment on project records and recorded NV
   measurements.
 
 The release preserves project state, evidence logs, bridge records, figures,
@@ -37,7 +37,8 @@ For a quick review:
 | --- | --- |
 | System overview | [docs/system_overview.md](docs/system_overview.md) |
 | Case studies | [cases/README.md](cases/README.md), [docs/case_walkthrough.md](docs/case_walkthrough.md) |
-| Benchmarks | [benchmarks/podmr-model-first-resonance-2026-05/README.md](benchmarks/podmr-model-first-resonance-2026-05/README.md) |
+| Ramsey checkpoint benchmark | [benchmarks/nv-checkpoint-review-2026-06/README.md](benchmarks/nv-checkpoint-review-2026-06/README.md) |
+| pODMR data evaluation benchmark | [benchmarks/podmr-model-first-resonance-2026-05/README.md](benchmarks/podmr-model-first-resonance-2026-05/README.md) |
 | Model and agent configuration | [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md) |
 | Code inventory | [docs/code_inventory.md](docs/code_inventory.md) |
 | Safety boundary | [docs/safety_boundary.md](docs/safety_boundary.md) |
@@ -47,7 +48,7 @@ For a quick review:
 | Part | What It Shows | Main Artifacts |
 | --- | --- | --- |
 | Case studies | A safety-bounded LLM research agent operating real NV-center experiments | Project state, evidence logs, bridge records, figures, reports, pODMR/Ramsey/CPMG analyses |
-| Benchmarks | How prompt context and reasoning effort affect pODMR resonance judgments | Raw export JSON, raw-readout figures, prompts, labels, predictions, analysis notes, scoring scripts |
+| Benchmarks | How reasoning effort affects hypothesis formation and pODMR data evaluation | Checkpoint packages, raw export JSON, raw-readout figures, prompts, labels, predictions, project notes, scoring scripts |
 | Source and docs | Public audit boundary for NV project management and analysis | Python/MATLAB analysis code, public runtime source, system docs, safety notes |
 
 ## Case Studies
@@ -58,19 +59,33 @@ final scientific conclusions were bounded by the evidence.
 
 | Case | Summary | Status |
 | --- | --- | --- |
-| [image145844](cases/image145844/README.md) | Aligned NV selection, pODMR screening, repeated Ramsey diagnostics, shifted-sideband 13C candidate reanalysis | Completed |
+| [image145844](cases/image145844/README.md) | Aligned NV selection, pODMR screening, repeated Ramsey diagnostics, and later Ramsey frequency reanalysis | Completed |
 | [image172647](cases/image172647/README.md) | Fresh re-image recovery, pODMR candidate rejection/acceptance, multi-detuning Ramsey, CPMG N=8 nearby-13C-like corroboration | Completed |
 | [image231924](cases/image231924/README.md) | Aligned NV selection, pODMR center refinement, corrected-center Ramsey, T2star closeout | Completed |
 
 ## Benchmarks
 
-The benchmark is an offline resonance-classification test built from pODMR data.
-It asks the agent to decide whether a resonance is present from one case at a
-time using raw export JSON files, raw-readout figures, and prompt context.
+The paper reports two offline benchmarks.  The Ramsey checkpoint benchmark tests
+whether the agent can use project records and newly returned Ramsey data to
+identify a missing residual calibration hypothesis.  The pODMR benchmark tests
+whether the agent can judge resonance presence in previously acquired pODMR
+measurements.
 
 | Benchmark | Summary |
 | --- | --- |
-| [pODMR calculation-guided resonance benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md) | 96 single-case pODMR classifications with prompts, raw inputs, labels, predictions, analysis notes, and scoring scripts |
+| [Ramsey checkpoint benchmark](benchmarks/nv-checkpoint-review-2026-06/README.md) | Five pre-analysis Ramsey checkpoints, four reasoning efforts, twenty replicates per checkpoint and effort, checkpoint packages, prompts, recovered project notes, and manual scoring CSVs |
+| [pODMR data evaluation benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md) | 96 single-case pODMR classifications with prompts, raw inputs, labels, predictions, analysis notes, tool use audit, deterministic checks, and the batch comparison used in the appendix |
+
+The Ramsey benchmark contains five chronological checkpoints named `cp01`
+through `cp05`.  Each checkpoint includes the project state, memory and
+knowledge snapshots, then available evidence, and terminal raw Ramsey data for
+the newly completed measurement.  Later analysis notes, later measurements, and
+human advice are excluded from the agent-visible checkpoint package.
+
+The main reported Ramsey result is summarized in
+[benchmarks/nv-checkpoint-review-2026-06/results/figures/reasoning_effort_sweep_low_to_xhigh_summary.csv](benchmarks/nv-checkpoint-review-2026-06/results/figures/reasoning_effort_sweep_low_to_xhigh_summary.csv).
+
+![Reasoning-effort sweep for the Ramsey checkpoint benchmark](benchmarks/nv-checkpoint-review-2026-06/results/figures/reasoning_effort_sweep_low_to_xhigh.png)
 
 The pODMR benchmark contains 24 resonance-present and 72 resonance-absent
 strong-pi measurements. Each prompt condition was run for three replicates with
@@ -81,9 +96,9 @@ The three prompt conditions are:
 
 | Condition | Description |
 | --- | --- |
-| Protocol only | Uses the raw export, raw-readout figure, and sequence XML. |
-| Domain facts | Adds compact NV-domain facts such as contrast scale, mod-depth/Rabi scaling, and average interpretation. |
-| Calculation-guided | Adds a requirement to establish the expected signal with a simulation or explicit quantitative model calculation before judging resonance presence. |
+| Sequence | Uses the raw export, raw-readout figure, and sequence XML. |
+| Facts | Adds compact setup facts such as contrast scale, Rabi frequency scaling, and stored-average interpretation. |
+| Expected signal | Adds a requirement to establish the expected signal with a simulation or explicit quantitative model calculation before judging resonance presence. |
 
 The main trend is that higher reasoning effort alone can increase
 false-positive resonance calls, while the calculation-guided condition suppresses
@@ -91,6 +106,8 @@ false positives across reasoning-effort settings without introducing false
 negatives in this dataset. Full predictions, per-run analysis notes, and scoring
 tables are included under
 [benchmarks/podmr-model-first-resonance-2026-05/results](benchmarks/podmr-model-first-resonance-2026-05/results).
+The appendix batch comparison is included as
+[batch_context_main_inputs_summary.csv](benchmarks/podmr-model-first-resonance-2026-05/results/batch_context_main_inputs_summary.csv).
 
 ![Reasoning-effort sweep for pODMR resonance classification](benchmarks/podmr-model-first-resonance-2026-05/results/figures/podmr_reasoning_sweep.png)
 
@@ -118,6 +135,14 @@ cases/
   image231924/
     project/
 benchmarks/
+  nv-checkpoint-review-2026-06/
+    inputs/
+    labels/
+    prompts/
+    results/
+      figures/
+      low_preanalysis_rootnote_2026-06-16/
+      mhx_preanalysis_wake_2026-06-16/
   podmr-model-first-resonance-2026-05/
     inputs/
     labels/

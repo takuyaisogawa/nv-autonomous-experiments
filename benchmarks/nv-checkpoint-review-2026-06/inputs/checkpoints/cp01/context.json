@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "checkpoint_id": "cp01",
+  "created_at": "2026-05-13T19:30:11",
+  "cutoff_time": "2026-05-13T19:30:11",
+  "cutoff_rule": "future-blind replay may use only prompt, payload, report, and file snapshots captured in this wake record, or explicit current-memory overlay snapshots selected by the evaluator",
+  "agent": {
+    "id": "nv-researcher",
+    "model": "openai-codex/gpt-5.5",
+    "thinking": "xhigh"
+  },
+  "next_action": {
+    "kind": "advance_project",
+    "reason": "execution queue is empty; wake the agent to synthesize or update the research agenda and advance all currently runnable safe project work from objective, evidence, human advice, and safety policy"
+  },
+  "agent_visible_files": {
+    "project": [
+      "project/state.md",
+      "project/brief.md",
+      "project/advice.md"
+    ],
+    "md": [
+      "md/memory.md",
+      "md/knowledge.md"
+    ],
+    "context": [
+      "context.json"
+    ],
+    "evidence": [
+      "evidence/e001.json",
+      "evidence/e002.json",
+      "evidence/e003.json",
+      "evidence/e004.json",
+      "evidence/e005.json",
+      "evidence/e006.json",
+      "evidence/e007.json",
+      "evidence/e008.json",
+      "evidence/e009.json",
+      "evidence/e010.json",
+      "evidence/e011.json"
+    ],
+    "measurement": [
+      "measurement/m001.json",
+      "measurement/m002.json",
+      "measurement/m003.json",
+      "measurement/m004.json",
+      "measurement/m005.json"
+    ]
+  },
+  "recent_evidence": [
+    {
+      "item": "recent_001",
+      "category": "bridge_result",
+      "summary": "Weak-pi pODMR terminal result copied for accepted r03; job completed with savedexperiment 1DExp-seq-Rabimodulated-vary-mw_freq-2026-05-13-180435.mat, 4 averages x 50000 repetitions, final counts 43.890 kcps.",
+      "related_claims": [],
+      "tags": [],
+      "timestamp": "2026-05-13T18:57:33",
+      "file_count": 2
+    },
+    {
+      "item": "recent_002",
+      "category": "analysis",
+      "summary": "Raw/readout-aware weak-pi pODMR review supports a clear usable resonance at 3.876 GHz for r03: raw signal, point-wise ratio, and reference-line normalization all minimize at 3.876 GHz; all 4 averages share the signal minimum; raw signal drop is about 14.3% vs edge median. Average 4 is drift-flagged but does not invalidate the shared resonance-scale dip.",
+      "related_claims": [],
+      "tags": [],
+      "timestamp": "2026-05-13T18:57:33",
+      "file_count": 3
+    },
+    {
+      "item": "recent_003",
+      "category": "analysis",
+      "summary": "Ramsey/T2star scout model, protocol inspection, and advisory for accepted r03. The 8 us/51 point plan exceeded the 450 s tracking cap, so it was redesigned to 6 us/31 points with det=1.5 MHz, 4 x 50000 shots; revised advisory has no blockers and estimates 417.946 s per average under the 450 s cap.",
+      "related_claims": [],
+      "tags": [],
+      "timestamp": "2026-05-13T18:57:33",
+      "file_count": 4
+    },
+    {
+      "item": "recent_004",
+      "category": "artifact",
+      "summary": "Started first Ramsey/T2star scout on r03 as nv23_ramsey_20260513_185505_auto_ramsey. It scans tau 0..6 us in 31 points with mw_freq=3.876 GHz, det=1.5 MHz, length_pi_pulse=52 ns, 4 averages x 50000 repetitions. Live status shows running average 1/4 and final-count text 43.890 kcps; bridge occupancy blocks further submissions until terminal.",
+      "related_claims": [],
+      "tags": [],
+      "timestamp": "2026-05-13T18:57:33",
+      "file_count": 3
+    },
+    {
+      "item": "recent_005",
+      "category": "figure",
+      "summary": "Weak-pi pODMR accepted; Ramsey/T2star scout started: Weak-pi pODMR on accepted r03 completed and raw/readout-aware review supports a clear usable resonance at 3.876 GHz: raw signal, point-wise ratio, and reference-line normalization all minimize there, all 4 averages share the signal minimum, and raw drop is about 14.3% vs edge median. A first Ramsey/T2star scout is now running as nv23_ramsey_20260513_185505_auto_ramsey using tau 0..6 us in 31 points, det=1.5 MHz, mw_freq=3.876 GHz, 4 x 50000 repetitions. The initial 8 us/51 point Ramsey plan was rejected because advisory exceeded the 450 s tracking cap; the revised preview had no blockers and estimated 417.946 s per average. Next action is to wait for terminal Ramsey result and perform raw/FFT review before any T2star or 13C conclusion.",
+      "related_claims": [],
+      "tags": [],
+      "timestamp": "2026-05-13T19:00:58",
+      "file_count": 1
+    }
+  ],
+  "notes": [
+    "Project, memory, knowledge, context, and evidence files are from the launch-time snapshot immediately after the target Ramsey was started.",
+    "The measurement directory contains only later terminal raw data and bridge metadata for that target Ramsey.",
+    "Source artifact names, source wake names, and source paths were removed from this agent-visible context file.",
+    "Use the neutral files in this checkpoint directory as the available evidence."
+  ]
+}
