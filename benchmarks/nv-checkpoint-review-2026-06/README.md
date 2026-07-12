@@ -100,10 +100,9 @@ python scripts\score_outputs.py results\model_outputs.jsonl
 ```
 
 The manuscript uses manual scores in
-`results/manual_rescore_codex_2026-06-30.csv`.  This file contains both the
-broader residual-offset score and the stricter calibration-residual score for
-all 400 runs, with a short rationale for each score.  The aggregated values used
-for the figure are in
+`results/manual_calibration_residual_scores_2026-07-11.csv`.  This file contains
+one binary calibration residual score for all 400 runs, with a short rationale
+for each score.  The aggregated values used for the figure are in
 `results/figures/reasoning_effort_sweep_low_to_xhigh_summary.csv`.
 
 The automatic score script is retained as a first-pass helper.  Borderline

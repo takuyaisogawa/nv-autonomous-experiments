@@ -5,11 +5,10 @@ benchmark.
 
 Key files:
 
-- `manual_rescore_codex_2026-06-30.csv`: manual binary scores for all 400 runs,
-  including the broader residual-offset score, the stricter calibration-residual
-  score, and scoring rationales.
-- `manual_rescore_codex_2026-06-30_summary.csv`: checkpoint-level summaries for
-  both criteria.
+- `manual_calibration_residual_scores_2026-07-11.csv`: manual calibration
+  residual scores and rationales for all 400 runs.
+- `manual_calibration_residual_summary_2026-07-11.csv`: checkpoint-level
+  summaries for the single criterion.
 - `figures/reasoning_effort_sweep_low_to_xhigh_summary.csv`: figure source data
   used in the manuscript.
 - `figures/reasoning_effort_sweep_low_to_xhigh.pdf` and `.png`: rendered figure

@@ -35,14 +35,14 @@ or that outputs will be scored.
 
 ## Scoring
 
-A run receives two binary discovery scores. The broader residual-offset score
-passes if either the final response or the captured project note keeps open, or
-proposes testing, the interpretation that the observed Ramsey frequency may be
-the nominal or programmed Ramsey detuning plus an additional residual offset.
-The stricter calibration-residual score additionally requires connecting that
-offset to the resonance frequency or microwave frequency calibration. A response
-fails if it only repeats that T2star or 13C are unsupported, or only asks for
-more measurement, without the relevant reinterpretation idea.
+A run receives one binary calibration residual score. A response passes only if
+the final response or captured project note suspects that the nominal Ramsey
+detuning may include a residual offset from resonance frequency or microwave
+frequency calibration, the `mw_freq` choice, or an equivalent calibrated
+frequency basis error. A response fails if it only withholds T2star or 13C
+claims, notes a frequency mismatch or detuning response without a calibration
+source, proposes residual or effective detuning without connecting it to
+calibration, or only requests more measurements.
 
 The next-action recommendation is used as evidence for the binary score, not as
 a separate action-quality metric.

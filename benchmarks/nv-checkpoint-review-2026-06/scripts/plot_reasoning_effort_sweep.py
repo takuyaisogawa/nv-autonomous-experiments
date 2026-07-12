@@ -11,75 +11,46 @@ import numpy as np
 ROOT = Path(__file__).resolve().parents[1]
 RESULTS = ROOT / "results"
 FIGURES = RESULTS / "figures"
+SCORE_FILE = RESULTS / "manual_calibration_residual_scores_2026-07-11.csv"
 
 EFFORTS = ["low", "medium", "high", "xhigh"]
 CHECKPOINTS = ["cp01", "cp02", "cp03", "cp04", "cp05"]
-
-SCORE_FILES = {
-    "residual-offset": [
-        RESULTS
-        / "low_preanalysis_rootnote_2026-06-16"
-        / "manual_scored_low_rootnote_residual_offset_20rep.csv",
-        RESULTS
-        / "mhx_preanalysis_wake_2026-06-16"
-        / "manual_scored_mhx_residual_offset_20rep.csv",
-    ],
-    "strong calibration-residual": [
-        RESULTS
-        / "low_preanalysis_rootnote_2026-06-16"
-        / "manual_scored_low_rootnote_strong_calibration_residual_20rep.csv",
-        RESULTS
-        / "mhx_preanalysis_wake_2026-06-16"
-        / "manual_scored_mhx_strong_calibration_residual_20rep.csv",
-    ],
-}
+CRITERION = "calibration-residual"
+COLOR = "#3AA35C"
 
 
 def read_scores() -> list[dict[str, str]]:
-    rows: list[dict[str, str]] = []
-    for criterion, paths in SCORE_FILES.items():
-        for path in paths:
-            if not path.exists():
-                raise FileNotFoundError(path)
-            with path.open("r", encoding="utf-8", newline="") as f:
-                for row in csv.DictReader(f):
-                    row = dict(row)
-                    row["criterion_group"] = criterion
-                    rows.append(row)
+    with SCORE_FILE.open("r", encoding="utf-8", newline="") as f:
+        rows = list(csv.DictReader(f))
+    if len(rows) != 400:
+        raise ValueError(f"Expected 400 score rows, found {len(rows)}")
     return rows
 
 
 def summarize(rows: list[dict[str, str]]) -> list[dict[str, object]]:
-    buckets: dict[tuple[str, str, str], list[int]] = defaultdict(lambda: [0, 0])
+    buckets: dict[tuple[str, str], list[int]] = defaultdict(lambda: [0, 0])
     for row in rows:
-        key = (
-            row["criterion_group"],
-            row["reasoning_effort"],
-            row["checkpoint_id"],
-        )
+        key = (row["reasoning_effort"], row["checkpoint_id"])
         buckets[key][1] += 1
-        if row["criterion_group"] == "strong calibration-residual":
-            score = row.get("score") or row.get("strong_score")
-        else:
-            score = row.get("score") or row.get("manual_score") or row.get("weak_score")
-        if score == "pass":
+        if row["calibration_residual_score"] == "pass":
             buckets[key][0] += 1
 
     summary: list[dict[str, object]] = []
-    for criterion in SCORE_FILES:
-        for effort in EFFORTS:
-            for checkpoint in CHECKPOINTS:
-                passes, total = buckets[(criterion, effort, checkpoint)]
-                summary.append(
-                    {
-                        "criterion_group": criterion,
-                        "reasoning_effort": effort,
-                        "checkpoint_id": checkpoint,
-                        "passes": passes,
-                        "total": total,
-                        "pass_rate": passes / total if total else float("nan"),
-                    }
-                )
+    for effort in EFFORTS:
+        for checkpoint in CHECKPOINTS:
+            passes, total = buckets[(effort, checkpoint)]
+            if total != 20:
+                raise ValueError(f"Expected 20 rows for {effort}/{checkpoint}, found {total}")
+            summary.append(
+                {
+                    "criterion_group": CRITERION,
+                    "reasoning_effort": effort,
+                    "checkpoint_id": checkpoint,
+                    "passes": passes,
+                    "total": total,
+                    "pass_rate": passes / total,
+                }
+            )
     return summary
 
 
@@ -98,8 +69,7 @@ def write_summary_csv(summary: list[dict[str, object]], out_path: Path) -> None:
             ],
         )
         writer.writeheader()
-        for row in summary:
-            writer.writerow(row)
+        writer.writerows(summary)
 
 
 def make_plot(summary: list[dict[str, object]], out_base: Path) -> None:
@@ -108,108 +78,66 @@ def make_plot(summary: list[dict[str, object]], out_base: Path) -> None:
             "font.family": "DejaVu Sans",
             "axes.spines.top": False,
             "axes.spines.right": False,
-            "axes.labelsize": 10,
-            "axes.titlesize": 11,
-            "xtick.labelsize": 9,
-            "ytick.labelsize": 9,
+            "axes.labelsize": 9,
+            "axes.titlesize": 10,
+            "xtick.labelsize": 8,
+            "ytick.labelsize": 8,
         }
     )
 
-    colors = {
-        "residual-offset": "#2E7D32",
-        "strong calibration-residual": "#1565C0",
-    }
-    x = np.arange(len(EFFORTS))
-    fig = plt.figure(figsize=(11.5, 8.2), constrained_layout=True)
-    gs = fig.add_gridspec(2, 2, height_ratios=[1.0, 1.35])
+    fig = plt.figure(figsize=(8.8, 3.25), constrained_layout=False)
+    gs = fig.add_gridspec(1, 2, width_ratios=[0.9, 1.45], wspace=0.30)
+    fig.subplots_adjust(left=0.075, right=0.92, top=0.88, bottom=0.20)
 
-    ax_line = fig.add_subplot(gs[0, :])
-    ax_line.set_axisbelow(True)
-    bar_width = 0.34
-    offsets = {
-        "residual-offset": -bar_width / 2,
-        "strong calibration-residual": bar_width / 2,
-    }
-    for criterion in SCORE_FILES:
-        rates = []
-        labels = []
-        for effort in EFFORTS:
-            subset = [
+    ax_bar = fig.add_subplot(gs[0, 0])
+    x = np.arange(len(EFFORTS))
+    rates = []
+    labels = []
+    for effort in EFFORTS:
+        subset = [r for r in summary if r["reasoning_effort"] == effort]
+        passes = sum(int(r["passes"]) for r in subset)
+        total = sum(int(r["total"]) for r in subset)
+        rates.append(passes / total)
+        labels.append(f"{passes}/{total}")
+    ax_bar.bar(x, rates, width=0.55, color=COLOR, edgecolor="white", linewidth=0.4)
+    for xi, yi, label in zip(x, rates, labels):
+        ax_bar.text(xi, yi + 0.012, label, ha="center", va="bottom", fontsize=7.5)
+    ax_bar.set_title("Aggregate pass rate")
+    ax_bar.set_xticks(x, EFFORTS)
+    ax_bar.set_xlabel("Reasoning effort")
+    ax_bar.set_ylabel("Pass rate")
+    ax_bar.set_ylim(0, 0.4)
+    ax_bar.grid(axis="y", color="#d9e1e5", linewidth=0.7)
+    ax_bar.set_axisbelow(True)
+    ax_bar.text(-0.12, 1.02, "(a)", transform=ax_bar.transAxes, fontsize=9)
+
+    ax_heat = fig.add_subplot(gs[0, 1])
+    matrix = np.zeros((len(EFFORTS), len(CHECKPOINTS)))
+    labels_heat = [["" for _ in CHECKPOINTS] for __ in EFFORTS]
+    for i, effort in enumerate(EFFORTS):
+        for j, checkpoint in enumerate(CHECKPOINTS):
+            item = next(
                 r
                 for r in summary
-                if r["criterion_group"] == criterion
-                and r["reasoning_effort"] == effort
-            ]
-            passes = sum(int(r["passes"]) for r in subset)
-            total = sum(int(r["total"]) for r in subset)
-            rate = passes / total if total else float("nan")
-            rates.append(rate)
-            labels.append(f"{passes}/{total}")
-        xpos = x + offsets[criterion]
-        ax_line.bar(
-            xpos,
-            rates,
-            width=bar_width,
-            color=colors[criterion],
-            label=criterion,
-            zorder=3,
-        )
-        for xi, yi, label in zip(xpos, rates, labels):
-            ax_line.text(
-                xi,
-                yi + 0.015,
-                label,
-                ha="center",
-                va="bottom",
-                fontsize=8,
-                zorder=4,
+                if r["reasoning_effort"] == effort and r["checkpoint_id"] == checkpoint
             )
+            matrix[i, j] = float(item["pass_rate"])
+            labels_heat[i][j] = f"{int(item['passes'])}/{int(item['total'])}"
+    image = ax_heat.imshow(matrix, vmin=0, vmax=1, cmap="Blues", aspect="auto")
+    ax_heat.set_title("Checkpoint pass rate")
+    ax_heat.set_xticks(np.arange(len(CHECKPOINTS)), CHECKPOINTS)
+    ax_heat.set_yticks(np.arange(len(EFFORTS)), EFFORTS)
+    ax_heat.set_xlabel("Checkpoint")
+    ax_heat.set_ylabel("Reasoning effort")
+    for i in range(len(EFFORTS)):
+        for j in range(len(CHECKPOINTS)):
+            color = "white" if matrix[i, j] > 0.58 else "#263238"
+            ax_heat.text(j, i, labels_heat[i][j], ha="center", va="center", color=color, fontsize=7.5)
+    ax_heat.text(-0.10, 1.02, "(b)", transform=ax_heat.transAxes, fontsize=9)
+    colorbar = fig.colorbar(image, ax=ax_heat, fraction=0.04, pad=0.025)
+    colorbar.set_label("Pass rate")
+    colorbar.ax.tick_params(labelsize=7)
 
-    ax_line.set_title("Reasoning effort sweep: manual pass rate")
-    ax_line.set_xticks(x, EFFORTS)
-    ax_line.set_ylim(0, 0.6)
-    ax_line.set_ylabel("Pass rate")
-    ax_line.grid(axis="y", color="#dddddd", linewidth=0.8, zorder=0)
-    ax_line.legend(loc="upper left", frameon=False)
-    ax_line.text(
-        0.0,
-        -0.23,
-        "All efforts used the stabilized root-level note prompt; two low runs were scored from returned output after note-file permission errors.",
-        transform=ax_line.transAxes,
-        fontsize=8,
-        color="#555555",
-    )
-
-    for idx, criterion in enumerate(SCORE_FILES):
-        ax = fig.add_subplot(gs[1, idx])
-        mat = np.zeros((len(EFFORTS), len(CHECKPOINTS)))
-        text = [["" for _ in CHECKPOINTS] for __ in EFFORTS]
-        for i, effort in enumerate(EFFORTS):
-            for j, checkpoint in enumerate(CHECKPOINTS):
-                item = next(
-                    r
-                    for r in summary
-                    if r["criterion_group"] == criterion
-                    and r["reasoning_effort"] == effort
-                    and r["checkpoint_id"] == checkpoint
-                )
-                mat[i, j] = float(item["pass_rate"])
-                text[i][j] = f"{int(item['passes'])}/{int(item['total'])}"
-        im = ax.imshow(mat, vmin=0, vmax=1, cmap="YlGnBu")
-        ax.set_title(criterion)
-        ax.set_xticks(np.arange(len(CHECKPOINTS)), CHECKPOINTS)
-        ax.set_yticks(np.arange(len(EFFORTS)), EFFORTS)
-        for i in range(len(EFFORTS)):
-            for j in range(len(CHECKPOINTS)):
-                color = "white" if mat[i, j] > 0.58 else "#222222"
-                ax.text(j, i, text[i][j], ha="center", va="center", color=color, fontsize=9)
-        ax.set_xlabel("Checkpoint")
-        if idx == 0:
-            ax.set_ylabel("Reasoning effort")
-        cbar = fig.colorbar(im, ax=ax, shrink=0.82)
-        cbar.set_label("Pass rate")
-
-    fig.suptitle("NV checkpoint review benchmark", fontsize=14, fontweight="bold")
     out_base.parent.mkdir(parents=True, exist_ok=True)
     fig.savefig(out_base.with_suffix(".png"), dpi=220)
     fig.savefig(out_base.with_suffix(".pdf"))

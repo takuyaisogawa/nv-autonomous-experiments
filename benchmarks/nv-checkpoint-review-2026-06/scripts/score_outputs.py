@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""First-pass binary scoring for Ramsey project-wake model outputs."""
+"""First-pass calibration residual scoring for Ramsey model outputs."""
 
 from __future__ import annotations
 
@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Any
 
 
-POSITIVE_PATTERNS = [
+RESIDUAL_MODEL_PATTERNS = [
     re.compile(r"\bprogrammed\b.{0,80}\b1\.0\s*MHz\b.{0,160}\b(plus|\+|shifted|offset|effective|residual)\b.{0,160}\b(192\s*kHz|0\.19[0-9]?\s*MHz|1\.19[0-9]?\s*MHz)\b", re.I | re.S),
     re.compile(r"\b(192\s*kHz|0\.19[0-9]?\s*MHz|1\.19[0-9]?\s*MHz)\b.{0,160}\b(plus|\+|shifted|offset|effective|residual)\b.{0,160}\bprogrammed\b.{0,80}\b1\.0\s*MHz\b", re.I | re.S),
     re.compile(r"\bprogrammed\b.{0,80}\b1\.5\s*MHz\b.{0,160}\b0\.884\s*MHz\b.{0,160}\b(center|centre|resonance|microwave|detuning)\b.{0,80}\b(error|offset|mismatch|off|miscentered|mis[- ]?cent(?:er|re)ed)\b", re.I | re.S),
@@ -26,6 +26,11 @@ POSITIVE_PATTERNS = [
     re.compile(r"\b1\.19[0-9]?\s*MHz\b.{0,160}\bdet\s*=\s*1\.0\s*MHz\b.{0,160}\b(residual|offset|effective\s+detuning)\b", re.I | re.S),
     re.compile(r"\b(microwave|mw|resonance|center|centre)\b.{0,80}\b(error|offset|drift|miscentered|mis[- ]?cent(?:er|re)ed|shifted)\b.{0,120}\b(nominal|programmed)\s+(detuning|det)\b", re.I | re.S),
     re.compile(r"\b(nominal|programmed)\s+(detuning|det)\b.{0,120}\b(microwave|mw|resonance|center|centre)\b.{0,80}\b(error|offset|drift|miscentered|mis[- ]?cent(?:er|re)ed|shifted)\b", re.I | re.S),
+]
+
+CALIBRATION_PATTERNS = [
+    re.compile(r"\b(pODMR|weak[- ]?pi|mw_freq|microwave|resonance|frequency calibration)\b.{0,140}\b(error|offset|drift|mismatch|miscentered|mis[- ]?cent(?:er|re)ed|recalibrat(?:e|ed|ion)|center|centre)\b", re.I | re.S),
+    re.compile(r"\b(error|offset|drift|mismatch|miscentered|mis[- ]?cent(?:er|re)ed)\b.{0,140}\b(pODMR|weak[- ]?pi|mw_freq|microwave|resonance center|resonance centre|frequency calibration)\b", re.I | re.S),
 ]
 
 WEAK_ONLY_PATTERNS = [
@@ -52,9 +57,12 @@ def read_jsonl(path: Path) -> list[dict[str, Any]]:
 
 
 def classify(text: str) -> tuple[str, str]:
-    positives = [pat.pattern for pat in POSITIVE_PATTERNS if pat.search(text)]
-    if positives:
-        return "pass", positives[0]
+    residual = [pat.pattern for pat in RESIDUAL_MODEL_PATTERNS if pat.search(text)]
+    calibration = [pat.pattern for pat in CALIBRATION_PATTERNS if pat.search(text)]
+    if residual and calibration:
+        return "pass", f"residual={residual[0]} calibration={calibration[0]}"
+    if residual:
+        return "fail", "residual interpretation without a calibration link"
     weak = [pat.pattern for pat in WEAK_ONLY_PATTERNS if pat.search(text)]
     if weak:
         return "fail", weak[0]
