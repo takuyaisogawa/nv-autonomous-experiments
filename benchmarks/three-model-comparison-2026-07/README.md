@@ -26,12 +26,10 @@ reasoning effort settings, replicate structure, and scoring rules.  Local
 analysis tools were available.  The pODMR prompts contained no labeled
 examples.
 
-Each new-model run used a fresh temporary directory containing only one
-agent-visible checkpoint or one unlabeled pODMR case.  During the GPT-5.6 Sol
-run, the Windows workspace sandbox blocked local analysis commands and was
-therefore bypassed for the accepted rerun.  The temporary-directory input
-isolation and prompt restriction were retained.  Results obtained before this
-configuration issue was identified were excluded from the reported sweep.
+The later GPT-5.4 and GPT-5.6 Sol sweeps used the same benchmark runners.  The
+original GPT-5.5 sweeps were retained from the earlier benchmark records.
+Earlier GPT-5.6 Sol pilot results from an invalid setup were excluded from the
+reported comparison.
 
 ## Models and run counts
 

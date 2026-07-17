@@ -21,7 +21,7 @@
       "manuscript_name": "GPT-5.6 Sol",
       "model_argument": "gpt-5.6-sol",
       "execution_date": "2026-07-15",
-      "note": "The accepted Windows rerun bypassed the workspace sandbox after it blocked local analysis commands. Temporary-directory input isolation and the prompt restriction remained in place. Earlier invalid-configuration results were excluded."
+      "note": "Earlier pilot results from an invalid setup were excluded from the reported comparison."
     }
   ],
   "reasoning_efforts": [
