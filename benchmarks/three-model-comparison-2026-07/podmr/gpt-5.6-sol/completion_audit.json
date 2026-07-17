@@ -1,0 +1,106 @@
+{
+  "expected_total": 3456,
+  "joined_rows": 3456,
+  "unique_joined_rows": 3456,
+  "unique_raw_records": 3456,
+  "unsuccessful_raw_records": [],
+  "cells": [
+    {
+      "reasoning_effort": "low",
+      "context_id": "context_0",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "low",
+      "context_id": "context_A",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "low",
+      "context_id": "context_B",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "medium",
+      "context_id": "context_0",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "medium",
+      "context_id": "context_A",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "medium",
+      "context_id": "context_B",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "high",
+      "context_id": "context_0",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "high",
+      "context_id": "context_A",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "high",
+      "context_id": "context_B",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "xhigh",
+      "context_id": "context_0",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "xhigh",
+      "context_id": "context_A",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    },
+    {
+      "reasoning_effort": "xhigh",
+      "context_id": "context_B",
+      "expected": 288,
+      "observed": 288,
+      "parse_failed": 0,
+      "complete": true
+    }
+  ],
+  "complete": true
+}

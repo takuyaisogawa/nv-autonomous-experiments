@@ -1,0 +1,401 @@
+custom_id,checkpoint_id,reasoning_effort,replicate,calibration_residual_score,calibration_residual_rationale
+cp01__low__rep01,cp01,low,1,fail,Fail: discusses an unexplained carrier mismatch but does not connect it to pODMR or microwave resonance-center calibration or an mw_freq basis error.
+cp01__low__rep02,cp01,low,2,fail,Fail: explicitly leaves resonance correction unsupported and does not advance a calibration-residual hypothesis.
+cp01__low__rep03,cp01,low,3,fail,Fail: explicitly withholds a Ramsey center correction and attributes the mismatch to noise or drift without a calibration source.
+cp01__low__rep04,cp01,low,4,pass,Pass: explicitly explains the sub-programmed carrier as plausible from the grid-limited ODMR center and its center-error uncertainty.
+cp01__low__rep05,cp01,low,5,pass,Pass: treats a resonance-center offset as a possible explanation for the mismatch and recommends an immediate weak-pi center verification.
+cp01__low__rep06,cp01,low,6,fail,Fail: requests a weak-pi resonance check after the mismatch but does not state a residual calibrated-center error as its explanation.
+cp01__low__rep07,cp01,low,7,pass,Pass: explicitly compares the sub-programmed carrier with the pODMR center-uncertainty allowance and identifies a possible corrected resonance-frequency issue.
+cp01__low__rep08,cp01,low,8,pass,Pass: explicitly treats resonance drift as a possible source of the detuning mismatch and calls for immediate weak-pi pODMR measurement of the shift.
+cp01__low__rep09,cp01,low,9,pass,Pass: explicitly identifies a residual microwave or resonance offset as a possible source of the carrier mismatch and calls for ODMR confirmation.
+cp01__low__rep10,cp01,low,10,pass,Pass: names a resonance mismatch as a plausible source of the off-programmed feature and proposes refreshing weak-pi pODMR before the control repeat.
+cp01__low__rep11,cp01,low,11,pass,Pass: explicitly states that resonance-frequency drift or drift of the weak-pi ODMR calibration could explain the mismatch.
+cp01__low__rep12,cp01,low,12,fail,Fail: proposes an effective detuning difference and resonance recheck without linking it to a calibrated-center residual.
+cp01__low__rep13,cp01,low,13,fail,Fail: recommends a weak-pODMR center check but does not state that a residual center error explains the Ramsey mismatch.
+cp01__low__rep14,cp01,low,14,fail,Fail: explicitly leaves any Ramsey-derived pODMR center correction unsupported.
+cp01__low__rep15,cp01,low,15,fail,Fail: allows an unspecified frequency offset but explicitly declines to suspect the weak-pi pODMR center as its source.
+cp01__low__rep16,cp01,low,16,fail,Fail: recommends a narrow weak-pi pODMR check but does not state that a residual center error explains the carrier mismatch.
+cp01__low__rep17,cp01,low,17,fail,Fail: requests a quick resonance check but does not link the displaced carrier to a residual center-calibration error.
+cp01__low__rep18,cp01,low,18,pass,Pass: explicitly identifies an ODMR-center shift as a possible cause of the carrier mismatch and recommends weak-pi recalibration.
+cp01__low__rep19,cp01,low,19,pass,Pass: explicitly quantifies a plausible resonance-center mismatch from the coarse pODMR grid and recommends finer weak-pi recalibration.
+cp01__low__rep20,cp01,low,20,pass,Pass: explicitly attributes the displacement to possible resonance drift or center error and calls for immediate weak-pi recalibration.
+cp02__low__rep01,cp02,low,1,fail,Fail: mentions a sequence or detuning calibration issue but not a residual offset from the calibrated resonance center or microwave frequency choice.
+cp02__low__rep02,cp02,low,2,fail,Fail: notes an unexplained detuning mismatch and sequence convention check without connecting it to pODMR or microwave-center calibration.
+cp02__low__rep03,cp02,low,3,fail,Fail: recommends pulse and control-path calibration but not a residual offset from pODMR or microwave resonance-center calibration.
+cp02__low__rep04,cp02,low,4,fail,Fail: asks to reconfirm pODMR but does not state that a residual pODMR or microwave-center offset explains the Ramsey mismatch.
+cp02__low__rep05,cp02,low,5,fail,Fail: recommends pulse and phase-path recalibration but does not attribute the Ramsey mismatch to resonance-center or mw_freq calibration.
+cp02__low__rep06,cp02,low,6,pass,Pass: links failure of detuning tracking to a possible microwave-frequency calibration problem as a source of the carrier mismatch.
+cp02__low__rep07,cp02,low,7,fail,Fail: proposes a multi-detuning common-offset fit but lists microwave-center error as unsupported rather than suspecting it as the source.
+cp02__low__rep08,cp02,low,8,fail,Fail: favors detuning implementation or acquisition transients after a refined pODMR center rather than a calibration residual.
+cp02__low__rep09,cp02,low,9,fail,Fail: preserves the established pODMR center and attributes failure to pulse or frequency delivery without a calibration-residual link.
+cp02__low__rep10,cp02,low,10,fail,Fail: treats the absent carrier as a phase-ramp or readout validation problem without a resonance-center calibration source.
+cp02__low__rep11,cp02,low,11,fail,Fail: proposes an effective carrier offset from the phase ramp but leaves electron-frequency offset unsupported and gives no calibration link.
+cp02__low__rep12,cp02,low,12,fail,Fail: preserves the fine-pODMR center conclusion and reports failed detuning tracking without a calibration-residual explanation.
+cp02__low__rep13,cp02,low,13,fail,Fail: explicitly rejects a Ramsey-derived resonance correction and frames the task as programmed-detuning calibration.
+cp02__low__rep14,cp02,low,14,fail,Fail: allows a sequence or control offset but does not connect it to resonance-frequency or mw_freq calibration.
+cp02__low__rep15,cp02,low,15,fail,Fail: proposes detuning-scaling validation without a pODMR or microwave-center source for the mismatch.
+cp02__low__rep16,cp02,low,16,pass,Pass: explicitly interprets the displacement as residual microwave-to-transition detuning and maps it to a shifted transition center for testing.
+cp02__low__rep17,cp02,low,17,fail,Fail: preserves the pODMR conclusion and treats the missing carrier as a detuning or phase-ramp implementation problem.
+cp02__low__rep18,cp02,low,18,fail,Fail: mentions an unspecified residual frequency offset without connecting it to resonance-frequency or mw_freq calibration.
+cp02__low__rep19,cp02,low,19,fail,Fail: preserves the fine-pODMR conclusion and treats failure as phase-ramp or readout sequence calibration.
+cp02__low__rep20,cp02,low,20,pass,Pass: links the carrier mismatch to a possible frequency-reference problem and pairs that hypothesis with refreshing the pODMR center.
+cp03__low__rep01,cp03,low,1,fail,Fail: identifies a frequency above the programmed detuning and proposes a detuning-shift test without a resonance-calibration source.
+cp03__low__rep02,cp03,low,2,fail,Fail: allows a shifted carrier or residual structure but gives no calibrated resonance-center or mw_freq source.
+cp03__low__rep03,cp03,low,3,fail,Fail: attributes the ratio feature to reference normalization or pulse and readout systematics without a resonance-frequency calibration hypothesis.
+cp03__low__rep04,cp03,low,4,fail,Fail: treats the broad frequency as unresolved short-record structure without a calibrated resonance-center error.
+cp03__low__rep05,cp03,low,5,fail,Fail: favors pulse and readout contrast problems without a resonance-frequency calibration hypothesis.
+cp03__low__rep06,cp03,low,6,fail,Fail: attributes the apparent carrier to reference-channel structure rather than a resonance-frequency calibration residual.
+cp03__low__rep07,cp03,low,7,fail,Fail: recommends pulse and phase controls and does not connect the missing carrier to resonance-frequency calibration.
+cp03__low__rep08,cp03,low,8,fail,Fail: rejects assignment of the offset carrier and gives no resonance-frequency calibration source.
+cp03__low__rep09,cp03,low,9,pass,Pass: explicitly interprets the repeatable effective detuning as a possible offset from nominal resonance or frequency calibration.
+cp03__low__rep10,cp03,low,10,fail,Fail: reports a component consistent with the programmed carrier and does not propose a calibration residual.
+cp03__low__rep11,cp03,low,11,fail,Fail: identifies an effective detuning or protocol offset without connecting it to resonance-frequency or mw_freq calibration.
+cp03__low__rep12,cp03,low,12,fail,Fail: treats the mismatch as transient or model behavior and leaves the established microwave center intact.
+cp03__low__rep13,cp03,low,13,fail,Fail: attributes missing contrast to pulse and phase or readout limitations rather than resonance-frequency calibration.
+cp03__low__rep14,cp03,low,14,fail,Fail: preserves the grid-supported resonance value and attributes failure to phase control without a calibration-residual hypothesis.
+cp03__low__rep15,cp03,low,15,fail,Fail: reports the programmed target and prior pODMR context without a resonance-frequency calibration residual hypothesis.
+cp03__low__rep16,cp03,low,16,fail,Fail: frames the result as a pulse or readout calibration control and gives no resonance-frequency calibration residual.
+cp03__low__rep17,cp03,low,17,fail,Fail: reports modulation near the programmed phase ramp and recommends detuning validation without a residual resonance-frequency calibration hypothesis.
+cp03__low__rep18,cp03,low,18,fail,Fail: reports absent programmed carrier and preserves the pODMR conclusion without a calibration-residual interpretation.
+cp03__low__rep19,cp03,low,19,fail,Fail: reports a near-programmed component and asks for detuning tracking without a resonance-center residual hypothesis.
+cp03__low__rep20,cp03,low,20,fail,Fail: explicitly states that the Ramsey failure does not imply revision of the pODMR center.
+cp04__low__rep01,cp04,low,1,fail,Fail: interprets the signal as detuning tracking but does not suspect a residual resonance-center or mw_freq calibration offset.
+cp04__low__rep02,cp04,low,2,fail,Fail: treats the response as detuning tracking without a residual resonance-frequency calibration hypothesis.
+cp04__low__rep03,cp04,low,3,fail,Fail: reports suggestive detuning tracking but does not connect an offset to pODMR or microwave-center calibration.
+cp04__low__rep04,cp04,low,4,fail,Fail: interprets the change as programmed-detuning tracking without a residual resonance-frequency calibration source.
+cp04__low__rep05,cp04,low,5,fail,Fail: identifies detuning-dependent behavior but gives no residual pODMR or microwave-center offset source.
+cp04__low__rep06,cp04,low,6,fail,Fail: concludes programmed-detuning tracking and explicitly leaves the established pODMR center intact without a calibration-residual hypothesis.
+cp04__low__rep07,cp04,low,7,fail,Fail: requests pODMR bracketing but does not attribute the observed offset to a pODMR or microwave-center calibration error.
+cp04__low__rep08,cp04,low,8,fail,Fail: uses prior pODMR only to preserve the alignment conclusion and gives no calibration-residual interpretation.
+cp04__low__rep09,cp04,low,9,fail,Fail: evaluates programmed-detuning response and leaves the established ODMR conclusion unchanged without a residual calibration hypothesis.
+cp04__low__rep10,cp04,low,10,fail,Fail: reports detuning tracking and explicitly leaves precise carrier offset unsupported without a calibration source.
+cp04__low__rep11,cp04,low,11,fail,Fail: reports a programmed-detuning shift with no residual resonance-center calibration hypothesis.
+cp04__low__rep12,cp04,low,12,fail,Fail: fits a common detuning offset but does not connect it to resonance-frequency or mw_freq calibration.
+cp04__low__rep13,cp04,low,13,fail,Fail: reports provisional detuning tracking and asks only for a resonance check without a calibration-residual interpretation.
+cp04__low__rep14,cp04,low,14,fail,Fail: reports programmed-detuning tracking and retains the calibrated NV without a calibration-residual hypothesis.
+cp04__low__rep15,cp04,low,15,fail,Fail: reports an observed programmed-detuning shift with no residual resonance calibration explanation.
+cp04__low__rep16,cp04,low,16,fail,Fail: defines success as programmed-detuning tracking and gives no calibrated resonance-center source for an offset.
+cp04__low__rep17,cp04,low,17,fail,Fail: leaves precise detuning tracking unsupported and gives no residual resonance-center calibration explanation.
+cp04__low__rep18,cp04,low,18,fail,Fail: reports an approximate programmed-detuning shift without a calibration-residual source.
+cp04__low__rep19,cp04,low,19,fail,Fail: treats the change as programmed-detuning tracking and leaves the existing pODMR conclusion unchanged.
+cp04__low__rep20,cp04,low,20,fail,Fail: proposes a control at the calibrated center without a residual resonance-center error hypothesis.
+cp05__low__rep01,cp05,low,1,fail,Fail: reports unstable spectral structure without linking the mismatch to resonance-frequency calibration.
+cp05__low__rep02,cp05,low,2,fail,Fail: uses pODMR only as prior provenance and does not connect the Ramsey frequency mismatch to that calibration.
+cp05__low__rep03,cp05,low,3,pass,Pass: links the carrier mismatch to possible resonance drift or calibration offset and calls for fine weak-pi pODMR bracketing of the Ramsey test.
+cp05__low__rep04,cp05,low,4,fail,Fail: explicitly declines to infer that the refreshed pODMR center is wrong and gives no calibration-residual hypothesis.
+cp05__low__rep05,cp05,low,5,fail,Fail: reports a weak programmed carrier and sequence or readout alternatives without connecting them to resonance calibration.
+cp05__low__rep06,cp05,low,6,fail,Fail: uses the refreshed pODMR center only as setup context and instead recommends pulse calibration and phase cycling.
+cp05__low__rep07,cp05,low,7,fail,Fail: reports weak programmed-carrier coherence without a residual resonance-frequency calibration explanation.
+cp05__low__rep08,cp05,low,8,fail,Fail: treats refreshed pODMR as prior evidence but does not connect the 2.27 MHz mismatch to that calibration.
+cp05__low__rep09,cp05,low,9,fail,Fail: explicitly declines to infer a corrected resonance center from the off-target feature.
+cp05__low__rep10,cp05,low,10,fail,Fail: requests a fresh pODMR check but does not identify a residual pODMR or microwave-center offset as the current mismatch source.
+cp05__low__rep11,cp05,low,11,pass,Pass: explicitly lists residual frequency-calibration error as a possible cause and calls for fine pODMR bracketing of the diagnostic.
+cp05__low__rep12,cp05,low,12,fail,Fail: reports an off-target feature with a refreshed center but does not propose that calibration as the residual source.
+cp05__low__rep13,cp05,low,13,fail,Fail: treats pODMR as prior setup and proposes pulse recalibration rather than a residual resonance-center offset.
+cp05__low__rep14,cp05,low,14,fail,Fail: explicitly leaves resonance correction from the spectral maxima unsupported.
+cp05__low__rep15,cp05,low,15,fail,Fail: reports an unstable carrier without a residual pODMR or microwave-center calibration hypothesis.
+cp05__low__rep16,cp05,low,16,fail,Fail: uses the refreshed pODMR center as setup and attributes the off-target feature to scan direction rather than residual center error.
+cp05__low__rep17,cp05,low,17,fail,Fail: reports an off-programmed peak and uses pODMR only as prior setup without identifying a residual center error.
+cp05__low__rep18,cp05,low,18,fail,Fail: attributes the unstable carrier to Ramsey pulse and readout calibration rather than resonance-frequency calibration.
+cp05__low__rep19,cp05,low,19,fail,Fail: explicitly leaves sub-grid refinement of the refreshed pODMR center unsupported.
+cp05__low__rep20,cp05,low,20,fail,Fail: mentions generic calibration and timing systematics or resonance conditions without a clear pODMR or microwave-center residual link.
+cp01__medium__rep01,cp01,medium,1,pass,Pass: explicitly interprets the carrier displacement as possible resonance offset unresolved by the coarse pODMR grid and recommends fine recentering.
+cp01__medium__rep02,cp01,medium,2,pass,Pass: explicitly identifies a residual resonance-center error as a possible source and ties the diagnostic to weak-pi pODMR recentering.
+cp01__medium__rep03,cp01,medium,3,fail,Fail: requests fine-pODMR recentering but explicitly leaves a transition-center correction unsupported.
+cp01__medium__rep04,cp01,medium,4,pass,Pass: explicitly interprets the carrier difference as residual microwave-to-transition detuning relative to the weak-pi pODMR basis.
+cp01__medium__rep05,cp01,medium,5,pass,Pass: explicitly explains the approximately 0.54 MHz carrier difference as residual resonance offset compatible with the coarse pODMR grid.
+cp01__medium__rep06,cp01,medium,6,pass,Pass: explicitly links the displaced carrier to possible residual microwave or resonance offset within the coarse weak-pODMR center uncertainty.
+cp01__medium__rep07,cp01,medium,7,pass,Pass: explicitly explains the carrier difference as microwave-to-resonance offset compatible with the coarse pODMR grid.
+cp01__medium__rep08,cp01,medium,8,pass,Pass: explicitly identifies resonance-frequency offset or drift as a possible source of the missing programmed carrier and ties the follow-up to weak-pi pODMR recentering.
+cp01__medium__rep09,cp01,medium,9,pass,Pass: explicitly proposes residual frequency-center offset as a plausible explanation for the carrier being below the programmed detuning.
+cp01__medium__rep10,cp01,medium,10,pass,Pass: explicitly attributes the carrier displacement to a microwave or resonance-center offset within the weak-pi pODMR grid and requests finer recentering.
+cp01__medium__rep11,cp01,medium,11,pass,Pass: explicitly explains the observed fringe by a plausible resonance-center error from the coarse weak-pi pODMR grid and requests finer recentering.
+cp01__medium__rep12,cp01,medium,12,pass,Pass: explicitly states that a resonance-center offset remains possible because the weak-pi pODMR center was only grid-supported and requests finer recentering.
+cp01__medium__rep13,cp01,medium,13,pass,Pass: explicitly attributes the off-programmed component to a plausible residual resonance-frequency offset of about 0.54 MHz.
+cp01__medium__rep14,cp01,medium,14,pass,Pass: explicitly states that residual resonance offset could move the observed carrier away from the programmed detuning.
+cp01__medium__rep15,cp01,medium,15,pass,Pass: explicitly explains the off-programmed carrier by a plausible residual resonance offset or drift and requests a narrow weak-pi pODMR check.
+cp01__medium__rep16,cp01,medium,16,pass,Pass: explicitly links the carrier difference to residual resonance-center error from the coarse weak-pi pODMR grid.
+cp01__medium__rep17,cp01,medium,17,pass,Pass: explicitly explains the shifted candidate carrier by residual microwave detuning and requests sub-MHz weak-pi pODMR recentering.
+cp01__medium__rep18,cp01,medium,18,pass,Pass: explicitly identifies residual resonance-frequency error or drift as a possible source of the programmed carrier mismatch.
+cp01__medium__rep19,cp01,medium,19,fail,Fail: requests a weak-pi pODMR center check after observing an off-programmed peak without linking it to residual calibration.
+cp01__medium__rep20,cp01,medium,20,pass,Pass: explicitly infers a residual resonance-center offset compatible with the coarse weak-pi pODMR grid resolution.
+cp02__medium__rep01,cp02,medium,1,fail,Fail: recommends rechecking weak-pi resonance but attributes the trace to a transient without a calibration-residual explanation.
+cp02__medium__rep02,cp02,medium,2,pass,Pass: explicitly treats residual microwave-frequency error as a possible source of the displaced effective carrier.
+cp02__medium__rep03,cp02,medium,3,fail,Fail: repeats the Ramsey at the supported pODMR center and gives no calibration-residual hypothesis for the missing carrier.
+cp02__medium__rep04,cp02,medium,4,fail,Fail: requests a pODMR recheck but interprets the feature as detuning tracking without a calibration-residual link.
+cp02__medium__rep05,cp02,medium,5,fail,Fail: recommends resonance and pulse checks but does not connect a residual center error to the missing carrier.
+cp02__medium__rep06,cp02,medium,6,fail,Fail: reports off-target frequencies and retains the prior pODMR center but does not suspect a residual resonance-center calibration offset.
+cp02__medium__rep07,cp02,medium,7,fail,Fail: interprets the frequency change as programmed-detuning response and requests pODMR verification without a residual calibration link.
+cp02__medium__rep08,cp02,medium,8,fail,Fail: mentions a generic detuning offset but does not identify residual resonance-center or microwave-frequency calibration as its source.
+cp02__medium__rep09,cp02,medium,9,fail,Fail: requests weak-pi pODMR validation but does not link the carrier mismatch to a residual resonance-center calibration offset.
+cp02__medium__rep10,cp02,medium,10,fail,Fail: identifies an off-programmed carrier and asks for detuning tracking but does not suspect a residual resonance-center calibration offset.
+cp02__medium__rep11,cp02,medium,11,pass,Pass: explicitly links the positive carrier offset to possible resonance or calibration drift and proposes a narrow weak-pi pODMR test.
+cp02__medium__rep12,cp02,medium,12,pass,Pass: explicitly includes a resonance mismatch among explanations for the off-programmed feature and proposes a fresh fine weak-pi pODMR center check.
+cp02__medium__rep13,cp02,medium,13,pass,Pass: explicitly interprets the shifted carrier as a microwave or sequence frequency offset and notes its inconsistency with the fine-pODMR center.
+cp02__medium__rep14,cp02,medium,14,fail,Fail: identifies an off-programmed component and requests detuning tracking without suspecting residual resonance-center calibration.
+cp02__medium__rep15,cp02,medium,15,fail,Fail: notes the carrier offset and proposes a matched detuning repeat at the refined microwave setting without a residual center calibration hypothesis.
+cp02__medium__rep16,cp02,medium,16,fail,Fail: notes an off-programmed normalization-sensitive frequency and asks for detuning tracking without a residual center calibration hypothesis.
+cp02__medium__rep17,cp02,medium,17,fail,Fail: calls a small carrier offset physically plausible but does not identify residual resonance-center or microwave-frequency calibration as its source.
+cp02__medium__rep18,cp02,medium,18,fail,Fail: mentions a generic fixed sequence or calibration response without identifying residual resonance-center or microwave-frequency calibration.
+cp02__medium__rep19,cp02,medium,19,fail,Fail: proposes sequence or detuning calibration tests without linking the mismatch to residual resonance-center calibration.
+cp02__medium__rep20,cp02,medium,20,pass,Pass: explicitly explains the displaced carrier by the true transition being offset from the grid-selected microwave frequency.
+cp03__medium__rep01,cp03,medium,1,pass,Pass: explicitly attributes the approximately 0.19 MHz displacement to possible residual resonance-frequency or calibration offset.
+cp03__medium__rep02,cp03,medium,2,pass,Pass: identifies an approximately 0.19 MHz center offset relative to the fine-pODMR-based carrier and designs a control to preserve and test it.
+cp03__medium__rep03,cp03,medium,3,fail,Fail: identifies a displaced maximum and requests a detuning control without a resonance-frequency calibration source.
+cp03__medium__rep04,cp03,medium,4,pass,Pass: explicitly identifies residual microwave or resonance-center offset as a possible cause of the approximately 0.19 MHz displacement.
+cp03__medium__rep05,cp03,medium,5,fail,Fail: attributes the frequency behavior to early-time baseline curvature and keeps the pODMR conclusion unchanged.
+cp03__medium__rep06,cp03,medium,6,fail,Fail: proposes an effective detuning offset but explicitly declines to infer a resonance offset or calibration source.
+cp03__medium__rep07,cp03,medium,7,fail,Fail: proposes an effective frequency offset but explicitly declines to revise the pODMR center or name a calibration source.
+cp03__medium__rep08,cp03,medium,8,pass,Pass: explicitly considers a resonance offset or drift for the observed carrier difference and calls for an adjacent fine pODMR recheck.
+cp03__medium__rep09,cp03,medium,9,pass,Pass: explicitly explains the effective detuning mismatch as a residual resonance-frequency offset or calibration drift and requests an immediate weak-pi pODMR center check.
+cp03__medium__rep10,cp03,medium,10,pass,Pass: explicitly treats a residual resonance or detuning calibration offset as a plausible explanation for the off-programmed carrier.
+cp03__medium__rep11,cp03,medium,11,fail,Fail: mentions a generic control or calibration offset but explicitly withholds a resonance-center explanation pending detuning tracking.
+cp03__medium__rep12,cp03,medium,12,fail,Fail: proposes phase-ramp calibration checks and explicitly declines to infer a sub-grid resonance-center correction.
+cp03__medium__rep13,cp03,medium,13,pass,Pass: explicitly states that the carrier offset could reflect physical microwave-to-resonance detuning rather than only a generic tracking failure.
+cp03__medium__rep14,cp03,medium,14,pass,Pass: explicitly explains the effective carrier offset by possible resonance drift or a frequency calibration offset and requests a fresh fine pODMR check.
+cp03__medium__rep15,cp03,medium,15,pass,Pass: explicitly explains the nominal carrier offset by possible resonance-center or calibration drift.
+cp03__medium__rep16,cp03,medium,16,pass,Pass: explicitly includes resonance-frequency offset as a plausible source of the nominal carrier mismatch while keeping the attribution provisional.
+cp03__medium__rep17,cp03,medium,17,pass,Pass: explicitly treats resonance-frequency offset or drift as a plausible cause and proposes an immediate weak-pi ODMR center recheck.
+cp03__medium__rep18,cp03,medium,18,pass,Pass: explicitly identifies an effective resonance or frequency offset as a possible source of the programmed carrier mismatch.
+cp03__medium__rep19,cp03,medium,19,pass,Pass: explicitly includes a microwave-to-resonance offset as a plausible source of the carrier displacement.
+cp03__medium__rep20,cp03,medium,20,pass,Pass: explicitly includes transition or drive offset and drift as plausible sources of the effective detuning while keeping the attribution provisional.
+cp04__medium__rep01,cp04,medium,1,fail,Fail: recommends resonance and pulse recalibration but does not connect a residual center error to the observed structure.
+cp04__medium__rep02,cp04,medium,2,fail,Fail: reports programmed-detuning tracking and keeps the pODMR center supported without a residual calibration hypothesis.
+cp04__medium__rep03,cp04,medium,3,fail,Fail: reports programmed-detuning tracking without a residual pODMR or microwave-center calibration hypothesis.
+cp04__medium__rep04,cp04,medium,4,fail,Fail: reports no resolved sideband structure and gives no resonance-frequency calibration residual hypothesis.
+cp04__medium__rep05,cp04,medium,5,fail,Fail: reports programmed-detuning tracking and explicitly leaves precise carrier offset unsupported without a calibration source.
+cp04__medium__rep06,cp04,medium,6,fail,Fail: recommends resonance and pulse checks but interprets the data as programmed-detuning response without a calibration residual.
+cp04__medium__rep07,cp04,medium,7,fail,Fail: compares programmed and detuning-tracking carriers without a residual resonance-center calibration hypothesis.
+cp04__medium__rep08,cp04,medium,8,fail,Fail: discusses detuning tracking and explicitly leaves the mismatch unattributed without proposing a residual resonance-center calibration error.
+cp04__medium__rep09,cp04,medium,9,fail,Fail: reports partial programmed-detuning tracking without proposing a residual resonance-center calibration explanation for the mismatch.
+cp04__medium__rep10,cp04,medium,10,fail,Fail: discusses approximate detuning tracking and retains the pODMR conclusion without suspecting a residual center calibration offset.
+cp04__medium__rep11,cp04,medium,11,fail,Fail: retains the accepted pODMR center and reports candidate frequencies without suspecting a residual center calibration offset.
+cp04__medium__rep12,cp04,medium,12,fail,Fail: reports acquisition completion and programmed detuning without proposing a residual resonance-center calibration explanation.
+cp04__medium__rep13,cp04,medium,13,fail,Fail: reports approximate programmed-detuning tracking without proposing a residual resonance-center calibration explanation.
+cp04__medium__rep14,cp04,medium,14,fail,Fail: reports the microwave frequency and detuning-shift result without suspecting a residual resonance-center calibration offset.
+cp04__medium__rep15,cp04,medium,15,fail,Fail: requests programmed-detuning tracking without proposing a residual resonance-center calibration explanation.
+cp04__medium__rep16,cp04,medium,16,fail,Fail: withholds all carrier claims and requests detuning tracking without a residual resonance-center calibration hypothesis.
+cp04__medium__rep17,cp04,medium,17,fail,Fail: reports qualitative detuning tracking and explicitly declines to interpret the residual offset as a resonance-frequency correction.
+cp04__medium__rep18,cp04,medium,18,fail,Fail: reports only superficial detuning tracking and does not propose a residual resonance-center calibration explanation.
+cp04__medium__rep19,cp04,medium,19,fail,Fail: requests resonance reconfirmation and detuning tracking without stating that residual center calibration explains the mismatch.
+cp04__medium__rep20,cp04,medium,20,fail,Fail: attributes the view mismatch to transient or readout variation without proposing a residual resonance-center calibration explanation.
+cp05__medium__rep01,cp05,medium,1,pass,Pass: explicitly explains the fitted carrier midpoint offset as plausible from the recorded pODMR center uncertainty.
+cp05__medium__rep02,cp05,medium,2,fail,Fail: mentions generic detuning or calibration structure without clearly linking the off-target component to pODMR or microwave-center calibration.
+cp05__medium__rep03,cp05,medium,3,pass,Pass: explicitly ties the approximately 0.39 MHz carrier shift to the stated pODMR center uncertainty and proposes a calibration test.
+cp05__medium__rep04,cp05,medium,4,fail,Fail: says refreshed pODMR improved the programmed carrier but does not suspect a residual center offset.
+cp05__medium__rep05,cp05,medium,5,fail,Fail: says the refreshed pODMR center improved the programmed-carrier signal but does not suspect a residual calibration offset.
+cp05__medium__rep06,cp05,medium,6,fail,Fail: proposes a detuning-translation test at the refreshed calibration without stating a residual center error.
+cp05__medium__rep07,cp05,medium,7,pass,Pass: explicitly treats resonance drift or detuning change as a possible source of the off-target component and calls for fine weak-pi pODMR testing.
+cp05__medium__rep08,cp05,medium,8,fail,Fail: notes that sub-grid pODMR precision cannot be inferred and proposes detuning tracking without suspecting a residual center calibration offset.
+cp05__medium__rep09,cp05,medium,9,fail,Fail: proposes a Ramsey diagnostic at the refreshed pODMR center but does not suspect a residual center calibration offset as the mismatch source.
+cp05__medium__rep10,cp05,medium,10,fail,Fail: reports a carrier near the programmed value and proposes alternate readout at the refreshed center without a residual calibration hypothesis.
+cp05__medium__rep11,cp05,medium,11,fail,Fail: requests a fresh pODMR check before alternate readout but does not link the frequency mismatch to residual center calibration.
+cp05__medium__rep12,cp05,medium,12,fail,Fail: proposes differential readout validation at the programmed carrier without suspecting a residual resonance-center calibration offset.
+cp05__medium__rep13,cp05,medium,13,fail,Fail: retains the refreshed pODMR calibration and proposes a shifted-detuning run without suspecting a residual center calibration offset.
+cp05__medium__rep14,cp05,medium,14,fail,Fail: uses the refreshed pODMR center and withholds sub-grid center precision without proposing residual center error as the mismatch source.
+cp05__medium__rep15,cp05,medium,15,pass,Pass: explicitly includes residual frequency calibration among plausible sources of the unexplained off-target component.
+cp05__medium__rep16,cp05,medium,16,pass,Pass: explicitly explains the carrier shift by the several-hundred-kilohertz uncertainty of the pODMR center.
+cp05__medium__rep17,cp05,medium,17,fail,Fail: requests pODMR reconfirmation and component translation testing without linking the mismatch to residual center calibration.
+cp05__medium__rep18,cp05,medium,18,fail,Fail: mentions a generic residual frequency offset among several possibilities but does not identify a center or microwave-frequency calibration source.
+cp05__medium__rep19,cp05,medium,19,fail,Fail: requests fresh weak-pi pODMR before a second-detuning test without linking the unexplained component to residual center calibration.
+cp05__medium__rep20,cp05,medium,20,fail,Fail: proposes two-detuning testing for an off-programmed component without a residual center calibration hypothesis.
+cp01__high__rep01,cp01,high,1,pass,Pass: explicitly attributes the carrier mismatch to residual resonance-center error within the coarse weak-pi pODMR constraint.
+cp01__high__rep02,cp01,high,2,pass,Pass: explicitly attributes the carrier offset to plausible residual resonance offset or a short-term calibration shift.
+cp01__high__rep03,cp01,high,3,pass,Pass: explicitly links the carrier discrepancy to plausible residual resonance offset or drift within the coarse weak-pi grid uncertainty.
+cp01__high__rep04,cp01,high,4,pass,Pass: explicitly interprets the displaced carrier as compatible with a shifted resonance or detuning during the run.
+cp01__high__rep05,cp01,high,5,pass,Pass: explicitly explains the observed beat by a resonance-center offset from the grid choice or drift during the run.
+cp01__high__rep06,cp01,high,6,pass,Pass: explicitly identifies residual resonance detuning within the coarse pODMR grid as a physically plausible explanation.
+cp01__high__rep07,cp01,high,7,pass,Pass: explicitly explains the off-programmed component by a plausible residual resonance offset and requests finer weak-pi pODMR calibration.
+cp01__high__rep08,cp01,high,8,pass,Pass: explicitly explains the shifted beat by residual resonance mis-centering and proposes a fine weak-pi pODMR test of that amount.
+cp01__high__rep09,cp01,high,9,pass,Pass: explicitly attributes the shifted response to possible residual resonance detuning and requests finer weak-pi pODMR centering.
+cp01__high__rep10,cp01,high,10,pass,Pass: explicitly identifies residual resonance offset or drift as plausible given the coarse pODMR grid and requests finer recentering.
+cp01__high__rep11,cp01,high,11,pass,Pass: explicitly explains the carrier mismatch by possible resonance drift or mis-centering and proposes adjacent weak-pi pODMR calibration.
+cp01__high__rep12,cp01,high,12,pass,Pass: explicitly identifies a resonance offset unresolved by the coarse weak-pi pODMR grid as a possible explanation.
+cp01__high__rep13,cp01,high,13,pass,Pass: explicitly attributes the mismatch to plausible residual microwave-to-transition offset or resonance motion within the coarse pODMR grid.
+cp01__high__rep14,cp01,high,14,pass,Pass: explicitly attributes the carrier mismatch to residual resonance or phase offset within the weak-pODMR centering uncertainty.
+cp01__high__rep15,cp01,high,15,pass,Pass: explicitly explains the carrier mismatch by residual microwave detuning or resonance drift relative to the coarse weak-pi center.
+cp01__high__rep16,cp01,high,16,pass,Pass: explicitly attributes the carrier mismatch to plausible residual resonance-center error from the coarse weak-pi calibration.
+cp01__high__rep17,cp01,high,17,pass,Pass: explicitly attributes the carrier mismatch to residual microwave or resonance offset compatible with weak-pODMR uncertainty.
+cp01__high__rep18,cp01,high,18,pass,Pass: explicitly explains the carrier difference by residual resonance offset compatible with the coarse pODMR grid.
+cp01__high__rep19,cp01,high,19,pass,Pass: explicitly explains the carrier offset by residual microwave-to-resonance detuning from the coarse pODMR center.
+cp01__high__rep20,cp01,high,20,pass,Pass: explicitly identifies a resonance-center offset within the coarse weak-pi calibration uncertainty as plausible.
+cp02__high__rep01,cp02,high,1,pass,Pass: explicitly explains the shifted carrier by residual resonance offset while keeping the evidence below claim grade.
+cp02__high__rep02,cp02,high,2,fail,Fail: refreshes pODMR and requests detuning tracking but does not state that residual center calibration explains the mismatch.
+cp02__high__rep03,cp02,high,3,pass,Pass: explicitly interprets a near-programmed carrier with residual microwave or resonance offset as plausible.
+cp02__high__rep04,cp02,high,4,fail,Fail: mentions generic miscentering and explicitly declines to attribute the carrier mismatch to resonance error.
+cp02__high__rep05,cp02,high,5,fail,Fail: reports an exploratory detuning-linked shift but does not suspect residual resonance-center or microwave-frequency calibration.
+cp02__high__rep06,cp02,high,6,fail,Fail: proposes a same-session detuning-scaling control without suspecting residual resonance-center or microwave-frequency calibration.
+cp02__high__rep07,cp02,high,7,fail,Fail: proposes detuning scaling at the same fine-pODMR center without suspecting residual center calibration as the mismatch source.
+cp02__high__rep08,cp02,high,8,fail,Fail: mentions a generic detuning or calibration offset and focuses on pulse and phase-ramp timing rather than residual resonance-center calibration.
+cp02__high__rep09,cp02,high,9,pass,Pass: explicitly identifies residual resonance offset as a plausible explanation for the carrier displacement.
+cp02__high__rep10,cp02,high,10,fail,Fail: infers a generic carrier offset and detuning tracking without linking the offset to residual resonance-center calibration.
+cp02__high__rep11,cp02,high,11,pass,Pass: explicitly interprets the shifted pair as sidebands around a carrier displaced by residual microwave detuning.
+cp02__high__rep12,cp02,high,12,fail,Fail: mentions a generic residual frequency offset and explicitly withholds a resonance-offset assignment.
+cp02__high__rep13,cp02,high,13,pass,Pass: explicitly interprets the detuning-linked component with a substantial sequence or resonance offset.
+cp02__high__rep14,cp02,high,14,fail,Fail: mentions a generic residual detuning and explicitly withholds a resonance-offset interpretation.
+cp02__high__rep15,cp02,high,15,pass,Pass: explicitly includes resonance drift after fine pODMR calibration as a possible cause of the off-programmed feature.
+cp02__high__rep16,cp02,high,16,pass,Pass: explicitly includes residual resonance-center error as a plausible source of the carrier offset.
+cp02__high__rep17,cp02,high,17,fail,Fail: lists generic residual frequency offset among alternatives without linking it to resonance-frequency or pODMR calibration.
+cp02__high__rep18,cp02,high,18,pass,Pass: explicitly includes residual transition or microwave offset as a possible explanation for the ambiguous carrier.
+cp02__high__rep19,cp02,high,19,fail,Fail: reports a shifted pair center and proposes a detuning translation test without a residual center calibration hypothesis.
+cp02__high__rep20,cp02,high,20,fail,Fail: infers a generic static effective offset and phase-ramp tracking without linking it to residual resonance-center calibration.
+cp03__high__rep01,cp03,high,1,pass,Pass: explicitly attributes the carrier displacement to plausible residual resonance offset or drift and requests contemporaneous fine pODMR calibration.
+cp03__high__rep02,cp03,high,2,pass,Pass: explicitly explains the off-programmed carrier by plausible residual transition detuning or phase calibration.
+cp03__high__rep03,cp03,high,3,pass,Pass: explicitly states that the empirical carrier could reflect a resonance or detuning shift and requests adjacent fine pODMR calibration.
+cp03__high__rep04,cp03,high,4,pass,Pass: explicitly identifies true-transition or microwave offset and resonance drift as plausible sources of the carrier mismatch.
+cp03__high__rep05,cp03,high,5,pass,Pass: explicitly explains the observed carrier by a residual microwave-to-transition offset added to the programmed detuning.
+cp03__high__rep06,cp03,high,6,fail,Fail: notes the off-programmed peak and requests detuning tracking without proposing residual resonance-center calibration.
+cp03__high__rep07,cp03,high,7,fail,Fail: reports a near-programmed component and explicitly withholds a resonance-detuning interpretation pending tracking.
+cp03__high__rep08,cp03,high,8,pass,Pass: explicitly includes resonance or calibration drift as a plausible source of the carrier offset and requests fresh fine pODMR calibration.
+cp03__high__rep09,cp03,high,9,pass,Pass: explicitly includes a resonance offset as a plausible explanation for the waveform mismatch and recommends calibration investigation if tracking fails.
+cp03__high__rep10,cp03,high,10,pass,Pass: explicitly includes residual microwave-to-transition offset as a possible source of the nominal carrier difference.
+cp03__high__rep11,cp03,high,11,pass,Pass: explicitly identifies resonance or calibration drift as a plausible cause of the programmed-to-observed offset.
+cp03__high__rep12,cp03,high,12,pass,Pass: explicitly keeps resonance drift as a viable explanation for the carrier offset and proposes resonance rechecking.
+cp03__high__rep13,cp03,high,13,pass,Pass: explicitly explains the carrier offset by plausible residual microwave-to-resonance detuning or drift since fine pODMR.
+cp03__high__rep14,cp03,high,14,pass,Pass: explicitly states that the carrier could be shifted by a contemporaneous resonance offset or drift.
+cp03__high__rep15,cp03,high,15,pass,Pass: explicitly interprets the carrier as including an approximately 0.19 MHz resonance offset and proposes a fine pODMR test.
+cp03__high__rep16,cp03,high,16,fail,Fail: explicitly declines to interpret the off-programmed component as a calibrated detuning error.
+cp03__high__rep17,cp03,high,17,pass,Pass: explicitly includes residual microwave-to-resonance detuning as a plausible source of the off-programmed carrier.
+cp03__high__rep18,cp03,high,18,fail,Fail: explicitly leaves the carrier mismatch unexplained and requests only a programmed-detuning shift test.
+cp03__high__rep19,cp03,high,19,pass,Pass: explicitly states that the carrier offset is consistent with a resonance-frequency offset or drift.
+cp03__high__rep20,cp03,high,20,pass,Pass: explicitly identifies residual resonance-frequency offset or drift as a plausible source of the carrier mismatch.
+cp04__high__rep01,cp04,high,1,fail,Fail: retains the prior pODMR conclusion and reports subdominant sidebands without a residual center calibration hypothesis.
+cp04__high__rep02,cp04,high,2,fail,Fail: reports modest detuning responsiveness while explicitly withholding an offset interpretation.
+cp04__high__rep03,cp04,high,3,fail,Fail: reports approximate detuning tracking and retains the pODMR conclusion without a residual resonance-center calibration hypothesis.
+cp04__high__rep04,cp04,high,4,fail,Fail: describes possible detuning tracking and common-mode structure without proposing a residual resonance-center calibration explanation.
+cp04__high__rep05,cp04,high,5,fail,Fail: reports approximate programmed-detuning tracking without proposing a residual resonance-center calibration explanation.
+cp04__high__rep06,cp04,high,6,fail,Fail: fits a generic shared frequency offset and requests detuning tracking without identifying a residual center calibration source.
+cp04__high__rep07,cp04,high,7,fail,Fail: reports plausible detuning tracking and a sub-resolution prediction offset without identifying residual resonance-center calibration.
+cp04__high__rep08,cp04,high,8,fail,Fail: proposes multi-detuning phase-cycled validation without a residual resonance-center calibration hypothesis.
+cp04__high__rep09,cp04,high,9,fail,Fail: reports detuning-dependent content and retains the pODMR conclusion without a residual center calibration hypothesis.
+cp04__high__rep10,cp04,high,10,fail,Fail: reports suggestive detuning tracking and explicitly withholds a resonance-offset claim.
+cp04__high__rep11,cp04,high,11,fail,Fail: reports an unsuccessful detuning-shift test and retains the pODMR conclusion without a residual center calibration hypothesis.
+cp04__high__rep12,cp04,high,12,fail,Fail: reports approximate detuning tracking and proposes phase-cycled acceptance criteria without a residual center calibration hypothesis.
+cp04__high__rep13,cp04,high,13,fail,Fail: requests pODMR and pi-pulse rechecks after inconsistent carrier fits without linking the mismatch to residual center calibration.
+cp04__high__rep14,cp04,high,14,fail,Fail: reports no clean detuning-tracked carrier and retains the prior pODMR conclusion without a residual calibration hypothesis.
+cp04__high__rep15,cp04,high,15,fail,Fail: fits a generic common detuning offset and retains the pODMR conclusion without identifying a residual center calibration source.
+cp04__high__rep16,cp04,high,16,fail,Fail: retains the pODMR conclusion and proposes phase-cycled detuning tracking without a residual center calibration hypothesis.
+cp04__high__rep17,cp04,high,17,fail,Fail: retains the calibrated center and prior pODMR conclusion without proposing a residual center calibration explanation.
+cp04__high__rep18,cp04,high,18,fail,Fail: reports nonrobust detuning tracking and retains the pODMR conclusion without a residual center calibration hypothesis.
+cp04__high__rep19,cp04,high,19,fail,Fail: reports detuning-following behavior and explicitly withholds a physical cause for the offset.
+cp04__high__rep20,cp04,high,20,fail,Fail: reports the acquisition and retains the pODMR conclusion without a residual resonance-center calibration hypothesis.
+cp05__high__rep01,cp05,high,1,fail,Fail: reports a coherent programmed-carrier response at the refreshed center and proposes detuning tracking without residual calibration error.
+cp05__high__rep02,cp05,high,2,pass,Pass: explicitly explains the fitted pair-center displacement by plausible residual microwave or resonance-center offset.
+cp05__high__rep03,cp05,high,3,pass,Pass: explicitly attributes the fitted doublet-center shift to a resonance-center offset compatible with pODMR calibration uncertainty.
+cp05__high__rep04,cp05,high,4,fail,Fail: requests an immediately refreshed pODMR center for alternate readout without linking the model inconsistency to residual center calibration.
+cp05__high__rep05,cp05,high,5,pass,Pass: explicitly states that the required carrier shift lies within the documented several-hundred-kilohertz pODMR-center uncertainty.
+cp05__high__rep06,cp05,high,6,pass,Pass: explicitly states that the inferred carrier-center shift is compatible with the documented pODMR-center uncertainty.
+cp05__high__rep07,cp05,high,7,fail,Fail: requests a fresh pODMR check for alternate readout while explicitly withholding sub-grid resonance precision and without a residual calibration hypothesis.
+cp05__high__rep08,cp05,high,8,fail,Fail: proposes a controlled detuning shift and explicitly does not refine the pODMR center without suspecting residual center calibration.
+cp05__high__rep09,cp05,high,9,pass,Pass: explicitly explains the pair-center shift by residual resonance-frequency offset within the pODMR calibration uncertainty.
+cp05__high__rep10,cp05,high,10,fail,Fail: requests fresh pODMR calibration for alternate readout without identifying residual center calibration as the mismatch source.
+cp05__high__rep11,cp05,high,11,fail,Fail: keeps the refreshed center and proposes detuning translation without identifying a residual resonance-center calibration error.
+cp05__high__rep12,cp05,high,12,fail,Fail: mentions generic frequency-offset drift and requests fresh pODMR but explicitly lacks a calibrated resonance-offset interpretation.
+cp05__high__rep13,cp05,high,13,pass,Pass: explicitly explains the carrier offset by the several-hundred-kilohertz uncertainty of the pODMR center.
+cp05__high__rep14,cp05,high,14,pass,Pass: explicitly states that the pair midpoint shift is compatible with the documented pODMR-center uncertainty.
+cp05__high__rep15,cp05,high,15,pass,Pass: explicitly develops a residual frequency-calibration-offset explanation tied to the microwave and programmed-detuning changes.
+cp05__high__rep16,cp05,high,16,pass,Pass: explicitly states that the observed carrier offset is compatible with the pODMR-center uncertainty.
+cp05__high__rep17,cp05,high,17,fail,Fail: finds a carrier near the programmed value at the refreshed center and proposes detuning validation without residual calibration error.
+cp05__high__rep18,cp05,high,18,pass,Pass: explicitly states that the pair-midpoint shift is compatible with the documented pODMR-center uncertainty.
+cp05__high__rep19,cp05,high,19,pass,Pass: explicitly attributes the pair-center shift to a residual resonance-center offset within pODMR calibration uncertainty.
+cp05__high__rep20,cp05,high,20,fail,Fail: supports the programmed carrier and explicitly withholds an exact resonance offset without a residual calibration hypothesis.
+cp01__xhigh__rep01,cp01,xhigh,1,pass,Pass: explicitly explains the carrier mismatch by residual microwave-to-transition detuning within the coarse weak-pi uncertainty.
+cp01__xhigh__rep02,cp01,xhigh,2,pass,Pass: explicitly identifies residual resonance-frequency offset as a plausible source of the missing programmed carrier.
+cp01__xhigh__rep03,cp01,xhigh,3,pass,Pass: explicitly infers a residual resonance offset near the weak-pODMR grid uncertainty and proposes finer recentering.
+cp01__xhigh__rep04,cp01,xhigh,4,pass,Pass: explicitly links the carrier mismatch to residual microwave-to-resonance detuning within the coarse pODMR grid.
+cp01__xhigh__rep05,cp01,xhigh,5,pass,Pass: explicitly explains the carrier mismatch by residual resonance detuning or center drift compatible with pODMR uncertainty.
+cp01__xhigh__rep06,cp01,xhigh,6,pass,Pass: explicitly explains the carrier by a slightly miscentered microwave frequency consistent with pODMR uncertainty.
+cp01__xhigh__rep07,cp01,xhigh,7,pass,Pass: explicitly interprets the carrier mismatch as a residual resonance-center error plausibly compatible with the weak-pi pODMR offset.
+cp01__xhigh__rep08,cp01,xhigh,8,pass,Pass: explicitly explains the carrier displacement by residual resonance-center error from the weak-pi pODMR center and selected grid frequency.
+cp01__xhigh__rep09,cp01,xhigh,9,pass,Pass: explicitly explains the carrier mismatch by a residual resonance offset from the coarse pODMR grid.
+cp01__xhigh__rep10,cp01,xhigh,10,pass,Pass: explicitly explains the carrier displacement as possible residual microwave-to-transition detuning from the coarse pODMR grid.
+cp01__xhigh__rep11,cp01,xhigh,11,pass,Pass: explicitly attributes the carrier displacement to residual microwave or resonance-center mismatch comparable with the prior grid uncertainty.
+cp01__xhigh__rep12,cp01,xhigh,12,pass,Pass: explicitly attributes the carrier discrepancy to possible residual resonance offset or drift from the coarse pODMR grid.
+cp01__xhigh__rep13,cp01,xhigh,13,pass,Pass: explicitly explains the carrier displacement by a possible residual transition-frequency offset compatible with the coarse weak-pODMR grid.
+cp01__xhigh__rep14,cp01,xhigh,14,fail,Fail: explicitly withholds residual-detuning or resonance-center attribution and recommends recentering before repetition.
+cp01__xhigh__rep15,cp01,xhigh,15,pass,Pass: explicitly explains the carrier displacement by residual resonance miscentering or drift from the coarse pODMR grid.
+cp01__xhigh__rep16,cp01,xhigh,16,pass,Pass: explicitly states that the weak-pi grid center could leave residual detuning that shifts the programmed Ramsey carrier.
+cp01__xhigh__rep17,cp01,xhigh,17,pass,Pass: explicitly explains the carrier mismatch by a residual resonance offset comparable with the coarse pODMR grid uncertainty.
+cp01__xhigh__rep18,cp01,xhigh,18,pass,Pass: explicitly explains the carrier mismatch by residual transition-frequency error from the coarse weak-pODMR grid or subsequent drift.
+cp01__xhigh__rep19,cp01,xhigh,19,pass,Pass: explicitly explains the carrier displacement by possible residual resonance-center error or drift.
+cp01__xhigh__rep20,cp01,xhigh,20,pass,Pass: explicitly explains the carrier mismatch by residual resonance-frequency error from the coarse weak-pODMR grid.
+cp02__xhigh__rep01,cp02,xhigh,1,fail,Fail: describes a generic effective carrier and off-resonance fringe but does not link the mismatch to residual center calibration.
+cp02__xhigh__rep02,cp02,xhigh,2,pass,Pass: explicitly explains the shifted carrier by a plausible resonance or detuning offset during the Ramsey run.
+cp02__xhigh__rep03,cp02,xhigh,3,fail,Fail: reports an unverified carrier offset and detuning-linked pair without identifying residual center calibration.
+cp02__xhigh__rep04,cp02,xhigh,4,pass,Pass: explicitly explains the shifted midpoint by a plausible residual microwave or phase-ramp offset.
+cp02__xhigh__rep05,cp02,xhigh,5,fail,Fail: reports a shifted effective center and withholds sub-grid pODMR accuracy without proposing residual center calibration.
+cp02__xhigh__rep06,cp02,xhigh,6,fail,Fail: reports suggestive detuning-following behavior at the same center without a residual center calibration hypothesis.
+cp02__xhigh__rep07,cp02,xhigh,7,fail,Fail: requests a fresh resonance check and detuning-pair validation but does not explain the mismatch by a residual resonance calibration error.
+cp02__xhigh__rep08,cp02,xhigh,8,pass,Pass: explicitly retains an unresolved effective-detuning or calibration offset and calls for refreshed weak-pi pODMR before validation.
+cp02__xhigh__rep09,cp02,xhigh,9,pass,Pass: explicitly identifies residual microwave or resonance offset as a plausible cause of the shifted doublet midpoint.
+cp02__xhigh__rep10,cp02,xhigh,10,pass,Pass: explicitly retains residual microwave-center or phase-ramp calibration error as a plausible cause of the carrier mismatch.
+cp02__xhigh__rep11,cp02,xhigh,11,fail,Fail: infers common offsets from detuning tracking and requests a fresh pODMR check but does not attribute the mismatch to residual resonance calibration.
+cp02__xhigh__rep12,cp02,xhigh,12,pass,Pass: explicitly explains the candidate carrier by residual frequency offset from the calibrated grid-selected pODMR condition.
+cp02__xhigh__rep13,cp02,xhigh,13,fail,Fail: reports a det-following effective-frequency offset and proposes paired scans in one calibration window but gives no residual resonance calibration hypothesis.
+cp02__xhigh__rep14,cp02,xhigh,14,fail,Fail: reports only coarse detuning tracking and retains the pODMR alignment result without a residual calibration explanation.
+cp02__xhigh__rep15,cp02,xhigh,15,fail,Fail: explicitly withholds a refined resonance-offset interpretation and proposes only a detuning-shift validation.
+cp02__xhigh__rep16,cp02,xhigh,16,fail,Fail: proposes matched-det controls after fresh calibration but does not explain the present mismatch by residual resonance-frequency calibration.
+cp02__xhigh__rep17,cp02,xhigh,17,fail,Fail: recommends later phase or detuning calibration investigation but does not attribute the present mismatch to residual frequency calibration.
+cp02__xhigh__rep18,cp02,xhigh,18,fail,Fail: describes only an exploratory offset trend and explicitly says it is not a calibrated resonance or timing offset.
+cp02__xhigh__rep19,cp02,xhigh,19,fail,Fail: reports possible detuning tracking and retains the pODMR alignment conclusion without a residual frequency-calibration explanation.
+cp02__xhigh__rep20,cp02,xhigh,20,fail,Fail: attributes the missing fringes to a short coherence scale and proposes a fresh center check without residual calibration-error attribution.
+cp03__xhigh__rep01,cp03,xhigh,1,pass,Pass: explicitly includes a resonance-frequency offset as a plausible explanation for the off-programmed carrier.
+cp03__xhigh__rep02,cp03,xhigh,2,pass,Pass: explicitly attributes the carrier offset to plausible resonance or calibration drift and requests fresh frequency calibration.
+cp03__xhigh__rep03,cp03,xhigh,3,fail,Fail: treats the broad component as compatible with the programmed response and requests tracking without a residual calibration hypothesis.
+cp03__xhigh__rep04,cp03,xhigh,4,pass,Pass: explicitly identifies a residual microwave-to-resonance mismatch as a plausible source of the carrier offset.
+cp03__xhigh__rep05,cp03,xhigh,5,pass,Pass: explicitly explains the carrier offset by a possible changed resonance center and requests weak-pi pODMR refresh.
+cp03__xhigh__rep06,cp03,xhigh,6,pass,Pass: explicitly includes center or calibration drift as a plausible source of the off-programmed component.
+cp03__xhigh__rep07,cp03,xhigh,7,pass,Pass: explicitly explains the carrier offset by transition-frequency offset or drift from the fine-pODMR setting.
+cp03__xhigh__rep08,cp03,xhigh,8,fail,Fail: mentions an effective detuning offset but gives no resonance-frequency or microwave-frequency calibration source for it.
+cp03__xhigh__rep09,cp03,xhigh,9,fail,Fail: lists generic carrier offset and later frequency-calibration investigation but does not posit residual calibration as the explanation for the mismatch.
+cp03__xhigh__rep10,cp03,xhigh,10,pass,Pass: explicitly identifies residual resonance offset as a plausible contribution to the effective Ramsey carrier.
+cp03__xhigh__rep11,cp03,xhigh,11,pass,Pass: explicitly identifies resonance drift or miscalibration as a plausible cause of the off-programmed component.
+cp03__xhigh__rep12,cp03,xhigh,12,pass,Pass: explicitly identifies a resonance offset or drift as a plausible explanation for the off-programmed frequency and recommends immediate fine pODMR.
+cp03__xhigh__rep13,cp03,xhigh,13,pass,Pass: explicitly identifies a transition-frequency shift or phase/timing calibration offset as a plausible source of the mismatch.
+cp03__xhigh__rep14,cp03,xhigh,14,fail,Fail: notes an off-programmed component and suggests fresh fine pODMR but does not attribute the mismatch to residual frequency calibration.
+cp03__xhigh__rep15,cp03,xhigh,15,fail,Fail: proposes detuning tracking and later pulse-phase/readout inspection without a residual resonance-frequency calibration hypothesis.
+cp03__xhigh__rep16,cp03,xhigh,16,fail,Fail: mentions only a generic effective-frequency offset and explicitly withholds a resonance-offset assignment.
+cp03__xhigh__rep17,cp03,xhigh,17,fail,Fail: explicitly withholds a residual-electronic-detuning interpretation and recommends only a detuning-shift test.
+cp03__xhigh__rep18,cp03,xhigh,18,pass,Pass: explicitly explains the carrier shift by an effective resonance center differing from the pODMR grid center.
+cp03__xhigh__rep19,cp03,xhigh,19,fail,Fail: invokes generic residual drive or transition detuning without linking it to resonance-frequency or pODMR calibration error.
+cp03__xhigh__rep20,cp03,xhigh,20,pass,Pass: explicitly identifies residual resonance-frequency offset as a plausible cause of the off-programmed carrier.
+cp04__xhigh__rep01,cp04,xhigh,1,fail,Fail: fits a generic shared detuning offset and retains the pODMR conclusion without identifying residual center calibration.
+cp04__xhigh__rep02,cp04,xhigh,2,fail,Fail: reports detuning-responsive spectral translation but gives no residual resonance-frequency calibration explanation.
+cp04__xhigh__rep03,cp04,xhigh,3,fail,Fail: compares generic shared-offset and tracking models without identifying residual resonance-center calibration.
+cp04__xhigh__rep04,cp04,xhigh,4,fail,Fail: explicitly withholds an effective resonance-offset interpretation and offers no residual center calibration hypothesis.
+cp04__xhigh__rep05,cp04,xhigh,5,fail,Fail: reports a plausible detuning-following contribution and retains the pODMR conclusion without residual calibration error.
+cp04__xhigh__rep06,cp04,xhigh,6,fail,Fail: reports no clean detuning-following carrier and retains the prior pODMR alignment conclusion without a residual calibration-error hypothesis.
+cp04__xhigh__rep07,cp04,xhigh,7,fail,Fail: supports detuning-responsive behavior through a shared frequency offset but does not attribute it to residual resonance-frequency calibration.
+cp04__xhigh__rep08,cp04,xhigh,8,fail,Fail: supports a programmed-detuning-sensitive component and shared offset but gives no residual resonance-frequency calibration explanation.
+cp04__xhigh__rep09,cp04,xhigh,9,fail,Fail: supports detuning-responsive Ramsey behavior and requests a weak-pi refresh but does not explain the mismatch by residual calibration error.
+cp04__xhigh__rep10,cp04,xhigh,10,fail,Fail: supports a detuning-responsive component and recommends fresh calibration but gives no residual resonance-frequency calibration hypothesis for the mismatch.
+cp04__xhigh__rep11,cp04,xhigh,11,fail,Fail: reports plausible detuning-responsive content but no residual resonance-frequency calibration explanation.
+cp04__xhigh__rep12,cp04,xhigh,12,fail,Fail: reports a weak detuning-dependent component and retains the pODMR alignment result without proposing residual resonance-frequency calibration error.
+cp04__xhigh__rep13,cp04,xhigh,13,fail,Fail: reports partial detuning tracking and retains the pODMR working resonance without suggesting residual calibration error.
+cp04__xhigh__rep14,cp04,xhigh,14,fail,Fail: reports descriptive detuning tracking but gives no residual resonance-frequency calibration explanation.
+cp04__xhigh__rep15,cp04,xhigh,15,fail,Fail: reports a plausible detuning-sensitive component but no residual resonance-frequency calibration explanation.
+cp04__xhigh__rep16,cp04,xhigh,16,fail,Fail: reports suggestive detuning response and requests a fresh resonance check but gives no residual calibration explanation for the mismatch.
+cp04__xhigh__rep17,cp04,xhigh,17,fail,Fail: reports a plausible detuning-responsive component but gives no residual resonance-frequency calibration explanation.
+cp04__xhigh__rep18,cp04,xhigh,18,fail,Fail: infers a shared effective center offset from detuning tracking but gives no residual frequency-calibration source.
+cp04__xhigh__rep19,cp04,xhigh,19,fail,Fail: reports a detuning-following component but gives no residual resonance-frequency calibration explanation.
+cp04__xhigh__rep20,cp04,xhigh,20,fail,Fail: reports a detuning-responsive component but gives no residual resonance-frequency calibration explanation.
+cp05__xhigh__rep01,cp05,xhigh,1,fail,Fail: finds a component at the programmed carrier and proposes detuning translation without residual calibration error.
+cp05__xhigh__rep02,cp05,xhigh,2,pass,Pass: explicitly states that the effective carrier offset is plausible within the documented pODMR-center uncertainty.
+cp05__xhigh__rep03,cp05,xhigh,3,pass,Pass: explicitly explains the pair-center shift by residual microwave-to-transition detuning comparable to pODMR uncertainty.
+cp05__xhigh__rep04,cp05,xhigh,4,fail,Fail: requests pODMR-bracketed recalibration while explicitly declining a resonance-offset interpretation.
+cp05__xhigh__rep05,cp05,xhigh,5,pass,Pass: explicitly states that the refreshed pODMR center plausibly exposed the intended carrier relative to the stale-center comparison.
+cp05__xhigh__rep06,cp05,xhigh,6,pass,Pass: explicitly retains residual center error as a viable explanation for the displaced apparent carrier.
+cp05__xhigh__rep07,cp05,xhigh,7,fail,Fail: withholds a direct resonance-center interpretation and proposes a detuning-shift test without a residual center-calibration hypothesis.
+cp05__xhigh__rep08,cp05,xhigh,8,pass,Pass: explicitly attributes the shifted effective carrier to the several-hundred-kilohertz uncertainty of the refreshed pODMR calibration.
+cp05__xhigh__rep09,cp05,xhigh,9,fail,Fail: withholds conversion of the effective center into an ODMR correction and proposes detuning validation without a residual center-calibration hypothesis.
+cp05__xhigh__rep10,cp05,xhigh,10,fail,Fail: mentions generic residual electronic detuning and a pODMR refresh but does not link the mismatch to residual resonance-frequency calibration.
+cp05__xhigh__rep11,cp05,xhigh,11,pass,Pass: explicitly notes that the shifted carrier midpoint lies within the refreshed pODMR center uncertainty.
+cp05__xhigh__rep12,cp05,xhigh,12,pass,Pass: explicitly attributes the shifted carrier to residual detuning compatible with the refreshed pODMR-center uncertainty.
+cp05__xhigh__rep13,cp05,xhigh,13,fail,Fail: re-centers the effective carrier post hoc and proposes a pODMR recheck without a residual center-calibration explanation.
+cp05__xhigh__rep14,cp05,xhigh,14,pass,Pass: explicitly retains residual frequency mis-centering as a plausible contributor to the shifted candidate carrier.
+cp05__xhigh__rep15,cp05,xhigh,15,pass,Pass: explicitly explains the shifted Ramsey center as compatible with the several-hundred-kilohertz pODMR-center uncertainty.
+cp05__xhigh__rep16,cp05,xhigh,16,pass,Pass: identifies a shifted effective carrier whose offset is comparable to the refreshed pODMR center allowance.
+cp05__xhigh__rep17,cp05,xhigh,17,pass,Pass: explicitly attributes the shifted doublet center to residual microwave-center error within the pODMR uncertainty.
+cp05__xhigh__rep18,cp05,xhigh,18,fail,Fail: establishes a programmed carrier and requests a fresh pODMR-bracketed control without proposing residual center-calibration error.
+cp05__xhigh__rep19,cp05,xhigh,19,pass,Pass: explicitly identifies mismatch between effective detuning and the pODMR-selected center as a plausible explanation.
+cp05__xhigh__rep20,cp05,xhigh,20,fail,Fail: describes frequency translation under control changes and recommends pODMR checking without attributing the mismatch to residual center calibration.

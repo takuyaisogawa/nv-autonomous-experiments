@@ -1,0 +1,171 @@
+{
+  "expected_total": 400,
+  "expected_model": "gpt-5.4",
+  "unique_records": 400,
+  "models": {
+    "gpt-5.4": 400
+  },
+  "cells": [
+    {
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp01",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp02",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp03",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp04",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp05",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp01",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp02",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp03",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp04",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp05",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp01",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp02",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp03",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp04",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp05",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp01",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp02",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp03",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp04",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    },
+    {
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp05",
+      "expected": 20,
+      "observed": 20,
+      "failed_or_empty": [],
+      "complete": true
+    }
+  ],
+  "complete": true
+}

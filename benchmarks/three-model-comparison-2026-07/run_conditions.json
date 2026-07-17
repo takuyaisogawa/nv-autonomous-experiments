@@ -1,0 +1,46 @@
+{
+  "release": "three-model-comparison-2026-07",
+  "models": [
+    {
+      "manuscript_name": "GPT-5.4",
+      "model_argument": "gpt-5.4",
+      "execution_date": "2026-07-16",
+      "note": "The alias supported by Codex with ChatGPT authentication at execution time was used."
+    },
+    {
+      "manuscript_name": "GPT-5.5",
+      "model_argument": "gpt-5.5",
+      "note": "Original benchmark records are stored in the Ramsey and pODMR benchmark directories."
+    },
+    {
+      "manuscript_name": "GPT-5.6 Sol",
+      "model_argument": "gpt-5.6-sol",
+      "execution_date": "2026-07-15",
+      "note": "The accepted Windows rerun bypassed the workspace sandbox after it blocked local analysis commands. Temporary-directory input isolation and the prompt restriction remained in place. Earlier invalid-configuration results were excluded."
+    }
+  ],
+  "reasoning_efforts": [
+    "low",
+    "medium",
+    "high",
+    "xhigh"
+  ],
+  "ramsey": {
+    "checkpoints": 5,
+    "replicates_per_checkpoint_effort": 20,
+    "runs_per_model": 400,
+    "three_model_total": 1200,
+    "local_tool_access": true
+  },
+  "podmr": {
+    "measurements": 96,
+    "resonance_present": 24,
+    "resonance_absent": 72,
+    "prompt_conditions": 3,
+    "replicates": 3,
+    "decisions_per_model": 3456,
+    "three_model_total": 10368,
+    "local_tool_access": true,
+    "labeled_examples_in_prompt": 0
+  }
+}

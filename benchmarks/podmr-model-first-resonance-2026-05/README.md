@@ -16,13 +16,16 @@ oriented NV centers whose corresponding transition lies outside that window.
 Failed acquisitions and tracking failures are excluded rather than labeled as
 resonance absent.
 
-Each prompt condition was evaluated with GPT-5.5 for three replicates at four
-reasoning-effort settings: `low`, `medium`, `high`, and `xhigh`.
+Each prompt condition was evaluated with GPT-5.4, GPT-5.5, and GPT-5.6 Sol for
+three replicates at four reasoning-effort settings: `low`, `medium`, `high`,
+and `xhigh`.
 
 ## Main Results
 
-The full reasoning-effort sweep is summarized in
-`results/reasoning_effort_sweep_summary.md`.
+The original GPT-5.5 reasoning-effort sweep is summarized in
+`results/reasoning_effort_sweep_summary.md`.  The GPT-5.4 and GPT-5.6 Sol
+records and the combined measurement bootstrap table are in the
+[three model comparison release](../three-model-comparison-2026-07/README.md).
 
 ![Reasoning-effort sweep for pODMR resonance classification](results/figures/podmr_reasoning_sweep.png)
 
@@ -31,6 +34,8 @@ resonance-absent case are shown below.  The figure plots the unnormalized
 reference and signal readouts for each case.
 
 ![Raw pODMR resonance-present and resonance-absent examples](results/figures/podmr_present_absent_examples.png)
+
+The table below reports the original GPT-5.5 sweep.
 
 | Reasoning | Condition | TP | TN | FP | FN | Accuracy | False-positive rate | False-negative rate |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -51,8 +56,9 @@ The expected signal condition differs from the facts condition by adding a
 requirement to establish the expected physical signal with a simulation or
 explicit quantitative model calculation before deciding whether a resonance is
 present. In this dataset, increasing reasoning effort alone increases
-false-positive resonance calls in the sequence condition, while the expected signal
-condition suppresses false positives across reasoning-effort settings.
+false-positive resonance calls in the sequence condition, while the expected
+signal condition keeps false positives low across reasoning-effort settings and
+all three models.
 
 Non-LLM signal-processing baselines are summarized in
 `results/non_llm_signal_baseline_summary.md`.
@@ -67,8 +73,10 @@ provided in one prompt, is summarized in
 - `labels/`: physical resonance labels used for scoring.
 - `prompts/`: exact prompt condition text.
 - `results/figures/`: benchmark summary figure as PNG and PDF.
-- `results/`: GPT-5.5 predictions, summaries, and per-run analysis notes for
+- `results/`: Original GPT-5.5 predictions, summaries, and per-run analysis notes for
   `low`, `medium`, `high`, and `xhigh` reasoning efforts, plus tool use audit,
   deterministic baseline summaries, and the batch comparison used in the
   manuscript appendix.
 - `scripts/`: scoring and package verification helpers.
+- `../three-model-comparison-2026-07/`: GPT-5.4 and GPT-5.6 Sol predictions,
+  notes, completion audits, and the combined three model summary.

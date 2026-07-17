@@ -53,6 +53,23 @@ reusable experimental lessons and prior-operation guidance.
 The public execution-source copy also records these defaults in
 `python/openclaw_nv_execution_source/nv_project_manager.py`.
 
+## Offline Benchmark Configuration
+
+The autonomous case studies above used GPT-5.5.  The offline Ramsey and pODMR
+benchmarks were subsequently evaluated with three model variants under the
+same inputs, prompts, reasoning effort settings, and replicate structure.
+
+| Manuscript name | Model argument | Benchmark role |
+| --- | --- | --- |
+| GPT-5.4 | `gpt-5.4` | Ramsey and pODMR comparison sweep |
+| GPT-5.5 | `gpt-5.5` | Original Ramsey and pODMR sweep |
+| GPT-5.6 Sol | `gpt-5.6-sol` | Ramsey and pODMR comparison sweep |
+
+The GPT-5.4 run used the alias available through Codex with ChatGPT
+authentication at execution time.  Full run counts and public audit records
+are documented in
+`benchmarks/three-model-comparison-2026-07/README.md`.
+
 ## Reporting Convention
 
 When citing these cases, describe the autonomy stack as:

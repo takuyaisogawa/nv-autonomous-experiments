@@ -1,7 +1,9 @@
 # Results
 
-This directory contains the results used for the manuscript Ramsey checkpoint
-benchmark.
+This directory contains the original GPT-5.5 results used for the manuscript
+Ramsey checkpoint benchmark.  GPT-5.4, GPT-5.6 Sol, and the combined three
+model source table are in
+`../../three-model-comparison-2026-07/ramsey/`.
 
 Key files:
 

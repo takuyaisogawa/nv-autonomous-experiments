@@ -1,0 +1,37 @@
+reasoning_effort,condition,condition_label,replicate,n,tp,tn,fp,fn,parse_failed,accuracy,false_positive_rate,false_negative_rate
+low,protocol_only,Sequence,1,96,20,71,1,4,0,0.947917,0.013889,0.166667
+low,protocol_only,Sequence,2,96,20,72,0,4,0,0.958333,0.000000,0.166667
+low,protocol_only,Sequence,3,96,21,70,2,3,0,0.947917,0.027778,0.125000
+low,domain_facts,Facts,1,96,23,71,1,1,0,0.979167,0.013889,0.041667
+low,domain_facts,Facts,2,96,21,70,2,3,0,0.947917,0.027778,0.125000
+low,domain_facts,Facts,3,96,23,72,0,1,0,0.989583,0.000000,0.041667
+low,model_first,Expected signal,1,96,22,70,2,2,0,0.958333,0.027778,0.083333
+low,model_first,Expected signal,2,96,22,69,3,2,0,0.947917,0.041667,0.083333
+low,model_first,Expected signal,3,96,21,70,2,3,0,0.947917,0.027778,0.125000
+medium,protocol_only,Sequence,1,96,21,71,1,3,0,0.958333,0.013889,0.125000
+medium,protocol_only,Sequence,2,96,22,67,5,2,0,0.927083,0.069444,0.083333
+medium,protocol_only,Sequence,3,96,21,71,1,3,0,0.958333,0.013889,0.125000
+medium,domain_facts,Facts,1,96,24,68,4,0,0,0.958333,0.055556,0.000000
+medium,domain_facts,Facts,2,96,22,71,1,2,0,0.968750,0.013889,0.083333
+medium,domain_facts,Facts,3,96,21,68,4,3,0,0.927083,0.055556,0.125000
+medium,model_first,Expected signal,1,96,22,71,1,2,0,0.968750,0.013889,0.083333
+medium,model_first,Expected signal,2,96,23,69,3,1,0,0.958333,0.041667,0.041667
+medium,model_first,Expected signal,3,96,21,71,1,3,0,0.958333,0.013889,0.125000
+high,protocol_only,Sequence,1,96,22,70,2,2,0,0.958333,0.027778,0.083333
+high,protocol_only,Sequence,2,96,23,68,4,1,0,0.947917,0.055556,0.041667
+high,protocol_only,Sequence,3,96,22,63,9,2,0,0.885417,0.125000,0.083333
+high,domain_facts,Facts,1,96,23,65,7,1,0,0.916667,0.097222,0.041667
+high,domain_facts,Facts,2,96,24,69,3,0,0,0.968750,0.041667,0.000000
+high,domain_facts,Facts,3,96,23,70,2,1,0,0.968750,0.027778,0.041667
+high,model_first,Expected signal,1,96,22,71,1,2,0,0.968750,0.013889,0.083333
+high,model_first,Expected signal,2,96,24,71,1,0,0,0.989583,0.013889,0.000000
+high,model_first,Expected signal,3,96,22,70,2,2,0,0.958333,0.027778,0.083333
+xhigh,protocol_only,Sequence,1,96,23,60,12,1,0,0.864583,0.166667,0.041667
+xhigh,protocol_only,Sequence,2,96,23,61,11,1,0,0.875000,0.152778,0.041667
+xhigh,protocol_only,Sequence,3,96,23,59,13,1,0,0.854167,0.180556,0.041667
+xhigh,domain_facts,Facts,1,96,23,68,4,1,0,0.947917,0.055556,0.041667
+xhigh,domain_facts,Facts,2,96,23,65,7,1,0,0.916667,0.097222,0.041667
+xhigh,domain_facts,Facts,3,96,24,65,7,0,0,0.927083,0.097222,0.000000
+xhigh,model_first,Expected signal,1,96,24,72,0,0,0,1.000000,0.000000,0.000000
+xhigh,model_first,Expected signal,2,96,22,72,0,2,0,0.979167,0.000000,0.083333
+xhigh,model_first,Expected signal,3,96,23,70,2,1,0,0.968750,0.027778,0.041667

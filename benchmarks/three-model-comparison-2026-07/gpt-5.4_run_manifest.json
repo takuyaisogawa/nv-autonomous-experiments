@@ -1,0 +1,31 @@
+{
+  "requested_model": "gpt-5.4",
+  "codex_model_argument": "gpt-5.4",
+  "official_current_snapshot_at_start": "gpt-5.4-2026-03-05",
+  "started_on": "2026-07-16",
+  "timezone": "America/New_York",
+  "authentication_surface": "Codex with ChatGPT account",
+  "snapshot_note": "The fixed snapshot ID is documented for the API but was rejected by Codex with ChatGPT authentication. The supported gpt-5.4 alias is used for all benchmark requests.",
+  "reasoning_efforts": [
+    "low",
+    "medium",
+    "high",
+    "xhigh"
+  ],
+  "ramsey": {
+    "runner": "work/gpt56_benchmarks/run_ramsey_resumable.py",
+    "expected_requests": 400,
+    "checkpoints": 5,
+    "replicates": 20,
+    "jobs": 10
+  },
+  "podmr": {
+    "runner": "work/gpt56_benchmarks/run_podmr_main_sweep.py",
+    "expected_requests": 3456,
+    "cases": 96,
+    "conditions": 3,
+    "replicates": 3,
+    "jobs": 20
+  },
+  "official_model_documentation": "https://developers.openai.com/api/docs/models/gpt-5.4"
+}

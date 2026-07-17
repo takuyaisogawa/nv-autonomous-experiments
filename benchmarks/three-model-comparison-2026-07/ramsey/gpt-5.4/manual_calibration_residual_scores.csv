@@ -1,0 +1,401 @@
+custom_id,checkpoint_id,reasoning_effort,replicate,calibration_residual_score,calibration_residual_rationale
+cp01__low__rep01,cp01,low,1,fail,Fail: recommends weak-pi pODMR recentering but does not identify the Ramsey mismatch as residual resonance-center calibration error.
+cp01__low__rep02,cp01,low,2,fail,Fail: treats the run as frequency-mismatched and proposes a detuning test without clearly linking the mismatch to a residual calibrated-center offset.
+cp01__low__rep03,cp01,low,3,pass,Pass: explicitly attributes the off-programmed carrier to an offset between the weak-pi pODMR grid center used for mw_freq and the actual transition.
+cp01__low__rep04,cp01,low,4,fail,Fail: requests a refreshed microwave-center check but does not state that a residual center-calibration offset may explain the Ramsey detuning mismatch.
+cp01__low__rep05,cp01,low,5,pass,Pass: explicitly frames the frequency mismatch as possible resonance-centering drift or a center-frequency problem and recommends resonance recalibration.
+cp01__low__rep06,cp01,low,6,fail,Fail: describes a frequency mismatch and possible imperfect setting without connecting it to resonance or microwave frequency calibration.
+cp01__low__rep07,cp01,low,7,fail,Fail: proposes a redesigned detuning test while retaining the existing mw_freq and does not identify a residual calibrated-center offset.
+cp01__low__rep08,cp01,low,8,fail,Fail: mentions recalibration only as a conditional procedural step and does not link the observed mismatch to residual resonance-center error.
+cp01__low__rep09,cp01,low,9,fail,Fail: explicitly withholds a physical frequency-shift conclusion and proposes controls without a residual resonance-center calibration hypothesis.
+cp01__low__rep10,cp01,low,10,fail,Fail: recommends fresh weak-pi pODMR before repeating but does not identify residual resonance-center calibration as an explanation for the mismatch.
+cp01__low__rep11,cp01,low,11,pass,Pass: explicitly identifies residual frequency offset from the weak-pi pODMR center or slow drift as an explanation for the effective Ramsey beat.
+cp01__low__rep12,cp01,low,12,fail,"Fail: attributes the off-target feature to noise, drift, or finite-window effects without identifying residual resonance-center calibration."
+cp01__low__rep13,cp01,low,13,pass,Pass: explicitly proposes rechecking the microwave frequency against a weak-pi pODMR refresh and states that a frequency offset could wash out the programmed detuning response.
+cp01__low__rep14,cp01,low,14,pass,Pass: explicitly identifies detuning or calibration mismatch as a plausible source of the off-target carrier and calls for a fresh weak-pi pODMR resonance check.
+cp01__low__rep15,cp01,low,15,pass,Pass: explicitly calls the off-target beat a resonance or detuning mismatch and proposes updating the center from a fresh weak-pi pODMR before repeating Ramsey.
+cp01__low__rep16,cp01,low,16,fail,Fail: recommends refreshing the weak-pi resonance but attributes the inconsistency only to drift or tracking and does not identify a residual calibrated-center offset.
+cp01__low__rep17,cp01,low,17,pass,Pass: explicitly names microwave frequency mis-setting as a plausible source of the off-target beat and calls for weak-pi pODMR recentering.
+cp01__low__rep18,cp01,low,18,fail,Fail: recommends a fresh weak-pi pODMR center check but does not identify residual calibrated-center error as the explanation for the mismatch.
+cp01__low__rep19,cp01,low,19,fail,Fail: recommends detuning-tracking validation but does not identify residual calibrated resonance-center error as the source of the off-target carrier.
+cp01__low__rep20,cp01,low,20,fail,Fail: recommends a fresh weak-pi pODMR recenter and detuning diagnostic but does not state that residual center offset explains the mismatch.
+cp02__low__rep01,cp02,low,1,fail,Fail: recommends a programmed-detuning diagnostic and reports off-target content without a residual resonance-center calibration hypothesis.
+cp02__low__rep02,cp02,low,2,fail,Fail: interprets the detuning-shift test as non-confirming and proposes a sequence diagnostic without linking the result to calibration error.
+cp02__low__rep03,cp02,low,3,fail,Fail: reports partial tracking of programmed detuning and does not propose a residual calibrated-center offset.
+cp02__low__rep04,cp02,low,4,fail,Fail: attributes off-target structure to baseline or artifact sensitivity without identifying resonance-center calibration error.
+cp02__low__rep05,cp02,low,5,fail,Fail: proposes another detuning-tracking test at the same mw_freq and does not connect the mismatch to residual calibration.
+cp02__low__rep06,cp02,low,6,fail,Fail: recommends a route diagnostic for detuning tracking without a residual resonance-center calibration explanation.
+cp02__low__rep07,cp02,low,7,fail,Fail: keeps the microwave center fixed and tests whether the feature follows detuning without identifying calibration error.
+cp02__low__rep08,cp02,low,8,fail,Fail: treats the pair as artifact or mixed structure and recommends another detuning diagnostic without a calibration-source hypothesis.
+cp02__low__rep09,cp02,low,9,fail,Fail: adds a weak-pi re-check procedurally but does not state that residual center calibration may explain the Ramsey mismatch.
+cp02__low__rep10,cp02,low,10,fail,Fail: reports movement toward programmed detuning and requests higher-SNR validation without proposing a residual calibrated-center offset.
+cp02__low__rep11,cp02,low,11,fail,Fail: recommends a weak-pi confirmation and paired-detuning diagnostic without stating that residual calibration may explain the mismatch.
+cp02__low__rep12,cp02,low,12,fail,Fail: attributes the mismatch to low-tau or transient structure and recommends a detuning diagnostic without a calibrated-center offset hypothesis.
+cp02__low__rep13,cp02,low,13,fail,Fail: discusses frequency-setting or sequence systematics and detuning tracking but does not link them to residual error from a calibrated resonance center.
+cp02__low__rep14,cp02,low,14,fail,Fail: recommends a programmed-detuning sweep to test peak tracking without proposing residual error from the calibrated resonance center.
+cp02__low__rep15,cp02,low,15,fail,Fail: proposes diagnosing detuning tracking and validating it with another Ramsey run without identifying residual resonance-center calibration error.
+cp02__low__rep16,cp02,low,16,fail,Fail: proposes a multi-detuning tracking diagnostic without a residual resonance-center calibration hypothesis.
+cp02__low__rep17,cp02,low,17,fail,Fail: recommends another detuning-discrimination Ramsey and does not connect the mismatch to calibrated resonance-center error.
+cp02__low__rep18,cp02,low,18,fail,Fail: attributes the mismatch to inconsistent spectral content and proposes a detuning diagnostic without a calibrated-center offset hypothesis.
+cp02__low__rep19,cp02,low,19,fail,Fail: treats the off-target component as drift or sequence artifact and recommends a detuning-shift test without proposing resonance-center calibration error.
+cp02__low__rep20,cp02,low,20,fail,Fail: proposes a detuning sweep and attributes structure to a sequence offset without identifying a residual calibrated resonance-center error.
+cp03__low__rep01,cp03,low,1,fail,Fail: reports an off-programmed short-tau component and recommends another diagnostic without a calibration-source explanation.
+cp03__low__rep02,cp03,low,2,fail,Fail: switches to an alternate detuning diagnostic without identifying residual resonance-center calibration error.
+cp03__low__rep03,cp03,low,3,fail,Fail: describes ambiguous short-time structure and partial carrier improvement without a residual calibrated-center hypothesis.
+cp03__low__rep04,cp03,low,4,fail,Fail: reports a non-unique carrier and requests a targeted repeat without linking the offset to calibration.
+cp03__low__rep05,cp03,low,5,fail,Fail: proposes a detuning-change control for low-frequency structure without identifying resonance-center calibration error.
+cp03__low__rep06,cp03,low,6,fail,Fail: attributes the result to baseline and common-mode variation without a calibrated-center offset explanation.
+cp03__low__rep07,cp03,low,7,fail,Fail: recommends an alternate diagnostic for detuning following without a residual resonance-center calibration hypothesis.
+cp03__low__rep08,cp03,low,8,fail,Fail: concludes that the redesign did not recover the carrier and does not connect the result to calibration error.
+cp03__low__rep09,cp03,low,9,fail,Fail: proposes another protocol for broad early-time structure without identifying a residual calibrated-center offset.
+cp03__low__rep10,cp03,low,10,fail,Fail: interprets the result as baseline-sensitive structure and common-mode drift without a calibrated-center offset hypothesis.
+cp03__low__rep11,cp03,low,11,fail,Fail: reports unresolved low-frequency structure and drift without linking the mismatch to resonance-center calibration.
+cp03__low__rep12,cp03,low,12,fail,Fail: interprets the response as broad low-frequency or envelope structure without identifying resonance-center calibration error.
+cp03__low__rep13,cp03,low,13,fail,Fail: reports an unstable non-carrier spectrum and recommends echo rather than proposing a residual calibrated-center frequency offset.
+cp03__low__rep14,cp03,low,14,fail,Fail: reports ambiguous off-target short-window structure without a resonance-center calibration-offset hypothesis.
+cp03__low__rep15,cp03,low,15,fail,Fail: attributes the result to monotonic early-time or low-frequency structure without identifying residual resonance-center calibration.
+cp03__low__rep16,cp03,low,16,fail,Fail: treats the short-window result as frequency-resolution and drift limited without a calibrated-center offset hypothesis.
+cp03__low__rep17,cp03,low,17,fail,Fail: attributes the result to baseline drift and coarse-grid harmonics without identifying residual resonance-center calibration.
+cp03__low__rep18,cp03,low,18,fail,Fail: suggests rechecking the frequency basis but attributes the data to baseline and drift without identifying a residual calibrated-center offset.
+cp03__low__rep19,cp03,low,19,fail,Fail: recommends recentering before a frequency-origin diagnostic but does not state that residual center calibration error explains the mismatch.
+cp03__low__rep20,cp03,low,20,fail,Fail: reports stronger but nonunique programmed-carrier response without a calibrated-center offset hypothesis.
+cp04__low__rep01,cp04,low,1,fail,Fail: interprets the spectral shift as det-following behavior and does not propose residual resonance-center calibration error.
+cp04__low__rep02,cp04,low,2,fail,Fail: reports moderate det-dependent evidence and requests drift-aware review without a calibration-source hypothesis.
+cp04__low__rep03,cp04,low,3,fail,Fail: treats the det-shift result as evidence against a fixed artifact without identifying residual calibrated-center error.
+cp04__low__rep04,cp04,low,4,fail,Fail: reports mixed empirical components and recommends a redesigned protocol without linking them to calibration.
+cp04__low__rep05,cp04,low,5,fail,Fail: concludes that no clean det-following carrier exists and does not propose a residual resonance-center offset.
+cp04__low__rep06,cp04,low,6,fail,Fail: notes weak compatibility with det tracking but recommends another protocol without a calibration explanation.
+cp04__low__rep07,cp04,low,7,fail,Fail: closes the Ramsey branch based on inconsistent views without identifying residual calibrated-center error.
+cp04__low__rep08,cp04,low,8,fail,Fail: reports a directionally expected det-shift but no residual resonance-center calibration hypothesis.
+cp04__low__rep09,cp04,low,9,fail,Fail: treats the det-shift result as artifact-sensitive and non-confirming without a residual calibration explanation.
+cp04__low__rep10,cp04,low,10,fail,Fail: reports a broad shifted component and recommends synthesis or closure without identifying resonance-center calibration error.
+cp04__low__rep11,cp04,low,11,fail,Fail: interprets the shift as suggestive det-following behavior and does not propose a residual calibrated-center offset.
+cp04__low__rep12,cp04,low,12,fail,Fail: treats the shifted feature as weak detuning-tracking evidence and recommends another targeted Ramsey run without a calibrated-center offset explanation.
+cp04__low__rep13,cp04,low,13,fail,Fail: interprets the det-shift test as negative for a det-tracking carrier and gives no calibrated-center offset explanation.
+cp04__low__rep14,cp04,low,14,fail,Fail: discusses det-shift behavior and a redesigned diagnostic without linking the mismatch to residual resonance-center calibration.
+cp04__low__rep15,cp04,low,15,fail,Fail: treats the det-shift outcome as an unsupported carrier model and recommends echo without a resonance-center calibration-offset hypothesis.
+cp04__low__rep16,cp04,low,16,fail,Fail: interprets the shifted component as mixed det-tracking evidence and gives no calibrated-center offset explanation.
+cp04__low__rep17,cp04,low,17,fail,Fail: concludes that the det-shift test does not support a tracking carrier and gives no resonance-center calibration-offset explanation.
+cp04__low__rep18,cp04,low,18,fail,Fail: interprets the result as transient-contaminated det-tracking behavior without linking it to residual resonance-center calibration.
+cp04__low__rep19,cp04,low,19,fail,Fail: treats the det-shift test as negative or inconclusive and gives no resonance-center calibration-offset explanation.
+cp04__low__rep20,cp04,low,20,fail,Fail: interprets spectrum changes as ambiguous det sensitivity without linking them to residual resonance-center calibration.
+cp05__low__rep01,cp05,low,1,fail,Fail: finds an off-model high-frequency component after refreshed-center acquisition but does not attribute it to residual calibration.
+cp05__low__rep02,cp05,low,2,fail,Fail: treats the refreshed-center run as negative evidence without identifying a residual calibrated-center offset.
+cp05__low__rep03,cp05,low,3,fail,Fail: attributes the dominant component to a Nyquist-edge artifact and recommends another protocol without a calibration hypothesis.
+cp05__low__rep04,cp05,low,4,fail,Fail: reports no stable carrier after refreshed-center acquisition and does not connect the mismatch to calibration error.
+cp05__low__rep05,cp05,low,5,fail,Fail: reports mixed per-average frequencies and rejects physical assignments without proposing residual center calibration.
+cp05__low__rep06,cp05,low,6,fail,Fail: identifies an early transient and weak carrier content without a residual resonance-center calibration explanation.
+cp05__low__rep07,cp05,low,7,fail,Fail: recommends drift review and a detuning-change test without identifying calibration error as the mismatch source.
+cp05__low__rep08,cp05,low,8,fail,Fail: treats refreshed-center tuning as procedural improvement but does not state that a residual center offset explains Ramsey detuning.
+cp05__low__rep09,cp05,low,9,fail,Fail: attributes the result to Nyquist-edge and transient structure without identifying residual resonance-center calibration.
+cp05__low__rep10,cp05,low,10,fail,Fail: reports weak alignment after refreshed-center tuning but does not state that a residual center offset explained the earlier mismatch.
+cp05__low__rep11,cp05,low,11,fail,Fail: concludes that the refreshed center did not resolve the carrier and does not propose residual calibration as the source.
+cp05__low__rep12,cp05,low,12,fail,Fail: attributes the result to a non-carrier spectral feature and model ambiguity without identifying residual resonance-center calibration.
+cp05__low__rep13,cp05,low,13,fail,Fail: identifies an edge artifact and weak programmed carrier but gives no calibrated resonance-center offset hypothesis.
+cp05__low__rep14,cp05,low,14,fail,Fail: says refreshed-center tuning recovered the carrier but does not state that a residual center offset explained the earlier mismatch.
+cp05__low__rep15,cp05,low,15,fail,Fail: reports that refreshed-center data weaken an old feature but does not state that residual center offset caused the original mismatch.
+cp05__low__rep16,cp05,low,16,fail,Fail: treats the high-frequency feature as nonphysical and recommends a redesigned diagnostic without a residual calibrated-center offset hypothesis.
+cp05__low__rep17,cp05,low,17,fail,Fail: reports a dominant off-target component in refreshed-center data but does not propose remaining resonance-center calibration error.
+cp05__low__rep18,cp05,low,18,fail,Fail: says refreshed-center tuning moved power toward the programmed detuning but does not state that a residual center offset explained the earlier mismatch.
+cp05__low__rep19,cp05,low,19,fail,Fail: reports that refreshed-center data suppressed an old candidate but does not propose remaining center calibration error.
+cp05__low__rep20,cp05,low,20,fail,Fail: attributes the result to an early-time transient and does not identify residual resonance-center calibration.
+cp01__medium__rep01,cp01,medium,1,pass,Pass: explicitly states that the Ramsey microwave frequency may be offset from the true resonance because the weak-pi pODMR center was grid limited.
+cp01__medium__rep02,cp01,medium,2,fail,Fail: attributes the mismatch to a tau-zero artifact and drift without a calibrated resonance-center offset hypothesis.
+cp01__medium__rep03,cp01,medium,3,fail,Fail: attributes the off-target structure to drift and contrast degradation without identifying residual resonance-center calibration.
+cp01__medium__rep04,cp01,medium,4,pass,Pass: explicitly states that the observed beat could mean the actual resonance is about 0.5 MHz offset from the assumed weak-pi center.
+cp01__medium__rep05,cp01,medium,5,pass,Pass: identifies weak-pi center inaccuracy and frequency mismatch as plausible provenance for the off-target beat and calls for finer recentering.
+cp01__medium__rep06,cp01,medium,6,pass,Pass: explicitly explains the effective beat as a roughly 0.53 MHz resonance offset from the grid-limited weak-pi center.
+cp01__medium__rep07,cp01,medium,7,pass,Pass: explicitly attributes the off-target beat to center-frequency uncertainty of about half the prior weak-pi grid spacing.
+cp01__medium__rep08,cp01,medium,8,pass,Pass: identifies calibration or resonance-drift ambiguity as the likely source of the frequency mismatch and calls for a weak-pi center recheck.
+cp01__medium__rep09,cp01,medium,9,fail,Fail: attributes the mismatch to drift or low SNR and recommends more averages without identifying residual resonance-center calibration.
+cp01__medium__rep10,cp01,medium,10,pass,Pass: explicitly includes resonance offset in the explanation for the off-target beat and recommends finer recalibration of the frequency basis.
+cp01__medium__rep11,cp01,medium,11,pass,Pass: explicitly attributes the effective detuning mismatch to microwave-center offset or drift relative to the weak-pi center.
+cp01__medium__rep12,cp01,medium,12,pass,Pass: identifies frequency mis-setting or loss of the previously calibrated weak-pi center as a plausible source of the off-target beat.
+cp01__medium__rep13,cp01,medium,13,pass,Pass: explicitly includes imperfect frequency setting in the explanation for the mismatch and calls for renewed weak-pi resonance verification.
+cp01__medium__rep14,cp01,medium,14,pass,Pass: explicitly identifies frequency mis-setting or loss of the weak-pi resonance center as a plausible explanation for the mismatch.
+cp01__medium__rep15,cp01,medium,15,pass,Pass: explicitly states that a modest resonance-center offset could move the beat away from the programmed detuning and recommends recalibration.
+cp01__medium__rep16,cp01,medium,16,fail,"Fail: attributes the off-target feature to limited SNR, drift, or baseline sensitivity without identifying residual resonance-center calibration."
+cp01__medium__rep17,cp01,medium,17,fail,Fail: proposes a different programmed detuning to test tracking without a calibrated-center offset hypothesis.
+cp01__medium__rep18,cp01,medium,18,pass,Pass: explicitly identifies resonance or detuning mismatch as a plausible cause of the off-target beat and calls for renewed weak-pi centering.
+cp01__medium__rep19,cp01,medium,19,fail,Fail: attributes the nonreproducible frequency content to drift and SNR and recommends shorter averages without identifying center calibration error.
+cp01__medium__rep20,cp01,medium,20,fail,Fail: attributes the off-target spectrum to mixed content or drift and recommends higher frequency discrimination without a calibrated-center offset hypothesis.
+cp02__medium__rep01,cp02,medium,1,fail,Fail: proposes a multi-detuning tracking test without a residual calibrated-center error hypothesis.
+cp02__medium__rep02,cp02,medium,2,fail,Fail: attributes the off-target spectrum to common-mode drift and transient structure without identifying resonance-center calibration error.
+cp02__medium__rep03,cp02,medium,3,fail,Fail: recommends repeating the same detuning at higher SNR without a residual calibrated-center error hypothesis.
+cp02__medium__rep04,cp02,medium,4,fail,Fail: recommends a high-SNR detuning control to test tracking without a residual resonance-center calibration hypothesis.
+cp02__medium__rep05,cp02,medium,5,fail,Fail: recommends a multi-detuning diagnostic without a residual calibrated resonance-center error hypothesis.
+cp02__medium__rep06,cp02,medium,6,fail,Fail: proposes a detuning diagnostic for off-target peaks without a residual calibrated resonance-center error hypothesis.
+cp02__medium__rep07,cp02,medium,7,fail,Fail: recommends a carrier-tracking detuning series and does not identify resonance-center calibration error.
+cp02__medium__rep08,cp02,medium,8,fail,"Fail: suspects phase-ramp, detuning implementation, or readout interpretation rather than a residual calibrated-center offset."
+cp02__medium__rep09,cp02,medium,9,fail,Fail: attributes the result to a tau-zero transient and recommends deliberate detuning control without a calibrated-center offset hypothesis.
+cp02__medium__rep10,cp02,medium,10,fail,Fail: treats the mismatch as nonphysical transient or detuning behavior without identifying residual resonance-center calibration.
+cp02__medium__rep11,cp02,medium,11,fail,Fail: recommends rechecking the microwave center before a detuning test but does not state that residual center error explains the mismatch.
+cp02__medium__rep12,cp02,medium,12,fail,Fail: recommends a programmed-detuning follow test without a residual calibrated resonance-center error hypothesis.
+cp02__medium__rep13,cp02,medium,13,fail,Fail: attributes the off-target component to drift or acquisition-order artifact without identifying residual resonance-center calibration.
+cp02__medium__rep14,cp02,medium,14,fail,Fail: proposes a multi-detuning tracking diagnostic for mixed frequency content without a residual calibrated-center error hypothesis.
+cp02__medium__rep15,cp02,medium,15,fail,Fail: attributes the inconsistency to normalization sensitivity and route or sequence behavior without identifying resonance-center calibration error.
+cp02__medium__rep16,cp02,medium,16,fail,Fail: reports weak mixed content and drift without identifying residual resonance-center calibration error.
+cp02__medium__rep17,cp02,medium,17,fail,Fail: treats the low-tau feature as artifact-limited and proposes detuning controls without a calibrated-center offset hypothesis.
+cp02__medium__rep18,cp02,medium,18,fail,Fail: attributes the result to residual artifact or nonstationary structure without identifying resonance-center calibration error.
+cp02__medium__rep19,cp02,medium,19,fail,Fail: recommends detuning or microwave-frequency input tests and only conditionally mentions resonance drift without identifying it as the mismatch explanation.
+cp02__medium__rep20,cp02,medium,20,fail,Fail: treats the branch as artifact limited and proposes a zero-detuning control without a residual calibrated-center error hypothesis.
+cp03__medium__rep01,cp03,medium,1,fail,Fail: treats the short-window response as an early-time transient and recommends near-zero detuning without a calibrated-center offset hypothesis.
+cp03__medium__rep02,cp03,medium,2,fail,Fail: treats the persistent off-target feature as an unresolved carrier or artifact and does not identify resonance-center calibration error.
+cp03__medium__rep03,cp03,medium,3,fail,Fail: proposes a detuning-shift test to classify the feature without a calibrated-center offset explanation.
+cp03__medium__rep04,cp03,medium,4,fail,Fail: attributes the off-target component to drift or baseline artifacts and proposes a sweep or echo without identifying calibrated-center error.
+cp03__medium__rep05,cp03,medium,5,fail,Fail: reports a persistent off-carrier feature and incompatible fits without identifying resonance-center calibration error.
+cp03__medium__rep06,cp03,medium,6,fail,Fail: attributes the ambiguity to short-window frequency resolution without a calibrated-center offset hypothesis.
+cp03__medium__rep07,cp03,medium,7,fail,Fail: treats the recurring off-carrier component as possible artifact and recommends echo without identifying resonance-center calibration error.
+cp03__medium__rep08,cp03,medium,8,fail,Fail: proposes a phase-ramp or detuning diagnostic for the persistent feature without a residual calibrated-center error hypothesis.
+cp03__medium__rep09,cp03,medium,9,fail,Fail: attributes the data to baseline and drift variation without identifying resonance-center calibration error.
+cp03__medium__rep10,cp03,medium,10,fail,Fail: attributes the ambiguity to short-span resolution and smooth baseline curvature without a calibrated-center offset hypothesis.
+cp03__medium__rep11,cp03,medium,11,fail,Fail: attributes the ratio structure to common-mode reference evolution and normalization sensitivity without identifying center calibration error.
+cp03__medium__rep12,cp03,medium,12,fail,Fail: treats the result as a broad baseline envelope and proposes a detuning shift without a calibrated-center offset hypothesis.
+cp03__medium__rep13,cp03,medium,13,fail,Fail: attributes the ambiguity to insufficient frequency resolution and common-mode motion without a calibrated-center offset hypothesis.
+cp03__medium__rep14,cp03,medium,14,fail,Fail: treats the result as broad low-frequency envelope plus weak carrier and proposes a det-shift test without a calibrated-center offset hypothesis.
+cp03__medium__rep15,cp03,medium,15,fail,Fail: treats the feature as a sequence or readout transient and recommends a zero-detuning control without a calibrated-center offset hypothesis.
+cp03__medium__rep16,cp03,medium,16,fail,Fail: reports improved but off-target short-tau sensitivity and recommends detuning dependence or echo without identifying center calibration error.
+cp03__medium__rep17,cp03,medium,17,fail,Fail: interprets the result as a broad envelope and common-mode drift without a calibrated-center offset hypothesis.
+cp03__medium__rep18,cp03,medium,18,fail,Fail: attributes the ambiguity to baseline competition and phase instability without identifying resonance-center calibration error.
+cp03__medium__rep19,cp03,medium,19,fail,Fail: attributes the result to early-time envelope or baseline shift and recommends an alternate protocol without identifying resonance-center calibration error.
+cp03__medium__rep20,cp03,medium,20,fail,Fail: recommends a weak-pi recenter before an alternate diagnostic but does not state that residual center offset explains the mismatch.
+cp04__medium__rep01,cp04,medium,1,fail,Fail: reports inconsistent det-shift and normalization behavior without linking it to residual resonance-center calibration.
+cp04__medium__rep02,cp04,medium,2,fail,Fail: interprets the det-shift result as baseline dominated and non-claim-grade without linking it to residual resonance-center calibration.
+cp04__medium__rep03,cp04,medium,3,fail,Fail: reports window-sensitive det-shift behavior without a residual calibrated-center offset hypothesis.
+cp04__medium__rep04,cp04,medium,4,fail,Fail: treats the shifted component as evidence of det-linked content and proposes a third detuning without a calibrated-center offset explanation.
+cp04__medium__rep05,cp04,medium,5,fail,Fail: interprets the shift as suggestive det tracking and gives no calibrated-center offset explanation.
+cp04__medium__rep06,cp04,medium,6,fail,Fail: treats the det-shift response as transient sensitive and does not link it to residual resonance-center calibration.
+cp04__medium__rep07,cp04,medium,7,fail,Fail: concludes that the det-shift result is baseline or mixed-component structure and gives no calibrated-center offset explanation.
+cp04__medium__rep08,cp04,medium,8,fail,Fail: interprets the new band as det-sensitive content and recommends drift review without a resonance-center calibration-offset hypothesis.
+cp04__medium__rep09,cp04,medium,9,fail,Fail: treats the det-shift result as suggestive det dependence and gives no resonance-center calibration-offset explanation.
+cp04__medium__rep10,cp04,medium,10,fail,Fail: interprets the det-shift direction as suggestive but unstable and gives no calibrated-center offset explanation.
+cp04__medium__rep11,cp04,medium,11,fail,Fail: interprets the det-shift response as model-ambiguous det sensitivity and gives no resonance-center calibration-offset explanation.
+cp04__medium__rep12,cp04,medium,12,fail,Fail: attributes the result to low-frequency baseline or transient structure without identifying residual center calibration.
+cp04__medium__rep13,cp04,medium,13,fail,Fail: interprets the shifted band as det-tracking evidence and gives no residual resonance-center calibration explanation.
+cp04__medium__rep14,cp04,medium,14,fail,Fail: reports det-shifted weight but a stronger off-target component and gives no resonance-center calibration-offset explanation.
+cp04__medium__rep15,cp04,medium,15,fail,Fail: treats the det-shift response as weak and inconsistent and gives no resonance-center calibration-offset explanation.
+cp04__medium__rep16,cp04,medium,16,fail,Fail: interprets the shift as det-sensitive spectral content without a calibrated-center offset hypothesis.
+cp04__medium__rep17,cp04,medium,17,fail,Fail: treats the shifted band as tentative det-following evidence and gives no resonance-center calibration-offset explanation.
+cp04__medium__rep18,cp04,medium,18,fail,Fail: interprets the shifted band as evidence against a fixed artifact without linking it to residual center calibration.
+cp04__medium__rep19,cp04,medium,19,fail,Fail: interprets the shift as qualitative det-tracking evidence and gives no calibrated-center offset explanation.
+cp04__medium__rep20,cp04,medium,20,fail,Fail: treats the shifted component as det-responsive but view dependent without linking it to residual center calibration.
+cp05__medium__rep01,cp05,medium,1,fail,Fail: reports that refreshed-center tuning did not recover the carrier but does not propose remaining resonance-center calibration error.
+cp05__medium__rep02,cp05,medium,2,fail,Fail: describes weak carrier content after refreshed-center tuning without stating that residual center offset explains the ambiguity.
+cp05__medium__rep03,cp05,medium,3,fail,Fail: reports improved carrier alignment after refreshed-center tuning but does not state that residual center offset caused the earlier mismatch.
+cp05__medium__rep04,cp05,medium,4,fail,Fail: reports a weak programmed-carrier component after refreshed-center tuning without identifying residual center calibration error.
+cp05__medium__rep05,cp05,medium,5,fail,Fail: reports off-target high-frequency content after refreshed-center tuning without proposing remaining center calibration error.
+cp05__medium__rep06,cp05,medium,6,fail,Fail: attributes the result to edge and transient structure and does not identify residual calibrated-center offset.
+cp05__medium__rep07,cp05,medium,7,fail,Fail: says the refreshed center helped recover a weak carrier but does not state that residual center offset explained the earlier mismatch.
+cp05__medium__rep08,cp05,medium,8,fail,Fail: reports a better carrier after refreshed-center tuning but does not state that residual center offset caused the earlier mismatch.
+cp05__medium__rep09,cp05,medium,9,fail,Fail: attributes the off-target feature to an early-time transient and does not identify residual resonance-center calibration.
+cp05__medium__rep10,cp05,medium,10,fail,Fail: describes a high-frequency edge artifact after refreshed-center tuning without identifying residual center calibration error.
+cp05__medium__rep11,cp05,medium,11,fail,Fail: reports a weak carrier and unsupported free-frequency optimum after refreshed-center tuning without proposing residual center error.
+cp05__medium__rep12,cp05,medium,12,fail,Fail: says refreshed-center conditions moved some power toward the carrier but does not state that residual center offset explains the prior mismatch.
+cp05__medium__rep13,cp05,medium,13,fail,Fail: reports that refreshed-center tuning did not rescue the carrier model without proposing remaining center calibration error.
+cp05__medium__rep14,cp05,medium,14,fail,Fail: describes transient and near-Nyquist structure after refreshed-center tuning without identifying residual center calibration error.
+cp05__medium__rep15,cp05,medium,15,fail,Fail: attributes the dominant component to sampling or transient artifact after refreshed-center tuning without identifying remaining center error.
+cp05__medium__rep16,cp05,medium,16,fail,Fail: reports targeted power moving toward the carrier after refreshed-center tuning but does not state that residual center offset caused the earlier mismatch.
+cp05__medium__rep17,cp05,medium,17,fail,Fail: reports mixed off-target content after refreshed-center tuning without identifying remaining center calibration error.
+cp05__medium__rep18,cp05,medium,18,fail,Fail: recommends a detuning-tracking diagnostic from the refreshed center but does not state that residual center offset explains the mismatch.
+cp05__medium__rep19,cp05,medium,19,fail,Fail: reports weak carrier-like structure after refreshed-center tuning without stating that residual center offset explains the earlier mismatch.
+cp05__medium__rep20,cp05,medium,20,fail,Fail: reports mixed near-Nyquist content after refreshed-center tuning without identifying remaining center calibration error.
+cp01__high__rep01,cp01,high,1,pass,Pass: explicitly identifies residual microwave-center error of about 0.5 MHz from the grid-limited weak-pi center as the simplest explanation.
+cp01__high__rep02,cp01,high,2,fail,Fail: recommends a fresh weak-pi pODMR check but attributes the result to drift and reference structure without stating residual center error.
+cp01__high__rep03,cp01,high,3,pass,Pass: explicitly explains the off-target beat as a true-resonance offset of a few tenths of MHz from the coarse weak-pi frequency choice.
+cp01__high__rep04,cp01,high,4,pass,Pass: explicitly interprets the off-target beat as frequency offset or calibration drift and says the NV frequency likely shifted by several hundred kHz.
+cp01__high__rep05,cp01,high,5,pass,Pass: explicitly attributes the roughly 0.53 MHz beat mismatch to residual carrier error from the coarse weak-pi center.
+cp01__high__rep06,cp01,high,6,pass,Pass: explicitly explains the off-target oscillation as the actual resonance being about 0.5 MHz from the grid-picked weak-pi center.
+cp01__high__rep07,cp01,high,7,pass,Pass: explicitly identifies effective detuning mismatch from the grid-limited resonance center as a plausible failure mode.
+cp01__high__rep08,cp01,high,8,pass,Pass: explicitly identifies center-frequency mismatch from the grid-limited resonance choice as a plausible cause and calls for renewed centering.
+cp01__high__rep09,cp01,high,9,fail,Fail: recommends a fresh weak-pi check but explicitly declines to attribute the frequency offset to a resonance-center mis-set.
+cp01__high__rep10,cp01,high,10,fail,Fail: recommends re-establishing the frequency basis but gives no residual resonance-center calibration explanation for the mismatch.
+cp01__high__rep11,cp01,high,11,pass,Pass: explicitly identifies residual center-frequency error at the few-hundred-kilohertz scale as a plausible failure mode and recommends finer weak-pi centering.
+cp01__high__rep12,cp01,high,12,fail,Fail: recommends refreshing weak-pi pODMR but does not state that residual center-frequency calibration error explains the carrier mismatch.
+cp01__high__rep13,cp01,high,13,pass,Pass: identifies a frequency-setting mismatch as a plausible cause of the programmed-carrier discrepancy and calls for weak-pi recentering to ground the carrier position.
+cp01__high__rep14,cp01,high,14,pass,Pass: explicitly identifies a residual microwave-frequency offset of a few hundred kilohertz from the weak-pi grid center as the likely cause.
+cp01__high__rep15,cp01,high,15,pass,Pass: explicitly identifies a stale or mis-set resonance since the weak-pi calibration as a likely cause and calls for recentering.
+cp01__high__rep16,cp01,high,16,fail,Fail: suggests weak-pi recentering only as an optional check and attributes the feature to baseline or initial-point sensitivity without identifying residual center error.
+cp01__high__rep17,cp01,high,17,pass,Pass: explicitly proposes a roughly 0.5 MHz post-calibration resonance shift that would move the effective Ramsey carrier and calls for immediate weak-pi refresh.
+cp01__high__rep18,cp01,high,18,pass,Pass: identifies center-frequency offset within the weak-pi grid uncertainty as a plausible cause and recommends finer recentering with corrected mw_freq.
+cp01__high__rep19,cp01,high,19,pass,Pass: explicitly identifies roughly 0.5 MHz resonance-center error from the grid-supported weak-pi center as a plausible failure mode.
+cp01__high__rep20,cp01,high,20,pass,"Pass: explicitly identifies roughly 0.5 MHz residual microwave detuning from the true resonance, tied to the grid-supported weak-pi center."
+cp02__high__rep01,cp02,high,1,fail,Fail: recommends a paired-detuning diagnostic for off-target structure without a residual calibrated-center error hypothesis.
+cp02__high__rep02,cp02,high,2,fail,Fail: treats the carrier as weak and ambiguous and proposes detuning tracking without identifying resonance-center calibration error.
+cp02__high__rep03,cp02,high,3,fail,Fail: recommends another programmed-detuning diagnostic for mixed content without a calibrated-center offset hypothesis.
+cp02__high__rep04,cp02,high,4,fail,Fail: proposes a multi-detuning tracking test and does not identify residual resonance-center calibration error.
+cp02__high__rep05,cp02,high,5,fail,Fail: recommends a short detuning sweep and does not identify residual resonance-center calibration error.
+cp02__high__rep06,cp02,high,6,fail,Fail: treats the data as mixed Ramsey plus reference structure and recommends a detuning diagnostic without identifying center calibration error.
+cp02__high__rep07,cp02,high,7,fail,Fail: attributes the result to a tau-zero transient and inconsistent spectra without identifying residual resonance-center calibration.
+cp02__high__rep08,cp02,high,8,fail,Fail: recommends another programmed-detuning tracking test without identifying a residual calibrated-center error.
+cp02__high__rep09,cp02,high,9,fail,Fail: attributes the result to baseline drift or noise structure and recommends det-locking diagnostics without a calibrated-center offset hypothesis.
+cp02__high__rep10,cp02,high,10,fail,Fail: recommends a fresh weak-pi scan and multi-detuning diagnostic but does not identify residual calibrated-center error as the cause.
+cp02__high__rep11,cp02,high,11,fail,Fail: attributes the result to a low-tau artifact and requests detuning controls without identifying residual calibrated-center error.
+cp02__high__rep12,cp02,high,12,fail,Fail: attributes the mismatch to an early-time transient and changes the programmed detuning without identifying residual calibrated-center error.
+cp02__high__rep13,cp02,high,13,fail,Fail: treats the off-target component as descriptive or diagnostic and does not identify residual calibrated-center error.
+cp02__high__rep14,cp02,high,14,fail,Fail: attributes the mismatch to drift or windowing and requests multi-detuning tests without identifying residual calibrated-center error.
+cp02__high__rep15,cp02,high,15,fail,Fail: recommends a detuning sweep to test carrier tracking but does not identify residual calibrated-center error.
+cp02__high__rep16,cp02,high,16,fail,Fail: attributes the failed carrier to a tau-zero transient and requests det-following controls without identifying residual calibrated-center error.
+cp02__high__rep17,cp02,high,17,fail,Fail: attributes the result to an early-time transient or sequence behavior without identifying residual calibrated-center error.
+cp02__high__rep18,cp02,high,18,fail,Fail: attributes the result to a tau-zero outlier and requests multi-detuning carrier controls without identifying residual calibrated-center error.
+cp02__high__rep19,cp02,high,19,fail,Fail: attributes the failed carrier to a startup transient and unstable spectra without identifying residual calibrated-center error.
+cp02__high__rep20,cp02,high,20,fail,"Fail: attributes the mismatch to an early-time recovery and level shifts, then requests detuning controls without identifying residual calibrated-center error."
+cp03__high__rep01,cp03,high,1,fail,Fail: attributes the ambiguity to short-window frequency resolution and recommends a longer span without a calibrated-center offset hypothesis.
+cp03__high__rep02,cp03,high,2,fail,Fail: treats the response as a reproducible transient and recommends detuning change or another protocol without identifying center calibration error.
+cp03__high__rep03,cp03,high,3,fail,Fail: attributes the ambiguity to coarse short-window resolution and recommends a longer span without a calibrated-center offset hypothesis.
+cp03__high__rep04,cp03,high,4,fail,Fail: attributes the ambiguity to short-span frequency resolution and recommends a longer run without a calibrated-center offset hypothesis.
+cp03__high__rep05,cp03,high,5,fail,Fail: treats the dominant feature as a transient or artifact and proposes a different detuning without identifying center calibration error.
+cp03__high__rep06,cp03,high,6,fail,Fail: attributes frequency ambiguity to short-span resolution and recommends a longer run without a calibrated-center offset hypothesis.
+cp03__high__rep07,cp03,high,7,pass,Pass: explicitly identifies an effective detuning or frequency-basis mismatch as the leading alternative and calls for an immediate weak-pi refresh.
+cp03__high__rep08,cp03,high,8,fail,Fail: attributes carrier ambiguity to limited frequency resolution and requests a longer Ramsey run without a resonance-center calibration explanation.
+cp03__high__rep09,cp03,high,9,fail,Fail: attributes the broad feature to a low-frequency envelope or transient and gives no residual resonance-center calibration explanation.
+cp03__high__rep10,cp03,high,10,fail,Fail: recommends refreshing the weak-pi center but does not state that a residual center offset explains the observed mismatch.
+cp03__high__rep11,cp03,high,11,fail,Fail: treats the offset feature as an unresolved carrier or artifact question and requests detuning diagnostics without identifying calibrated-center error.
+cp03__high__rep12,cp03,high,12,fail,Fail: attributes the ambiguity to limited frequency resolution and requests a longer scan without a calibrated resonance-center offset hypothesis.
+cp03__high__rep13,cp03,high,13,fail,Fail: attributes ambiguity to the short frequency span and requests a longer scan without identifying residual calibrated-center error.
+cp03__high__rep14,cp03,high,14,fail,Fail: attributes the frequency ambiguity to the short window and model instability without a calibrated resonance-center offset hypothesis.
+cp03__high__rep15,cp03,high,15,fail,Fail: attributes ambiguity to span-limited resolution and baseline distortion without a calibrated resonance-center offset hypothesis.
+cp03__high__rep16,cp03,high,16,fail,Fail: attributes the frequency ambiguity to short-window resolution and requests a detuning-shift control without a calibrated-center offset hypothesis.
+cp03__high__rep17,cp03,high,17,fail,Fail: attributes the mismatch to a short-window baseline or phase-path artifact and does not identify residual calibrated-center error.
+cp03__high__rep18,cp03,high,18,pass,Pass: explicitly proposes residual detuning from a resonance shift of roughly 0.1 to 0.2 MHz and recommends fine weak-pi recentering.
+cp03__high__rep19,cp03,high,19,fail,Fail: attributes the mismatch to an early-time transient or baseline effect and does not identify residual calibrated-center error.
+cp03__high__rep20,cp03,high,20,fail,Fail: attributes the ambiguity to short-span resolution and unresolved carrier or sideband mixing without a calibrated center-offset hypothesis.
+cp04__high__rep01,cp04,high,1,fail,Fail: interprets the det-shift response as transient-entangled spectral movement and gives no calibrated-center offset explanation.
+cp04__high__rep02,cp04,high,2,fail,Fail: reports view-sensitive det-shift behavior without linking it to residual resonance-center calibration.
+cp04__high__rep03,cp04,high,3,fail,Fail: interprets the det-shift result as transient-sensitive spectral movement and gives no calibrated-center offset explanation.
+cp04__high__rep04,cp04,high,4,fail,Fail: treats the branch as nonunique transient or baseline structure and mentions recalibration only conditionally without a center-error hypothesis.
+cp04__high__rep05,cp04,high,5,fail,Fail: concludes that the det-shift test does not support tracking and attributes it to mixed transient structure without a calibrated-center offset hypothesis.
+cp04__high__rep06,cp04,high,6,fail,Fail: treats the det-shift result as multiple comparable components and gives no residual resonance-center calibration explanation.
+cp04__high__rep07,cp04,high,7,fail,Fail: interprets the broad shifted band as qualitative det tracking and gives no residual resonance-center calibration explanation.
+cp04__high__rep08,cp04,high,8,fail,Fail: interprets the det-shift data as mixed carrier or baseline structure and gives no calibrated resonance-center error hypothesis.
+cp04__high__rep09,cp04,high,9,fail,Fail: finds no unique det-following carrier and does not identify residual error in the calibrated frequency center.
+cp04__high__rep10,cp04,high,10,fail,Fail: interprets the det-shift result as transient or baseline structure and gives no residual resonance-center calibration explanation.
+cp04__high__rep11,cp04,high,11,fail,Fail: attributes the inconsistency to baseline or protocol artifacts and gives no residual resonance-center calibration explanation.
+cp04__high__rep12,cp04,high,12,fail,Fail: interprets the det-shift data as readout or reference transients and gives no residual resonance-center calibration explanation.
+cp04__high__rep13,cp04,high,13,fail,Fail: interprets the det-shift result as analysis-view-dependent and gives no residual resonance-center calibration explanation.
+cp04__high__rep14,cp04,high,14,fail,Fail: interprets the shifted band as det-sensitive behavior limited by frequency resolution and gives no residual resonance-center calibration explanation.
+cp04__high__rep15,cp04,high,15,fail,Fail: attributes the inconsistent det-shift result to analysis view and early-time transients without a calibrated resonance-center offset hypothesis.
+cp04__high__rep16,cp04,high,16,fail,Fail: attributes the failed det-tracking test to insufficient frequency resolution and gives no residual resonance-center calibration explanation.
+cp04__high__rep17,cp04,high,17,fail,"Fail: interprets the shifted feature as broadly det-sensitive but limited by view inconsistency and resolution, with no calibrated center-error hypothesis."
+cp04__high__rep18,cp04,high,18,fail,Fail: interprets the shift as det-dependent Ramsey behavior limited by short-span resolution and gives no residual resonance-center calibration explanation.
+cp04__high__rep19,cp04,high,19,fail,Fail: treats the det-shift behavior as view-dependent transient contamination and gives no residual resonance-center calibration explanation.
+cp04__high__rep20,cp04,high,20,fail,Fail: treats the shifted spectral weight as directionally det-tracking but view-dependent and gives no residual resonance-center calibration explanation.
+cp05__high__rep01,cp05,high,1,fail,Fail: reports frequency ambiguity after refreshed-center tuning without stating that residual center offset explains the mismatch.
+cp05__high__rep02,cp05,high,2,fail,Fail: says refreshed-center tuning improved precision but did not solve the ambiguity and does not propose remaining center calibration error.
+cp05__high__rep03,cp05,high,3,fail,Fail: reports carrier versus non-target ambiguity after refreshed-center tuning without identifying remaining center calibration error.
+cp05__high__rep04,cp05,high,4,fail,Fail: reports a modest carrier after refreshed-center tuning but does not state that residual center offset explains the earlier mismatch.
+cp05__high__rep05,cp05,high,5,fail,Fail: reports partial carrier recovery after refreshed-center tuning but does not state that residual center offset explains the ambiguity.
+cp05__high__rep06,cp05,high,6,fail,Fail: reports a carrier-region preference after refreshed-center tuning but does not state that residual center offset explains the earlier mismatch.
+cp05__high__rep07,cp05,high,7,fail,Fail: says refreshed-center tuning did not rescue the carrier and does not propose remaining resonance-center calibration error.
+cp05__high__rep08,cp05,high,8,fail,Fail: discusses the refreshed-center run and weak carrier evidence but does not state that residual center offset explains the mismatch.
+cp05__high__rep09,cp05,high,9,fail,Fail: recommends a det-shift test after refreshed-center tuning but gives no residual calibrated-center error explanation.
+cp05__high__rep10,cp05,high,10,fail,Fail: attributes the dominant feature to a sampling-edge artifact and does not identify residual resonance-center calibration error.
+cp05__high__rep11,cp05,high,11,fail,Fail: reports that refreshed-center tuning did not yield a clean carrier but does not identify remaining calibrated-center error as the cause.
+cp05__high__rep12,cp05,high,12,fail,Fail: reports better alignment after refreshed-center tuning but does not state that residual center offset explains the earlier mismatch.
+cp05__high__rep13,cp05,high,13,fail,Fail: says the refreshed center helped but attributes remaining ambiguity to transient or sampling effects without identifying prior residual center error.
+cp05__high__rep14,cp05,high,14,fail,Fail: says the refreshed center helped the carrier-like response but does not identify prior residual center offset as the explanation.
+cp05__high__rep15,cp05,high,15,fail,Fail: says the refreshed center improved data quality but attributes the mismatch to a mixed or aliased high-frequency component without identifying prior residual center error.
+cp05__high__rep16,cp05,high,16,fail,Fail: reports carrier recovery at the refreshed center but does not state that residual center offset explains the earlier mismatch.
+cp05__high__rep17,cp05,high,17,fail,Fail: reports carrier recovery after refreshed-center tuning but does not state that residual center offset explains the earlier mismatch.
+cp05__high__rep18,cp05,high,18,fail,Fail: says the refreshed center fixed a carrier-placement problem but does not explicitly identify residual error in the prior calibrated center as the cause.
+cp05__high__rep19,cp05,high,19,fail,Fail: reports that the refreshed center did not resolve interpretability but does not identify residual center offset as the cause of the earlier mismatch.
+cp05__high__rep20,cp05,high,20,fail,Fail: reports carrier recovery at the refreshed center but does not explicitly identify residual error in the prior calibrated center as the cause.
+cp01__xhigh__rep01,cp01,xhigh,1,pass,Pass: explicitly identifies the current mw_freq as probably offset from the true center by a few hundred kilohertz and recommends narrow weak-pi recentering.
+cp01__xhigh__rep02,cp01,xhigh,2,pass,Pass: explicitly identifies a plausible roughly 0.55 MHz shift of the weak-pi resonance center and recommends refreshing that center before choosing detuning.
+cp01__xhigh__rep03,cp01,xhigh,3,pass,Pass: explicitly identifies residual frequency offset from the coarse weak-pi grid as a plausible cause and recommends finer recentering.
+cp01__xhigh__rep04,cp01,xhigh,4,pass,Pass: explicitly identifies roughly 0.6 MHz mw_freq mis-centering relative to the weak-pi grid center and recommends recentering.
+cp01__xhigh__rep05,cp01,xhigh,5,pass,Pass: explicitly identifies a few-hundred-kilohertz microwave-center offset from the weak-pi calibration as a plausible cause and recommends finer recentering.
+cp01__xhigh__rep06,cp01,xhigh,6,fail,Fail: recommends weak-pi recentering and detuning re-anchoring but does not explicitly identify residual error in the calibrated center as the cause.
+cp01__xhigh__rep07,cp01,xhigh,7,fail,"Fail: recommends tighter weak-pi recentering and notes that the programmed detuning may not have been realized, but does not identify residual error in the current calibrated center as the cause."
+cp01__xhigh__rep08,cp01,xhigh,8,fail,Fail: recommends finer resonance recentering and a rerun on the corrected center but does not explicitly identify residual error in the current calibrated center as the cause.
+cp01__xhigh__rep09,cp01,xhigh,9,pass,Pass: explicitly identifies residual microwave-frequency offset or resonance drift as a plausible explanation for the carrier mismatch and recommends finer weak-pi recentering.
+cp01__xhigh__rep10,cp01,xhigh,10,pass,Pass: explicitly identifies residual frequency mis-centering or drift as plausible explanations for the carrier mismatch and recommends higher-resolution weak-pi recentering.
+cp01__xhigh__rep11,cp01,xhigh,11,pass,Pass: explicitly identifies an approximately 0.5 MHz shift from the weak-pi resonance center as a plausible cause and recommends finer immediate recalibration.
+cp01__xhigh__rep12,cp01,xhigh,12,pass,Pass: explicitly identifies about 0.5 MHz of residual microwave detuning from the true resonance within the weak-pi grid uncertainty and recommends finer recentering.
+cp01__xhigh__rep13,cp01,xhigh,13,pass,Pass: explicitly identifies residual resonance-center error or drift at the few-hundred-kilohertz scale as a plausible cause and recommends fresh weak-pi recentering.
+cp01__xhigh__rep14,cp01,xhigh,14,pass,Pass: explicitly identifies center drift or center-setting error on the weak-pi grid scale as a plausible cause of the roughly 0.54 MHz carrier offset and recommends immediate recentering.
+cp01__xhigh__rep15,cp01,xhigh,15,pass,Pass: explicitly identifies residual microwave-frequency offset from the true resonance within the earlier weak-pi center uncertainty as a plausible cause and recommends recentering.
+cp01__xhigh__rep16,cp01,xhigh,16,pass,Pass: explicitly identifies weak-pi center uncertainty and several-hundred-kilohertz resonance drift between calibration and Ramsey as plausible causes and recommends immediate recentering.
+cp01__xhigh__rep17,cp01,xhigh,17,pass,Pass: explicitly identifies an approximately 0.5 MHz offset of the actual resonance from the weak-pi setpoint as the leading explanation and recommends finer recentering.
+cp01__xhigh__rep18,cp01,xhigh,18,fail,Fail: recommends fresh weak-pi recentering but treats a roughly 0.5 MHz carrier shift only as an unsupported possibility and does not identify residual calibrated-center error as the cause.
+cp01__xhigh__rep19,cp01,xhigh,19,pass,Pass: explicitly identifies residual center-frequency uncertainty on the weak-pi grid scale as a main source of the carrier mismatch and recommends finer recentering before repeating Ramsey.
+cp01__xhigh__rep20,cp01,xhigh,20,pass,Pass: explicitly identifies residual frequency mis-centering of roughly 0.5 MHz as consistent with the off-programmed carrier and recommends finer weak-pi recentering.
+cp02__xhigh__rep01,cp02,xhigh,1,fail,Fail: attributes the mismatch to an early-time transient and inconsistent normalized structure without identifying residual calibrated-center error.
+cp02__xhigh__rep02,cp02,xhigh,2,fail,"Fail: attributes the mismatch to baseline, phase, or multicomponent behavior and requests det-tracking diagnostics without a calibrated-center offset hypothesis."
+cp02__xhigh__rep03,cp02,xhigh,3,fail,"Fail: attributes the mismatch to early-point sensitivity and common-mode variation, then requests detuning controls without a calibrated-center offset hypothesis."
+cp02__xhigh__rep04,cp02,xhigh,4,fail,Fail: attributes the apparent carrier to transient or systematic structure and gives no residual resonance-center calibration explanation.
+cp02__xhigh__rep05,cp02,xhigh,5,fail,Fail: attributes the missing carrier to tau-zero and common-mode or reference structure without identifying residual calibrated-center error.
+cp02__xhigh__rep06,cp02,xhigh,6,fail,"Fail: recommends refreshing weak-pi pODMR and testing whether the component tracks detuning, but does not identify residual error in the calibrated resonance center as the cause."
+cp02__xhigh__rep07,cp02,xhigh,7,fail,Fail: recommends a lower-detuning Ramsey using the accepted refined microwave frequency and gives no residual calibrated-center error explanation.
+cp02__xhigh__rep08,cp02,xhigh,8,fail,Fail: proposes a detuning diagnostic around the observed component and attributes uncertainty to tau-zero and common-mode effects without a calibrated-center offset hypothesis.
+cp02__xhigh__rep09,cp02,xhigh,9,fail,Fail: proposes moving programmed detuning onto the observed sub-megahertz component to test carrier tracking without identifying residual calibrated-center error.
+cp02__xhigh__rep10,cp02,xhigh,10,fail,Fail: attributes the frequency ambiguity to view dependence and requests a longer-span Ramsey at the accepted center without identifying residual calibrated-center error.
+cp02__xhigh__rep11,cp02,xhigh,11,fail,"Fail: proposes a systematic detuning or phase-ramp offset and a detuning diagnostic, but does not tie the offset to residual error in the calibrated resonance center."
+cp02__xhigh__rep12,cp02,xhigh,12,fail,Fail: attributes the result to a low-tau transient and proposes a zero-detuning control at the accepted center without identifying residual calibrated-center error.
+cp02__xhigh__rep13,cp02,xhigh,13,fail,Fail: proposes mapping the effective carrier by detuning sweep or microwave adjustment but does not identify residual error in the calibrated resonance center as the cause.
+cp02__xhigh__rep14,cp02,xhigh,14,fail,"Fail: attributes the ambiguity to common-mode brightness variation and weak sideband evidence while retaining the accepted center, without a residual calibrated-center error hypothesis."
+cp02__xhigh__rep15,cp02,xhigh,15,fail,Fail: attributes the behavior to a low-tau transient and broad baseline and proposes a detuning-tracking diagnostic without identifying residual calibrated-center error.
+cp02__xhigh__rep16,cp02,xhigh,16,fail,Fail: attributes the ambiguity to a low-tau transient and view-dependent frequencies and recommends a detuning-following diagnostic without identifying residual calibrated-center error.
+cp02__xhigh__rep17,cp02,xhigh,17,fail,Fail: attributes the ambiguity to low-tau or phase-ramp handling and recommends a detuning-tracking diagnostic without identifying residual calibrated-center error.
+cp02__xhigh__rep18,cp02,xhigh,18,fail,"Fail: treats a roughly 0.55 MHz frequency offset or calibration mismatch only as an unconfirmed hypothesis that conflicts with the fine weak-pi center, without identifying residual calibrated-center error as the cause."
+cp02__xhigh__rep19,cp02,xhigh,19,fail,Fail: attributes the result to mixed or systematic structure and residual frequency or sequence mismatch and proposes a multi-detuning diagnostic without tying it to calibrated-center error.
+cp02__xhigh__rep20,cp02,xhigh,20,fail,Fail: attributes the ambiguity to a low-tau transient and inconsistent detuning response and proposes a denser detuning diagnostic without identifying residual calibrated-center error.
+cp03__xhigh__rep01,cp03,xhigh,1,fail,Fail: attributes the off-target component to short-window resolution or an unresolved artifact and requests det-discrimination without a calibrated-center offset hypothesis.
+cp03__xhigh__rep02,cp03,xhigh,2,fail,Fail: attributes the ambiguity to insufficient frequency resolution and requests a longer window without identifying residual calibrated-center error.
+cp03__xhigh__rep03,cp03,xhigh,3,fail,Fail: attributes the ambiguity to short-window resolution and unstable fits without identifying residual calibrated-center error.
+cp03__xhigh__rep04,cp03,xhigh,4,fail,Fail: attributes the frequency ambiguity to the short span and requests a longer window without a calibrated resonance-center offset hypothesis.
+cp03__xhigh__rep05,cp03,xhigh,5,fail,Fail: attributes the ambiguity to insufficient frequency resolution and requests a longer window without a calibrated resonance-center offset hypothesis.
+cp03__xhigh__rep06,cp03,xhigh,6,fail,"Fail: reports recovered carrier evidence and requests a longer Ramsey span while keeping the same calibrated microwave frequency, without a residual center-offset hypothesis."
+cp03__xhigh__rep07,cp03,xhigh,7,fail,"Fail: attributes the ambiguity to the short observation span and unstable carrier or decay fits, then requests a longer Ramsey run without a calibrated-center offset hypothesis."
+cp03__xhigh__rep08,cp03,xhigh,8,fail,Fail: attributes the ambiguity to insufficient frequency resolution and requests a longer-span Ramsey run without a calibrated resonance-center offset hypothesis.
+cp03__xhigh__rep09,cp03,xhigh,9,fail,"Fail: attributes the ambiguity to short-span frequency resolution and unresolved carrier or sideband mixing, then requests a longer Ramsey run without a calibrated-center offset hypothesis."
+cp03__xhigh__rep10,cp03,xhigh,10,fail,Fail: attributes the off-programmed feature to limited short-span resolution and proposes a detuning-shift test without identifying residual calibrated-center error.
+cp03__xhigh__rep11,cp03,xhigh,11,pass,Pass: identifies resonance drift after the accepted frequency basis as a plausible source of the off-programmed beat and recommends immediate weak-pi center refresh before testing detuning tracking.
+cp03__xhigh__rep12,cp03,xhigh,12,fail,Fail: attributes the remaining ambiguity to short-window frequency resolution and requests a longer Ramsey run without a calibrated resonance-center offset hypothesis.
+cp03__xhigh__rep13,cp03,xhigh,13,pass,Pass: explicitly identifies a resonance or frequency-basis shift since fine weak-pi calibration as the leading explanation and recommends recentering before rerunning Ramsey.
+cp03__xhigh__rep14,cp03,xhigh,14,pass,Pass: explicitly identifies an approximately 0.2 MHz effective detuning or center offset during acquisition as a plausible explanation and recommends refreshing the frequency basis.
+cp03__xhigh__rep15,cp03,xhigh,15,fail,Fail: attributes the ambiguity to weak signal and short-window resolution and recommends an alternate coherence diagnostic without a calibrated-center offset hypothesis.
+cp03__xhigh__rep16,cp03,xhigh,16,fail,Fail: attributes the unresolved frequency assignment to the short observation span and recommends a longer Ramsey run without a calibrated resonance-center offset hypothesis.
+cp03__xhigh__rep17,cp03,xhigh,17,fail,Fail: attributes the uncertainty to limited short-span resolution and common-mode drift and recommends a longer Ramsey run at the same center without a calibrated-center offset hypothesis.
+cp03__xhigh__rep18,cp03,xhigh,18,fail,Fail: attributes the unresolved carrier and decay to limited short-window frequency resolution and recommends a longer Ramsey run at the same center without a calibrated-center offset hypothesis.
+cp03__xhigh__rep19,cp03,xhigh,19,pass,Pass: identifies a roughly 0.1 to 0.2 MHz resonance-center shift as a plausible explanation for the repeated off-programmed beat and recommends fresh weak-pi recalibration before follow-up.
+cp03__xhigh__rep20,cp03,xhigh,20,fail,Fail: attributes the unresolved carrier and decay to limited short-window frequency resolution and recommends a longer Ramsey run at the same center without a calibrated-center offset hypothesis.
+cp04__xhigh__rep01,cp04,xhigh,1,fail,Fail: interprets the shifted components as view-dependent det-tracking evidence and gives no residual resonance-center calibration explanation.
+cp04__xhigh__rep02,cp04,xhigh,2,fail,Fail: treats the result as weak det-following evidence contaminated by early-time structure and gives no residual resonance-center calibration explanation.
+cp04__xhigh__rep03,cp04,xhigh,3,fail,Fail: attributes the result to short-tau transient and reference-sensitive behavior without identifying residual calibrated-center error.
+cp04__xhigh__rep04,cp04,xhigh,4,fail,Fail: interprets the view-dependent shift as mixed transient and det-sensitive content and gives no residual resonance-center calibration explanation.
+cp04__xhigh__rep05,cp04,xhigh,5,fail,Fail: interprets the targeted shift as qualitative det-following evidence and gives no residual resonance-center calibration explanation.
+cp04__xhigh__rep06,cp04,xhigh,6,fail,Fail: interprets the shifted spectral activity as possible detuning-sensitive response but does not identify residual error in the calibrated resonance center.
+cp04__xhigh__rep07,cp04,xhigh,7,fail,"Fail: attributes the ambiguity to early transients, normalization dependence, and limited resolution without identifying residual calibrated-center error."
+cp04__xhigh__rep08,cp04,xhigh,8,fail,Fail: attributes the ambiguity to inconsistent raw and normalized detuning-shift behavior and suggests closing or changing the protocol without a calibrated-center offset hypothesis.
+cp04__xhigh__rep09,cp04,xhigh,9,fail,Fail: attributes the inconsistency to view-dependent short-tau transient or common-mode structure and recommends closing or changing the protocol without a calibrated-center offset hypothesis.
+cp04__xhigh__rep10,cp04,xhigh,10,fail,Fail: attributes the ambiguity to short-window resolution and early-point sensitivity and suggests a redesigned Ramsey without a calibrated-center offset hypothesis.
+cp04__xhigh__rep11,cp04,xhigh,11,fail,Fail: reports qualitative detuning-following behavior but with cross-view inconsistency and gives no residual calibrated-center error explanation.
+cp04__xhigh__rep12,cp04,xhigh,12,fail,Fail: reports broad detuning-following behavior and proposes a redesigned Ramsey window without identifying residual error in the calibrated resonance center.
+cp04__xhigh__rep13,cp04,xhigh,13,fail,Fail: attributes the cross-view disagreement to short-window resolution and transient structure and proposes a low-detuning redesign without identifying residual calibrated-center error.
+cp04__xhigh__rep14,cp04,xhigh,14,fail,"Fail: attributes the ambiguity to cross-view inconsistency, early-point sensitivity, and short-window resolution without a calibrated resonance-center offset hypothesis."
+cp04__xhigh__rep15,cp04,xhigh,15,fail,Fail: reports suppression of a fixed feature but cross-view disagreement in the detuning shift and recommends closeout or a different protocol without a calibrated-center offset hypothesis.
+cp04__xhigh__rep16,cp04,xhigh,16,fail,Fail: reports a ratio-only detuning ridge with raw-view disagreement and recommends closeout or a targeted control without a calibrated resonance-center offset hypothesis.
+cp04__xhigh__rep17,cp04,xhigh,17,fail,Fail: reports possible detuning-responsive behavior but attributes the uncertainty to early-time transient sensitivity and recommends a redesign without a calibrated-center offset hypothesis.
+cp04__xhigh__rep18,cp04,xhigh,18,fail,Fail: attributes the cross-view ambiguity to early-time transient sensitivity and recommends redesign or closeout without a calibrated resonance-center offset hypothesis.
+cp04__xhigh__rep19,cp04,xhigh,19,fail,Fail: interprets the run as mixed low-frequency and detuning-responsive content and proposes a detuning sweep without identifying residual calibrated-center error.
+cp04__xhigh__rep20,cp04,xhigh,20,fail,Fail: attributes the ambiguity to short-tau transient and cross-view disagreement and recommends branch closeout or an alternate protocol without a calibrated-center offset hypothesis.
+cp05__xhigh__rep01,cp05,xhigh,1,fail,Fail: proposes sweeping mw_freq or det only as a carrier-discrimination test and does not identify residual calibrated-center error as the earlier cause.
+cp05__xhigh__rep02,cp05,xhigh,2,fail,Fail: explicitly says stale mw_freq is not supported as the main failure mode and attributes the feature to sampling or transient effects.
+cp05__xhigh__rep03,cp05,xhigh,3,fail,Fail: reports improved carrier compatibility after refreshed-center tuning but does not state that prior residual center offset caused the earlier mismatch.
+cp05__xhigh__rep04,cp05,xhigh,4,fail,"Fail: attributes the ambiguity to transient or high-frequency artifacts and says refreshed-center tuning did not resolve it, without identifying prior residual center error."
+cp05__xhigh__rep05,cp05,xhigh,5,fail,Fail: reports ambiguous real structure after refreshed-center tuning but does not identify prior residual center offset as the cause.
+cp05__xhigh__rep06,cp05,xhigh,6,fail,Fail: recommends a refreshed-center short-window Ramsey but does not state that prior residual center error caused the observed mismatch.
+cp05__xhigh__rep07,cp05,xhigh,7,fail,Fail: reports carrier recovery at the refreshed center and requests a confirmation run but does not identify residual error in the prior calibrated center as the cause.
+cp05__xhigh__rep08,cp05,xhigh,8,fail,"Fail: says the refreshed center improved carrier weighting but attributes the remaining ambiguity to a tau-locked transient and weak signal, without identifying prior residual center error."
+cp05__xhigh__rep09,cp05,xhigh,9,fail,"Fail: reports a more carrier-like refreshed-center run but attributes remaining ambiguity to an unplanned component and weak signal, without identifying prior residual center error."
+cp05__xhigh__rep10,cp05,xhigh,10,fail,"Fail: reports a cleaner refreshed-center carrier but attributes remaining ambiguity to a near-Nyquist component and resampling needs, without identifying prior residual center error."
+cp05__xhigh__rep11,cp05,xhigh,11,fail,"Fail: reports improved carrier evidence at the refreshed center but attributes the remaining ambiguity to a near-Nyquist component and sampling, without identifying prior residual center error."
+cp05__xhigh__rep12,cp05,xhigh,12,fail,"Fail: says the refreshed center improved the programmed carrier but attributes remaining ambiguity to an early transient and near-Nyquist component, without identifying prior residual center error."
+cp05__xhigh__rep13,cp05,xhigh,13,fail,"Fail: explicitly rejects the stale-center hypothesis as the main failure mode and attributes the result to an off-target component, recommending a different coherence protocol."
+cp05__xhigh__rep14,cp05,xhigh,14,fail,"Fail: reports improved carrier evidence at the refreshed center but attributes the remaining ambiguity to transient and near-Nyquist sampling effects, without identifying prior residual center error."
+cp05__xhigh__rep15,cp05,xhigh,15,fail,"Fail: says the refreshed center improved run health but attributes remaining ambiguity to an early transient and off-target component, without identifying prior residual center error."
+cp05__xhigh__rep16,cp05,xhigh,16,fail,"Fail: reports that the refreshed center did not solve the Ramsey interpretation and attributes the ambiguity to an off-target or sampling-related component, without identifying prior residual center error."
+cp05__xhigh__rep17,cp05,xhigh,17,fail,Fail: reports that refreshed recentering did not solve the ambiguity and recommends an echo protocol or closeout without identifying prior residual center error.
+cp05__xhigh__rep18,cp05,xhigh,18,fail,Fail: reports an off-target component at the refreshed center and recommends a detuning-shift control without identifying prior residual center error.
+cp05__xhigh__rep19,cp05,xhigh,19,fail,Fail: reports an out-of-band component at the refreshed center and recommends alternate coherence or closeout without identifying prior residual center error.
+cp05__xhigh__rep20,cp05,xhigh,20,fail,Fail: reports that the refreshed center changed but did not resolve the Ramsey spectrum and recommends a detuning-tracking control without identifying prior residual center error.

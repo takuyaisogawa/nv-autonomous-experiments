@@ -34,14 +34,17 @@ Then reply with a short handoff summary, the next action, and a compact Project 
 
 ## Reported Sweep
 
+- Models: GPT-5.4, GPT-5.5, GPT-5.6 Sol
 - Checkpoints: `cp01` through `cp05`
 - Reasoning efforts: `low`, `medium`, `high`, `xhigh`
 - Replicates per checkpoint-effort pair: `20`
-- Total runs: `5 x 4 x 20 = 400`
+- Runs per model: `5 x 4 x 20 = 400`
+- Three model total: `1,200`
 
-The package contains inputs, prompt text, run scripts, scoring helpers, manual
-scoring CSVs, recovered project notes, and the figure summary used in the
-manuscript.
+This package contains the shared inputs, prompt text, run scripts, scoring
+helpers, and the original GPT-5.5 records.  The GPT-5.4 and GPT-5.6 Sol records
+and the combined figure source table are in the
+[three model comparison release](../three-model-comparison-2026-07/README.md).
 
 Each model run is launched in a temporary directory containing only one
 checkpoint snapshot and the task prompt. The runner uses a writable sandbox
@@ -99,11 +102,15 @@ python scripts\run_sweep.py --model gpt-5.5 --reasoning-effort all --replicates 
 python scripts\score_outputs.py results\model_outputs.jsonl
 ```
 
-The manuscript uses manual scores in
+The original GPT-5.5 sweep uses manual scores in
 `results/manual_calibration_residual_scores_2026-07-11.csv`.  This file contains
 one binary calibration residual score for all 400 runs, with a short rationale
 for each score.  The aggregated values used for the figure are in
 `results/figures/reasoning_effort_sweep_low_to_xhigh_summary.csv`.
+
+The manuscript three model values and the corresponding GPT-5.4 and GPT-5.6
+Sol per-run records are in
+`../three-model-comparison-2026-07/ramsey/`.
 
 The automatic score script is retained as a first-pass helper.  Borderline
 responses should be audited against `labels/scoring_guide.md`.

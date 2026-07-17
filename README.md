@@ -39,6 +39,7 @@ For a quick review:
 | Case studies | [cases/README.md](cases/README.md), [docs/case_walkthrough.md](docs/case_walkthrough.md) |
 | Ramsey checkpoint benchmark | [benchmarks/nv-checkpoint-review-2026-06/README.md](benchmarks/nv-checkpoint-review-2026-06/README.md) |
 | pODMR data evaluation benchmark | [benchmarks/podmr-model-first-resonance-2026-05/README.md](benchmarks/podmr-model-first-resonance-2026-05/README.md) |
+| Three model benchmark comparison | [benchmarks/three-model-comparison-2026-07/README.md](benchmarks/three-model-comparison-2026-07/README.md) |
 | Model and agent configuration | [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md) |
 | Code inventory | [docs/code_inventory.md](docs/code_inventory.md) |
 | Safety boundary | [docs/safety_boundary.md](docs/safety_boundary.md) |
@@ -73,8 +74,9 @@ measurements.
 
 | Benchmark | Summary |
 | --- | --- |
-| [Ramsey checkpoint benchmark](benchmarks/nv-checkpoint-review-2026-06/README.md) | Five pre-analysis Ramsey checkpoints, four reasoning efforts, twenty replicates per checkpoint and effort, checkpoint packages, prompts, recovered project notes, and manual scoring CSVs |
-| [pODMR data evaluation benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md) | 96 single-case pODMR classifications with prompts, raw inputs, labels, predictions, analysis notes, tool use audit, deterministic checks, and the batch comparison used in the appendix |
+| [Ramsey checkpoint benchmark](benchmarks/nv-checkpoint-review-2026-06/README.md) | Five pre-analysis Ramsey checkpoints, four reasoning efforts, twenty replicates per checkpoint and effort for GPT-5.4, GPT-5.5, and GPT-5.6 Sol |
+| [pODMR data evaluation benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md) | 96 single-case pODMR classifications under three prompt conditions and four reasoning efforts for all three models |
+| [Three model comparison records](benchmarks/three-model-comparison-2026-07/README.md) | Combined source tables, new-model predictions, analysis notes, Ramsey handoffs, manual scores, and completion audits |
 
 The Ramsey benchmark contains five chronological checkpoints named `cp01`
 through `cp05`.  Each checkpoint includes the project state, memory and
@@ -82,15 +84,16 @@ knowledge snapshots, then available evidence, and terminal raw Ramsey data for
 the newly completed measurement.  Later analysis notes, later measurements, and
 human advice are excluded from the agent-visible checkpoint package.
 
-The main reported Ramsey result is summarized in
-[benchmarks/nv-checkpoint-review-2026-06/results/figures/reasoning_effort_sweep_low_to_xhigh_summary.csv](benchmarks/nv-checkpoint-review-2026-06/results/figures/reasoning_effort_sweep_low_to_xhigh_summary.csv).
+The three model Ramsey result is summarized in
+[benchmarks/three-model-comparison-2026-07/ramsey/three_model_checkpoint_summary.csv](benchmarks/three-model-comparison-2026-07/ramsey/three_model_checkpoint_summary.csv).
+The figure below shows the original GPT-5.5 sweep.
 
 ![Reasoning-effort sweep for the Ramsey checkpoint benchmark](benchmarks/nv-checkpoint-review-2026-06/results/figures/reasoning_effort_sweep_low_to_xhigh.png)
 
 The pODMR benchmark contains 24 resonance-present and 72 resonance-absent
 strong-pi measurements. Each prompt condition was run for three replicates with
-GPT-5.5 at four reasoning-effort settings: `low`, `medium`, `high`, and
-`xhigh`.
+GPT-5.4, GPT-5.5, and GPT-5.6 Sol at four reasoning-effort settings: `low`,
+`medium`, `high`, and `xhigh`.
 
 The three prompt conditions are:
 
@@ -101,11 +104,14 @@ The three prompt conditions are:
 | Expected signal | Adds a requirement to establish the expected signal with a simulation or explicit quantitative model calculation before judging resonance presence. |
 
 The main trend is that higher reasoning effort alone can increase
-false-positive resonance calls, while the calculation-guided condition suppresses
-false positives across reasoning-effort settings without introducing false
-negatives in this dataset. Full predictions, per-run analysis notes, and scoring
-tables are included under
+false-positive resonance calls, while the calculation-guided condition keeps
+false-positive rates low across all three models.  The original GPT-5.5 sweep
+had no false negatives, while GPT-5.4 and GPT-5.6 Sol had small numbers of false
+negatives in some cells.  Full predictions, per-run analysis notes, and scoring
+tables for the original sweep are included under
 [benchmarks/podmr-model-first-resonance-2026-05/results](benchmarks/podmr-model-first-resonance-2026-05/results).
+The new model records and combined bootstrap table are in
+[benchmarks/three-model-comparison-2026-07](benchmarks/three-model-comparison-2026-07).
 The appendix batch comparison is included as
 [batch_context_main_inputs_summary.csv](benchmarks/podmr-model-first-resonance-2026-05/results/batch_context_main_inputs_summary.csv).
 
@@ -116,6 +122,8 @@ resonance-absent case are shown below.  The figure plots the unnormalized
 reference and signal readouts for each case.
 
 ![Raw pODMR resonance-present and resonance-absent examples](benchmarks/podmr-model-first-resonance-2026-05/results/figures/podmr_present_absent_examples.png)
+
+Original GPT-5.5 false positive rates are shown below.
 
 | Reasoning | Protocol-only FPR | Domain-facts FPR | Calculation-guided FPR |
 | --- | ---: | ---: | ---: |
@@ -135,6 +143,9 @@ cases/
   image231924/
     project/
 benchmarks/
+  three-model-comparison-2026-07/
+    ramsey/
+    podmr/
   nv-checkpoint-review-2026-06/
     inputs/
     labels/
