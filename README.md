@@ -144,6 +144,10 @@ cases/
     project/
 benchmarks/
   three-model-comparison-2026-07/
+    models/
+      gpt-5.4/
+      gpt-5.5/
+      gpt-5.6-sol/
     ramsey/
     podmr/
   nv-checkpoint-review-2026-06/

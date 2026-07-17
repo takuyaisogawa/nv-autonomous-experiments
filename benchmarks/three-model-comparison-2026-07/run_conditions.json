@@ -10,7 +10,12 @@
     {
       "manuscript_name": "GPT-5.5",
       "model_argument": "gpt-5.5",
-      "note": "Original benchmark records are stored in the Ramsey and pODMR benchmark directories."
+      "execution_dates": {
+        "ramsey": "2026-06-16",
+        "podmr": "2026-06-06"
+      },
+      "execution_date_timezone": "UTC",
+      "note": "The execution dates are taken from timestamps retained in the original released benchmark output records. Those records are stored in the Ramsey and pODMR benchmark directories."
     },
     {
       "manuscript_name": "GPT-5.6 Sol",

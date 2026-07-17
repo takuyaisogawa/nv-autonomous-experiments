@@ -1,11 +1,25 @@
 # Three Model Benchmark Comparison
 
-This directory contains the GPT-5.4 and GPT-5.6 Sol records added for the
-three model comparison in the manuscript.  The original GPT-5.5 benchmark
-records remain in the benchmark directories linked below.
+This directory is the manuscript hub for the GPT-5.4, GPT-5.5, and GPT-5.6 Sol
+benchmark comparison.  The three models are presented in parallel through
+model specific record indexes.  The indexes retain the original source
+locations, so the GPT-5.5 records do not need to be duplicated.
 
 - [Ramsey checkpoint benchmark](../nv-checkpoint-review-2026-06/README.md)
 - [pODMR data evaluation benchmark](../podmr-model-first-resonance-2026-05/README.md)
+
+## Parallel model index
+
+|  | GPT-5.4 | GPT-5.5 | GPT-5.6 Sol |
+| --- | --- | --- | --- |
+| Model argument | `gpt-5.4` | `gpt-5.5` | `gpt-5.6-sol` |
+| Recorded execution date | 2026-07-16, America/New_York | pODMR 2026-06-06 UTC<br>Ramsey 2026-06-16 UTC | 2026-07-15 |
+| Model record index | [GPT-5.4 records](models/gpt-5.4/) | [GPT-5.5 records](models/gpt-5.5/) | [GPT-5.6 Sol records](models/gpt-5.6-sol/) |
+| Ramsey | [records](ramsey/gpt-5.4/) | [source record index](models/gpt-5.5/#ramsey-checkpoint-benchmark) | [records](ramsey/gpt-5.6-sol/) |
+| pODMR | [records](podmr/gpt-5.4/) | [source record index](models/gpt-5.5/#podmr-data-evaluation-benchmark) | [records](podmr/gpt-5.6-sol/) |
+
+The benchmark specific directories provide the same parallel view for
+[Ramsey](ramsey/) and [pODMR](podmr/).
 
 All three models received the same benchmark inputs, prompt conditions,
 reasoning effort settings, replicate structure, and scoring rules.  Local
@@ -39,9 +53,9 @@ and twenty replicates for each checkpoint and effort pair.
 
 | Model | Low | Medium | High | X-high |
 | --- | ---: | ---: | ---: | ---: |
-| GPT-5.4 | 7/100 | 13/100 | 17/100 | 20/100 |
-| GPT-5.5 | 11/100 | 17/100 | 21/100 | 34/100 |
-| GPT-5.6 Sol | 16/100 | 42/100 | 55/100 | 49/100 |
+| [GPT-5.4](models/gpt-5.4/) | 7/100 | 13/100 | 17/100 | 20/100 |
+| [GPT-5.5](models/gpt-5.5/) | 11/100 | 17/100 | 21/100 | 34/100 |
+| [GPT-5.6 Sol](models/gpt-5.6-sol/) | 16/100 | 42/100 | 55/100 | 49/100 |
 
 The combined checkpoint source data are in
 [`ramsey/three_model_checkpoint_summary.csv`](ramsey/three_model_checkpoint_summary.csv).
