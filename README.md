@@ -2,152 +2,133 @@
 
 ## Overview
 
-Public release for auditable LLM-agent workflows in NV-center experiments.
-The completed workflows used the OpenClaw platform as the agent and
-project-management layer around the NV instrument-control stack.
+This repository is the public audit release accompanying a manuscript on an
+LLM agent for autonomous nitrogen-vacancy center experiments.  The OpenClaw
+platform provided the agent and project management layer around the NV
+instrument control stack.
 
-This repository has two parallel parts:
+The manuscript has two connected contributions.  First, it demonstrates an
+autonomous experimental workflow that combines persistent project records,
+quantitative calculation and data analysis tools, and deterministic experiment
+control.  Second, it evaluates scientific reasoning separately from laboratory
+execution through Ramsey checkpoint and pODMR data evaluation benchmarks.
 
-- **Case studies:** sanitized completed project folders from real
-  autonomous-agent NV experiments.
-- **Benchmarks:** offline Ramsey and pODMR tasks that evaluate how reasoning
-  effort changes agent judgment on project records and recorded NV
-  measurements.
+The release contains completed project records, evidence logs, bridge records,
+figures, reports, benchmark inputs, labels, predictions, per run analysis notes,
+manual scores, and analysis code needed to audit the reported results.  It is a
+sanitized research release and not the full live OpenClaw backend.
 
-The release preserves project state, evidence logs, bridge records, figures,
-reports, analysis artifacts, benchmark inputs, labels, predictions, per-run
-analysis notes, and scoring scripts needed to inspect the results. It is a
-sanitized audit release, not the full live OpenClaw backend.
+## Paper and Repository Map
+
+The order below follows the current manuscript.
+
+| Manuscript component | What it shows | Repository entry point |
+| --- | --- | --- |
+| Figure 1. Autonomous NV workflow | The boundary between LLM reasoning, persistent project state, analysis tools, deterministic validation, and hardware control | [System overview](docs/system_overview.md), [runtime architecture](docs/runtime_architecture.md) |
+| Figure 2. Main autonomous experiment | NV candidate selection, pODMR screening and calibration, Ramsey measurements, and a CPMG check of a weak feature that could be related to nearby carbon-13 coupling | [Main experiment `image172647`](cases/image172647/README.md) |
+| Figure 3. Ramsey checkpoint benchmark | Recognition of a residual resonance calibration hypothesis across GPT-5.4, GPT-5.5, and GPT-5.6 Sol | [Three model Ramsey comparison](benchmarks/three-model-comparison-2026-07/ramsey/) |
+| Figure 4. pODMR benchmark | Effects of prompt condition, reasoning effort, and model identity on resonance judgments | [Three model pODMR comparison](benchmarks/three-model-comparison-2026-07/podmr/) |
+| Supplementary case studies and analyses | Two additional completed autonomous runs, representative pODMR inputs, deterministic checks, and detailed benchmark tables | [Additional cases](cases/README.md), [benchmark records](benchmarks/three-model-comparison-2026-07/README.md) |
 
 ## Public Scope
 
-The case-referenced NV project-management source is public for audit.
-
-This repository cannot control hardware.
-
-Real completed case artifacts are included.
+The case-referenced NV project management source is public for audit.  This
+repository cannot control hardware.  Real completed case artifacts are
+included, while live configuration, private queue locations, and runnable
+hardware entry points are excluded.
 
 See [docs/public_scope.md](docs/public_scope.md) for the exact public boundary.
 
-## Start Here
+## Autonomous Experiment Records
 
-For a quick review:
+The main experiment in the manuscript is `image172647`.  The agent recovered
+from a fresh image, screened candidate NV centers with pODMR, refined the
+resonance calibration, acquired Ramsey measurements at multiple detunings, and
+used a CPMG N=8 measurement to check a weak feature that could be related to a
+nearby carbon-13 spin.  The released project folder records what the agent saw,
+what it decided, the artifacts it wrote, and the evidence limits applied to the
+final interpretation.
 
-| Area | Entry point |
+| Case | Role in the manuscript | Summary | Status |
+| --- | --- | --- | --- |
+| [`image172647`](cases/image172647/README.md) | Main autonomous workflow demonstration | Fresh image recovery, candidate rejection and acceptance, pODMR calibration, Ramsey measurements at multiple detunings, and a CPMG N=8 check | Completed |
+| [`image145844`](cases/image145844/README.md) | Additional case study | Aligned NV selection, pODMR screening, repeated Ramsey diagnostics, and later frequency reanalysis | Completed |
+| [`image231924`](cases/image231924/README.md) | Additional case study | Aligned NV selection, pODMR center refinement, Ramsey after resonance center correction, and a bounded `T2*` closeout | Completed |
+
+## Offline Benchmarks
+
+Both benchmarks were evaluated with GPT-5.4, GPT-5.5, and GPT-5.6 Sol using the
+same inputs, prompts, reasoning effort settings, replicate structure, and
+scoring rules for each model.  Model identifiers, execution dates, and direct
+links to each model's records are collected in the
+[parallel model index](benchmarks/three-model-comparison-2026-07/README.md).
+
+| Benchmark | Design | Total size |
+| --- | --- | ---: |
+| [Ramsey checkpoint benchmark](benchmarks/three-model-comparison-2026-07/ramsey/) | Five chronological checkpoints, four reasoning effort settings, and twenty replicates per checkpoint and effort for each model | 1,200 runs |
+| [pODMR data evaluation benchmark](benchmarks/three-model-comparison-2026-07/podmr/) | 96 measurements, three prompt conditions, four reasoning effort settings, and three replicates for each model | 10,368 decisions |
+
+### Ramsey checkpoint benchmark
+
+The Ramsey task tests whether the agent can integrate project records and a
+newly returned Ramsey measurement to identify a missing hypothesis involving a
+residual resonance calibration offset.  Later analysis, later measurements,
+and human advice were excluded from each agent visible checkpoint package.
+
+| Model | Low | Medium | High | X-high |
+| --- | ---: | ---: | ---: | ---: |
+| GPT-5.4 | 7/100 | 13/100 | 17/100 | 20/100 |
+| GPT-5.5 | 11/100 | 17/100 | 21/100 | 34/100 |
+| GPT-5.6 Sol | 16/100 | 42/100 | 55/100 | 49/100 |
+
+Complete checkpoint values, per run records, and manual scoring evidence are
+available from the [Ramsey comparison directory](benchmarks/three-model-comparison-2026-07/ramsey/).
+
+![Figure 3. Ramsey checkpoint benchmark across three models](benchmarks/three-model-comparison-2026-07/figures/ramsey_checkpoint_benchmark.png)
+
+### pODMR data evaluation benchmark
+
+The pODMR task contains 24 resonance present and 72 resonance absent
+measurements.  Each agent judged one unlabeled measurement at a time under
+three prompt conditions.
+
+| Condition | Information available to the agent |
 | --- | --- |
-| System overview | [docs/system_overview.md](docs/system_overview.md) |
-| Case studies | [cases/README.md](cases/README.md), [docs/case_walkthrough.md](docs/case_walkthrough.md) |
-| Ramsey checkpoint benchmark | [benchmarks/nv-checkpoint-review-2026-06/README.md](benchmarks/nv-checkpoint-review-2026-06/README.md) |
-| pODMR data evaluation benchmark | [benchmarks/podmr-model-first-resonance-2026-05/README.md](benchmarks/podmr-model-first-resonance-2026-05/README.md) |
-| Three model benchmark comparison | [benchmarks/three-model-comparison-2026-07/README.md](benchmarks/three-model-comparison-2026-07/README.md) |
-| Model and agent configuration | [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md) |
-| Code inventory | [docs/code_inventory.md](docs/code_inventory.md) |
-| Safety boundary | [docs/safety_boundary.md](docs/safety_boundary.md) |
+| Sequence | Raw export, raw readout figure, and pulse sequence information |
+| Facts | Sequence information plus compact experimental setup facts |
+| Expected signal | Facts plus a requirement to calculate the expected signal before judging resonance presence |
 
-## Repository Contents
+Sequence information alone produced more false positive resonance judgments at
+higher reasoning effort.  Requiring an expected signal calculation kept the
+false positive rate between 0 and 3.70 percent across all three models and all
+reasoning settings.  GPT-5.5 produced no false negatives.  GPT-5.6 Sol produced
+one false negative in the low reasoning sequence condition.  GPT-5.4 produced
+between two and eleven false negatives among 72 resonance present decisions in
+each prompt and reasoning cell.
 
-| Part | What It Shows | Main Artifacts |
-| --- | --- | --- |
-| Case studies | A safety-bounded LLM research agent operating real NV-center experiments | Project state, evidence logs, bridge records, figures, reports, pODMR/Ramsey/CPMG analyses |
-| Benchmarks | How reasoning effort affects hypothesis formation and pODMR data evaluation | Checkpoint packages, raw export JSON, raw-readout figures, prompts, labels, predictions, project notes, scoring scripts |
-| Source and docs | Public audit boundary for NV project management and analysis | Python/MATLAB analysis code, public runtime source, system docs, safety notes |
+Complete point estimates, measurement level bootstrap intervals, predictions,
+and analysis notes are available from the
+[pODMR comparison directory](benchmarks/three-model-comparison-2026-07/podmr/).
 
-## Case Studies
+![Figure 4. pODMR benchmark across three models](benchmarks/three-model-comparison-2026-07/figures/podmr_benchmark_summary.png)
 
-The case studies are completed autonomous NV project runs. They are intended to
-show what the agent saw, what it decided, which artifacts it wrote, and how the
-final scientific conclusions were bounded by the evidence.
-
-| Case | Summary | Status |
-| --- | --- | --- |
-| [image145844](cases/image145844/README.md) | Aligned NV selection, pODMR screening, repeated Ramsey diagnostics, and later Ramsey frequency reanalysis | Completed |
-| [image172647](cases/image172647/README.md) | Fresh re-image recovery, pODMR candidate rejection/acceptance, multi-detuning Ramsey, CPMG N=8 nearby-13C-like corroboration | Completed |
-| [image231924](cases/image231924/README.md) | Aligned NV selection, pODMR center refinement, corrected-center Ramsey, T2star closeout | Completed |
-
-## Benchmarks
-
-The paper reports two offline benchmarks.  The Ramsey checkpoint benchmark tests
-whether the agent can use project records and newly returned Ramsey data to
-identify a missing residual calibration hypothesis.  The pODMR benchmark tests
-whether the agent can judge resonance presence in previously acquired pODMR
-measurements.
-
-| Benchmark | Summary |
-| --- | --- |
-| [Ramsey checkpoint benchmark](benchmarks/nv-checkpoint-review-2026-06/README.md) | Five pre-analysis Ramsey checkpoints, four reasoning efforts, twenty replicates per checkpoint and effort for GPT-5.4, GPT-5.5, and GPT-5.6 Sol |
-| [pODMR data evaluation benchmark](benchmarks/podmr-model-first-resonance-2026-05/README.md) | 96 single-case pODMR classifications under three prompt conditions and four reasoning efforts for all three models |
-| [Three model comparison records](benchmarks/three-model-comparison-2026-07/README.md) | Combined source tables, new-model predictions, analysis notes, Ramsey handoffs, manual scores, and completion audits |
-
-The Ramsey benchmark contains five chronological checkpoints named `cp01`
-through `cp05`.  Each checkpoint includes the project state, memory and
-knowledge snapshots, then available evidence, and terminal raw Ramsey data for
-the newly completed measurement.  Later analysis notes, later measurements, and
-human advice are excluded from the agent-visible checkpoint package.
-
-The three model Ramsey result is summarized in
-[benchmarks/three-model-comparison-2026-07/ramsey/three_model_checkpoint_summary.csv](benchmarks/three-model-comparison-2026-07/ramsey/three_model_checkpoint_summary.csv).
-The figure below shows the original GPT-5.5 sweep.
-
-![Reasoning-effort sweep for the Ramsey checkpoint benchmark](benchmarks/nv-checkpoint-review-2026-06/results/figures/reasoning_effort_sweep_low_to_xhigh.png)
-
-The pODMR benchmark contains 24 resonance-present and 72 resonance-absent
-strong-pi measurements. Each prompt condition was run for three replicates with
-GPT-5.4, GPT-5.5, and GPT-5.6 Sol at four reasoning-effort settings: `low`,
-`medium`, `high`, and `xhigh`.
-
-The three prompt conditions are:
-
-| Condition | Description |
-| --- | --- |
-| Sequence | Uses the raw export, raw-readout figure, and sequence XML. |
-| Facts | Adds compact setup facts such as contrast scale, Rabi frequency scaling, and stored-average interpretation. |
-| Expected signal | Adds a requirement to establish the expected signal with a simulation or explicit quantitative model calculation before judging resonance presence. |
-
-The main trend is that higher reasoning effort alone can increase
-false-positive resonance calls, while the calculation-guided condition keeps
-false-positive rates low across all three models.  The original GPT-5.5 sweep
-had no false negatives, while GPT-5.4 and GPT-5.6 Sol had small numbers of false
-negatives in some cells.  Full predictions, per-run analysis notes, and scoring
-tables for the original sweep are included under
-[benchmarks/podmr-model-first-resonance-2026-05/results](benchmarks/podmr-model-first-resonance-2026-05/results).
-The new model records and combined bootstrap table are in
-[benchmarks/three-model-comparison-2026-07](benchmarks/three-model-comparison-2026-07).
-The appendix batch comparison is included as
-[batch_context_main_inputs_summary.csv](benchmarks/podmr-model-first-resonance-2026-05/results/batch_context_main_inputs_summary.csv).
-
-![Reasoning-effort sweep for pODMR resonance classification](benchmarks/podmr-model-first-resonance-2026-05/results/figures/podmr_reasoning_sweep.png)
-
-Example raw pODMR traces for one resonance-present case and one
-resonance-absent case are shown below.  The figure plots the unnormalized
-reference and signal readouts for each case.
-
-![Raw pODMR resonance-present and resonance-absent examples](benchmarks/podmr-model-first-resonance-2026-05/results/figures/podmr_present_absent_examples.png)
-
-Original GPT-5.5 false positive rates are shown below.
-
-| Reasoning | Protocol-only FPR | Domain-facts FPR | Calculation-guided FPR |
-| --- | ---: | ---: | ---: |
-| low | 14.81% | 6.94% | 3.70% |
-| medium | 32.87% | 9.26% | 0.46% |
-| high | 44.44% | 12.04% | 0.46% |
-| xhigh | 53.24% | 6.48% | 0.46% |
+Representative pODMR measurements used in the Supplementary Information are
+available in the [original benchmark records](benchmarks/podmr-model-first-resonance-2026-05/README.md).
 
 ## Repository Layout
 
 ```text
 cases/
   image145844/
-    project/
   image172647/
-    project/
   image231924/
-    project/
 benchmarks/
   three-model-comparison-2026-07/
     models/
       gpt-5.4/
       gpt-5.5/
       gpt-5.6-sol/
+    figures/
     ramsey/
     podmr/
   nv-checkpoint-review-2026-06/
@@ -155,18 +136,11 @@ benchmarks/
     labels/
     prompts/
     results/
-      figures/
-      low_preanalysis_rootnote_2026-06-16/
-      mhx_preanalysis_wake_2026-06-16/
   podmr-model-first-resonance-2026-05/
     inputs/
     labels/
     prompts/
     results/
-      gpt-5.5-low/
-      gpt-5.5-medium/
-      gpt-5.5-high/
-      gpt-5.5-xhigh/
 python/
   openclaw_runtime/
   openclaw_nv_execution_source/
@@ -175,36 +149,34 @@ matlab/
   manifests/
   sequences/
 tools/
-requirements.txt
 docs/
 ```
 
-## Documentation Map
+## Documentation and Source Map
 
 | Topic | Entry point |
 | --- | --- |
-| Public boundary | [docs/public_scope.md](docs/public_scope.md) |
+| Public boundary | [docs/public_scope.md](docs/public_scope.md), [docs/source_release_boundary.md](docs/source_release_boundary.md) |
 | System architecture | [docs/system_overview.md](docs/system_overview.md), [docs/runtime_architecture.md](docs/runtime_architecture.md) |
-| Model and agent configuration | [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md), [docs/agent_prompt_context.md](docs/agent_prompt_context.md) |
+| Model and agent configuration | [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md), [three model run conditions](benchmarks/three-model-comparison-2026-07/run_conditions.json) |
 | Case guide | [docs/case_walkthrough.md](docs/case_walkthrough.md), [cases/README.md](cases/README.md) |
-| Memory and knowledge | [docs/memory_knowledge.md](docs/memory_knowledge.md), [docs/nv_research_memory.md](docs/nv_research_memory.md), [docs/nv_research_knowledge_index.md](docs/nv_research_knowledge_index.md), [docs/nv_research_knowledge_excerpt.md](docs/nv_research_knowledge_excerpt.md) |
-| Agent prompt context | [docs/agent_prompt_context.md](docs/agent_prompt_context.md) |
+| Memory and knowledge | [docs/memory_knowledge.md](docs/memory_knowledge.md), [docs/nv_research_memory.md](docs/nv_research_memory.md), [docs/nv_research_knowledge_index.md](docs/nv_research_knowledge_index.md) |
 | Project state and intents | [docs/project_state_template.md](docs/project_state_template.md), [docs/experiment_intent_schema.md](docs/experiment_intent_schema.md) |
-| Code and safety | [docs/code_inventory.md](docs/code_inventory.md), [docs/source_release_boundary.md](docs/source_release_boundary.md), [docs/safety_boundary.md](docs/safety_boundary.md) |
+| Code and safety | [docs/code_inventory.md](docs/code_inventory.md), [docs/safety_boundary.md](docs/safety_boundary.md) |
 | Source provenance | [SOURCE_PROVENANCE.md](SOURCE_PROVENANCE.md) |
-
-## License
-
-Code is licensed under the MIT License. Documentation, public case-study
-folders, included data exports, generated figures, reports, and analysis
-artifacts are licensed under CC BY 4.0. See `LICENSE`.
 
 ## Reproducibility
 
-The included case artifacts are intended to support analysis review and
-rebuilding of selected figures, metrics, and reports. Full live laboratory
+The released records support audit, offline analysis, and reconstruction of the
+reported benchmark values and selected figures.  Full live laboratory
 re-execution is outside the scope of this public release.
+
+## License
+
+Code is licensed under the MIT License.  Documentation, public case folders,
+data exports, generated figures, reports, and analysis artifacts are licensed
+under CC BY 4.0.  See [LICENSE](LICENSE).
 
 ## Citation
 
-Citation metadata is provided in `CITATION.cff`.
+Citation metadata is provided in [CITATION.cff](CITATION.cff).
