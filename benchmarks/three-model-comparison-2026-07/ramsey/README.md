@@ -1,7 +1,6 @@
 # Ramsey Checkpoint Benchmark Across Three Models
 
-The model columns below follow the comparison used in Fig. 3 and Supplementary
-Table S7 of the manuscript.
+The model columns below follow the comparison used in Fig. 3 of the manuscript.
 
 |  | GPT-5.4 | GPT-5.5 | GPT-5.6 Sol |
 | --- | --- | --- | --- |

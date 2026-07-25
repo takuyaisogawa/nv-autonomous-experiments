@@ -1,7 +1,7 @@
 # Case: image172647
 
 Completed aligned-NV case study with fresh re-imaging after a stale-candidate
-failure, pODMR-based candidate rejection/acceptance, weak-pi center refinement,
+failure, pODMR-based candidate rejection/acceptance, resonant frequency refinement,
 multi-detuning Ramsey follow-up, and CPMG N=8 corroboration of a weak
 nearby-13C-like signature.
 
@@ -27,8 +27,9 @@ a fresh re-image of the original region, rejected `reimage1804_c01` after a
 healthy but no-clear-resonance strong-pi pODMR scan, and accepted
 `reimage1804_c02` after a clear signal-only strong-pi pODMR resonance.
 
-The accepted branch then proceeded through weak-pi pODMR center refinement,
-three Ramsey datasets at different programmed detunings, and a CPMG N=8 tau
+The accepted branch then proceeded through weak-pi pODMR refinement of the
+resonant frequency, three Ramsey datasets at different programmed detunings,
+and a CPMG N=8 tau
 scan designed as an independent discriminator for the weak 13C-like candidate.
 
 ## Model Provenance
@@ -58,7 +59,7 @@ publication-grade single-spin claim.
 | [Fresh re-image candidate map](project/work/artifacts/figures/image172647_reimage1804_candidate_peaks_20260514_1812.png) | Candidate ranking after the stale initial candidate failure |
 | [Rejected c01 pODMR review](project/work/artifacts/figures/reimage1804_c01_podmr_terminal_4avg_20260514_1859.png) | Healthy-count pODMR scan used to reject `reimage1804_c01` |
 | [Accepted c02 strong-pi pODMR review](project/work/artifacts/figures/reimage1804_c02_podmr_terminal_4avg_20260514_1957.png) | Alignment-screen evidence for the accepted branch |
-| [Weak-pi pODMR refinement](project/work/artifacts/figures/reimage1804_c02_weak_pi_podmr_terminal_4avg_20260514_2251.png) | Microwave-center refinement used for later Ramsey/CPMG planning |
+| [Weak-pi pODMR refinement](project/work/artifacts/figures/reimage1804_c02_weak_pi_podmr_terminal_4avg_20260514_2251.png) | Resonant frequency refinement used for later Ramsey and CPMG planning |
 | [det=1.0 Ramsey terminal review](project/work/artifacts/figures/reimage1804_c02_ramsey_det1_terminal_16avg_20260515_0245.png) | Short/few-us T2star and weak high-sideband candidate evidence |
 | [det=1.25 Ramsey terminal review](project/work/artifacts/figures/reimage1804_c02_ramsey_det1p25_terminal_16avg_20260515_0645.png) | Third-detuning artifact discriminator |
 | [CPMG N=8 target-region review](project/work/artifacts/figures/reimage1804_c02_cpmg_n8_terminal_target_region_20260515_0945.png) | Independent CPMG corroboration of the weak nearby-13C-like feature |

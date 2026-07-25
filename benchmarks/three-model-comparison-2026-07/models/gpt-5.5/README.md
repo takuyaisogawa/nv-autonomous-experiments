@@ -24,10 +24,10 @@ those records.
 ## pODMR data evaluation benchmark
 
 - [Benchmark method, inputs, and labels](../../../podmr-model-first-resonance-2026-05/)
-- [Low reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-low/readout_only_three_conditions/)
-- [Medium reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-medium/readout_only_three_conditions/)
-- [High reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-high/readout_only_three_conditions/)
-- [X-high reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-xhigh/readout_only_three_conditions/)
+- [Low reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-low/)
+- [Medium reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-medium/)
+- [High reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-high/)
+- [X-high reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-xhigh/)
 - [Combined three model measurement bootstrap table](../../podmr/three_model_case_bootstrap.csv)
 
 Shared conditions and the execution dates recovered from the released output
