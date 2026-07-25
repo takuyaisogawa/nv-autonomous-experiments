@@ -15,3 +15,6 @@ __pycache__/
 private_config*
 secrets*
 tokens*
+
+# Reproduced manuscript figures
+benchmarks/three-model-comparison-2026-07/reproduced/

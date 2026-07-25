@@ -53,7 +53,7 @@ final interpretation.
 | --- | --- | --- | --- |
 | [`image172647`](cases/image172647/README.md) | Main autonomous workflow demonstration | Fresh image recovery, candidate rejection and acceptance, pODMR calibration, Ramsey measurements at multiple detunings, and a CPMG N=8 check | Completed |
 | [`image145844`](cases/image145844/README.md) | Additional case study | Aligned NV selection, pODMR screening, repeated Ramsey diagnostics, and later frequency reanalysis | Completed |
-| [`image231924`](cases/image231924/README.md) | Additional case study | Aligned NV selection, pODMR center refinement, Ramsey after resonance center correction, and a bounded `T2*` closeout | Completed |
+| [`image231924`](cases/image231924/README.md) | Additional case study | Aligned NV selection, resonant frequency refinement, a repeated Ramsey measurement, and a bounded `T2*` closeout | Completed |
 
 ## Offline Benchmarks
 
@@ -170,6 +170,11 @@ docs/
 The released records support audit, offline analysis, and reconstruction of the
 reported benchmark values and selected figures.  Full live laboratory
 re-execution is outside the scope of this public release.
+
+The quantitative panels and final layouts of manuscript Figs. 3 and 4 can be
+reproduced from the released source tables and vector artwork.  See the
+[figure reproduction guide](benchmarks/three-model-comparison-2026-07/REPRODUCE_FIGURES.md)
+for the environment, commands, inputs, and expected outputs.
 
 ## License
 

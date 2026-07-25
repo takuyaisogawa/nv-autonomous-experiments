@@ -1,7 +1,7 @@
 # Case: image231924
 
-Completed aligned-NV and T2star case study with pODMR center refinement,
-corrected-center Ramsey follow-up, and closeout report.
+Completed aligned-NV and T2star case study with resonant frequency refinement,
+a repeated Ramsey measurement, and a closeout report.
 
 ## Start Here
 
@@ -13,15 +13,15 @@ corrected-center Ramsey follow-up, and closeout report.
 | [Work notes](project/work/notes/) | Time-ordered reasoning and decisions |
 | [Bridge records](project/work/bridge_jobs/) | Submit/status/result records from the MATLAB bridge |
 | [Analysis outputs](project/work/artifacts/analysis/) | JSON reviews, model comparisons, and case scripts |
-| [Figures](project/work/artifacts/figures/) | pODMR, Ramsey, and corrected-center closeout plots |
+| [Figures](project/work/artifacts/figures/) | pODMR, Ramsey, and closeout plots |
 | [Raw/data copy](project/data_git_20260512/) | Raw and processed data snapshot included for this case |
 
 ## Reading Summary
 
 The agent recovered from an invalid first pODMR acquisition, re-established
-trackability, passed a strong-pi pODMR alignment screen, refined the microwave
-center with weak-pi pODMR, and used a corrected-center Ramsey repeat as the
-closeout dataset.
+trackability, passed a strong-pi pODMR alignment screen, refined the resonant
+frequency with weak-pi pODMR, and repeated the Ramsey measurement using the
+refined microwave frequency.
 
 ## Model Provenance
 
@@ -40,7 +40,7 @@ The final closeout report is
 [closeout_20260512_0525.pdf](project/summaries/closeout_20260512_0525.pdf).
 
 Final claim boundary: aligned `image231924_c01` found; T2star scale about
-`4 us`; no resolved nearby 13C coupling in the corrected-center Ramsey data.
+`4 us`; no resolved nearby 13C coupling in the repeated Ramsey data.
 
 ## Representative Artifacts
 
@@ -48,5 +48,5 @@ Final claim boundary: aligned `image231924_c01` found; T2star scale about
 | --- | --- |
 | [Candidate map](project/work/artifacts/figures/image231924_candidate_map.png) | Candidate selection context for the image region |
 | [Strong-pi pODMR retry review](project/work/artifacts/figures/image231924_c01_strong_podmr_retry1_review.png) | Alignment-screen evidence after recovery from the invalid first acquisition |
-| [Narrow weak-pi pODMR review](project/work/artifacts/figures/image231924_c01_narrow_weak_podmr_after_ramsey_20260512_025521_review.png) | Microwave-center refinement used before the corrected-center Ramsey |
+| [Narrow weak-pi pODMR review](project/work/artifacts/figures/image231924_c01_narrow_weak_podmr_after_ramsey_20260512_025521_review.png) | Resonant frequency refinement used before the repeated Ramsey measurement |
 | [Corrected-center Ramsey terminal review](project/work/artifacts/figures/image231924_c01_corrected_center_ramsey_repeat_terminal_review.png) | Main closeout dataset supporting the T2star and 13C-negative boundary |

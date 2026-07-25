@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this repository, please cite it as below."
 type: software
-title: "Large Language Model Reasoning for Autonomous Quantum Sensing Experiments"
+title: "Agentic AI for Scientific Reasoning in Autonomous Quantum Sensing Experiments"
 authors:
   - family-names: "Isogawa"
     given-names: "Takuya"

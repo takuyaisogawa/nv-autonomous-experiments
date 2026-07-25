@@ -92,3 +92,9 @@ Absolute user paths are replaced with `<USER_HOME>` during this conversion.
 Raw CLI stderr logs and internal execution traces are not included.  The
 released records retain the model outputs needed to audit the reported binary
 decisions and Ramsey manual scoring.
+
+## Figure reproduction
+
+The scripts, source tables, and vector artwork needed to reproduce the
+quantitative panels and final layouts of manuscript Figs. 3 and 4 are described
+in [REPRODUCE_FIGURES.md](REPRODUCE_FIGURES.md).

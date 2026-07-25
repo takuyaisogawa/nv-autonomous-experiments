@@ -1,7 +1,7 @@
 # pODMR Benchmark Across Three Models
 
 The model columns below follow the comparison used in Fig. 4 and Supplementary
-Table S8 of the manuscript.
+Tables S1--S5 of the manuscript.
 
 |  | GPT-5.4 | GPT-5.5 | GPT-5.6 Sol |
 | --- | --- | --- | --- |
