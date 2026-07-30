@@ -18,3 +18,7 @@ tokens*
 
 # Reproduced manuscript figures
 benchmarks/three-model-comparison-2026-07/reproduced/
+
+# Local provider-comparison runs
+benchmarks/podmr-model-first-resonance-2026-05/results/local/
+benchmarks/nv-checkpoint-review-2026-06/results/claude-local/

@@ -41,6 +41,10 @@ release.
 - pODMR data evaluation benchmark package used in the manuscript, including raw
   inputs, prompt conditions, labels, predictions, per-run notes, tool use audit,
   deterministic checks, figures, and the appendix batch-comparison summary.
+- Reconstructed provider-neutral pODMR per-case runner and a post-release
+  Claude adapter for the Ramsey checkpoint benchmark. These use temporary
+  case-level workspaces and do not expose benchmark labels to the model
+  workspace.
 - Three model comparison records for GPT-5.4, GPT-5.5, and GPT-5.6 Sol,
   including combined source tables, new-model predictions and analysis notes,
   Ramsey handoffs and project notes, manual scores, and completion audits.

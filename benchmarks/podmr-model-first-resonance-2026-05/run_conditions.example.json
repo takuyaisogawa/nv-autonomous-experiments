@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "created_utc": "YYYY-MM-DDTHH:MM:SS+00:00",
+  "provider": "codex_or_claude",
+  "model": "FULL_MODEL_ID",
+  "reasoning_effort": "low",
+  "condition": "all",
+  "replicates": 1,
+  "image_delivery": "The agent opens raw_readouts.png from the isolated per-case workspace.",
+  "workspace_files": [
+    "raw_export.json",
+    "raw_readouts.png",
+    "sequence.xml",
+    "case_metadata.json",
+    "task.md",
+    "outputs/"
+  ],
+  "labels_in_workspace": false,
+  "cli_binary": "provider_cli",
+  "cli_version": "PROVIDER_CLI_VERSION",
+  "python_version": "PYTHON_VERSION",
+  "platform": "OPERATING_SYSTEM",
+  "runner_git_commit": "GIT_COMMIT_SHA",
+  "case_index_sha256": "SHA256",
+  "prompt_sha256": {
+    "context_0": "SHA256",
+    "context_A": "SHA256",
+    "context_B": "SHA256"
+  }
+}

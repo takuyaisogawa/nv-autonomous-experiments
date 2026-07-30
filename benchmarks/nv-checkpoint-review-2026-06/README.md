@@ -67,6 +67,8 @@ section is used as the note text in `model_outputs.jsonl`.
   from local wake-record snapshots and terminal raw measurement artifacts.
 - `scripts/run_sweep.py`: runs Codex CLI over checkpoints, efforts, and
   replicates.
+- `scripts/run_sweep_claude.py`: post-release Claude CLI adapter using the same
+  checkpoints, task prompt, note collection, and resume format.
 - `scripts/score_outputs.py`: applies an automatic first-pass binary score to
   the final response plus the captured project note.
 
@@ -95,6 +97,27 @@ Resume only failed or missing runs in an existing result file:
 ```powershell
 python scripts\run_sweep.py --model gpt-5.5 --reasoning-effort all --replicates 10 --retry-failed
 ```
+
+Run a small Claude pilot:
+
+```powershell
+python scripts\run_sweep_claude.py `
+  --model "FULL_MODEL_ID" `
+  --reasoning-effort low `
+  --replicates 2 `
+  --checkpoint cp01 `
+  --jobs 1 `
+  --max-budget-usd 10 `
+  --result-dir results\claude-local\pilot
+```
+
+The Claude adapter instructs the agent to open PNG evidence with its Read tool
+instead of attaching images to the first message. It records the exact model
+argument, CLI version, task-prompt hash, and image-delivery method in
+`run_conditions.json`. This adapter was added after the manuscript runs. A
+comparison against the released Codex results should therefore report the
+harness difference. For a new provider comparison with matched pODMR image
+delivery, use the provider-neutral per-case runner in the pODMR benchmark.
 
 ## Score
 
