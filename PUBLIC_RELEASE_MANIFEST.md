@@ -49,6 +49,9 @@ release.
   including combined source tables, new-model predictions and analysis notes,
   Ramsey handoffs and project notes, manual scores, and completion audits.
 - License and citation metadata.
+- The original September 2023 human NV selection log and a retrospective
+  explanation of its purpose and selection criteria in
+  `human_reference/2023-09_nv_selection/`.
 
 ## Sanitize
 

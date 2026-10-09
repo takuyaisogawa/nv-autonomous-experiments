@@ -29,6 +29,7 @@ The order below follows the current manuscript.
 | Figure 3. Ramsey checkpoint benchmark | Recognition of a residual resonance calibration hypothesis across GPT-5.4, GPT-5.5, and GPT-5.6 Sol | [Three model Ramsey comparison](benchmarks/three-model-comparison-2026-07/ramsey/) |
 | Figure 4. pODMR benchmark | Effects of prompt condition, reasoning effort, and model identity on resonance judgments | [Three model pODMR comparison](benchmarks/three-model-comparison-2026-07/podmr/) |
 | Supplementary case studies and analyses | Two additional completed autonomous runs, representative pODMR inputs, deterministic checks, and detailed benchmark tables | [Additional cases](cases/README.md), [benchmark records](benchmarks/three-model-comparison-2026-07/README.md) |
+| Supplementary Note 4. Human reference workflow | Archived human NV selection and characterization from September 2023, with the experimental purpose and selection criteria | [Original log and context](human_reference/2023-09_nv_selection/README.md) |
 
 ## Public Scope
 
