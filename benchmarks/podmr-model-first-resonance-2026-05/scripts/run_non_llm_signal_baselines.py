@@ -115,16 +115,17 @@ class CaseFeatures:
 
 def per_average_features(scan: dict, x: np.ndarray) -> tuple[float, float, float]:
     each = np.asarray(scan.get("ExperimentDataEachAvg"), dtype=float)
-    if each.ndim != 4 or each.shape[2] < 2:
+    # Export axes: scan, average, readout (reference/signal), frequency point.
+    if each.ndim != 4 or each.shape[1] < 2 or each.shape[2] < 2:
         return float("nan"), float("nan"), float("nan")
 
     centers: list[float] = []
     depths: list[float] = []
     snrs: list[float] = []
     interior = np.arange(1, len(x) - 1)
-    for avg_idx in range(each.shape[2]):
-        reference = each[0, 0, avg_idx, :]
-        signal = each[0, 1, avg_idx, :]
+    for average in each[0]:
+        reference = average[0]
+        signal = average[1]
         contrast = 1.0 - signal / reference
         trend = np.polyval(np.polyfit(x, contrast, 1), x)
         residual = contrast - trend

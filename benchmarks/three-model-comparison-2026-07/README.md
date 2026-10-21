@@ -21,7 +21,7 @@ locations, so the GPT-5.5 records do not need to be duplicated.
 The benchmark specific directories provide the same parallel view for
 [Ramsey](ramsey/) and [pODMR](podmr/).
 
-All three models received the same benchmark inputs, prompt conditions,
+All three models received the same benchmark inputs, prompts,
 reasoning effort settings, replicate structure, and scoring rules.  Local
 analysis tools were available.  The pODMR prompts contained no labeled
 examples.
@@ -64,8 +64,8 @@ recovered notes are in the Ramsey benchmark results directory.
 
 ## pODMR comparison
 
-Each model was evaluated on 96 measurements under three prompt conditions,
-four reasoning effort settings, and three replicates.  Each model, condition,
+Each model was evaluated on 96 measurements from two NV centers using three
+prompts, four reasoning effort settings, and three replicates. Each model, prompt,
 and effort cell therefore contains 288 binary decisions.
 
 The combined measurement bootstrap values used in the manuscript are in
@@ -74,10 +74,10 @@ Each new model folder contains all 3,456 joined predictions, completion audits,
 replicate summaries, case difficulty summaries, measurement bootstrap results,
 and compact prediction records with the corresponding analysis note text.
 
-The main cross-model result is that the expected signal condition kept false
+The main cross-model result is that the expected signal prompt kept false
 positive rates between 0 and 3.7 percent across all model and reasoning
 combinations.  GPT-5.5 had no false negatives.  GPT-5.6 Sol had one false
-negative in the low reasoning sequence condition.  GPT-5.4 had between two and
+negative at low reasoning with the sequence prompt.  GPT-5.4 had between two and
 eleven false negatives among the 72 resonance decisions in each prompt and
 reasoning cell.
 

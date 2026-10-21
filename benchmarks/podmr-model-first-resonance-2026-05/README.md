@@ -4,19 +4,21 @@ This benchmark evaluates whether an agent can judge resonance presence in
 previously acquired pODMR measurements, and how prompt context and reasoning
 effort affect that judgment.
 
-The dataset contains 96 strong-pi pODMR measurements:
+The dataset contains 96 strong-pi pODMR measurements from two NV centers:
 
-- 24 resonance-present cases
-- 72 resonance-absent cases
+- 24 resonance-present measurements from one NV center
+- 72 resonance-absent measurements from the other NV center
 
 The labels are defined by the physical measurement configuration.  The
-resonance-present cases use aligned NV centers whose targeted transition lies
-inside the scanned frequency window.  The resonance-absent cases use differently
-oriented NV centers whose corresponding transition lies outside that window.
+resonance-present measurements were acquired from an NV center aligned with
+the static magnetic field, whose targeted transition lay inside the scanned
+frequency window. The resonance-absent measurements were acquired from the
+other NV center, which had a different crystallographic orientation and whose
+corresponding transition lay outside that window.
 Failed acquisitions and tracking failures are excluded rather than labeled as
 resonance absent.
 
-Each prompt condition was evaluated with GPT-5.4, GPT-5.5, and GPT-5.6 Sol for
+Each prompt was evaluated with GPT-5.4, GPT-5.5, and GPT-5.6 Sol for
 three replicates at four reasoning-effort settings: `low`, `medium`, `high`,
 and `xhigh`.
 
@@ -37,7 +39,7 @@ reference and signal readouts for each case.
 
 The table below reports the original GPT-5.5 sweep.
 
-| Reasoning | Condition | TP | TN | FP | FN | Accuracy | False-positive rate | False-negative rate |
+| Reasoning | Prompt | TP | TN | FP | FN | Accuracy | False-positive rate | False-negative rate |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
 | low | Sequence | 72 | 184 | 32 | 0 | 88.9% | 14.81% | 0.00% |
 | low | Facts | 72 | 201 | 15 | 0 | 94.8% | 6.94% | 0.00% |
@@ -52,12 +54,12 @@ The table below reports the original GPT-5.5 sweep.
 | xhigh | Facts | 72 | 202 | 14 | 0 | 95.1% | 6.48% | 0.00% |
 | xhigh | Expected signal | 72 | 215 | 1 | 0 | 99.7% | 0.46% | 0.00% |
 
-The expected signal condition differs from the facts condition by adding a
+The expected signal prompt differs from the facts prompt by adding a
 requirement to establish the expected physical signal with a simulation or
 explicit quantitative model calculation before deciding whether a resonance is
 present. In this dataset, increasing reasoning effort alone increases
-false-positive resonance calls in the sequence condition, while the expected
-signal condition keeps false positives low across reasoning-effort settings and
+false-positive resonance calls with the sequence prompt, while the expected
+signal prompt keeps false positives low across reasoning-effort settings and
 all three models.
 
 Non-LLM signal-processing baselines are summarized in
@@ -133,7 +135,7 @@ one prepared workspace without invoking a model.
 
 - `inputs/`: agent-visible raw export JSON files and raw-readout figures.
 - `labels/`: physical resonance labels used for scoring.
-- `prompts/`: exact prompt condition text.
+- `prompts/`: exact prompt text.
 - `results/figures/`: benchmark summary figure as PNG and PDF.
 - `results/`: Original GPT-5.5 predictions, summaries, and per-run analysis notes for
   `low`, `medium`, `high`, and `xhigh` reasoning efforts, plus tool use audit,

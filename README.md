@@ -27,7 +27,7 @@ The order below follows the current manuscript.
 | Figure 1. Autonomous NV workflow | The boundary between LLM reasoning, persistent project state, analysis tools, deterministic validation, and hardware control | [System overview](docs/system_overview.md), [runtime architecture](docs/runtime_architecture.md) |
 | Figure 2. Main autonomous experiment | NV candidate selection, pODMR screening and calibration, Ramsey measurements, and a CPMG check of a weak feature that could be related to nearby carbon-13 coupling | [Main experiment `image172647`](cases/image172647/README.md) |
 | Figure 3. Ramsey checkpoint benchmark | Recognition of a residual resonance calibration hypothesis across GPT-5.4, GPT-5.5, and GPT-5.6 Sol | [Three model Ramsey comparison](benchmarks/three-model-comparison-2026-07/ramsey/) |
-| Figure 4. pODMR benchmark | Effects of prompt condition, reasoning effort, and model identity on resonance judgments | [Three model pODMR comparison](benchmarks/three-model-comparison-2026-07/podmr/) |
+| Figure 4. pODMR benchmark | Effects of prompts, reasoning effort, and model identity on resonance judgments | [Three model pODMR comparison](benchmarks/three-model-comparison-2026-07/podmr/) |
 | Supplementary case studies and analyses | Two additional completed autonomous runs, representative pODMR inputs, deterministic checks, and detailed benchmark tables | [Additional cases](cases/README.md), [benchmark records](benchmarks/three-model-comparison-2026-07/README.md) |
 | Supplementary Note 4. Human reference workflow | Archived human NV selection and characterization from September 2023, with the experimental purpose and selection criteria | [Original log and context](human_reference/2023-09_nv_selection/README.md) |
 
@@ -67,7 +67,7 @@ links to each model's records are collected in the
 | Benchmark | Design | Total size |
 | --- | --- | ---: |
 | [Ramsey checkpoint benchmark](benchmarks/three-model-comparison-2026-07/ramsey/) | Five chronological checkpoints, four reasoning effort settings, and twenty replicates per checkpoint and effort for each model | 1,200 runs |
-| [pODMR data evaluation benchmark](benchmarks/three-model-comparison-2026-07/podmr/) | 96 measurements, three prompt conditions, four reasoning effort settings, and three replicates for each model | 10,368 decisions |
+| [pODMR data evaluation benchmark](benchmarks/three-model-comparison-2026-07/podmr/) | 96 measurements from two NV centers, three prompts, four reasoning effort settings, and three replicates for each model | 10,368 decisions |
 
 ### Ramsey checkpoint benchmark
 
@@ -89,11 +89,13 @@ available from the [Ramsey comparison directory](benchmarks/three-model-comparis
 
 ### pODMR data evaluation benchmark
 
-The pODMR task contains 24 resonance present and 72 resonance absent
-measurements.  Each agent judged one unlabeled measurement at a time under
-three prompt conditions.
+The pODMR task contains 96 measurements from two NV centers: 24 from one NV
+whose targeted transition lay within the scanned frequency range and 72 from
+another whose targeted transition lay outside that range. These were labeled
+as resonance present and absent, respectively. Each agent judged one unlabeled
+measurement at a time using one of three prompts.
 
-| Condition | Information available to the agent |
+| Prompt | Information available to the agent |
 | --- | --- |
 | Sequence | Raw export, raw readout figure, and pulse sequence information |
 | Facts | Sequence information plus compact experimental setup facts |
@@ -103,7 +105,7 @@ Sequence information alone produced more false positive resonance judgments at
 higher reasoning effort.  Requiring an expected signal calculation kept the
 false positive rate between 0 and 3.70 percent across all three models and all
 reasoning settings.  GPT-5.5 produced no false negatives.  GPT-5.6 Sol produced
-one false negative in the low reasoning sequence condition.  GPT-5.4 produced
+one false negative at low reasoning with the sequence prompt.  GPT-5.4 produced
 between two and eleven false negatives among 72 resonance present decisions in
 each prompt and reasoning cell.
 

@@ -9,12 +9,12 @@ Tables S1--S5 of the manuscript.
 | Per model records | [records](gpt-5.4/) | [original source records](../models/gpt-5.5/#podmr-data-evaluation-benchmark) | [records](gpt-5.6-sol/) |
 | Decisions | 3,456 | 3,456 | 3,456 |
 
-Each model was evaluated on the same 96 measurements under three prompt
-conditions, four reasoning effort settings, and three replicates.  The complete
+Each model was evaluated on the same 96 measurements from two NV centers using
+three prompts, four reasoning effort settings, and three replicates. The complete
 point estimates and measurement level bootstrap intervals are in
 [three_model_case_bootstrap.csv](three_model_case_bootstrap.csv).
 
-## Expected signal condition
+## Expected signal prompt
 
 The table gives false positives among 216 resonance absent decisions and false
 negatives among 72 resonance present decisions in each cell.

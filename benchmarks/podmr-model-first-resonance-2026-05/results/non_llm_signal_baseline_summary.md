@@ -14,7 +14,7 @@ in this dataset.
 | contrast_depth_ge_0p132 | 24 | 72 | 0 | 0 | 100.0% | 0.0% | 0.0% |
 | contrast_depth_ge_0p10 | 24 | 69 | 3 | 0 | 96.9% | 4.2% | 0.0% |
 | detrended_depth_snr | 23 | 72 | 0 | 1 | 99.0% | 0.0% | 4.2% |
-| avg_consistent_depth_snr | 8 | 70 | 2 | 16 | 81.2% | 2.8% | 66.7% |
+| avg_consistent_depth_snr | 24 | 71 | 1 | 0 | 99.0% | 1.4% | 0.0% |
 | lorentzian_bic_depth | 22 | 70 | 2 | 2 | 95.8% | 2.8% | 8.3% |
 | gaussian_bic_depth | 22 | 71 | 1 | 2 | 96.9% | 1.4% | 8.3% |
 
