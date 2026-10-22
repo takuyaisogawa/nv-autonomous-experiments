@@ -10,8 +10,8 @@ The model columns below follow the comparison used in Fig. 3 of the manuscript.
 
 ## LLM-judge passes used in the manuscript
 
-All 1,200 responses were scored by the fixed [GPT-6.1 Sol/high judge](llm_judge_v6/).
-Human validation gave 96% agreement on 100 responses; original labels are retained.
+All 1,200 responses were scored by the fixed [GPT-6.1 Sol/high judge](llm_judge/).
+Human validation gave 96% agreement on 100 responses.
 
 Values are passing runs out of 100 across five checkpoints and twenty
 replicates per checkpoint at each reasoning effort.
@@ -23,7 +23,7 @@ replicates per checkpoint at each reasoning effort.
 | High | 16 | 18 | 53 |
 | X-high | 22 | 27 | 44 |
 
-The current checkpoint table is [llm_judge_v6/checkpoint_summary.csv](llm_judge_v6/checkpoint_summary.csv).
+The current checkpoint table is [llm_judge/checkpoint_summary.csv](llm_judge/checkpoint_summary.csv).
 The previous [three_model_checkpoint_summary.csv](three_model_checkpoint_summary.csv)
-and per-model score files are unchanged. The [comparison](llm_judge_v6/legacy_comparison/comparison.json)
+and per-model score files are unchanged. The [comparison](llm_judge/legacy_comparison/comparison.json)
 records both sets of labels and reasons.

@@ -1,13 +1,11 @@
 # Human validation of the Ramsey judge
 
-One author (Takuya Isogawa) graded 100 responses sampled without replacement
-from the 1,184 responses not used in prompt development. Judge outputs,
-previous labels, model identities and reasoning settings were concealed.
-The original English was available alongside Japanese machine translations;
-AI explanations were also used as reading aids. The author finalized the
-labels before the judge's outputs were revealed.
+One author (Takuya Isogawa) graded 100 randomly sampled responses using
+the same rubric as the judge. Judge outputs, model identities and reasoning
+settings were concealed. The author finalized the labels before the judge's
+outputs were revealed.
 
-The original labels give **96/100 agreement (96%)**, Wilson 95% CI
+The human and judge labels give **96/100 agreement (96%)**, Wilson 95% CI
 **90.2–98.4%**, and **Cohen's kappa 0.9008428359**.
 
 | Human label | Judge PASS | Judge FAIL |
@@ -16,12 +14,10 @@ The original labels give **96/100 agreement (96%)**, Wilson 95% CI
 | FAIL | 1 | 70 |
 
 `human_original.json` is the byte-for-byte finalized export. `comparison.json`
-contains the original labels and reasons. `selection.json` records the seed,
+contains the human and judge labels and reasons. `selection.json` records the seed,
 excluded development cases and sample mapping. `protocol.json` is the plan
 saved before labeling; `method.json` records the completed review procedure.
 `reading_aids.jsonl` preserves the English segments and Japanese translations.
-The conversational explanations were reading assistance, not an additional
-independent set of reference labels.
 
 The four disagreements below remain unchanged. English human reasons are
 translations; the Japanese reasons are preserved exactly in the JSON files.

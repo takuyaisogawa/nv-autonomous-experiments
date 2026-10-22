@@ -1,4 +1,4 @@
-"""Verify archived inputs/labels and reproduce v6 counts and human agreement."""
+"""Verify archived inputs/labels and reproduce judge counts and human agreement."""
 from pathlib import Path
 from collections import Counter, defaultdict
 import csv

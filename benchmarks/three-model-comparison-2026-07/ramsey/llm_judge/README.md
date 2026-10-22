@@ -1,16 +1,15 @@
-# Ramsey checkpoint scoring with a fixed LLM judge (v6)
+# Ramsey checkpoint scoring with a fixed LLM judge
 
 The manuscript uses GPT-6.1 Sol (`gpt-6.1-sol`) at high reasoning effort to
 score all 1,200 archived responses. The fixed prompt includes the existing
 GitHub scoring guide verbatim. Each response was graded once in a fresh
 Codex CLI session with tools disabled. The input contained the task context,
-complete final response and project note; previous labels, model identities
-and reasoning settings were withheld.
+complete final response and project note. Model identities and reasoning
+settings were withheld.
 
 The judge returned **269 PASS and 931 FAIL**. Human validation on 100 randomly
 sampled responses gave **96% agreement**, **Cohen's kappa 0.901**, and a
-**Wilson 95% CI of 90.2–98.4%**. Original labels were retained after reviewing
-the four disagreements. See [human validation](human_validation_100/).
+**Wilson 95% CI of 90.2–98.4%**. See [human validation](human_validation_100/).
 
 ## Manuscript pass counts
 
@@ -34,12 +33,11 @@ Each cell contains 100 responses (five checkpoints, twenty replicates).
 - `case_mapping.jsonl`: evaluated model, checkpoint, effort and source records.
   This metadata was not supplied to the judge.
 - `input_manifest.json` and `provenance.json`: input and source hashes.
-- `human_validation_100/`: original human export, sampling records,
+- `human_validation_100/`: human labels, sampling records,
   comparison, reading aids and four disagreement cases.
 - `legacy_comparison/`: previous labels and reasons, comparison and 53
   disagreements. Agreement with previous labels is 1,147/1,200 (95.6%).
-  These previous scores are separate from the new human validation labels.
-- `figures/`: manuscript v6 Figure 3 and the unchanged previous figure.
+- `figures/`: manuscript Figure 3 and the unchanged previous figure.
 - `checkpoint_summary.csv`: the 60 model/effort/checkpoint cells used in Figure 3.
 
 The task context was reconstructed from the archived task prompt and runner.

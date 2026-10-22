@@ -121,7 +121,7 @@ delivery, use the provider-neutral per-case runner in the pODMR benchmark.
 
 ## Current manuscript scores
 
-The manuscript uses the fixed [GPT-6.1 Sol/high LLM judge](../three-model-comparison-2026-07/ramsey/llm_judge_v6/).
+The manuscript uses the fixed [GPT-6.1 Sol/high LLM judge](../three-model-comparison-2026-07/ramsey/llm_judge/).
 Its 1,200 labels, full prompt, execution settings, and human validation
 (96/100 agreement) are released there. The previous scores below are preserved
 and compared with the judge results; they are not the human validation labels.

@@ -55,9 +55,9 @@ and twenty replicates for each checkpoint and effort pair.
 | [GPT-5.5](models/gpt-5.5/) | 4/100 | 17/100 | 18/100 | 27/100 |
 | [GPT-5.6 Sol](models/gpt-5.6-sol/) | 15/100 | 36/100 | 53/100 | 44/100 |
 
-These are the fixed [v6 LLM-judge results](ramsey/llm_judge_v6/), validated
+These are the fixed [LLM-judge results](ramsey/llm_judge/), validated
 against 100 human labels with 96% agreement. The current checkpoint source
-table is [`ramsey/llm_judge_v6/checkpoint_summary.csv`](ramsey/llm_judge_v6/checkpoint_summary.csv).
+table is [`ramsey/llm_judge/checkpoint_summary.csv`](ramsey/llm_judge/checkpoint_summary.csv).
 The previous [`ramsey/three_model_checkpoint_summary.csv`](ramsey/three_model_checkpoint_summary.csv)
 is preserved for comparison.
 The GPT-5.4 and GPT-5.6 Sol folders contain completion audits, checkpoint
@@ -94,7 +94,7 @@ Absolute user paths are replaced with `<USER_HOME>` during this conversion.
 
 Raw CLI stderr logs and internal execution traces are not included.  The
 released records retain the model outputs needed to audit the reported binary
-decisions and the previous Ramsey scoring. The v6 release adds the unchanged
+decisions and the previous Ramsey scoring. The judge release adds the unchanged
 judge outputs, human validation records and reproducible scoring procedure.
 
 ## Figure reproduction

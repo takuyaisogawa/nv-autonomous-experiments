@@ -31,7 +31,7 @@ The order below follows the current manuscript.
 | Figure 4. pODMR benchmark | Effects of prompts, reasoning effort, and model identity on resonance judgments | [Three model pODMR comparison](benchmarks/three-model-comparison-2026-07/podmr/) |
 | Supplementary case studies and analyses | Two additional completed autonomous runs, representative pODMR inputs, deterministic checks, and detailed benchmark tables | [Additional cases](cases/README.md), [benchmark records](benchmarks/three-model-comparison-2026-07/README.md) |
 | Supplementary Note 4. Human reference workflow | Archived human NV selection and characterization from September 2023, with the experimental purpose and selection criteria | [Original log and context](human_reference/2023-09_nv_selection/README.md) |
-| Supplementary Note 5. Ramsey judge validation | Original human labels, 96% agreement, four disagreements, and comparison with previous scores | [Judge and validation records](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge_v6/) |
+| Supplementary Note 5. Ramsey judge validation | Human labels, 96% agreement, and four disagreements | [Judge and validation records](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/) |
 
 ## Public Scope
 
@@ -84,13 +84,13 @@ and human advice were excluded from each agent visible checkpoint package.
 | GPT-5.5 | 4/100 | 17/100 | 18/100 | 27/100 |
 | GPT-5.6 Sol | 15/100 | 36/100 | 53/100 | 44/100 |
 
-These results use the fixed GPT-6.1 Sol/high LLM judge (v6). Human validation
-gave 96/100 agreement (Cohen's kappa 0.901); the original labels are retained.
-The [judge release](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge_v6/)
+These results use the fixed GPT-6.1 Sol/high LLM judge. Human validation
+gave 96/100 agreement (Cohen's kappa 0.901).
+The [judge release](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/)
 contains all scores, prompts, validation records, and a comparison with the
 unchanged previous scores.
 
-![Figure 3. Ramsey checkpoint benchmark with v6 LLM-judge scores](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge_v6/figures/figure3_ramsey_benchmark_v6.png)
+![Figure 3. Ramsey checkpoint benchmark with LLM-judge scores](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/figures/figure3_ramsey_benchmark.png)
 
 ### pODMR data evaluation benchmark
 

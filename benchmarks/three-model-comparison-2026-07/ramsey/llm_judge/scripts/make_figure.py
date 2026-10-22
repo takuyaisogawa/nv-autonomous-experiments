@@ -1,4 +1,4 @@
-"""Rebuild manuscript Fig. 3 with frozen v6 judgments, preserving its layout."""
+"""Rebuild manuscript Fig. 3 with frozen judge results, preserving its layout."""
 from __future__ import annotations
 
 import csv
@@ -51,7 +51,7 @@ def main():
     assert len(buckets) == 60 and all(len(v) == 20 for v in buckets.values())
     OUT.mkdir(parents=True, exist_ok=True)
     TMP.mkdir(parents=True, exist_ok=True)
-    summary_path = OUT / 'v6_checkpoint_summary.csv'
+    summary_path = OUT / 'checkpoint_summary.csv'
     fields = ['model', 'criterion_group', 'reasoning_effort', 'checkpoint_id', 'passes', 'total', 'pass_rate']
     summary_rows = []
     for m in models:
@@ -138,8 +138,8 @@ def main():
     colorbar = fig.colorbar(image, cax=cax)
     colorbar.set_label('Pass rate', labelpad=4.2)
     colorbar.ax.tick_params(length=2.93, width=.821, labelsize=7.5065, pad=1.76)
-    quantitative = TMP / 'v6_quantitative_panels.pdf'
-    fig.savefig(quantitative, metadata={'Title': 'Ramsey checkpoint benchmark: v6 LLM judge'})
+    quantitative = TMP / 'quantitative_panels.pdf'
+    fig.savefig(quantitative, metadata={'Title': 'Ramsey checkpoint benchmark: LLM judge'})
     plt.close(fig)
 
     # Retain panel (a) as vector artwork from the paper. Remove the other panels
@@ -153,17 +153,17 @@ def main():
     clip = fitz.Rect(0, 0, 276, 174)
     output[0].show_pdf_page(clip, schematic, 0, clip=clip, keep_proportion=False)
     output.set_metadata({
-        'title': 'Ramsey checkpoint benchmark: v6 LLM judge',
-        'subject': 'GPT-6.1 Sol/high; 1200 independent judgments; v6 prompt; 269 PASS. Layout matches manuscript Fig. 3.',
+        'title': 'Ramsey checkpoint benchmark: LLM judge',
+        'subject': 'GPT-6.1 Sol/high; 1200 independent judgments; fixed scoring prompt; 269 PASS. Layout matches manuscript Fig. 3.',
         'creator': 'Matplotlib and PyMuPDF; original manuscript vector schematic',
     })
-    final = OUT / 'figure3_ramsey_benchmark_v6.pdf'
+    final = OUT / 'figure3_ramsey_benchmark.pdf'
     output.save(final, garbage=4, deflate=True)
     output.close()
     schematic.close()
     source.close()
     provenance = {
-        'judge': 'gpt-6.1-sol', 'judge_reasoning_effort': 'high', 'judge_prompt': 'v6',
+        'judge': 'gpt-6.1-sol', 'judge_reasoning_effort': 'high', 'judge_prompt': 'prompts/judge_prompt.txt',
         'n': 1200, 'pass': 269, 'per_bar_n': 100, 'per_heatmap_cell_n': 20,
         'report': str(report_path), 'report_sha256': sha(report_path),
         'source_figure': str(PAPER), 'source_figure_sha256': sha(PAPER),
