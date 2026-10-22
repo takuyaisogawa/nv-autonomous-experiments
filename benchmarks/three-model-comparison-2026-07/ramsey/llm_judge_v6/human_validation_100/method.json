@@ -1,0 +1,14 @@
+{
+  "reviewer": "Takuya Isogawa",
+  "reviewer_role": "One author with expertise in NV experiments",
+  "review_complete": true,
+  "original_english_available": true,
+  "reading_aids": [
+    "Japanese machine translations displayed with English",
+    "AI-generated explanations of the responses during grading"
+  ],
+  "labels_finalized_before_judge_outputs_revealed": true,
+  "original_human_and_judge_labels_unchanged": true,
+  "statistics": "Original labels before discussion of disagreements",
+  "protocol_file": "protocol.json records the plan frozen before human labeling."
+}

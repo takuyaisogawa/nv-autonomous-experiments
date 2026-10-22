@@ -119,7 +119,14 @@ comparison against the released Codex results should therefore report the
 harness difference. For a new provider comparison with matched pODMR image
 delivery, use the provider-neutral per-case runner in the pODMR benchmark.
 
-## Score
+## Current manuscript scores
+
+The manuscript uses the fixed [GPT-6.1 Sol/high LLM judge](../three-model-comparison-2026-07/ramsey/llm_judge_v6/).
+Its 1,200 labels, full prompt, execution settings, and human validation
+(96/100 agreement) are released there. The previous scores below are preserved
+and compared with the judge results; they are not the human validation labels.
+
+## Previous scoring workflow
 
 ```powershell
 python scripts\score_outputs.py results\model_outputs.jsonl

@@ -1,0 +1,711 @@
+{
+  "format_version": 1,
+  "dataset_id": "ramsey100-d3d852a8407d1fb6",
+  "exported_at": "2026-10-21T21:25:54.203Z",
+  "reviewer": "",
+  "confirmed_at": "2026-10-21T21:25:54.202Z",
+  "current": 99,
+  "mode": "ja",
+  "records": {
+    "H001": {
+      "verdict": "FAIL",
+      "reason": "残留離調キャリブレーションのエラーに結び付けてない。",
+      "evidence": "",
+      "flagged": true,
+      "updated_at": "2026-10-21T16:34:27.672Z"
+    },
+    "H002": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波の周波数のずれを疑ってない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T18:23:16.367Z"
+    },
+    "H003": {
+      "verdict": "PASS",
+      "reason": "現在の離調設定が実際の共鳴と合っていない可能性を考慮してる。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T18:25:42.928Z"
+    },
+    "H004": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": true,
+      "updated_at": "2026-10-21T21:18:29.450Z"
+    },
+    "H005": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数に言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T18:33:40.053Z"
+    },
+    "H006": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数に言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T18:35:00.368Z"
+    },
+    "H007": {
+      "verdict": "PASS",
+      "reason": "マイクロ波の周波数設定と実際の共鳴中心のずれによる可能性を考慮してる。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T18:35:52.881Z"
+    },
+    "H008": {
+      "verdict": "PASS",
+      "reason": "以前のpODMRの粗い測定刻みに伴って、マイクロ波と実際の共鳴周波数のずれが残っている可能性を述べている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T18:38:05.137Z"
+    },
+    "H009": {
+      "verdict": "PASS",
+      "reason": "原因候補として、共鳴中心の約0.5～0.6 MHzのずれを挙げている。以前のweak-π pODMRの測定刻みが1 MHzだったこととも関連づけている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T18:39:16.229Z"
+    },
+    "H010": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:19:33.684Z"
+    },
+    "H011": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:19:45.466Z"
+    },
+    "H012": {
+      "verdict": "PASS",
+      "reason": "weak-pODMRで採用した共鳴中心に由来する離調のずれを指摘している。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T18:45:08.519Z"
+    },
+    "H013": {
+      "verdict": "PASS",
+      "reason": "共鳴周波数や周波数較正の小さなずれが残っている可能性を考えている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T19:26:50.435Z"
+    },
+    "H014": {
+      "verdict": "PASS",
+      "reason": "以前のpODMRの測定刻みが1 MHzだったことから、共鳴中心のずれやドリフトが残っている可能性を考えている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T19:27:46.698Z"
+    },
+    "H015": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:20:08.558Z"
+    },
+    "H016": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:20:14.654Z"
+    },
+    "H017": {
+      "verdict": "PASS",
+      "reason": "マイクロ波周波数と実際の共鳴周波数のずれによる可能性を言及してる。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T19:33:08.639Z"
+    },
+    "H018": {
+      "verdict": "PASS",
+      "reason": "マイクロ波周波数と共鳴周波数のずれで説明できる可能性を考えている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T19:34:16.576Z"
+    },
+    "H019": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:20:32.001Z"
+    },
+    "H020": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:20:39.074Z"
+    },
+    "H021": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:20:45.573Z"
+    },
+    "H022": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": true,
+      "updated_at": "2026-10-21T21:20:55.886Z"
+    },
+    "H023": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:21:16.372Z"
+    },
+    "H024": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:21:23.559Z"
+    },
+    "H025": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:21:31.558Z"
+    },
+    "H026": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:21:37.733Z"
+    },
+    "H027": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:21:44.823Z"
+    },
+    "H028": {
+      "verdict": "PASS",
+      "reason": "pODMRで決めた共鳴中心の不確かさによるずれと解釈している。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T19:50:36.629Z"
+    },
+    "H029": {
+      "verdict": "PASS",
+      "reason": "マイクロ波周波数の残留オフセットについて言及している。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T19:51:55.568Z"
+    },
+    "H030": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:22:00.638Z"
+    },
+    "H031": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数がずれている可能性に言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T19:54:13.185Z"
+    },
+    "H032": {
+      "verdict": "PASS",
+      "reason": "マイクロ波周波数と共鳴周波数の残留ずれが加わっている可能性を考えている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T19:54:36.454Z"
+    },
+    "H033": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:22:17.357Z"
+    },
+    "H034": {
+      "verdict": "PASS",
+      "reason": "共鳴からの離調を可能性として挙げている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:00:33.980Z"
+    },
+    "H035": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:22:32.060Z"
+    },
+    "H036": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:22:37.605Z"
+    },
+    "H037": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:22:43.294Z"
+    },
+    "H038": {
+      "verdict": "PASS",
+      "reason": "共鳴中心の残留ずれを可能性として挙げている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:04:49.168Z"
+    },
+    "H039": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:22:52.995Z"
+    },
+    "H040": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:22:58.014Z"
+    },
+    "H041": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:23:03.700Z"
+    },
+    "H042": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:23:09.370Z"
+    },
+    "H043": {
+      "verdict": "FAIL",
+      "reason": "離調の不一致を共鳴中心のずれとつなげていない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:14:12.747Z"
+    },
+    "H044": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:24:20.888Z"
+    },
+    "H045": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:24:29.717Z"
+    },
+    "H046": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数にズレがある可能性に言及がない。",
+      "evidence": "",
+      "flagged": true,
+      "updated_at": "2026-10-21T20:19:08.899Z"
+    },
+    "H047": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:24:43.434Z"
+    },
+    "H048": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:24:49.183Z"
+    },
+    "H049": {
+      "verdict": "PASS",
+      "reason": "粗いweak-π pODMR較正の不確かさに伴う共鳴中心のずれで説明できる可能性に言及している。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:21:16.475Z"
+    },
+    "H050": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:22:29.708Z"
+    },
+    "H051": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:26:29.944Z"
+    },
+    "H052": {
+      "verdict": "PASS",
+      "reason": "weak-π pODMRで決めた共鳴中心とのずれによる残留離調を挙げている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:27:20.230Z"
+    },
+    "H053": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:27:49.763Z"
+    },
+    "H054": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:31:46.807Z"
+    },
+    "H055": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:32:15.669Z"
+    },
+    "H056": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:32:35.748Z"
+    },
+    "H057": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:34:14.401Z"
+    },
+    "H058": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:34:39.169Z"
+    },
+    "H059": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:38:12.954Z"
+    },
+    "H060": {
+      "verdict": "PASS",
+      "reason": "pODMRの共鳴中心の不確かさで説明できる可能性を挙げている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:38:27.206Z"
+    },
+    "H061": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:39:55.065Z"
+    },
+    "H062": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:40:18.861Z"
+    },
+    "H063": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": true,
+      "updated_at": "2026-10-21T20:42:54.340Z"
+    },
+    "H064": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:43:52.872Z"
+    },
+    "H065": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:44:40.777Z"
+    },
+    "H066": {
+      "verdict": "PASS",
+      "reason": "残留する周波数誤差に言及してる。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:47:02.222Z"
+    },
+    "H067": {
+      "verdict": "PASS",
+      "reason": "残留する共鳴周波数のずれに言及してる。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:47:24.062Z"
+    },
+    "H068": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:48:03.911Z"
+    },
+    "H069": {
+      "verdict": "PASS",
+      "reason": "実際の共鳴とマイクロ波周波数のずれに言及している。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:49:08.876Z"
+    },
+    "H070": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:50:27.839Z"
+    },
+    "H071": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:50:48.262Z"
+    },
+    "H072": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:51:35.669Z"
+    },
+    "H073": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:52:27.622Z"
+    },
+    "H074": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:52:50.357Z"
+    },
+    "H075": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:53:09.965Z"
+    },
+    "H076": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:55:30.963Z"
+    },
+    "H077": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:55:44.746Z"
+    },
+    "H078": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:56:56.145Z"
+    },
+    "H079": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:57:15.026Z"
+    },
+    "H080": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:58:01.293Z"
+    },
+    "H081": {
+      "verdict": "PASS",
+      "reason": "共鳴周波数のドリフトや離調に言及している。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:58:37.350Z"
+    },
+    "H082": {
+      "verdict": "PASS",
+      "reason": "共鳴周波数や較正のドリフトの可能性を挙げている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T20:59:36.074Z"
+    },
+    "H083": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:00:58.768Z"
+    },
+    "H084": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:01:48.028Z"
+    },
+    "H085": {
+      "verdict": "PASS",
+      "reason": "数百kHz程度の共鳴中心の設定誤差に、ドリフトや参照信号の変動が重なっている可能性を挙げている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:02:17.966Z"
+    },
+    "H086": {
+      "verdict": "PASS",
+      "reason": "マイクロ波周波数が実際の共鳴から約0.5 MHzずれている可能性を挙げている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:02:43.231Z"
+    },
+    "H087": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:03:58.323Z"
+    },
+    "H088": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:04:53.716Z"
+    },
+    "H089": {
+      "verdict": "PASS",
+      "reason": "現在のマイクロ波周波数が実際の共鳴中心から数百kHzずれている可能性が高く、ドリフトや蛍光強度の低下も信号を不明瞭にしていると解釈している。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:05:20.340Z"
+    },
+    "H090": {
+      "verdict": "PASS",
+      "reason": "設定した1.5 MHzとの差約0.54 MHzについて、粗いweak-π pODMRで決めた共鳴中心に残る誤差で説明できる可能性を挙げている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:06:50.186Z"
+    },
+    "H091": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:07:17.996Z"
+    },
+    "H092": {
+      "verdict": "PASS",
+      "reason": "実際の共鳴周波数がweak-π pODMRで決めた値から約0.5 MHzずれていたという解釈が最も妥当だとしている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:07:46.659Z"
+    },
+    "H093": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:08:03.106Z"
+    },
+    "H094": {
+      "verdict": "PASS",
+      "reason": "1 MHz刻みで決めた共鳴中心に対する残留離調や、共鳴周波数のドリフトが原因の可能性を挙げている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:09:09.855Z"
+    },
+    "H095": {
+      "verdict": "FAIL",
+      "reason": "pODMRで決めた共鳴中心が間違っているとは判断できないとしている。",
+      "evidence": "",
+      "flagged": true,
+      "updated_at": "2026-10-21T21:14:24.480Z"
+    },
+    "H096": {
+      "verdict": "PASS",
+      "reason": "マイクロ波と共鳴の残留ずれで説明できる可能性があるとしている。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:15:07.813Z"
+    },
+    "H097": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:15:55.903Z"
+    },
+    "H098": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:16:24.325Z"
+    },
+    "H099": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:16:51.012Z"
+    },
+    "H100": {
+      "verdict": "FAIL",
+      "reason": "マイクロ波周波数のずれに言及がない。",
+      "evidence": "",
+      "flagged": false,
+      "updated_at": "2026-10-21T21:25:32.746Z"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "source_judgments": 1200,
+  "raw_pass_count": 269,
+  "summary_cells": 60,
+  "replicates_per_cell": 20,
+  "rendered_heatmap_labels_match_in_order": true,
+  "all_12_bar_labels_verified": true,
+  "page_size_matches_v5": true,
+  "single_page_pdf": true,
+  "source_figure_unchanged": true,
+  "source_report_unchanged": true,
+  "visual_review": "Poppler render at 300 dpi inspected; labels, axes, colors and vector schematic verified."
+}

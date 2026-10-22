@@ -1,0 +1,12 @@
+{
+  "cases": 1200,
+  "fresh_judge_calls": 1200,
+  "infrastructure_retries": 0,
+  "duplicate_case_ids": 0,
+  "distinct_sessions": 1200,
+  "tools_used": 0,
+  "source_data_and_original_labels_unchanged": true,
+  "frozen_files_verified": true,
+  "saved_judgments_equal_report": true,
+  "completed": true
+}

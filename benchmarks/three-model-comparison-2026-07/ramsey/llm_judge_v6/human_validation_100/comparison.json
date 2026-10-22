@@ -1,0 +1,2128 @@
+{
+  "dataset_id": "ramsey100-d3d852a8407d1fb6",
+  "n": 100,
+  "agreement_count": 96,
+  "agreement_rate": 0.96,
+  "agreement_wilson_95ci": [
+    0.9016292856411208,
+    0.9843366960084523
+  ],
+  "cohen_kappa": 0.9008428358948933,
+  "confusion_matrix": {
+    "human_PASS_judge_PASS": 26,
+    "human_PASS_judge_FAIL": 3,
+    "human_FAIL_judge_PASS": 1,
+    "human_FAIL_judge_FAIL": 70
+  },
+  "human_reviewer": "",
+  "human_confirmed_at": "2026-10-21T21:25:54.202Z",
+  "human_export_sha256": "0dd9c6b4fb59dc604de798ed89bfbdd6f2145da2ae33b61b4053aaa0f05ec9dc",
+  "judge_report_sha256": "0c4937fba4d6fe4450d49b2fefef229a5754b20fa1b1419555ea0107cd8b647f",
+  "scores_are_pre_adjudication": true,
+  "cases": [
+    {
+      "review_id": "H001",
+      "source_case_id": "case1016",
+      "human_verdict": "FAIL",
+      "judge_verdict": "PASS",
+      "agreement": false,
+      "human_reason": "残留離調キャリブレーションのエラーに結び付けてない。",
+      "human_evidence": "",
+      "human_flagged": true,
+      "judge_reason": "The note connects the unexpected Ramsey frequency to a possible shifted resonance basis and explicitly proposes checking an inferred center offset with weak-pi pODMR. This establishes the required calibration connection, rather than merely recommending fresh measurements.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A plausible physical interpretation is that the resonance/phase basis shifted by roughly several hundred kHz during the run, or that the Ramsey phase-ramp behavior plus residual detuning did not produce the expected carrier."
+        },
+        {
+          "source": "project_note",
+          "quote": "TrackCenter/count check plus a fine weak-pi pODMR around the current `3.876 GHz` basis, wide enough to catch an inferred `~0.5 MHz` center shift."
+        }
+      ]
+    },
+    {
+      "review_id": "H002",
+      "source_case_id": "case0248",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波の周波数のずれを疑ってない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the Ramsey frequency discrepancy to a residual error in the calibrated resonance or microwave frequency. Recommending a weak-pi refresh without that connection is explicitly insufficient under the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "the current data is more consistent with low-SNR Ramsey structure mixed with drift/baseline variation than with a clean single-frequency Ramsey decay."
+        },
+        {
+          "source": "project_note",
+          "quote": "Most direct next step: refresh the weak-pi resonance on `r03`, then rerun Ramsey with the same or slightly higher total shots but a grid chosen to better test the programmed carrier:"
+        }
+      ]
+    },
+    {
+      "review_id": "H003",
+      "source_case_id": "case0535",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "現在の離調設定が実際の共鳴と合っていない可能性を考慮してる。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note attributes the observed-versus-programmed frequency discrepancy to a possible resonance/detuning mismatch and connects it to the weak-pi pODMR center used to set detuning. Together, these express a suspected residual error in the calibrated frequency basis, rather than merely recommending refreshed pODMR.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "the current detuning is probably not well matched to the actual instantaneous resonance"
+        },
+        {
+          "source": "project_note",
+          "quote": "Reacquire weak-pi pODMR on r03 immediately before the next Ramsey, then repeat Ramsey with the same `0..6 us` span but set detuning from the refreshed center so the intended carrier is deliberately near `~1.0 MHz` rather than `1.5 MHz`."
+        }
+      ]
+    },
+    {
+      "review_id": "H004",
+      "source_case_id": "case0577",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": true,
+      "judge_reason": "The response identifies an offset frequency and recommends recalibration, but never connects the offset to an error in the calibrated resonance or microwave center. Effective detuning and a recalibration recommendation alone do not satisfy the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A cautious physical reading is that r03 may have a weak, short-lived Ramsey response with effective detuning near `1.0..1.2 MHz`, but the current evidence does not isolate whether this is true Ramsey precession, residual baseline/count drift, imperfect reference correction, pulse/sequence artifact, or noise-shaped structure."
+        },
+        {
+          "source": "project_note",
+          "quote": "recalibrate the microwave resonance with weak-pi pODMR after the final-count drop, then run a phase-controlled/detuning-shift Ramsey pair designed to test whether the `~1.2 MHz` feature follows programmed detuning"
+        }
+      ]
+    },
+    {
+      "review_id": "H005",
+      "source_case_id": "case0315",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数に言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The texts identify a frequency mismatch and recommend rechecking the resonance, but never connect the mismatch to a residual error in the calibrated resonance or microwave frequency basis. Re-centering alone does not meet the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Using all 31 points, the strongest FFT / single-tone component is near `0.96 MHz`, not at the programmed `1.5 MHz`."
+        },
+        {
+          "source": "project_note",
+          "quote": "Re-check the resonance on `r03` with a tighter weak-pi pODMR around the current `3.876 GHz` grid minimum, then repeat Ramsey with higher robustness rather than relying on this scout fit."
+        }
+      ]
+    },
+    {
+      "review_id": "H006",
+      "source_case_id": "case0477",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数に言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the apparent Ramsey frequency offset to resonance-center or microwave-frequency calibration. Discussing an alternative frequency and recommending a detuning control do not meet the calibration-residual criterion.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "prior exploratory `1.178 MHz`: `0.0362`, larger than the programmed carrier"
+        },
+        {
+          "source": "project_note",
+          "quote": "Best next discriminating step: run a matched short-window Ramsey control on the same NV with the same tau grid and shot budget but `det = 0` (or an equal-magnitude opposite-sign det if the route supports it)."
+        }
+      ]
+    },
+    {
+      "review_id": "H007",
+      "source_case_id": "case0243",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "マイクロ波の周波数設定と実際の共鳴中心のずれによる可能性を考慮してる。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The project note explicitly connects the Ramsey frequency offset to residual microwave/resonance-center mismatch and prior center-calibration uncertainty.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The 0.54 MHz difference from the programmed 1.5 MHz carrier is plausibly residual MW/resonance-center mismatch (sign depends on the sequence convention) and is comparable to the prior grid-center uncertainty, rather than evidence for 13C by itself."
+        }
+      ]
+    },
+    {
+      "review_id": "H008",
+      "source_case_id": "case0324",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "以前のpODMRの粗い測定刻みに伴って、マイクロ波と実際の共鳴周波数のずれが残っている可能性を述べている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly suspects a residual Ramsey detuning offset caused by uncertainty in the pODMR-calibrated resonance center. Its qualification that this explanation is unproven does not negate the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Its roughly `0.54 MHz` displacement from the programmed `1.5 MHz` could reflect residual microwave-to-transition detuning at the edge of the prior 1 MHz pODMR grid uncertainty, but that origin is not established by this dataset."
+        },
+        {
+          "source": "project_note",
+          "quote": "Fresh-track r03, then run a finer weak-pi pODMR calibration around `3.876 GHz` to test the inferred `~0.54 MHz` residual offset."
+        }
+      ]
+    },
+    {
+      "review_id": "H009",
+      "source_case_id": "case0356",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "原因候補として、共鳴中心の約0.5～0.6 MHzのずれを挙げている。以前のweak-π pODMRの測定刻みが1 MHzだったこととも関連づけている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly connects the Ramsey frequency mismatch to a possible resonance-center error associated with the coarse weak-pi pODMR calibration, satisfying the calibration-source requirement.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A plausible explanation is an effective Ramsey detuning or resonance-center mismatch of roughly `0.5..0.6 MHz`, which is within the coarse `1 MHz` weak-pi pODMR grid scale and comparable to the pre-run center-uncertainty guard."
+        }
+      ]
+    },
+    {
+      "review_id": "H010",
+      "source_case_id": "case0123",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects a residual Ramsey detuning offset caused by resonance-center or microwave-frequency calibration error. Listing the calibrated center and recommending detuning tracking do not establish the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The most conservative interpretation is readout/reference structure plus average-dependent noise/drift, with a possible weak Ramsey contribution not yet separated from those effects."
+        },
+        {
+          "source": "project_note",
+          "quote": "Require a common oscillation whose fitted frequency shifts one-for-one with programmed detuning and is stable under leave-one-average-out review before measuring T2* or interpreting 13C sidebands."
+        }
+      ]
+    },
+    {
+      "review_id": "H011",
+      "source_case_id": "case0033",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects that the Ramsey frequency offset arises from resonance-center or microwave-frequency calibration error. Mentioning an uncertain resonance center and recommending a detuning-shift check does not establish the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The most economical spectral interpretation is a Ramsey midpoint near 1.89 MHz with two approximately equal sidebands near 1.50 and 2.27 MHz."
+        },
+        {
+          "source": "project_note",
+          "quote": "Treating the fitted 1.89 MHz midpoint as a direct, sign-resolved ESR detuning or claiming a more precise microwave resonance center."
+        },
+        {
+          "source": "project_note",
+          "quote": "Run one controlled, non-blind det-shift validation at the same refreshed microwave center, preferably with phase cycling: change `det` from 1.5 to 1.1 MHz while retaining the 8 us span and adequate shots."
+        }
+      ]
+    },
+    {
+      "review_id": "H012",
+      "source_case_id": "case0523",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "weak-pODMRで採用した共鳴中心に由来する離調のずれを指摘している。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly suspects that the observed-versus-programmed Ramsey frequency mismatch could originate from the weak-pODMR resonance center, establishing the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The strongest fitted/FFT component is near `0.95-0.97 MHz`, not at the programmed `1.5 MHz` detuning. This could reflect a real detuning mismatch from the weak-pODMR grid center, scan drift, or an artifact of low-SNR/per-average variation."
+        }
+      ]
+    },
+    {
+      "review_id": "H013",
+      "source_case_id": "case0060",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "共鳴周波数や周波数較正の小さなずれが残っている可能性を考えている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The project note explicitly suspects that the observed Ramsey detuning includes an offset from resonance/frequency calibration, satisfying the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Its agreement with the prior 8 us run's exploratory ~1.178 MHz feature suggests a repeatable effective detuning (possibly a small offset from the nominal resonance/frequency calibration) rather than the programmed detuning being reproduced exactly."
+        }
+      ]
+    },
+    {
+      "review_id": "H014",
+      "source_case_id": "case0962",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "以前のpODMRの測定刻みが1 MHzだったことから、共鳴中心のずれやドリフトが残っている可能性を考えている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly connects the observed-versus-programmed Ramsey frequency discrepancy to a possible residual resonance offset associated with the coarse pODMR calibration grid.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A Ramsey-like candidate is visible near 0.96 MHz, not at the programmed 1.5 MHz."
+        },
+        {
+          "source": "project_note",
+          "quote": "This consistency makes a weak decaying Ramsey response plausible; a residual resonance offset/drift is also plausible given the prior 1 MHz pODMR grid."
+        }
+      ]
+    },
+    {
+      "review_id": "H015",
+      "source_case_id": "case0804",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response recognizes an effective frequency offset and recommends a detuning-shift test, but never connects that offset to a resonance-center or microwave-frequency calibration error. An effective detuning without that calibration connection explicitly fails the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The empirical component near 1.19 MHz could be a Ramsey carrier with an effective frequency offset from the programmed 1.0 MHz, or unresolved beating/multiple components."
+        },
+        {
+          "source": "project_note",
+          "quote": "It differs from the programmed 1.0 MHz and needs a controlled detuning-shift test."
+        }
+      ]
+    },
+    {
+      "review_id": "H016",
+      "source_case_id": "case0177",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the apparent Ramsey frequency offset to resonance-center or microwave-frequency calibration error. Reporting a peak near 1.178 MHz, questioning carrier precision, and retaining the same microwave center do not establish the required calibration-residual suspicion.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "the ratio least-squares screen is broad and peaks near `1.178 MHz`."
+        },
+        {
+          "source": "project_note",
+          "quote": "same accepted NV and microwave center"
+        },
+        {
+          "source": "final_response",
+          "quote": "precise carrier frequency from this run alone"
+        }
+      ]
+    },
+    {
+      "review_id": "H017",
+      "source_case_id": "case0154",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数と実際の共鳴周波数のずれによる可能性を言及してる。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note connects the suspected residual offset to the microwave frequency and an inferred shifted transition center, establishing a calibrated frequency-basis discrepancy rather than merely proposing effective detuning.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "`mw_freq=3.8759 GHz`, programmed `det=1.0 MHz`"
+        },
+        {
+          "source": "project_note",
+          "quote": "If physical, its +0.17 MHz displacement from the programmed 1.0 MHz phase ramp is plausibly residual microwave-to-transition detuning; this would place the transition near 3.87573 GHz under the usual sign convention, but the sign/convention and center must be tested experimentally."
+        }
+      ]
+    },
+    {
+      "review_id": "H018",
+      "source_case_id": "case0824",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数と共鳴周波数のずれで説明できる可能性を考えている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly suspects a microwave/resonance frequency offset as the source of the excess over nominal Ramsey detuning, satisfying the calibration-basis connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A modest microwave/resonance offset could explain why it is about 0.19 MHz above the nominal detuning, but that mechanism has not yet been tested by changing detuning."
+        },
+        {
+          "source": "project_note",
+          "quote": "If it does, use the inferred resonance offset to design a longer, adequately sampled Ramsey window for T2*"
+        }
+      ]
+    },
+    {
+      "review_id": "H019",
+      "source_case_id": "case0914",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects that nominal Ramsey detuning includes an offset from resonance-center or microwave-frequency calibration. They discuss baseline ambiguity, unsupported fits, and diagnostic measurements without the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "low-frequency/broad-envelope structure dominates and the expected carrier/sidebands are not isolated well enough for physical extraction."
+        },
+        {
+          "source": "project_note",
+          "quote": "a targeted frequency/phase diagnostic that can separate true Ramsey phase evolution from broad baseline structure."
+        }
+      ]
+    },
+    {
+      "review_id": "H020",
+      "source_case_id": "case1117",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response and note discuss frequency differences and detuning tracking, but neither connects a possible residual offset to resonance-center or microwave-frequency calibration. Detuning tracking alone does not satisfy the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The new run shows its strongest combined ratio-screen component near `1.621 MHz`, close to the det-tracking expectation `~1.692 MHz` and closer to that expectation than to `1.192 MHz`."
+        },
+        {
+          "source": "final_response",
+          "quote": "no strong claim that the Ramsey carrier is cleanly identified exactly at the programmed detuning."
+        }
+      ]
+    },
+    {
+      "review_id": "H021",
+      "source_case_id": "case0803",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects a possible Ramsey frequency offset to resonance-center or microwave-frequency calibration. Listing `mw_freq` as measurement metadata and proposing a detuning control do not satisfy the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Most plausible reading: the dataset is dominated by a short-`tau` transient plus average-to-average baseline variation, with any Ramsey oscillation too weak or inconsistent to claim from this run."
+        },
+        {
+          "source": "final_response",
+          "quote": "Use a `det = 0 MHz` control to test whether the early-time step survives without an imposed phase ramp"
+        }
+      ]
+    },
+    {
+      "review_id": "H022",
+      "source_case_id": "case1122",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": true,
+      "judge_reason": "The response identifies a frequency mismatch and recommends refreshing the pODMR center, but never attributes the mismatch to a possible resonance-center or microwave-frequency calibration residual. The scoring guide explicitly excludes merely refreshing the center without that connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "free decaying-cosine fits prefer `~0.95-0.96 MHz` rather than `1.5 MHz`"
+        },
+        {
+          "source": "final_response",
+          "quote": "Recommended next action: refresh weak-pi pODMR on `r03`, then rerun a bounded Ramsey scout designed to check whether the carrier becomes consistent with the intended detuning and whether the per-average peak structure becomes reproducible."
+        }
+      ]
+    },
+    {
+      "review_id": "H023",
+      "source_case_id": "case0745",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the Ramsey frequency discrepancy to residual error in the calibrated resonance or microwave frequency. Listing mw_freq and discussing detuning tracking, noise, or artifacts does not satisfy the calibration connection requirement.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "this new run does not show convincing evidence that the dominant spectral content follows the programmed detuning from the earlier `~0.884 MHz` scout feature to the new `1.0 MHz` setting."
+        },
+        {
+          "source": "final_response",
+          "quote": "redesign the next measurement as a targeted diagnostic for artifact vs real oscillatory signal"
+        }
+      ]
+    },
+    {
+      "review_id": "H024",
+      "source_case_id": "case0554",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note identifies an effective detuning offset but never connects it to an error in the calibrated resonance or microwave frequency. Withholding a calibrated-carrier label and recommending a detuning-shift test do not establish the required calibration-source connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "plausibly indicating an effective detuning about 0.18–0.20 MHz above the programmed value (or another reproducible protocol/systematic offset)."
+        },
+        {
+          "source": "project_note",
+          "quote": "The ~1.19 MHz component should not yet be labeled a calibrated Ramsey carrier or 13C feature"
+        }
+      ]
+    },
+    {
+      "review_id": "H025",
+      "source_case_id": "case0665",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects a Ramsey frequency offset to an error in the calibrated resonance or microwave center. A generic calibration artifact, a weak-pi resonance recheck, and a detuning-tracking diagnostic do not establish the required residual calibration-offset interpretation.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The most plausible current interpretation is non-claim-grade Ramsey contrast dominated by drift/common-mode variation, early-time transient structure, or a sequence/phase/calibration artifact."
+        },
+        {
+          "source": "project_note",
+          "quote": "First do a targeted Ramsey route/phase diagnostic on r03: re-check the weak-pi resonance if needed, then run a short det-control Ramsey comparison or alternate validated Ramsey/echo route to verify that the observed oscillation tracks the programmed detuning."
+        }
+      ]
+    },
+    {
+      "review_id": "H026",
+      "source_case_id": "case0664",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects a Ramsey frequency offset to an error in the calibrated resonance or microwave frequency. An unidentified component, detuning-shift control, and fresh pODMR check alone do not satisfy the calibration-residual criterion.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "It also contains a coherent but unidentified ~2.26–2.27 MHz component."
+        },
+        {
+          "source": "project_note",
+          "quote": "bracket it with a fresh pODMR center check, use a deliberately shifted detuning (preferably 1.0 MHz)"
+        }
+      ]
+    },
+    {
+      "review_id": "H027",
+      "source_case_id": "case0889",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects a possible Ramsey frequency offset to resonance-center or microwave-frequency calibration error. Discussing predicted detuning tracking and protocol artifacts does not satisfy the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The amplitudes at the programmed `1.500 MHz` and predicted det-tracking `1.692 MHz` positions are comparable but still modest:"
+        },
+        {
+          "source": "final_response",
+          "quote": "Next action: stop blind Ramsey repeats under the current sequence and move to an alternate or redesigned protocol that can separate tau-dependent baseline artifacts from real Ramsey phase evolution."
+        }
+      ]
+    },
+    {
+      "review_id": "H028",
+      "source_case_id": "case0898",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "pODMRで決めた共鳴中心の不確かさによるずれと解釈している。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The project note explicitly connects the Ramsey carrier’s offset from programmed detuning to uncertainty in the calibrated pODMR resonance center.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The most economical physical interpretation is a Ramsey carrier near 1.89 MHz, offset by about +0.39 MHz in magnitude from the programmed 1.5 MHz because the pODMR center was only known to several hundred kHz, with side components at approximately carrier +/- 0.385 MHz."
+        }
+      ]
+    },
+    {
+      "review_id": "H029",
+      "source_case_id": "case0125",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数の残留オフセットについて言及している。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly links the approximately 0.18 MHz carrier discrepancy to a possible residual microwave-frequency offset or calibration issue, satisfying the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "It is more coherent across stored-average bootstraps than the planned frequencies, but it was found exploratorily and is offset from the programmed carrier by about `0.18 MHz`. A residual microwave-frequency offset, sequence phase convention/calibration issue, or analysis/noise artifact remain plausible."
+        }
+      ]
+    },
+    {
+      "review_id": "H030",
+      "source_case_id": "case1182",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note identifies a residual detuning mismatch and recommends a resonance check, but never connects the mismatch to an error in the calibrated resonance center or microwave frequency. These statements do not meet the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "likely indicating that the effective residual detuning differs from the requested 1.5 MHz."
+        },
+        {
+          "source": "project_note",
+          "quote": "Repeat a targeted Ramsey acquisition on r03 after fresh tracking and a quick resonance check, using shorter per-average blocks/more averages to reduce drift exposure."
+        }
+      ]
+    },
+    {
+      "review_id": "H031",
+      "source_case_id": "case0084",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数がずれている可能性に言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the apparent Ramsey frequency offset to an error in the calibrated resonance center or microwave frequency basis. They discuss limited resolution, drift, and further measurements, which do not satisfy the calibration-residual requirement.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "No supported exact Ramsey frequency assignment. The target-band maximum near `1.205 MHz`, the exact `1.0 MHz` component, and the sideband-target components are too correlated over this short window."
+        },
+        {
+          "source": "final_response",
+          "quote": "keeping `mw_freq = 3.8759 GHz` and `det = 1.0 MHz`"
+        }
+      ]
+    },
+    {
+      "review_id": "H032",
+      "source_case_id": "case0905",
+      "human_verdict": "PASS",
+      "judge_verdict": "FAIL",
+      "agreement": false,
+      "human_reason": "マイクロ波周波数と共鳴周波数の残留ずれが加わっている可能性を考えている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note recognizes residual detuning but never connects it to an error in resonance-center or microwave-frequency calibration. Merely reporting mw_freq and residual drive/transition detuning does not meet the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The most economical physical reading is an effective Ramsey carrier near `1.19–1.20 MHz`, plausibly the programmed phase detuning plus residual drive/transition detuning."
+        },
+        {
+          "source": "project_note",
+          "quote": "The exact origin/sign of the approximately `0.19 MHz` offset from programmed det, and whether one frequency adequately describes all residual structure, remain unresolved."
+        }
+      ]
+    },
+    {
+      "review_id": "H033",
+      "source_case_id": "case0478",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response proposes an effective detuning offset but never clearly attributes it to resonance-center or microwave-frequency calibration error. Mentioning a resonance offset only as an unsupported inference does not establish the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A Ramsey oscillation with an approximately +0.19 MHz effective detuning offset is plausible; unresolved multi-frequency beating is also plausible."
+        },
+        {
+          "source": "project_note",
+          "quote": "Do not yet call the 1.187 MHz component a physical Ramsey carrier or infer a 0.187 MHz resonance offset; detuning-following behavior has not been demonstrated at comparable SNR."
+        }
+      ]
+    },
+    {
+      "review_id": "H034",
+      "source_case_id": "case0308",
+      "human_verdict": "PASS",
+      "judge_verdict": "FAIL",
+      "agreement": false,
+      "human_reason": "共鳴からの離調を可能性として挙げている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note mentions resonance detuning and recommends recentering, but does not clearly identify a residual error in the calibrated resonance or microwave center as contributing to nominal Ramsey detuning. The guide explicitly excludes recentering recommendations without that connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "No supported claim that the actual Ramsey oscillation frequency is `0.94 MHz`; this may reflect drift/noise/reference artifacts or resonance detuning, and the stored averages do not lock to one frequency."
+        },
+        {
+          "source": "project_note",
+          "quote": "First re-check/recenter r03 with a narrow weak-pi pODMR around the current `3.876 GHz` resonance, because the Ramsey carrier was inconsistent with the programmed detuning and the final counts dropped by `12.1%`."
+        }
+      ]
+    },
+    {
+      "review_id": "H035",
+      "source_case_id": "case0193",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response and note mention the refreshed calibration center but never suspect that a resonance-center or microwave-frequency calibration error contributes residual Ramsey detuning. They instead emphasize sampling-edge competition and ambiguous frequency assignment, which do not satisfy the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "`evidence/e001.json`: terminal weak-pi pODMR refresh review selecting `mw_freq = 3.8765 GHz`."
+        },
+        {
+          "source": "project_note",
+          "quote": "This component sits close to the `2.5 MHz` Nyquist edge, so it is not yet safe to call it physical."
+        },
+        {
+          "source": "final_response",
+          "quote": "keep `mw_freq = 3.8765 GHz` and `det = 1.5 MHz`, but reduce the tau step to raise Nyquist"
+        }
+      ]
+    },
+    {
+      "review_id": "H036",
+      "source_case_id": "case1103",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the Ramsey frequency discrepancy to a residual error in the calibrated resonance center or microwave frequency. Mixed-frequency interpretations and a proposed detuning sweep do not satisfy the calibration-connection requirement.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A more plausible reading is mixed content: a repeatable low-frequency feature near `0.88 MHz` remains strong at `det = 1.5 MHz`, while a weaker but coherent det-responsive component appears near `1.5..1.7 MHz`."
+        },
+        {
+          "source": "final_response",
+          "quote": "That suggests mixed content rather than a simple det-tracking carrier shift."
+        }
+      ]
+    },
+    {
+      "review_id": "H037",
+      "source_case_id": "case0333",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response discusses detuning tracking and names a calibrated microwave center, but never suspects that a resonance-center or microwave calibration error contributes a residual offset to the nominal Ramsey detuning. These separate mentions do not establish the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The prior ratio-screen maximum was 1.192 MHz; the new maximum is 1.623 MHz, an observed shift of +0.431 MHz versus +0.500 MHz predicted."
+        },
+        {
+          "source": "project_note",
+          "quote": "Then acquire r03 at the calibrated 3.8759 GHz center with det about 1.5 MHz"
+        }
+      ]
+    },
+    {
+      "review_id": "H038",
+      "source_case_id": "case0212",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "共鳴中心の残留ずれを可能性として挙げている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly connects the observed Ramsey frequency offset to a possible residual resonance offset or calibration shift, satisfying the calibration-source requirement.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The observed carrier is 0.54-0.56 MHz below the programmed 1.5 MHz phase ramp. Residual resonance offset or short-term calibration shift is plausible, but Ramsey magnitude alone does not determine the correction sign."
+        }
+      ]
+    },
+    {
+      "review_id": "H039",
+      "source_case_id": "case1068",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response and note discuss detuning tracking and measurement limitations, but neither connects the Ramsey frequency offset to an error in the calibrated resonance center, microwave frequency, or equivalent frequency calibration basis.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "This suggests detuning tracking, but the 0.521 MHz nominal resolution and inconsistent per-average frequencies prevent a claim-grade interpretation."
+        },
+        {
+          "source": "project_note",
+          "quote": "The most defensible conclusion is suggestive detuning tracking with inadequate frequency/model stability for physical parameter extraction."
+        }
+      ]
+    },
+    {
+      "review_id": "H040",
+      "source_case_id": "case0826",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the apparent frequency offset to resonance-center or microwave-frequency calibration. Competing fits, baseline/drift concerns, and a detuning-scan recommendation alone do not satisfy the calibration-residual criterion.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "Free fits near `1.22..1.25 MHz` and curved baselines explain the data at least as well as an exact-`1.000 MHz` carrier."
+        },
+        {
+          "source": "project_note",
+          "quote": "A claim that the best-fit free frequency near `1.22..1.25 MHz` is physical rather than baseline/drift/analysis competition."
+        },
+        {
+          "source": "project_note",
+          "quote": "deliberately vary `det` across a small set around the observed structure (for example near `0.8`, `1.0`, `1.2`, and `1.4 MHz`) and ask whether the dominant oscillation follows the programmed det."
+        }
+      ]
+    },
+    {
+      "review_id": "H041",
+      "source_case_id": "case0197",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response and note discuss measured frequencies and detuning tracking, but neither connects the apparent frequency offset to an error in the calibrated resonance center, microwave frequency, or equivalent calibration basis.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The combined ratio LS maximum moved from `1.192 MHz` at programmed `det = 1.0 MHz` to `1.624 MHz` at `det = 1.5 MHz`: an observed `+0.432 MHz` shift versus the predicted `+0.500 MHz`."
+        },
+        {
+          "source": "final_response",
+          "quote": "The completed run plausibly contains a det-responsive differential component"
+        }
+      ]
+    },
+    {
+      "review_id": "H042",
+      "source_case_id": "case0525",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response identifies a frequency mismatch and recommends comparison with fine pODMR, but neither text connects that mismatch to a residual error in the calibrated resonance or microwave frequency center. Mentioning pODMR alone does not meet the criterion.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The det-shift diagnostic does not cleanly validate the expected programmed `1.0 MHz` carrier. The combined spectrum moved away from the prior scout's `~0.884 MHz` feature, but it peaks around `1.1..1.2 MHz` and the per-average spectra do not agree."
+        },
+        {
+          "source": "final_response",
+          "quote": "First compare this det-shift result against the first Ramsey scout and fine pODMR, then choose a diagnostic to separate phase-ramp/readout artifacts from true dephasing"
+        }
+      ]
+    },
+    {
+      "review_id": "H043",
+      "source_case_id": "case0014",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "離調の不一致を共鳴中心のずれとつなげていない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response identifies detuning mismatch and recommends checking the microwave center, but never clearly attributes the observed Ramsey frequency offset to an error in the calibrated resonance or microwave frequency. Refreshing the center alone does not satisfy the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "this first Ramsey was affected by detuning mismatch and/or drift/noise"
+        },
+        {
+          "source": "project_note",
+          "quote": "run a fresh track and a narrow weak-pi pODMR/frequency check around the r03 resonance to verify the microwave center after the observed count drop."
+        },
+        {
+          "source": "final_response",
+          "quote": "Use the refreshed resonance to choose detuning"
+        }
+      ]
+    },
+    {
+      "review_id": "H044",
+      "source_case_id": "case0439",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response recommends a detuning-shift check and conditionally rechecking calibration, but never connects an apparent Ramsey frequency offset to an error in the calibrated resonance or microwave center. It does not suspect a calibration-derived residual in the nominal detuning.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The second Ramsey is analyzable and shows weak spectral weight close to the programmed `1.0 MHz` detuning."
+        },
+        {
+          "source": "project_note",
+          "quote": "if not, pause Ramsey repeats and re-check frequency calibration/readout normalization before making T2star or 13C claims."
+        }
+      ]
+    },
+    {
+      "review_id": "H045",
+      "source_case_id": "case0291",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the Ramsey frequency mismatch to a residual error in the calibrated resonance or microwave frequency. Listing `mw_freq` and prior pODMR evidence does not establish that connection; drift explanations and detuning-route checks alone do not pass.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Average-to-average common-mode level changes are large (`~30%` span in both reference and signal mean levels), so much of the raw variation is plausibly drift / tracking / baseline change rather than a stable Ramsey oscillation."
+        },
+        {
+          "source": "final_response",
+          "quote": "Run a targeted control/route diagnostic to verify that the Ramsey phase-ramp / detuning path produces a carrier that follows the programmed `det` on a known-good case"
+        }
+      ]
+    },
+    {
+      "review_id": "H046",
+      "source_case_id": "case0736",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数にズレがある可能性に言及がない。",
+      "human_evidence": "",
+      "human_flagged": true,
+      "judge_reason": "The response and note identify an off-target frequency and discuss refreshing mw_freq, but neither suspects a residual resonance-center or microwave-calibration error contributing to the nominal Ramsey detuning. Discussing—and discounting—a stale center does not establish the required calibration-residual connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The stale-center hypothesis is therefore not supported as the main failure mode."
+        },
+        {
+          "source": "project_note",
+          "quote": "Do not assign the `~2.27 MHz` component to a physical Ramsey carrier or coupling without an independent diagnostic; it is off the planned carrier/sideband targets and not anchored by per-average consistency."
+        }
+      ]
+    },
+    {
+      "review_id": "H047",
+      "source_case_id": "case0984",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the Ramsey frequency offset to resonance-center or microwave-frequency calibration error. Discussing predicted carrier frequencies, detuning tracking, and baseline contamination does not satisfy the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The new run shows some oscillatory weight near the programmed/predicted carrier band (`1.5 .. 1.7 MHz`), which is qualitatively consistent with a possible det-following Ramsey component."
+        },
+        {
+          "source": "final_response",
+          "quote": "The programmed and predicted det-tracking carrier checks are larger (`1.500 MHz: 0.02399`, `1.692 MHz: 0.02505`) but still modest, below a stronger low-frequency term at `0.400 MHz` (`0.0534`), and not consistent across averages."
+        }
+      ]
+    },
+    {
+      "review_id": "H048",
+      "source_case_id": "case0859",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects a Ramsey frequency offset to resonance-center or microwave-frequency calibration error. Mentioning a refreshed center and frequencies near the programmed detuning does not establish the required calibration-residual interpretation.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The refreshed-center long-span Ramsey completed cleanly on `2026-05-14`"
+        },
+        {
+          "source": "project_note",
+          "quote": "carrier-band best is `1.515 MHz` on the full trace and `1.517 MHz` after skipping the first 4 tau points"
+        }
+      ]
+    },
+    {
+      "review_id": "H049",
+      "source_case_id": "case0566",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "粗いweak-π pODMR較正の不確かさに伴う共鳴中心のずれで説明できる可能性に言及している。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The project note explicitly connects the Ramsey frequency mismatch to a plausible resonance-center offset arising from weak-pi calibration uncertainty. This satisfies the calibration-residual criterion without requiring a definitive attribution.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "the fitted carrier is about 0.54 MHz away from the programmed 1.5 MHz phase ramp"
+        },
+        {
+          "source": "project_note",
+          "quote": "A resonance-center offset within/near the coarse weak-pi calibration uncertainty is plausible, but measurement/systematic structure is also plausible."
+        }
+      ]
+    },
+    {
+      "review_id": "H050",
+      "source_case_id": "case1075",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response suspects an effective detuning offset but never connects it to resonance-center or microwave-frequency calibration error. The separate caution about the fine-pODMR center does not establish that connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "there may be a real Ramsey beat with an effective detuning offset of order 0.18 MHz"
+        },
+        {
+          "source": "project_note",
+          "quote": "The mismatch between programmed detuning and observed spectral content is not yet explained."
+        },
+        {
+          "source": "project_note",
+          "quote": "The fine-pODMR center should remain a grid-supported operating point, not a sub-grid resonance claim."
+        }
+      ]
+    },
+    {
+      "review_id": "H051",
+      "source_case_id": "case0397",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response identifies a frequency offset and recommends checking the calibrated center, but never connects the offset to a possible resonance-center or microwave-frequency calibration error. The guide explicitly excludes center rechecks and detuning-shift diagnostics alone.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The Ramsey carrier is not confirmed at exactly the programmed `1.0 MHz`; the best normalized component is offset to about `1.18 MHz`."
+        },
+        {
+          "source": "final_response",
+          "quote": "First re-check the weak-pi pODMR center around `3.8759 GHz`; if stable, run a shorter det-shift Ramsey diagnostic to test whether the `~1.18 MHz` normalized component follows programmed detuning."
+        }
+      ]
+    },
+    {
+      "review_id": "H052",
+      "source_case_id": "case0029",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "weak-π pODMRで決めた共鳴中心とのずれによる残留離調を挙げている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly connects the Ramsey frequency offset to residual detuning relative to the calibrated weak-pi pODMR center, satisfying the calibration-source requirement.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The frequency being well below the programmed `1.5 MHz` carrier is plausibly consistent with resonance drift or residual detuning relative to the weak-pi pODMR grid center, rather than a clean centered Ramsey carrier."
+        }
+      ]
+    },
+    {
+      "review_id": "H053",
+      "source_case_id": "case1028",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the Ramsey frequency offset to a calibrated resonance center, microwave frequency choice, or calibration error. Detuning tracking and scan-order sensitivity are discussed, while pODMR is mentioned only as support for alignment.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The point-ratio screen moves from 1.192 MHz at det=1.0 to 1.623 MHz at det=1.5, a +0.431 MHz shift versus the predicted +0.500 MHz."
+        },
+        {
+          "source": "project_note",
+          "quote": "This is more consistent with scan-order/baseline sensitivity, unstable phase/frequency, or unresolved mixed components than with one stable Ramsey carrier, despite the absence of gross drift flags."
+        },
+        {
+          "source": "project_note",
+          "quote": "The accepted aligned-NV conclusion remains supported by the earlier pODMR context, but this Ramsey run does not independently strengthen it."
+        }
+      ]
+    },
+    {
+      "review_id": "H054",
+      "source_case_id": "case0802",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the Ramsey frequency offset to an error in the calibrated resonance or microwave frequency. Recommending a refreshed pODMR center and detuning-shift control without identifying a possible calibration-induced residual offset explicitly fails the guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The stable 2.27 MHz aggregate feature may be a weak coherent experimental/sequence feature or a structured residual assembled across noisy averages; its origin is unresolved."
+        },
+        {
+          "source": "project_note",
+          "quote": "Run a short, high-SNR phase-cycled Ramsey control (or equivalent quadrature readout) at the refreshed pODMR center, with two deliberately separated programmed detunings and identical timing."
+        }
+      ]
+    },
+    {
+      "review_id": "H055",
+      "source_case_id": "case1040",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects that a Ramsey frequency offset arises from resonance-center or microwave-frequency calibration error. Mentioning a refreshed center and improved alignment does not explicitly connect the detuning to a residual calibration offset, as required.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "the new May 14, 2026 refreshed-center Ramsey completed cleanly and is better aligned with the intended `1.5 MHz` detuning than the earlier `~1.178/1.192 MHz` branch"
+        },
+        {
+          "source": "project_note",
+          "quote": "This is consistent with the programmed `1.5 MHz` detuning and is better aligned with the intended carrier than the earlier `~1.178/1.192 MHz` branch."
+        }
+      ]
+    },
+    {
+      "review_id": "H056",
+      "source_case_id": "case1153",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects a residual Ramsey detuning offset caused by resonance-center or microwave-frequency calibration. Both focus on unstable fits and baseline structure, which do not satisfy the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "A monotonic short-timescale trend explains the data about as well as oscillatory fits, so there is still no supported `T2star` or `13C` conclusion from this Ramsey branch."
+        },
+        {
+          "source": "project_note",
+          "quote": "Different seeds collapse toward either a weak `~0.95 MHz` solution with `T ~ 0.15 us` or an effectively low-frequency/boundary solution, which is consistent with the dataset being dominated by monotonic early-time structure rather than a resolved Ramsey oscillation."
+        }
+      ]
+    },
+    {
+      "review_id": "H057",
+      "source_case_id": "case0693",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response and note identify a frequency mismatch and recommend a detuning-tracking diagnostic, but neither connects the mismatch to a residual error in the calibrated resonance or microwave frequency center. This fails the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "the dominant spectral weight does not land cleanly on the programmed `1.000 MHz` carrier."
+        },
+        {
+          "source": "project_note",
+          "quote": "Overall: this looks more like weak Ramsey modulation plus drift/windowing ambiguity than a clean claim-grade carrier/sideband dataset."
+        },
+        {
+          "source": "project_note",
+          "quote": "require the dominant spectral component to move with the programmed detuning before claiming `T2*` or `13C`"
+        }
+      ]
+    },
+    {
+      "review_id": "H058",
+      "source_case_id": "case0844",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the Ramsey frequency mismatch to an error in the calibrated resonance center or microwave frequency. They discuss weak, unstable signals and unsupported claims, which do not satisfy the calibration-residual criterion.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A descriptive decaying-cosine fit in ratio space lands near `1.20 MHz` with `T2* ~ 3.0 us`, but that result is not stable enough to trust physically: it does not lock to the programmed `1.0 MHz`, the fitted amplitude is small, and the fit remains driven by weak normalized structure rather than an obvious raw oscillation."
+        },
+        {
+          "source": "final_response",
+          "quote": "the strongest spectral structure still does not cleanly follow the programmed `1.0 MHz` carrier."
+        }
+      ]
+    },
+    {
+      "review_id": "H059",
+      "source_case_id": "case0491",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note suggests a possible detuning offset and separately recommends investigating frequency calibration, but does not clearly connect the offset from programmed detuning to an error in the calibrated resonance or microwave center. These suggestions do not establish the required calibration-residual interpretation.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A small resonance/detuning offset, multiple components, or a residual protocol/systematic contribution remain plausible explanations for the detailed waveform."
+        },
+        {
+          "source": "project_note",
+          "quote": "if it remains near 1.19 MHz, do not promote T2*/13C and investigate the frequency calibration/protocol or close this branch as unsupported."
+        }
+      ]
+    },
+    {
+      "review_id": "H060",
+      "source_case_id": "case0471",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "pODMRの共鳴中心の不確かさで説明できる可能性を挙げている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly connects the Ramsey carrier offset from the programmed detuning to uncertainty in the calibrated pODMR resonance center.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A reasonable physical reading is a carrier shifted by ~0.396 MHz from the programmed 1.5 MHz, plus a 13C-consistent doublet. The pODMR center was explicitly only known to several hundred kHz, so that carrier shift is plausible."
+        }
+      ]
+    },
+    {
+      "review_id": "H061",
+      "source_case_id": "case1186",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects that the Ramsey frequency offset results from resonance-center or microwave-frequency calibration error. Identifying an off-nominal component and recommending fresh pODMR without explicitly connecting them does not satisfy the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The detuning-shift diagnostic does not show a clean carrier locked to the programmed `1.0 MHz`."
+        },
+        {
+          "source": "project_note",
+          "quote": "The largest combined ratio component from a dense `0.2..2.2 MHz` scan appears near `1.175 MHz` with amplitude about `0.0225`, but this is not stable enough across averages to promote as a physical carrier."
+        },
+        {
+          "source": "final_response",
+          "quote": "first run a fresh weak-pi pODMR confirmation around `3.8759 GHz`"
+        }
+      ]
+    },
+    {
+      "review_id": "H062",
+      "source_case_id": "case0666",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response and note identify competing frequencies but attribute the ambiguity to the short measurement window. Neither connects the frequency offset to resonance-center or microwave-frequency calibration, as required.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "In the same short window, a linear-baseline sinusoid at `1.178 MHz` fits better than the programmed `1.0 MHz` carrier"
+        },
+        {
+          "source": "final_response",
+          "quote": "the short span does not isolate a unique carrier frequency."
+        }
+      ]
+    },
+    {
+      "review_id": "H063",
+      "source_case_id": "case0284",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": true,
+      "judge_reason": "The note recognizes an effective carrier offset but does not identify resonance-center or microwave-frequency calibration error as a plausible cause. Mentioning a calibrated detuning error only as an unsupported claim does not establish the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The 1.19 MHz value may reflect the effective Ramsey carrier under this implementation, but it should not yet be promoted to an exact resonance-frequency correction."
+        },
+        {
+          "source": "project_note",
+          "quote": "No sub-resolution claim that the physical carrier is exactly 1.192 MHz or that its ~0.19 MHz offset from the programmed 1.0 MHz phase ramp is a calibrated detuning error."
+        }
+      ]
+    },
+    {
+      "review_id": "H064",
+      "source_case_id": "case1148",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects that the Ramsey frequency offset arises from residual resonance-center or microwave-frequency calibration error. Mentioning a refreshed center and an unexpected frequency peak does not establish the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "In all three frequency screens, both full-span and skip-4 views peak near `2.27 MHz`, not at the programmed `1.5 MHz` carrier or the expected `1.115/1.885 MHz` 13C sidebands."
+        },
+        {
+          "source": "project_note",
+          "quote": "Plausible reading: the refreshed microwave center and higher shot count improved data quality, but they did not convert the Ramsey trace into a carrier-dominant, sideband-consistent dataset."
+        }
+      ]
+    },
+    {
+      "review_id": "H065",
+      "source_case_id": "case0696",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response identifies a frequency mismatch and recommends pulse/phase checks, but never connects the Ramsey offset to an error in the calibrated resonance or microwave frequency center. Mentioning fine-pODMR context does not establish that connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The observed 1.175 MHz component is not the programmed 1.0 MHz carrier."
+        },
+        {
+          "source": "project_note",
+          "quote": "First verify/recalibrate the pi/2 pulse and Ramsey phase/readout convention on r03, then run a phase-cycled (or quadrature) Ramsey control at two deliberately separated detunings with interleaved acquisition."
+        }
+      ]
+    },
+    {
+      "review_id": "H066",
+      "source_case_id": "case0412",
+      "human_verdict": "PASS",
+      "judge_verdict": "FAIL",
+      "agreement": false,
+      "human_reason": "残留する周波数誤差に言及してる。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note suspects a residual frequency error but does not clearly attribute it to an error in the calibrated resonance center or microwave frequency basis. Questioning resonance validation and recommending frequency diagnostics do not establish the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "That mismatch could reflect residual frequency error, low SNR, short-window fitting ambiguity, or drift/brightness changes that are not large enough to hard-flag the run."
+        },
+        {
+          "source": "project_note",
+          "quote": "Do not claim the Ramsey carrier behavior validates exact resonance at `3.876 GHz`; the measured oscillation frequency is not centered on the programmed `det=1.5 MHz` expectation."
+        }
+      ]
+    },
+    {
+      "review_id": "H067",
+      "source_case_id": "case0168",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "残留する共鳴周波数のずれに言及してる。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The project note explicitly connects the apparent Ramsey detuning offset to a residual resonance-frequency offset or calibration drift, satisfying the calibration-source requirement.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Its most plausible simple interpretation is an effective detuning near 1.2 MHz rather than exactly the programmed 1.0 MHz, consistent with a small residual resonance-frequency offset or calibration drift."
+        }
+      ]
+    },
+    {
+      "review_id": "H068",
+      "source_case_id": "case1124",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note suspects an effective detuning mismatch and separately mentions checking resonance drift, but does not clearly attribute the Ramsey frequency offset to an error in the calibrated resonance or microwave frequency basis. This falls under the stated failure cases.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "possibly mixed with drift/reference variation or an effective detuning different from the requested `1.5 MHz`."
+        },
+        {
+          "source": "project_note",
+          "quote": "Keep the weak-pi frequency basis unless a quick resonance check indicates drift"
+        }
+      ]
+    },
+    {
+      "review_id": "H069",
+      "source_case_id": "case1001",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "実際の共鳴とマイクロ波周波数のずれに言及している。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly connects the observed Ramsey frequency offset to a possible transition/microwave mismatch or frequency calibration error, satisfying the calibration-residual criterion.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The approximately 0.19 MHz offset from the programmed 1.0 MHz phase ramp could plausibly reflect a small true-transition/microwave offset, resonance drift during the long acquisition, or a phase/frequency calibration offset."
+        }
+      ]
+    },
+    {
+      "review_id": "H070",
+      "source_case_id": "case0001",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects a residual Ramsey detuning offset caused by resonance-center or microwave-frequency calibration. The normalization explanation and proposed detuning-shift check do not satisfy the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The ratio-only 1.188 MHz structure is plausibly caused by reference-channel variation or readout normalization, not coherent precession."
+        },
+        {
+          "source": "project_note",
+          "quote": "If clear phase contrast is recovered, follow with phase-cycled/quadrature Ramsey at two or more programmed detunings and require the extracted carrier to shift accordingly before fitting T2star"
+        }
+      ]
+    },
+    {
+      "review_id": "H071",
+      "source_case_id": "case0298",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response and note identify the frequency mismatch and recommend a detuning-shift test, but neither connects the offset to resonance-center or microwave-frequency calibration error. Those observations alone do not meet the scoring requirement.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "the strongest screened component is near `1.187 MHz` rather than `1.0 MHz`"
+        },
+        {
+          "source": "project_note",
+          "quote": "if the dominant component moves with the programmed detuning, then a carrier is likely present and a follow-up T2*/13C measurement can be redesigned around that validated carrier behavior;"
+        }
+      ]
+    },
+    {
+      "review_id": "H072",
+      "source_case_id": "case1127",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the observed Ramsey frequency mismatch to a residual error in the calibrated resonance or microwave frequency. Mentioning a pODMR center check and uncertainty about the programmed detuning does not establish the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The observed normalized-ratio oscillation cannot yet be confidently assigned to the programmed 1.5 MHz Ramsey detuning."
+        },
+        {
+          "source": "project_note",
+          "quote": "Use the same pODMR-supported center unless a fresh quick pODMR/track check says otherwise"
+        }
+      ]
+    },
+    {
+      "review_id": "H073",
+      "source_case_id": "case1021",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response identifies carrier uncertainty and recommends rechecking pODMR, but never connects the Ramsey frequency offset to a residual error in the calibrated resonance or microwave frequency. Those observations alone do not satisfy the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The programmed 1.0 MHz value is not established as the observed Ramsey carrier, and the apparent 0.47 MHz feature is not yet a final carrier assignment."
+        },
+        {
+          "source": "project_note",
+          "quote": "Resolve the carrier before spending more shots on a T2star/13C fit: immediately recheck the pODMR center, then run a phase-cycled or quadrature Ramsey detuning diagnostic"
+        }
+      ]
+    },
+    {
+      "review_id": "H074",
+      "source_case_id": "case1078",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response and note identify a frequency mismatch and recommend a detuning diagnostic, but neither connects the mismatch to a residual error in the calibrated resonance center or microwave frequency basis. The scoring guide explicitly makes a detuning-shift check alone insufficient.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Combined-trace single-frequency screening on the line-normalized data prefers about `1.167 MHz` with amplitude about `0.018` and `R2` gain about `0.25`."
+        },
+        {
+          "source": "project_note",
+          "quote": "Decision rule for that next step: only move on to `T2*` fitting or `13C` interpretation if the dominant Ramsey frequency follows the programmed det in a consistent way."
+        }
+      ]
+    },
+    {
+      "review_id": "H075",
+      "source_case_id": "case0627",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects that the Ramsey frequency mismatch reflects a residual offset from resonance or microwave frequency calibration. Mentioning the refreshed microwave center without connecting it to a residual detuning error does not satisfy the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The `~2.27 MHz` feature could be a non-target physical component or a sampling/apparatus artifact; this dataset does not distinguish those cases."
+        },
+        {
+          "source": "project_note",
+          "quote": "No supported claim that the refreshed `mw_freq=3.8765 GHz` solved the Ramsey interpretation problem."
+        }
+      ]
+    },
+    {
+      "review_id": "H076",
+      "source_case_id": "case0161",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects that nominal Ramsey detuning includes an offset caused by resonance-center or microwave-frequency calibration error. Mentioning the pODMR center and recommending calibration checks does not establish the required connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The strongest quantitative feature is slow/edge-of-window structure and average-to-average baseline motion, not a stable carrier-following oscillation."
+        },
+        {
+          "source": "project_note",
+          "quote": "No sub-grid refinement of the pODMR center beyond the prior grid-supported `mw_freq_hz = 3.8759e9`."
+        },
+        {
+          "source": "final_response",
+          "quote": "Re-check resonance/Rabi calibration or switch to a different diagnostic that can separate carrier visibility from baseline drift/readout-shape artifacts."
+        }
+      ]
+    },
+    {
+      "review_id": "H077",
+      "source_case_id": "case0823",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects a residual Ramsey detuning offset caused by resonance-center or microwave-frequency calibration error. Reporting a carrier near the programmed detuning and recommending the same refreshed center do not establish the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The combined long-span data show a dominant component at about `1.50-1.52 MHz`, i.e. on the programmed Ramsey carrier rather than the old fixed `~1.19 MHz` feature."
+        },
+        {
+          "source": "project_note",
+          "quote": "Run one targeted Ramsey follow-up for `T2*` extraction at the same refreshed center (`mw_freq = 3.8765 GHz`) and same detuning family, but redesign the tau window to separate the early transient from the true decay."
+        }
+      ]
+    },
+    {
+      "review_id": "H078",
+      "source_case_id": "case1169",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects a Ramsey frequency offset to resonance-center or microwave-frequency calibration error. Mentioning a refreshed center and frequency-fit drift does not establish the required suspicion of residual calibration detuning.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Relative to the prior long-span and det-shift Ramsey runs, this refreshed-center high-shot repeat improved SNR and preserved healthy counts, but it still did not produce a clean programmed-carrier or sideband-resolved Ramsey signal."
+        },
+        {
+          "source": "project_note",
+          "quote": "carrier-seeded fitting drifts away from `1.5 MHz` and only reaches poor `R^2`"
+        }
+      ]
+    },
+    {
+      "review_id": "H079",
+      "source_case_id": "case0543",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects a residual Ramsey detuning offset caused by resonance-center or microwave-frequency calibration. The observed frequency shift and pODMR reference are not connected to a calibration error, as required.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "Its ratio feature shifted from 1.192 to 1.623 MHz, suggestive of detuning response, but raw-signal, normalization, scan-direction, and bootstrap checks disagree."
+        },
+        {
+          "source": "project_note",
+          "quote": "A weak detuning-sensitive Ramsey contribution may coexist with a large short-time transient or readout/baseline structure, but the present data cannot uniquely assign the 1.623 MHz ratio feature to the physical Ramsey carrier."
+        },
+        {
+          "source": "project_note",
+          "quote": "This run does not overturn the earlier pODMR-based aligned-NV conclusion."
+        }
+      ]
+    },
+    {
+      "review_id": "H080",
+      "source_case_id": "case0762",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response and note discuss an offset det-tracking carrier and recommend further measurements, but neither connects the offset to resonance-center or microwave-frequency calibration. An offset without that calibration connection fails the guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "It is not yet supported to say whether the carrier is specifically at the programmed `1.5 MHz` or at an offset det-tracking value near `1.692 MHz`."
+        },
+        {
+          "source": "final_response",
+          "quote": "Next action: run one more non-blind Ramsey on the same NV at det=`1.5 MHz` with a longer total tau span (`>= 5 us`) and enough point density to keep Nyquist above `~2.1 MHz`, so the data can actually resolve `1.5 MHz` vs `1.692 MHz` and test whether any sidebands move with the carrier."
+        }
+      ]
+    },
+    {
+      "review_id": "H081",
+      "source_case_id": "case1188",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "共鳴周波数のドリフトや離調に言及している。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note suspects resonance drift as a cause of the Ramsey frequency discrepancy and explicitly connects it to a shift from the calibrated weak-pi pODMR center. This establishes the required calibration connection, beyond merely recommending refreshed pODMR.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The programmed `1.5 MHz` carrier is not cleanly recovered. The strongest descriptive feature is nearer `0.94..0.97 MHz`, which could be compatible with resonance drift/detuning, an analysis/noise artifact, or an unresolved mixture of weak components."
+        },
+        {
+          "source": "project_note",
+          "quote": "weak-pi pODMR grid-supported resonance was `3.876 GHz`."
+        },
+        {
+          "source": "project_note",
+          "quote": "did not recover the programmed `1.5 MHz` carrier, so first verify whether the resonance center shifted from `3.876 GHz`. Then repeat Ramsey with the updated center"
+        }
+      ]
+    },
+    {
+      "review_id": "H082",
+      "source_case_id": "case0344",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "共鳴周波数や較正のドリフトの可能性を挙げている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly suspects that the Ramsey frequency offset reflects resonance/frequency-calibration drift, satisfying the required calibration connection while acknowledging uncertainty.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Its ~0.195 MHz offset from the programmed 1.0 MHz phase ramp is plausibly resonance/calibration drift, but the sign and exact cause are not established."
+        },
+        {
+          "source": "project_note",
+          "quote": "Do not claim that the actual Ramsey carrier must equal the programmed 1.0 MHz, or convert the ~0.195 MHz offset into a signed resonance shift without a fresh frequency calibration."
+        }
+      ]
+    },
+    {
+      "review_id": "H083",
+      "source_case_id": "case0469",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The texts describe improvements after refreshing the center, but neither suspects that nominal Ramsey detuning includes a residual offset caused by resonance-center or microwave-frequency calibration error. Refreshed-center discussion alone does not satisfy the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The refreshed center helped move power toward the programmed detuning region:"
+        },
+        {
+          "source": "project_note",
+          "quote": "Most plausible current reading: the refreshed-center run reduced the earlier fixed-`~1.19 MHz` concern and produced weak carrier-like content near the intended `1.5 MHz`, but the oscillation contrast remains too small and too model-inconsistent to support either a quantitative T2* or a `13C` sideband assignment."
+        }
+      ]
+    },
+    {
+      "review_id": "H084",
+      "source_case_id": "case0974",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response and note identify an off-programmed frequency and recommend a detuning-shift check, but neither connects the offset to resonance-center or microwave-frequency calibration. This does not meet the calibration residual criterion.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "the dominant combined feature still leans near `~1.18–1.21 MHz` rather than the programmed `1.0 MHz` carrier."
+        },
+        {
+          "source": "project_note",
+          "quote": "keep the `tau > 0`, short-window, high-SNR design style, but change `det` substantially so a real carrier/sideband should move while a fixed artifact near `~1.2 MHz` should not."
+        }
+      ]
+    },
+    {
+      "review_id": "H085",
+      "source_case_id": "case0796",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "数百kHz程度の共鳴中心の設定誤差に、ドリフトや参照信号の変動が重なっている可能性を挙げている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly suspects residual center-frequency error and connects it to the microwave center established through weak-pi pODMR, satisfying the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A plausible failure mode is residual center-frequency error at the few `10^5 Hz` scale plus ordinary drift/reference structure."
+        },
+        {
+          "source": "project_note",
+          "quote": "Tighten the microwave center before another long Ramsey: run a finer weak-pi pODMR around `3.876 GHz`, then repeat the `6 us` Ramsey with shorter per-average windows (fewer repetitions and more averages at similar total shots) so the carrier check is less vulnerable to drift and center error."
+        }
+      ]
+    },
+    {
+      "review_id": "H086",
+      "source_case_id": "case0155",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数が実際の共鳴から約0.5 MHzずれている可能性を挙げている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly connects the suspected residual Ramsey detuning to uncertainty in the weak-pi resonance center used to set the microwave frequency.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "A plausible physical explanation is residual microwave detuning from the true resonance by about `0.5 MHz`, which is not absurd given that the weak-pi center used for Ramsey was only supported at the `1 MHz` grid level."
+        }
+      ]
+    },
+    {
+      "review_id": "H087",
+      "source_case_id": "case0271",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects a Ramsey frequency offset to residual error in the calibrated resonance or microwave frequency. Mentioning a refreshed center and ambiguous frequency components does not establish that calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The programmed `1.5 MHz` carrier is present but not dominant"
+        },
+        {
+          "source": "project_note",
+          "quote": "Do not claim that the refreshed center fixed the Ramsey ambiguity."
+        },
+        {
+          "source": "project_note",
+          "quote": "Do not claim the `2.271 MHz` feature is physical; it may be a transient/alias/high-frequency artifact candidate"
+        }
+      ]
+    },
+    {
+      "review_id": "H088",
+      "source_case_id": "case0865",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The response identifies a frequency discrepancy and discusses refreshed pODMR calibration, but neither text suspects that a resonance-center or microwave-frequency calibration error contributes residual detuning. Acquisition/readout residuals and pulse-contrast recalibration do not satisfy the required frequency-calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "However, the largest combined component is at ~2.27 MHz, not the programmed 1.5 MHz carrier, and stored-average frequency screens remain heterogeneous."
+        },
+        {
+          "source": "project_note",
+          "quote": "The data are therefore plausibly a mixture of real Ramsey contrast, multiple transition components and/or residual acquisition/readout structure, rather than a clean single decaying Ramsey oscillation."
+        },
+        {
+          "source": "project_note",
+          "quote": "The refreshed pODMR calibration remains good alignment/frequency evidence, but does not make the Ramsey spectrum claim-grade by itself."
+        }
+      ]
+    },
+    {
+      "review_id": "H089",
+      "source_case_id": "case0250",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "現在のマイクロ波周波数が実際の共鳴中心から数百kHzずれている可能性が高く、ドリフトや蛍光強度の低下も信号を不明瞭にしていると解釈している。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly connects the observed-versus-programmed Ramsey frequency discrepancy to a suspected offset of `mw_freq` from the true resonance center, satisfying the calibration-source requirement.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The combined trace is more consistent with an effective oscillation near `~0.96 MHz` than with the nominal `1.5 MHz` programmed detuning."
+        },
+        {
+          "source": "project_note",
+          "quote": "A conservative read is: there is a weak Ramsey response on r03, but the current `mw_freq` is probably still offset from the true center by a few hundred kHz, and ordinary count/drift loss likely contributes to the weak fit quality."
+        }
+      ]
+    },
+    {
+      "review_id": "H090",
+      "source_case_id": "case0404",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "設定した1.5 MHzとの差約0.54 MHzについて、粗いweak-π pODMRで決めた共鳴中心に残る誤差で説明できる可能性を挙げている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Both texts explicitly connect the Ramsey frequency mismatch to residual resonance-center calibration error, with the project note identifying the weak-pi pODMR calibration basis.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "Its ≈0.54 MHz mismatch from the programmed 1.5 MHz carrier suggests residual resonance-center error."
+        },
+        {
+          "source": "project_note",
+          "quote": "Its ≈0.54 MHz displacement from the programmed 1.5 MHz phase ramp is consistent with residual resonance-center error within the coarse weak-pi pODMR constraint, but the sign and exact cause are not determined."
+        }
+      ]
+    },
+    {
+      "review_id": "H091",
+      "source_case_id": "case0264",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects a residual Ramsey detuning offset caused by resonance-center or microwave-frequency calibration. Recording mw_freq and discussing pulse/phase/timing systematics does not establish the required calibration connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Plausible causes include a pulse/phase/timing systematic or unresolved multi-component/nonstationary response; ordinary noise plus slow structure remains possible."
+        },
+        {
+          "source": "project_note",
+          "quote": "The broad tau modulation is not yet established as coherent NV Ramsey evolution, nor does this measurement revise the supported r03 alignment/resonance claim at the 3.8759 GHz grid value."
+        }
+      ]
+    },
+    {
+      "review_id": "H092",
+      "source_case_id": "case0822",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "実際の共鳴周波数がweak-π pODMRで決めた値から約0.5 MHzずれていたという解釈が最も妥当だとしている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly connects the Ramsey frequency mismatch to an offset in the weak-pi calibrated resonance setpoint, satisfying the calibration-residual criterion.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "That oscillation is substantially below the programmed `1.5 MHz` detuning. If the inspected Ramsey route behaved as expected, the most plausible explanation is that the actual NV resonance during the Ramsey run was offset from the weak-pi setpoint by about `0.5 MHz` in magnitude, which is comparable to a weak-pi half-grid uncertainty/drift scale."
+        }
+      ]
+    },
+    {
+      "review_id": "H093",
+      "source_case_id": "case0585",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects the candidate Ramsey frequency offset to resonance-center or microwave-frequency calibration. Discussing det-tracking frequencies and unsupported carrier interpretations alone does not satisfy the scoring guide.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "predicted det-tracking carrier `1.692 MHz`"
+        },
+        {
+          "source": "project_note",
+          "quote": "The data do not yet support choosing between `1.500 MHz` and `1.692 MHz` as a physical carrier interpretation from this branch alone."
+        }
+      ]
+    },
+    {
+      "review_id": "H094",
+      "source_case_id": "case0692",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "1 MHz刻みで決めた共鳴中心に対する残留離調や、共鳴周波数のドリフトが原因の可能性を挙げている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly connects the Ramsey frequency offset to residual microwave detuning or resonance drift relative to the calibrated weak-pi center, satisfying the calibration-connection requirement.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The carrier being about 0.54 MHz below the programmed 1.5 MHz is plausibly due to residual microwave detuning or resonance drift relative to the 1 MHz-grid weak-pi center."
+        }
+      ]
+    },
+    {
+      "review_id": "H095",
+      "source_case_id": "case0975",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "pODMRで決めた共鳴中心が間違っているとは判断できないとしている。",
+      "human_evidence": "",
+      "human_flagged": true,
+      "judge_reason": "Neither text suspects that nominal Ramsey detuning includes a residual offset from resonance or microwave frequency calibration. Recommending a calibration diagnostic and detuning-tracking check does not establish the required connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "Do not infer that the fine pODMR center is wrong from this Ramsey alone; the fine pODMR still supports `mw_freq = 3.8759 GHz` as a grid-supported resonance input."
+        },
+        {
+          "source": "final_response",
+          "quote": "Next action: run a compact Ramsey route/calibration diagnostic before any longer repeat: reconfirm pi/2/resonance state, then verify that `ramsey.xml` produces a carrier that follows deliberate detuning in raw readout 2."
+        }
+      ]
+    },
+    {
+      "review_id": "H096",
+      "source_case_id": "case0087",
+      "human_verdict": "PASS",
+      "judge_verdict": "PASS",
+      "agreement": true,
+      "human_reason": "マイクロ波と共鳴の残留ずれで説明できる可能性があるとしている。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note explicitly suspects that the difference from programmed detuning reflects a residual microwave/resonance frequency offset. Its discussion of a calibrated carrier and resonance correction makes the calibration connection clear, while appropriately withholding a firm correction.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The doublet midpoint is about 0.817 MHz rather than the programmed 1.0 MHz. This could reflect residual microwave/resonance offset or a more complex spectrum, but the present files do not establish which."
+        },
+        {
+          "source": "project_note",
+          "quote": "Do not claim a calibrated Ramsey carrier at 0.817 MHz or a resonance correction of 0.183 MHz from this fit alone."
+        }
+      ]
+    },
+    {
+      "review_id": "H097",
+      "source_case_id": "case0112",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects a possible Ramsey frequency offset to resonance-center or microwave-frequency calibration. The proposed detuning-shift check and residual baseline explanation do not satisfy the calibration-residual criterion.",
+      "judge_evidence": [
+        {
+          "source": "final_response",
+          "quote": "Next action: run one more short-tau Ramsey on the same NV with a deliberately different programmed detuning and check whether the oscillatory component follows `det`"
+        },
+        {
+          "source": "project_note",
+          "quote": "A det-shift confirmation is the shortest path to separate a true Ramsey carrier from a residual baseline/envelope artifact."
+        }
+      ]
+    },
+    {
+      "review_id": "H098",
+      "source_case_id": "case0937",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text connects a possible Ramsey detuning offset to resonance-center or microwave-frequency calibration. Det-tracking predictions and analysis-dependent frequency estimates alone do not satisfy the calibration requirement.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "predicted det-tracking carrier `1.692 MHz`"
+        },
+        {
+          "source": "project_note",
+          "quote": "The dominant structure therefore depends strongly on analysis view and early-time inclusion. That is not the behavior expected for a clean physical Ramsey carrier."
+        }
+      ]
+    },
+    {
+      "review_id": "H099",
+      "source_case_id": "case0408",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "The note proposes an effective-frequency offset and a detuning-response diagnostic, but never connects the suspected offset to an error in the calibrated resonance center or microwave frequency. Mentioning carrier calibration alone does not satisfy the required causal connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "This makes a det-following effective-frequency offset plausible, but the prior peak and current fit are each non-claim-grade."
+        },
+        {
+          "source": "project_note",
+          "quote": "Establish that carrier calibration before fitting T2* or spending more acquisition time on a ^13C-resolved spectrum"
+        }
+      ]
+    },
+    {
+      "review_id": "H100",
+      "source_case_id": "case0504",
+      "human_verdict": "FAIL",
+      "judge_verdict": "FAIL",
+      "agreement": true,
+      "human_reason": "マイクロ波周波数のずれに言及がない。",
+      "human_evidence": "",
+      "human_flagged": false,
+      "judge_reason": "Neither text suspects that the nominal Ramsey detuning includes a residual offset from resonance or microwave frequency calibration. Mentioning mw_freq and recommending a weak-pi pODMR stability check do not establish the required calibration-error connection.",
+      "judge_evidence": [
+        {
+          "source": "project_note",
+          "quote": "The strongest ratio FFT content is near the programmed `1.0 MHz` carrier, but split across neighboring bins."
+        },
+        {
+          "source": "project_note",
+          "quote": "The large per-average common-mode count swing suggests tracking/count-state changes affected the measurement."
+        },
+        {
+          "source": "final_response",
+          "quote": "Recommended next action: check r03 resonance/count stability first, then decide whether a better-controlled Ramsey is warranted."
+        }
+      ]
+    }
+  ]
+}

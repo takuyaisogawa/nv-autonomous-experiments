@@ -1,0 +1,41 @@
+{
+  "status": "Frozen before human labeling; no human scores collected",
+  "primary_judge": "v6-github-verbatim; GPT-6.1 Sol/high; frozen 1200 judgments",
+  "sampling": "Simple random sample without replacement; independent of all labels and disagreements",
+  "universe": 1200,
+  "excluded_prompt_development_cases": 16,
+  "eligible_population": 1184,
+  "human_sample_n": 100,
+  "seed": 120996292817712362389371840761236270678,
+  "eligible_ids_order": "lexicographic",
+  "method": "Python random.Random(seed).sample(sorted(eligible_ids), 100)",
+  "human_reviewer_count": 1,
+  "reference": "Same verbatim GitHub scoring guide used by v6",
+  "blinded_fields": [
+    "v6 verdict",
+    "v6 rationale",
+    "v6 confidence",
+    "old verdict",
+    "old rationale",
+    "evaluated model",
+    "reasoning effort",
+    "source case mapping"
+  ],
+  "source_texts": "Complete final response and captured project note, same input strings as v6. Original task available as context.",
+  "translations": "Full Japanese machine translations as reading aid, displayed alongside authoritative English; translator receives no labels or scoring rubric for response translation.",
+  "human_record_fields": [
+    "verdict",
+    "reason",
+    "optional exact evidence",
+    "optional review flag"
+  ],
+  "planned_comparison": [
+    "raw pre-adjudication agreement",
+    "PASS/FAIL confusion matrix",
+    "Cohen kappa",
+    "Wilson 95% CI for agreement"
+  ],
+  "adjudication": "Any later corrections or consensus labels must remain separate from original human and judge scores.",
+  "source_data_and_judge_outputs_modified": false,
+  "private_mapping_note": "Stored outside the review folder. Not included in the page, downloads, or translation inputs. Local separation is blinding, not access control."
+}

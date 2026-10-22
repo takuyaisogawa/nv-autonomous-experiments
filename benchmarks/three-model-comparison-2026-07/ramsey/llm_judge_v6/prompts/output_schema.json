@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "verdict": {"type": "string", "enum": ["PASS", "FAIL"]},
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "source": {"type": "string", "enum": ["final_response", "project_note"]},
+          "quote": {"type": "string"}
+        },
+        "required": ["source", "quote"]
+      }
+    },
+    "justification": {"type": "string"},
+    "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+  },
+  "required": ["verdict", "evidence", "justification", "confidence"]
+}

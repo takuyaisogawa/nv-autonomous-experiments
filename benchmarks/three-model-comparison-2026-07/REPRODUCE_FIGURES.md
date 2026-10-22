@@ -4,7 +4,20 @@ This workflow reconstructs the quantitative panels and final layouts of
 manuscript Figs. 3 and 4.  It reads the released benchmark source tables and
 reuses the existing vector artwork for panels 3a and 4a.
 
-## Inputs
+## Current Figure 3 (v6 LLM judge)
+
+The manuscript now uses [v6 scores](ramsey/llm_judge_v6/). Reproduce the
+counts and the updated Figure 3 from the repository root with:
+
+```shell
+python benchmarks/three-model-comparison-2026-07/ramsey/llm_judge_v6/scripts/reproduce.py
+python benchmarks/three-model-comparison-2026-07/ramsey/llm_judge_v6/scripts/make_figure.py
+```
+
+Outputs are written to `ramsey/llm_judge_v6/reproduced/`. The commands below
+retain the previous Figure 3 and the unchanged Figure 4 workflow.
+
+## Inputs for the previous Figure 3 and Figure 4
 
 - `ramsey/three_model_checkpoint_summary.csv`
 - `podmr/three_model_case_bootstrap.csv`

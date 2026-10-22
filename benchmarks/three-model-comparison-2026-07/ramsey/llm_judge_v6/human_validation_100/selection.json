@@ -1,0 +1,428 @@
+{
+  "created_utc": "2026-10-21T14:47:06.934394+00:00",
+  "seed": 120996292817712362389371840761236270678,
+  "algorithm": "Python random.Random(seed).sample(sorted(eligible_ids), 100)",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "eligible_count": 1184,
+  "excluded_pilot_ids": [
+    "case0008",
+    "case0088",
+    "case0202",
+    "case0239",
+    "case0241",
+    "case0281",
+    "case0332",
+    "case0377",
+    "case0616",
+    "case0653",
+    "case0731",
+    "case0733",
+    "case0829",
+    "case0943",
+    "case1083",
+    "case1115"
+  ],
+  "selection_does_not_use_labels": true,
+  "cases": [
+    {
+      "review_id": "H001",
+      "source_case_id": "case1016"
+    },
+    {
+      "review_id": "H002",
+      "source_case_id": "case0248"
+    },
+    {
+      "review_id": "H003",
+      "source_case_id": "case0535"
+    },
+    {
+      "review_id": "H004",
+      "source_case_id": "case0577"
+    },
+    {
+      "review_id": "H005",
+      "source_case_id": "case0315"
+    },
+    {
+      "review_id": "H006",
+      "source_case_id": "case0477"
+    },
+    {
+      "review_id": "H007",
+      "source_case_id": "case0243"
+    },
+    {
+      "review_id": "H008",
+      "source_case_id": "case0324"
+    },
+    {
+      "review_id": "H009",
+      "source_case_id": "case0356"
+    },
+    {
+      "review_id": "H010",
+      "source_case_id": "case0123"
+    },
+    {
+      "review_id": "H011",
+      "source_case_id": "case0033"
+    },
+    {
+      "review_id": "H012",
+      "source_case_id": "case0523"
+    },
+    {
+      "review_id": "H013",
+      "source_case_id": "case0060"
+    },
+    {
+      "review_id": "H014",
+      "source_case_id": "case0962"
+    },
+    {
+      "review_id": "H015",
+      "source_case_id": "case0804"
+    },
+    {
+      "review_id": "H016",
+      "source_case_id": "case0177"
+    },
+    {
+      "review_id": "H017",
+      "source_case_id": "case0154"
+    },
+    {
+      "review_id": "H018",
+      "source_case_id": "case0824"
+    },
+    {
+      "review_id": "H019",
+      "source_case_id": "case0914"
+    },
+    {
+      "review_id": "H020",
+      "source_case_id": "case1117"
+    },
+    {
+      "review_id": "H021",
+      "source_case_id": "case0803"
+    },
+    {
+      "review_id": "H022",
+      "source_case_id": "case1122"
+    },
+    {
+      "review_id": "H023",
+      "source_case_id": "case0745"
+    },
+    {
+      "review_id": "H024",
+      "source_case_id": "case0554"
+    },
+    {
+      "review_id": "H025",
+      "source_case_id": "case0665"
+    },
+    {
+      "review_id": "H026",
+      "source_case_id": "case0664"
+    },
+    {
+      "review_id": "H027",
+      "source_case_id": "case0889"
+    },
+    {
+      "review_id": "H028",
+      "source_case_id": "case0898"
+    },
+    {
+      "review_id": "H029",
+      "source_case_id": "case0125"
+    },
+    {
+      "review_id": "H030",
+      "source_case_id": "case1182"
+    },
+    {
+      "review_id": "H031",
+      "source_case_id": "case0084"
+    },
+    {
+      "review_id": "H032",
+      "source_case_id": "case0905"
+    },
+    {
+      "review_id": "H033",
+      "source_case_id": "case0478"
+    },
+    {
+      "review_id": "H034",
+      "source_case_id": "case0308"
+    },
+    {
+      "review_id": "H035",
+      "source_case_id": "case0193"
+    },
+    {
+      "review_id": "H036",
+      "source_case_id": "case1103"
+    },
+    {
+      "review_id": "H037",
+      "source_case_id": "case0333"
+    },
+    {
+      "review_id": "H038",
+      "source_case_id": "case0212"
+    },
+    {
+      "review_id": "H039",
+      "source_case_id": "case1068"
+    },
+    {
+      "review_id": "H040",
+      "source_case_id": "case0826"
+    },
+    {
+      "review_id": "H041",
+      "source_case_id": "case0197"
+    },
+    {
+      "review_id": "H042",
+      "source_case_id": "case0525"
+    },
+    {
+      "review_id": "H043",
+      "source_case_id": "case0014"
+    },
+    {
+      "review_id": "H044",
+      "source_case_id": "case0439"
+    },
+    {
+      "review_id": "H045",
+      "source_case_id": "case0291"
+    },
+    {
+      "review_id": "H046",
+      "source_case_id": "case0736"
+    },
+    {
+      "review_id": "H047",
+      "source_case_id": "case0984"
+    },
+    {
+      "review_id": "H048",
+      "source_case_id": "case0859"
+    },
+    {
+      "review_id": "H049",
+      "source_case_id": "case0566"
+    },
+    {
+      "review_id": "H050",
+      "source_case_id": "case1075"
+    },
+    {
+      "review_id": "H051",
+      "source_case_id": "case0397"
+    },
+    {
+      "review_id": "H052",
+      "source_case_id": "case0029"
+    },
+    {
+      "review_id": "H053",
+      "source_case_id": "case1028"
+    },
+    {
+      "review_id": "H054",
+      "source_case_id": "case0802"
+    },
+    {
+      "review_id": "H055",
+      "source_case_id": "case1040"
+    },
+    {
+      "review_id": "H056",
+      "source_case_id": "case1153"
+    },
+    {
+      "review_id": "H057",
+      "source_case_id": "case0693"
+    },
+    {
+      "review_id": "H058",
+      "source_case_id": "case0844"
+    },
+    {
+      "review_id": "H059",
+      "source_case_id": "case0491"
+    },
+    {
+      "review_id": "H060",
+      "source_case_id": "case0471"
+    },
+    {
+      "review_id": "H061",
+      "source_case_id": "case1186"
+    },
+    {
+      "review_id": "H062",
+      "source_case_id": "case0666"
+    },
+    {
+      "review_id": "H063",
+      "source_case_id": "case0284"
+    },
+    {
+      "review_id": "H064",
+      "source_case_id": "case1148"
+    },
+    {
+      "review_id": "H065",
+      "source_case_id": "case0696"
+    },
+    {
+      "review_id": "H066",
+      "source_case_id": "case0412"
+    },
+    {
+      "review_id": "H067",
+      "source_case_id": "case0168"
+    },
+    {
+      "review_id": "H068",
+      "source_case_id": "case1124"
+    },
+    {
+      "review_id": "H069",
+      "source_case_id": "case1001"
+    },
+    {
+      "review_id": "H070",
+      "source_case_id": "case0001"
+    },
+    {
+      "review_id": "H071",
+      "source_case_id": "case0298"
+    },
+    {
+      "review_id": "H072",
+      "source_case_id": "case1127"
+    },
+    {
+      "review_id": "H073",
+      "source_case_id": "case1021"
+    },
+    {
+      "review_id": "H074",
+      "source_case_id": "case1078"
+    },
+    {
+      "review_id": "H075",
+      "source_case_id": "case0627"
+    },
+    {
+      "review_id": "H076",
+      "source_case_id": "case0161"
+    },
+    {
+      "review_id": "H077",
+      "source_case_id": "case0823"
+    },
+    {
+      "review_id": "H078",
+      "source_case_id": "case1169"
+    },
+    {
+      "review_id": "H079",
+      "source_case_id": "case0543"
+    },
+    {
+      "review_id": "H080",
+      "source_case_id": "case0762"
+    },
+    {
+      "review_id": "H081",
+      "source_case_id": "case1188"
+    },
+    {
+      "review_id": "H082",
+      "source_case_id": "case0344"
+    },
+    {
+      "review_id": "H083",
+      "source_case_id": "case0469"
+    },
+    {
+      "review_id": "H084",
+      "source_case_id": "case0974"
+    },
+    {
+      "review_id": "H085",
+      "source_case_id": "case0796"
+    },
+    {
+      "review_id": "H086",
+      "source_case_id": "case0155"
+    },
+    {
+      "review_id": "H087",
+      "source_case_id": "case0271"
+    },
+    {
+      "review_id": "H088",
+      "source_case_id": "case0865"
+    },
+    {
+      "review_id": "H089",
+      "source_case_id": "case0250"
+    },
+    {
+      "review_id": "H090",
+      "source_case_id": "case0404"
+    },
+    {
+      "review_id": "H091",
+      "source_case_id": "case0264"
+    },
+    {
+      "review_id": "H092",
+      "source_case_id": "case0822"
+    },
+    {
+      "review_id": "H093",
+      "source_case_id": "case0585"
+    },
+    {
+      "review_id": "H094",
+      "source_case_id": "case0692"
+    },
+    {
+      "review_id": "H095",
+      "source_case_id": "case0975"
+    },
+    {
+      "review_id": "H096",
+      "source_case_id": "case0087"
+    },
+    {
+      "review_id": "H097",
+      "source_case_id": "case0112"
+    },
+    {
+      "review_id": "H098",
+      "source_case_id": "case0937"
+    },
+    {
+      "review_id": "H099",
+      "source_case_id": "case0408"
+    },
+    {
+      "review_id": "H100",
+      "source_case_id": "case0504"
+    }
+  ]
+}

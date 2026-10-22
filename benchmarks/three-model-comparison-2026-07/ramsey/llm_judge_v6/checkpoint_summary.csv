@@ -1,0 +1,61 @@
+model,criterion_group,reasoning_effort,checkpoint_id,passes,total,pass_rate
+GPT-5.4,calibration-residual,low,cp01,7,20,0.35
+GPT-5.4,calibration-residual,low,cp02,0,20,0.0
+GPT-5.4,calibration-residual,low,cp03,0,20,0.0
+GPT-5.4,calibration-residual,low,cp04,0,20,0.0
+GPT-5.4,calibration-residual,low,cp05,0,20,0.0
+GPT-5.4,calibration-residual,medium,cp01,10,20,0.5
+GPT-5.4,calibration-residual,medium,cp02,0,20,0.0
+GPT-5.4,calibration-residual,medium,cp03,0,20,0.0
+GPT-5.4,calibration-residual,medium,cp04,0,20,0.0
+GPT-5.4,calibration-residual,medium,cp05,0,20,0.0
+GPT-5.4,calibration-residual,high,cp01,14,20,0.7
+GPT-5.4,calibration-residual,high,cp02,0,20,0.0
+GPT-5.4,calibration-residual,high,cp03,2,20,0.1
+GPT-5.4,calibration-residual,high,cp04,0,20,0.0
+GPT-5.4,calibration-residual,high,cp05,0,20,0.0
+GPT-5.4,calibration-residual,xhigh,cp01,17,20,0.85
+GPT-5.4,calibration-residual,xhigh,cp02,2,20,0.1
+GPT-5.4,calibration-residual,xhigh,cp03,3,20,0.15
+GPT-5.4,calibration-residual,xhigh,cp04,0,20,0.0
+GPT-5.4,calibration-residual,xhigh,cp05,0,20,0.0
+GPT-5.5,calibration-residual,low,cp01,4,20,0.2
+GPT-5.5,calibration-residual,low,cp02,0,20,0.0
+GPT-5.5,calibration-residual,low,cp03,0,20,0.0
+GPT-5.5,calibration-residual,low,cp04,0,20,0.0
+GPT-5.5,calibration-residual,low,cp05,0,20,0.0
+GPT-5.5,calibration-residual,medium,cp01,10,20,0.5
+GPT-5.5,calibration-residual,medium,cp02,5,20,0.25
+GPT-5.5,calibration-residual,medium,cp03,2,20,0.1
+GPT-5.5,calibration-residual,medium,cp04,0,20,0.0
+GPT-5.5,calibration-residual,medium,cp05,0,20,0.0
+GPT-5.5,calibration-residual,high,cp01,9,20,0.45
+GPT-5.5,calibration-residual,high,cp02,4,20,0.2
+GPT-5.5,calibration-residual,high,cp03,5,20,0.25
+GPT-5.5,calibration-residual,high,cp04,0,20,0.0
+GPT-5.5,calibration-residual,high,cp05,0,20,0.0
+GPT-5.5,calibration-residual,xhigh,cp01,11,20,0.55
+GPT-5.5,calibration-residual,xhigh,cp02,4,20,0.2
+GPT-5.5,calibration-residual,xhigh,cp03,10,20,0.5
+GPT-5.5,calibration-residual,xhigh,cp04,0,20,0.0
+GPT-5.5,calibration-residual,xhigh,cp05,2,20,0.1
+GPT-5.6 Sol,calibration-residual,low,cp01,9,20,0.45
+GPT-5.6 Sol,calibration-residual,low,cp02,2,20,0.1
+GPT-5.6 Sol,calibration-residual,low,cp03,2,20,0.1
+GPT-5.6 Sol,calibration-residual,low,cp04,0,20,0.0
+GPT-5.6 Sol,calibration-residual,low,cp05,2,20,0.1
+GPT-5.6 Sol,calibration-residual,medium,cp01,16,20,0.8
+GPT-5.6 Sol,calibration-residual,medium,cp02,4,20,0.2
+GPT-5.6 Sol,calibration-residual,medium,cp03,11,20,0.55
+GPT-5.6 Sol,calibration-residual,medium,cp04,0,20,0.0
+GPT-5.6 Sol,calibration-residual,medium,cp05,5,20,0.25
+GPT-5.6 Sol,calibration-residual,high,cp01,19,20,0.95
+GPT-5.6 Sol,calibration-residual,high,cp02,9,20,0.45
+GPT-5.6 Sol,calibration-residual,high,cp03,14,20,0.7
+GPT-5.6 Sol,calibration-residual,high,cp04,0,20,0.0
+GPT-5.6 Sol,calibration-residual,high,cp05,11,20,0.55
+GPT-5.6 Sol,calibration-residual,xhigh,cp01,19,20,0.95
+GPT-5.6 Sol,calibration-residual,xhigh,cp02,4,20,0.2
+GPT-5.6 Sol,calibration-residual,xhigh,cp03,11,20,0.55
+GPT-5.6 Sol,calibration-residual,xhigh,cp04,0,20,0.0
+GPT-5.6 Sol,calibration-residual,xhigh,cp05,10,20,0.5

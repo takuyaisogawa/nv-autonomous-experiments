@@ -1,0 +1,38 @@
+{
+  "judge_prompt_version": "v6-github-verbatim",
+  "source_batch": "20261021T051400Z-ce38c081",
+  "github_guide": {
+    "revision": "10c6353fe1d7397ed4e30e117078c4e9c2093eb6",
+    "path": "benchmarks/nv-checkpoint-review-2026-06/labels/scoring_guide.md",
+    "url": "https://github.com/takuyaisogawa/nv-autonomous-experiments/blob/10c6353fe1d7397ed4e30e117078c4e9c2093eb6/benchmarks/nv-checkpoint-review-2026-06/labels/scoring_guide.md",
+    "sha256_bytes": "cf78760cc5faa3a4ed503564b809482a378267fdbad23e4887290a1b2cb509d7",
+    "included_verbatim": true
+  },
+  "input_shuffle_seed": 20261021,
+  "task_prompt_provenance": "Reconstructed from released task.md and run_sweep.py prompt_text(); historical per-run request payloads were not independently verified.",
+  "input_hash_format": "SHA-256 of the original pretty-printed JSON text with LF newlines, matching the judging runner.",
+  "fixed_source_hashes": {
+    "judge_prompt.txt": "3a93e602f96668a1372a370f0ce4c8b14bd26265bd2abd48fc293af5767f6997",
+    "scoring_guide.md": "cf78760cc5faa3a4ed503564b809482a378267fdbad23e4887290a1b2cb509d7",
+    "judge_instructions.txt": "da5a7b78dc2c22c761a82d13dd2ea4076d259887d5f749ad388fddaf435b097c",
+    "output_schema.json": "fe43637472342fcf9851199fd09c5093d71fe9c43de173905d83149c0cf2e5aa",
+    "config.json": "165a6c9b58526d4d4e01a05265b5eb4de210bb554ae13dc63f0b6a4b8d2962d4",
+    "judge_cli.py": "3ce58ff793d5dab1719a09837550d722b77caf92b87a698f30126bfe47dcabec",
+    "run_full.py": "83165d2d01bc2fffbd489a73f63e49f534f71e2f6b3d0babbb32f4528c1ca756",
+    "prepare_full.py": "92b1ff7f59a6db24b82cb8f647587d08be2c8cb03174ebcfb1929b5d6b0b0840"
+  },
+  "source_all_results_sha256": "53a86fa4aa6941f0f80565bc0757499d39a2f98a7f8662f5eed30c07c7642c7b",
+  "source_comparison_sha256": "0c4937fba4d6fe4450d49b2fefef229a5754b20fa1b1419555ea0107cd8b647f",
+  "previous_source_file_hashes": {
+    "benchmarks/three-model-comparison-2026-07/ramsey/gpt-5.6-sol/manual_scoring_records.csv": "0ef4ae103d7c57b40a25163067fa29a230d12c99221371bf79f3246363ed0114",
+    "benchmarks/nv-checkpoint-review-2026-06/results/low_preanalysis_rootnote_2026-06-16/model_outputs.jsonl": "6f946e09263a4599e46014203013aaefea0dcd38a607d629acd05d7ad38d04d9",
+    "benchmarks/three-model-comparison-2026-07/ramsey/gpt-5.4/manual_scoring_records.csv": "e765f9a3bb4d47ab8909a4d655481ae90d14dd7ef994c6b4e4b7200c80ee6586",
+    "benchmarks/three-model-comparison-2026-07/ramsey/gpt-5.4/manual_calibration_residual_scores.csv": "1d80043cabbd27e726a09127d178e613bc3c02750f5638bfdfbe1c46939c96cc",
+    "benchmarks/three-model-comparison-2026-07/ramsey/gpt-5.6-sol/manual_calibration_residual_scores.csv": "2cb1a5ac42a1343960970ceda1a126e8a6ab0d10d977ca9eb424565e190368d9",
+    "benchmarks/nv-checkpoint-review-2026-06/results/manual_calibration_residual_scores_2026-07-11.csv": "a0dd200b0db15de88efff5325f772a963e15d3a4cc5fef26f9911cd051727d2c",
+    "benchmarks/nv-checkpoint-review-2026-06/results/mhx_preanalysis_wake_2026-06-16/model_outputs.jsonl": "f856c56cc475a8bbf3f8b3a0ecf69d6978bd7b3902531c0a18eb1fa674055fc3"
+  },
+  "human_original_sha256": "0dd9c6b4fb59dc604de798ed89bfbdd6f2145da2ae33b61b4053aaa0f05ec9dc",
+  "source_verdicts_and_rationales_unchanged": true,
+  "runner_note": "Public runner uses portable paths; model, effort, prompts, isolation flags and input payload are preserved."
+}

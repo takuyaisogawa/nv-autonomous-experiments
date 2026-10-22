@@ -51,12 +51,15 @@ and twenty replicates for each checkpoint and effort pair.
 
 | Model | Low | Medium | High | X-high |
 | --- | ---: | ---: | ---: | ---: |
-| [GPT-5.4](models/gpt-5.4/) | 7/100 | 13/100 | 17/100 | 20/100 |
-| [GPT-5.5](models/gpt-5.5/) | 11/100 | 17/100 | 21/100 | 34/100 |
-| [GPT-5.6 Sol](models/gpt-5.6-sol/) | 16/100 | 42/100 | 55/100 | 49/100 |
+| [GPT-5.4](models/gpt-5.4/) | 7/100 | 10/100 | 16/100 | 22/100 |
+| [GPT-5.5](models/gpt-5.5/) | 4/100 | 17/100 | 18/100 | 27/100 |
+| [GPT-5.6 Sol](models/gpt-5.6-sol/) | 15/100 | 36/100 | 53/100 | 44/100 |
 
-The combined checkpoint source data are in
-[`ramsey/three_model_checkpoint_summary.csv`](ramsey/three_model_checkpoint_summary.csv).
+These are the fixed [v6 LLM-judge results](ramsey/llm_judge_v6/), validated
+against 100 human labels with 96% agreement. The current checkpoint source
+table is [`ramsey/llm_judge_v6/checkpoint_summary.csv`](ramsey/llm_judge_v6/checkpoint_summary.csv).
+The previous [`ramsey/three_model_checkpoint_summary.csv`](ramsey/three_model_checkpoint_summary.csv)
+is preserved for comparison.
 The GPT-5.4 and GPT-5.6 Sol folders contain completion audits, checkpoint
 summaries, per-run manual scores and rationales, and compact records containing
 the returned handoff and project note text.  The original GPT-5.5 scores and
@@ -91,7 +94,8 @@ Absolute user paths are replaced with `<USER_HOME>` during this conversion.
 
 Raw CLI stderr logs and internal execution traces are not included.  The
 released records retain the model outputs needed to audit the reported binary
-decisions and Ramsey manual scoring.
+decisions and the previous Ramsey scoring. The v6 release adds the unchanged
+judge outputs, human validation records and reproducible scoring procedure.
 
 ## Figure reproduction
 

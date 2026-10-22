@@ -1,0 +1,10 @@
+{
+  "n": 100,
+  "excluded": 16,
+  "pool": 1184,
+  "unique": true,
+  "no_pilot_overlap": true,
+  "source_hashes_verified": true,
+  "metadata_scan_matches": [],
+  "seed": 120996292817712362389371840761236270678
+}
