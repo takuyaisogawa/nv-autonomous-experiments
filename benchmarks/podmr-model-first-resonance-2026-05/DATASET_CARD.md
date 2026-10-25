@@ -2,7 +2,7 @@
 
 ## Dataset
 
-The benchmark contains 96 pODMR measurements from a single NV center workflow.
+The benchmark contains 96 pODMR measurements from two NV centers.
 All cases use `Rabimodulated.xml` with a 100 MHz microwave-frequency sweep,
 21 points, 5 MHz step, and two stored averages.
 

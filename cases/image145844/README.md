@@ -9,7 +9,7 @@ Ramsey frequency reanalysis.
 | Entry point | Why it matters |
 | --- | --- |
 | [Full walkthrough](../../docs/case_walkthrough.md) | Cross-case timeline and audit guide |
-| [Main project state](project/work/state.md) | Final state, current findings, claim boundary |
+| [Main project state](project/work/state.md) | Final status, findings, and limitations |
 | [Evidence ledger](project/.manager/evidence.jsonl) | Append-only evidence index |
 | [Work notes](project/work/notes/) | Time-ordered reasoning and decisions |
 | [Bridge records](project/work/bridge_jobs/) | Submit/status/result records from the MATLAB bridge |
@@ -19,10 +19,9 @@ Ramsey frequency reanalysis.
 
 ## Reading Summary
 
-The agent rejected fresh `r01` and `r02` for alignment selection after
-raw/readout-aware pODMR reviews did not show clear usable resonances. It
-accepted `r03` after strong-pi and weak-pi pODMR evidence, then ran multiple
-Ramsey branches with changed measurement conditions rather than blind repeats.
+The agent rejected `r01` and `r02` because analysis of the raw pODMR readouts
+showed no clear usable resonances. It accepted `r03` after strong-pi and weak-pi
+pODMR measurements, then varied the conditions of subsequent Ramsey measurements.
 
 ## Model Provenance
 
@@ -37,13 +36,13 @@ shape, so the explicit model fields are recorded here and in `case.yaml` for
 the public release. See
 [model and agent configuration](../../docs/model_and_agent_configuration.md).
 
-The final revised closeout is
+The revised final report is
 [image145844_reimage_r03_shifted_sideband_recloseout_report_20260514_1320.pdf](project/work/artifacts/reports/20260514_1320_r03_shifted_sideband_recloseout/image145844_reimage_r03_shifted_sideband_recloseout_report_20260514_1320.pdf).
 
-Final claim boundary: aligned `r03` found; no unconditional claim-grade numeric
-T2star; the Ramsey frequency interpretation was revised after considering a
-residual calibration offset, but the data do not establish an independently
-confirmed nearby-13C coupling claim.
+The agent identified `r03` as aligned with the magnetic field. The analysis
+did not establish a reliable value of T2star or identify coupling to an
+individual nearby 13C nucleus. The agent later revised its interpretation of
+the Ramsey frequency after considering a residual calibration error.
 
 ## Representative Artifacts
 

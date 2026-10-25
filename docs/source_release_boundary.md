@@ -11,13 +11,10 @@ execution disabled.
 - `matlab/analysis/`
 - `docs/agent_prompt_context.md`
 
-These are sanitized copies or public summaries. Local paths have been
-placeholdered, and the public release does not include private configuration or
-live queue roots.
+These are sanitized copies or public summaries. Local paths have been replaced
+with placeholders.
 
 ## Execution Guard
 
-The execution-source Python files have direct CLI execution disabled.
-
-This keeps the scientific and engineering record visible without turning the
-repository into a live lab-control package.
+Direct CLI execution is disabled in the Python files that would control
+experiments. See [Public scope](public_scope.md) for the full release contents.

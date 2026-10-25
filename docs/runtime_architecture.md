@@ -20,14 +20,10 @@ inspection and the image-axis normalization contract used by the cases.
 `matlab/manifests` and `matlab/sequences` contain the case-relevant manifest
 and XML records needed to inspect what was requested.
 
-The live MATLAB lab backend source is not included in this public release.
+## Agent Instructions
 
-## Prompt Surface
+`docs/agent_prompt_context.md` summarizes the instructions given to the NV
+project agent.
 
-`docs/agent_prompt_context.md` summarizes the retained NV project-manager
-project-manager prompt context used for long-running project wake context. The
-runtime skill folder and thin wrapper script are omitted from the public source
-tree to avoid confusing them with the real project-manager implementation.
-
-The public case folders preserve real completed records, but the repository
-does not provide a route to live hardware.
+Hardware execution is disabled. See [Public scope](public_scope.md) for the
+included and excluded components.

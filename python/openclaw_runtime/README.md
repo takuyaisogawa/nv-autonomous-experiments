@@ -1,7 +1,8 @@
 # Runtime Helpers
 
-Sanitized helper scripts retained because they are referenced by
-the two public cases or required by retained case-referenced source files.
+These helper scripts are used by the three public case studies or by the
+other source files included in this release. Private local settings have been
+removed.
 
 Included helper groups:
 
@@ -16,6 +17,6 @@ defaults are exposed through environment variables such as `MATLAB_23C_ROOT`,
 `OPENCLAW_TOOLS_MAT_PARSE`, and `OPENCLAW_TECTONIC`, or represented by explicit
 placeholders.
 
-Live backend dispatch, daemon wiring, and direct live queue mutation are outside
-this runtime-helper layer. The retained execution-path source is published
-under `python/openclaw_nv_execution_source/` with direct execution disabled.
+Code for submitting and managing experiments is published under
+`python/openclaw_nv_execution_source/` with direct execution disabled. See
+[Public scope](../../docs/public_scope.md) for the release contents.

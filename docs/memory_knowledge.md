@@ -5,9 +5,9 @@ self-updating research agent can remain auditable as it accumulates experience.
 
 ## Memory
 
-Memory is the compact wake-start contract. It describes the agent role, the
-current operating rules, hard safety boundaries, project routing, and the index
-for selecting relevant knowledge sections.
+Memory contains the instructions read at the start of each agent run. It
+describes the agent's role, operating rules, safety constraints, project
+selection, and how to find relevant knowledge sections.
 
 In practice, memory answers questions such as:
 
@@ -33,10 +33,10 @@ called for by the current project state, evidence, or memory index.
 
 The split makes the system easier to inspect and safer to revise.
 
-- Every wake starts from a compact, comparable contract.
+- Each agent run begins by reading the current operating instructions.
 - Old lessons do not silently dominate every new decision.
-- A wrong or stale lesson can be corrected in knowledge without rewriting the
-  wake contract.
+- A wrong or outdated lesson can be corrected in knowledge without rewriting
+  the operating instructions.
 - A new hard rule can be promoted into memory when it should apply to every
   wake.
 - The difference between current operating rules and accumulated lessons is

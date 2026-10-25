@@ -4,12 +4,11 @@ This benchmark packages five OpenClaw/NV Ramsey checkpoints from the completed
 `image145844` case. It is designed for a reasoning-effort sweep with the same
 agent-visible evidence held fixed within each checkpoint.
 
-Each checkpoint is a pre-analysis review state: project files, memory,
-knowledge, context, and prior evidence come from immediately after the target
-Ramsey job was launched. The only later files added are the terminal raw
-measurement export and bridge metadata for that same Ramsey. This avoids giving
-the model the original agent's post-measurement review, autosave review, or next
-action as a hint.
+Each checkpoint contains the information available before analysis of the new
+Ramsey measurement. Project files, memory, knowledge, context, and prior
+evidence were copied from immediately after that measurement was launched.
+The completed measurement data and bridge metadata were then added. The
+original agent's analyses of that measurement and its next action were excluded.
 
 The benchmark intentionally uses neutral checkpoint and evidence filenames
 (`cp01`, `e001.json`, and so on). Source filenames and wake-record provenance are
@@ -17,7 +16,7 @@ kept outside the agent-visible checkpoint folders.
 
 ## Agent Task
 
-Each run is framed as a normal NV project wake after a Ramsey measurement has
+Each run asks the agent to resume the project after a Ramsey measurement has
 completed. The prompt asks the model to analyze the new measurement data, use
 local tools such as Python when useful, write a root-level project note, include
 a compact note section in the final handoff, and choose the next action:

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository is the public audit release accompanying a manuscript on an
+This repository contains the data and code accompanying a manuscript on an
 LLM agent for autonomous nitrogen-vacancy center experiments.  The OpenClaw
 platform provided the agent and project management layer around the NV
 instrument control stack.
@@ -16,8 +16,7 @@ execution through Ramsey checkpoint and pODMR data evaluation benchmarks.
 The release contains completed project records, evidence logs, bridge records,
 figures, reports, benchmark inputs, labels, predictions, per run analysis notes,
 LLM-judge outputs, human validation labels, previous scores, and analysis code
-needed to audit the reported results. It is a
-sanitized research release and not the full live OpenClaw backend.
+needed to check the reported results.
 
 ## Paper and Repository Map
 
@@ -26,8 +25,8 @@ The order below follows the current manuscript.
 | Manuscript component | What it shows | Repository entry point |
 | --- | --- | --- |
 | Figure 1. Autonomous NV workflow | The boundary between LLM reasoning, persistent project state, analysis tools, deterministic validation, and hardware control | [System overview](docs/system_overview.md), [runtime architecture](docs/runtime_architecture.md) |
-| Figure 2. Main autonomous experiment | NV candidate selection, pODMR screening and calibration, Ramsey measurements, and a CPMG check of a weak feature that could be related to nearby carbon-13 coupling | [Main experiment `image172647`](cases/image172647/README.md) |
-| Figure 3. Ramsey checkpoint benchmark | Recognition of a residual resonance calibration hypothesis across GPT-5.4, GPT-5.5, and GPT-5.6 Sol | [Three model Ramsey comparison](benchmarks/three-model-comparison-2026-07/ramsey/) |
+| Figure 2. Main autonomous experiment | NV candidate selection, pODMR screening and calibration, Ramsey measurements, and a CPMG measurement to investigate a possible carbon-13 contribution to the weak frequency components in the Ramsey spectra | [Main experiment `image172647`](cases/image172647/README.md) |
+| Figure 3. Ramsey checkpoint benchmark | Whether GPT-5.4, GPT-5.5, and GPT-5.6 Sol identify a possible error in the calibrated resonance frequency | [Three model Ramsey comparison](benchmarks/three-model-comparison-2026-07/ramsey/) |
 | Figure 4. pODMR benchmark | Effects of prompts, reasoning effort, and model identity on resonance judgments | [Three model pODMR comparison](benchmarks/three-model-comparison-2026-07/podmr/) |
 | Supplementary case studies and analyses | Two additional completed autonomous runs, representative pODMR inputs, deterministic checks, and detailed benchmark tables | [Additional cases](cases/README.md), [benchmark records](benchmarks/three-model-comparison-2026-07/README.md) |
 | Supplementary Note 4. Human reference workflow | Archived human NV selection and characterization from September 2023, with the experimental purpose and selection criteria | [Original log and context](human_reference/2023-09_nv_selection/README.md) |
@@ -35,36 +34,32 @@ The order below follows the current manuscript.
 
 ## Public Scope
 
-The case-referenced NV project management source is public for audit.  This
-repository cannot control hardware.  Real completed case artifacts are
-included, while live configuration, private queue locations, and runnable
-hardware entry points are excluded.
-
-See [docs/public_scope.md](docs/public_scope.md) for the exact public boundary.
+The repository provides experimental records and code for inspection and
+offline analysis. Hardware execution is disabled. See
+[Public scope](docs/public_scope.md) for what is included and excluded.
 
 ## Autonomous Experiment Records
 
-The main experiment in the manuscript is `image172647`.  The agent recovered
-from a fresh image, screened candidate NV centers with pODMR, refined the
-resonance calibration, acquired Ramsey measurements at multiple detunings, and
-used a CPMG N=8 measurement to check a weak feature that could be related to a
-nearby carbon-13 spin.  The released project folder records what the agent saw,
-what it decided, the artifacts it wrote, and the evidence limits applied to the
-final interpretation.
+The main experiment in the manuscript is `image172647`. The agent acquired a
+new image, screened candidate NV centers with pODMR, refined the resonance
+calibration, and acquired Ramsey measurements at multiple detunings. It then
+used an N=8 CPMG measurement to investigate a possible carbon-13 contribution
+to the weak frequency components in the Ramsey spectra. The released project
+folder records the data, decisions, analyses, and final interpretation.
 
 | Case | Role in the manuscript | Summary | Status |
 | --- | --- | --- | --- |
-| [`image172647`](cases/image172647/README.md) | Main autonomous workflow demonstration | Fresh image recovery, candidate rejection and acceptance, pODMR calibration, Ramsey measurements at multiple detunings, and a CPMG N=8 check | Completed |
+| [`image172647`](cases/image172647/README.md) | Main autonomous workflow demonstration | New imaging after loss of the initial candidate, candidate selection, pODMR calibration, Ramsey measurements at multiple detunings, and a CPMG N=8 check | Completed |
 | [`image145844`](cases/image145844/README.md) | Additional case study | Aligned NV selection, pODMR screening, repeated Ramsey diagnostics, and later frequency reanalysis | Completed |
-| [`image231924`](cases/image231924/README.md) | Additional case study | Aligned NV selection, resonant frequency refinement, a repeated Ramsey measurement, and a bounded `T2*` closeout | Completed |
+| [`image231924`](cases/image231924/README.md) | Additional case study | Aligned NV selection, resonant frequency refinement, a repeated Ramsey measurement, and a final report on the `T2*` estimate and its limitations | Completed |
 
 ## Offline Benchmarks
 
 Both benchmarks were evaluated with GPT-5.4, GPT-5.5, and GPT-5.6 Sol using the
 same inputs, prompts, reasoning effort settings, replicate structure, and
-scoring rules for each model.  Model identifiers, execution dates, and direct
-links to each model's records are collected in the
-[parallel model index](benchmarks/three-model-comparison-2026-07/README.md).
+scoring rules for each model. Model identifiers, execution dates, and links
+to each model's records are listed in the
+[model comparison](benchmarks/three-model-comparison-2026-07/README.md).
 
 | Benchmark | Design | Total size |
 | --- | --- | ---: |
@@ -73,10 +68,10 @@ links to each model's records are collected in the
 
 ### Ramsey checkpoint benchmark
 
-The Ramsey task tests whether the agent can integrate project records and a
-newly returned Ramsey measurement to identify a missing hypothesis involving a
-residual resonance calibration offset.  Later analysis, later measurements,
-and human advice were excluded from each agent visible checkpoint package.
+The Ramsey task tests whether the agent can use project records and new
+Ramsey data to identify a possible residual error in the calibrated resonance
+frequency. Analysis, measurements, and human advice from after each checkpoint
+were excluded from the files supplied to the agent.
 
 | Model | Low | Medium | High | X-high |
 | --- | ---: | ---: | ---: | ---: |
@@ -114,8 +109,8 @@ one false negative at low reasoning with the sequence prompt.  GPT-5.4 produced
 between two and eleven false negatives among 72 resonance present decisions in
 each prompt and reasoning cell.
 
-Complete point estimates, measurement level bootstrap intervals, predictions,
-and analysis notes are available from the
+Complete point estimates, confidence intervals obtained by bootstrap resampling
+of measurements, predictions, and analysis notes are available from the
 [pODMR comparison directory](benchmarks/three-model-comparison-2026-07/podmr/).
 
 ![Figure 4. pODMR benchmark across three models](benchmarks/three-model-comparison-2026-07/figures/podmr_benchmark_summary.png)
@@ -176,8 +171,7 @@ docs/
 ## Reproducibility
 
 The released records support audit, offline analysis, and reconstruction of the
-reported benchmark values and selected figures.  Full live laboratory
-re-execution is outside the scope of this public release.
+reported benchmark values and selected figures.
 
 The quantitative panels and final layouts of manuscript Figs. 3 and 4 can be
 reproduced from the released source tables and vector artwork.  See the

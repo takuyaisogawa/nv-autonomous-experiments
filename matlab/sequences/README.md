@@ -2,7 +2,7 @@
 
 Sequence XML files needed to interpret the public case studies.
 
-Included in this pass:
+Included files:
 
 - `SavedSequences-AWG/Rabimodulated.xml`
 - `SavedSequences-AWG/CPMG.xml`

@@ -42,12 +42,13 @@ pointers, not as a complete research plan. A normal wake should:
 - continue into the next runnable task while policy, bridge state, evidence,
   and time budget permit.
 
-During a running execute, useful bridge-free work was allowed: analysis, model
-calculations, literature review, evidence-gap closure, notes, figures, tables,
-or interpretation updates. The agent was not allowed to mutate the bridge queue
-or stop/mark terminal a running job without terminal evidence or a hard anomaly.
+While a measurement was running, the agent could analyze data, calculate
+models, review literature, address unresolved questions, and prepare notes,
+figures, or tables without interacting with the bridge. It was instructed not
+to change the queue, stop a job, or mark it complete without evidence that it
+had finished or encountered a serious problem.
 
-## Project Memory Surface
+## Project Records
 
 The main durable records were:
 
@@ -90,4 +91,5 @@ The public source corresponding to this prompt context is:
 - `python/openclaw_nv_execution_source/enqueue_nv_sequence_direct.py`
 - `python/openclaw_nv_execution_source/enqueue_nv_imaging_direct.py`
 
-Direct execution of these public source files is disabled in this release.
+Direct execution of these public source files is disabled. See
+[Public scope](public_scope.md) for the release contents.

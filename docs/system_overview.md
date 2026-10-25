@@ -32,9 +32,9 @@ bridge/result artifacts -> evidence ledger -> updated project state
 `project-execution agent` is the LLM research role for these cases. Its public
 configuration is recorded in `docs/model_and_agent_configuration.md`.
 
-`project state` is the compact current truth for a project. In the case
-copies, the readable form is `work/state.md`; machine state and audit records
-live under `.manager/`.
+`project state` summarizes the agent's current findings and next steps. In the
+case copies, the readable form is `work/state.md`; machine state and audit
+records are stored under `.manager/`.
 
 `backlog` is an execution queue and audit trail, not the full scientific plan.
 It captures bounded work items, external blockers, and completed decisions.
@@ -52,6 +52,8 @@ bridge results, notes, and reports to the claims they support or reject.
 
 ## Wake Loop
 
+A "wake" is one invocation of the project agent by the scheduler.
+
 The scheduler inspects project state, bridge/result activity, backlog, and
 recent agent-run records. If work is actionable, it writes a wake record and
 dispatches the project agent. The public cases preserve the wake records and
@@ -61,12 +63,8 @@ wiring is outside this focused public subset.
 
 ## Backend Boundary
 
-The public repository cannot move stages, emit microwave signals, start lasers,
-control cameras, or mutate a live bridge queue. Execution-source entry points
-are disabled, and private configuration/live queue roots are excluded.
-
-Completed case folders preserve real historical bridge/result artifacts for
-audit.
+Hardware execution is disabled in the public code. See
+[Public scope](public_scope.md) for the included records and excluded components.
 
 ## Where To Look
 

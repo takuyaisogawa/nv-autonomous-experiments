@@ -11,7 +11,8 @@ Tables S1--S5 of the manuscript.
 
 Each model was evaluated on the same 96 measurements from two NV centers using
 three prompts, four reasoning effort settings, and three replicates. The complete
-point estimates and measurement level bootstrap intervals are in
+point estimates and confidence intervals obtained by bootstrap resampling of
+measurements are in
 [three_model_case_bootstrap.csv](three_model_case_bootstrap.csv).
 
 ## Expected signal prompt

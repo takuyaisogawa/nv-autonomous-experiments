@@ -2,7 +2,7 @@
 
 Sanitized sequence manifests used by the public case studies.
 
-Included in this pass:
+Included files:
 
 - `staging/pulsed_odmr_rabimodulated_v1.json`
 - `validated/auto__cpmg.json`

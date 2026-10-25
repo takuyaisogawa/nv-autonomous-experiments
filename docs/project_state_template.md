@@ -3,10 +3,10 @@
 This document shows the public version of the template used to initialize
 `work/state.md` for autonomous NV projects.
 
-`work/state.md` is the main readable state surface for the project agent. It is
-short, current, and evidence-oriented. Detailed derivations, failed ideas, and
-per-task checks belong in `work/notes/`, while backend-facing execution
-contracts belong in `work/bridge_jobs/` or the backend boundary.
+`work/state.md` is the main summary of the project's current status. It links
+findings to supporting evidence. Detailed derivations, failed ideas, and checks
+are stored in `work/notes/`, while job specifications and execution records are
+stored in `work/bridge_jobs/` or the live bridge queue.
 
 The template is included because it captures the operating pattern behind the
 case folders: the agent may use qualitative scientific judgment to propose
@@ -83,8 +83,8 @@ note pointers. Scientific interpretation belongs in this file and `work/notes/`.
 
 ## Why This Matters
 
-The template is deliberately not a detailed scientific script. It gives the
-agent a compact state surface and makes the audit rules explicit:
+The template keeps the project's status easy to read and makes the recording
+requirements explicit:
 
 - keep the current state readable;
 - write small retrievable notes;
