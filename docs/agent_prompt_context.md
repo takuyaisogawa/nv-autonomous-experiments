@@ -12,7 +12,7 @@ manager source in `python/openclaw_nv_execution_source/nv_project_manager.py`.
   expansion.
 - Python owns durable state, queue safety, audit logs, wake pacing, completion
   markers, and hard hardware/code safety boundaries.
-- The MATLAB bridge remains the execute safety gate. The agent must not bypass
+- The MATLAB bridge checks each job before execution. The agent must not bypass
   bridge validation, manifest limits, local lab opt-in, queue execute opt-in,
   or hardware safety limits.
 
@@ -42,10 +42,10 @@ pointers, not as a complete research plan. A normal wake should:
 - continue into the next runnable task while policy, bridge state, evidence,
   and time budget permit.
 
-While a measurement was running, the agent could analyze data, calculate
-models, review literature, address unresolved questions, and prepare notes,
-figures, or tables without interacting with the bridge. It was instructed not
-to change the queue, stop a job, or mark it complete without evidence that it
+While a measurement was running, the agent could analyze data, perform model
+calculations, review literature, address unresolved questions, and prepare
+notes, figures, or tables without interacting with the bridge. It was instructed
+not to change the queue, stop a job, or mark it complete without evidence that it
 had finished or encountered a serious problem.
 
 ## Project Records

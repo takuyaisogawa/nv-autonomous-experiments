@@ -33,8 +33,8 @@ The high-level artifact map is:
 
 ## image172647
 
-Objective: find a magnetic-field-aligned NV from `image172647`, then obtain a
-well-supported T2star and 13C conclusion.
+Objective: find a magnetic-field-aligned NV from `image172647`, then estimate
+T2star and assess evidence for coupling to nearby 13C nuclei.
 
 Main entry points:
 
@@ -53,9 +53,9 @@ Main entry points:
 | Fresh re-image | New imaging result and candidate ranking | Use the fresh image frame and test `reimage1804_c01`, then `reimage1804_c02` | `work/artifacts/image172647_reimage1804_candidates/`, `work/artifacts/figures/image172647_reimage1804_candidate_peaks_20260514_1812.png` |
 | Reject `reimage1804_c01` | TrackCenter and terminal strong-pi pODMR review | Reject c01 because healthy-count pODMR showed no clear usable resonance and only weak depressions relative to expected contrast | `work/artifacts/analysis/reimage1804_c01_podmr_terminal_summary_4avg_20260514_1859.json`, `work/notes/reimage1804_c01_podmr_terminal_review_reject_20260514_1900.md` |
 | Accept `reimage1804_c02` | TrackCenter plus terminal strong-pi pODMR | Accept c02 as the aligned branch: clear signal-only resonance near 3.875 GHz, with lower-than-reference contrast caveat | `work/artifacts/analysis/reimage1804_c02_podmr_terminal_summary_4avg_20260514_1957.json`, `work/notes/reimage1804_c02_podmr_terminal_review_accept_20260514_1959.md` |
-| Ramsey scout | Initial det=1.5 MHz Ramsey terminal review | Support a weak empirical oscillation and short/few-us T2star order, but do not establish 13C or a final scalar | `work/artifacts/analysis/reimage1804_c02_ramsey_terminal_8avg_summary_20260514_2150.json`, `work/artifacts/figures/reimage1804_c02_ramsey_terminal_8avg_20260514_2150.png` |
+| Ramsey scout | Initial det=1.5 MHz Ramsey terminal review | The agent identified weak oscillations and tentatively estimated a T2star of a few microseconds, but did not establish 13C coupling or a reliable T2star value | `work/artifacts/analysis/reimage1804_c02_ramsey_terminal_8avg_summary_20260514_2150.json`, `work/artifacts/figures/reimage1804_c02_ramsey_terminal_8avg_20260514_2150.png` |
 | Weak-pi center refinement | Weak-pi pODMR terminal review | Refine the working center to `3.876501337 GHz`; rule out a large electron-resonance mis-centering explanation for the earlier high-frequency Ramsey component | `work/artifacts/analysis/reimage1804_c02_weak_pi_podmr_terminal_4avg_summary_20260514_2251.json`, `work/artifacts/figures/reimage1804_c02_weak_pi_podmr_terminal_4avg_20260514_2251.png` |
-| det=1.0 Ramsey discriminator | Terminal 16-average det=1.0 MHz Ramsey | Support short/few-us T2star order and leave a weak det+13C-compatible candidate, but do not establish 13C from Ramsey alone | `work/artifacts/analysis/reimage1804_c02_ramsey_det1_terminal_summary_16avg_20260515_0245.json`, `work/artifacts/figures/reimage1804_c02_ramsey_det1_terminal_16avg_20260515_0245.png` |
+| det=1.0 Ramsey discriminator | Terminal 16-average det=1.0 MHz Ramsey | Support a tentative T2star estimate of a few microseconds and leave a weak det+13C-compatible candidate, but do not establish 13C from Ramsey alone | `work/artifacts/analysis/reimage1804_c02_ramsey_det1_terminal_summary_16avg_20260515_0245.json`, `work/artifacts/figures/reimage1804_c02_ramsey_det1_terminal_16avg_20260515_0245.png` |
 | det=1.25 Ramsey discriminator | Third-detuning model, autosave trends, terminal 16-average review | The agent judged the frequency shift consistent with a possible 13C contribution, but insufficient to confirm it from Ramsey alone | `work/artifacts/analysis/reimage1804_c02_ramsey_det1p25_terminal_summary_16avg_20260515_0645.json`, `work/artifacts/figures/reimage1804_c02_ramsey_det1p25_terminal_16avg_20260515_0645.png` |
 | CPMG N=8 follow-up | Non-blind CPMG model based on the weak-pi center and 13C Larmor estimate | Use CPMG to investigate a possible 13C contribution; the agent interpreted the dip as supporting this hypothesis | `work/artifacts/analysis/reimage1804_c02_cpmg_n8_terminal_target_region_review_20260515_0945.json`, `work/artifacts/figures/reimage1804_c02_cpmg_n8_terminal_target_region_20260515_0945.png` |
 | Closeout | Closeout report bundle and final state | Mark the original objective satisfied; no more bridge work by default | `work/reports/closeout_20260515_1225/`, `summaries/nv23_image172647_closeout_report_20260515.pdf` |
@@ -73,8 +73,8 @@ components.
 
 ## image145844
 
-Objective: find a magnetic-field-aligned NV from `image145844`, then obtain a
-well-supported T2star and 13C conclusion.
+Objective: find a magnetic-field-aligned NV from `image145844`, then estimate
+T2star and assess evidence for coupling to nearby 13C nuclei.
 
 Main entry points:
 
@@ -95,7 +95,7 @@ Main entry points:
 | Accept `r03` as aligned | Fresh `r03` TrackCenter plus strong-pi pODMR terminal review | Accept `r03` as first magnetic-field-aligned candidate because raw signal, ratio, and reference-line-normalized views agree at the resonance grid point | `work/artifacts/analysis/image145844_reimage_r03_strong_podmr_raw_review_20260513_1741.json`, `work/notes/20260513_1808_r03_acceptance_and_weak_podmr_start.md` |
 | Refine the resonant frequency | Weak-pi and fine weak-pi pODMR reviews | Use grid-supported microwave frequencies for Ramsey planning without claiming sub-grid precision | `work/artifacts/analysis/image145844_reimage_r03_weak_podmr_raw_review_20260513_1838.json`, `work/artifacts/analysis/image145844_reimage_r03_fine_weak_podmr_raw_review_20260513_2031.json` |
 | First Ramsey scout | Ramsey terminal raw export, FFT review, drift review | The data can be analyzed, but do not establish a reliable T2star value or identify 13C coupling | `work/artifacts/analysis/image145844_reimage_r03_ramsey_t2star_raw_fft_review_20260513_1930.json`, `work/notes/20260513_1958_weak_podmr_review_and_ramsey_start.md` |
-| Non-blind Ramsey follow-ups | Second long-span Ramsey, short-tau/high-SNR diagnostic, det-shift diagnostic | Change measurement conditions to test failure modes; do not promote ambiguous components into claims | `work/artifacts/analysis/`, `work/notes/20260513_2220_second_ramsey_terminal_review.md`, `work/notes/20260514_0200_shorttau_terminal_review_and_detshift_start.md` |
+| Ramsey measurements with revised settings | Second long-span Ramsey, short-tau/high-SNR diagnostic, det-shift diagnostic | Change measurement conditions to test failure modes; do not promote ambiguous components into claims | `work/artifacts/analysis/`, `work/notes/20260513_2220_second_ramsey_terminal_review.md`, `work/notes/20260514_0200_shorttau_terminal_review_and_detshift_start.md` |
 | pODMR refresh | Fine weak-pi pODMR refresh after det-shift branch | Refresh `mw_freq_hz` before final long-span Ramsey; treat pODMR refresh as calibration only | `work/artifacts/analysis/image145844_reimage_r03_fine_weak_podmr_refresh_after_detshift_terminal_review_20260514_0523.json`, `work/notes/20260514_0540_podmr_refresh_review_and_refreshed_center_ramsey_design.md` |
 | Final refreshed-center Ramsey | 20-average refreshed-center Ramsey terminal review and model comparison | Under fixed-carrier interpretation, no unconditional numeric T2star and no fixed 13C sideband claim | `work/artifacts/analysis/image145844_reimage_r03_ramsey_refreshed_center_terminal_review_20260514_0938.json`, `work/artifacts/analysis/image145844_reimage_r03_ramsey_refreshed_center_terminal_model_comparison_20260514_0948.json` |
 | Bridge-free reanalysis | Human advice requesting Ramsey frequency reanalysis, final Ramsey data, bootstrap/model comparison | Revise the Ramsey frequency interpretation after considering a residual calibration offset; do not touch the bridge | `work/artifacts/analysis/image145844_reimage_r03_ramsey_refreshed_center_shifted_sideband_reanalysis_20260514_1308.json`, `work/artifacts/analysis/image145844_reimage_r03_shifted_triplet_targeted_bootstrap_20260514_1312.json` |
@@ -111,8 +111,8 @@ a reliable T2star value or identify coupling to an individual nearby 13C nucleus
 
 ## image231924
 
-Objective: find a magnetic-field-aligned NV from `image231924`, then obtain a
-well-supported T2star and 13C conclusion.
+Objective: find a magnetic-field-aligned NV from `image231924`, then estimate
+T2star and assess evidence for coupling to nearby 13C nuclei.
 
 Main entry points:
 

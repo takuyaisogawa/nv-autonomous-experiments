@@ -43,9 +43,9 @@ It captures bounded work items, external blockers, and completed decisions.
 domain lessons. In the live system, memory routes the agent to the relevant
 knowledge sections instead of loading every prior lesson into every wake.
 
-`experiment intent` is the agent-authored scientific plan before any bridge
-touch. It records the objective, submit spec, safety assumptions, expected
-evidence, and verification status.
+`experiment intent` is the scientific plan prepared by the agent before
+submitting a measurement to the MATLAB bridge. It records the objective,
+submit spec, safety assumptions, expected evidence, and verification status.
 
 `evidence ledger` is append-only provenance. It links analysis outputs, figures,
 bridge results, notes, and reports to the claims they support or reject.

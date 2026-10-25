@@ -55,9 +55,9 @@ folder records the data, decisions, analyses, and final interpretation.
 
 ## Offline Benchmarks
 
-Both benchmarks were evaluated with GPT-5.4, GPT-5.5, and GPT-5.6 Sol using the
-same inputs, prompts, reasoning effort settings, replicate structure, and
-scoring rules for each model. Model identifiers, execution dates, and links
+For each benchmark, GPT-5.4, GPT-5.5, and GPT-5.6 Sol were evaluated using
+the same input files, prompts, reasoning effort settings, number of replicates,
+and scoring rules. Model identifiers, execution dates, and links
 to each model's records are listed in the
 [model comparison](benchmarks/three-model-comparison-2026-07/README.md).
 

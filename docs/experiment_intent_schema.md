@@ -44,7 +44,7 @@ object. Important fields include:
 
 | Field | Purpose |
 | --- | --- |
-| `schema_version` | Public schema generation. |
+| `schema_version` | Version of the intent schema. |
 | `kind` | Should be `experiment_intent`. |
 | `intent_id` | Stable id used to link intent, submit spec, result, and evidence. |
 | `project_id` | Project that owns the intent. |

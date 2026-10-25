@@ -14,7 +14,7 @@ project-execution agent in the included autonomous NV case studies.
 
 The `nv-researcher` project-execution agent is separate from the direct-chat
 `main` agent. The two roles may use the same model family, but they are
-separate sessions with different startup context and memory surfaces.
+separate sessions with different initial instructions and memory documents.
 
 ## Deterministic Runtime Roles
 

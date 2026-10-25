@@ -133,8 +133,8 @@ python scripts\score_outputs.py results\model_outputs.jsonl
 
 The original GPT-5.5 sweep uses manual scores in
 `results/manual_calibration_residual_scores_2026-07-11.csv`.  This file contains
-one binary calibration residual score for all 400 runs, with a short rationale
-for each score.  The aggregated values used for the figure are in
+a PASS/FAIL label and a short rationale for each of the 400 runs. The aggregated
+values used for the figure are in
 `results/figures/reasoning_effort_sweep_low_to_xhigh_summary.csv`.
 
 The manuscript three model values and the corresponding GPT-5.4 and GPT-5.6
