@@ -6,7 +6,8 @@ Each run asks GPT-5.5 to classify one pODMR measurement as
 The three prompt conditions form an ablation:
 
 1. `context_0_protocol_only`: NV pODMR context plus protocol/XML inspection.
-2. `context_A_domain_facts`: XML inspection plus contrast/Rabi/average facts.
+2. `context_A_domain_facts`: XML inspection plus information about the expected
+   contrast, Rabi frequency, and interpretation of stored averages.
 3. `context_B_model_first`: same domain facts plus explicit quantitative
    expected-signal modeling before judgment.
 

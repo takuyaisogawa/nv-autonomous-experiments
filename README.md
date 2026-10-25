@@ -106,8 +106,8 @@ higher reasoning effort.  Requiring an expected signal calculation kept the
 false positive rate between 0 and 3.70 percent across all three models and all
 reasoning settings.  GPT-5.5 produced no false negatives.  GPT-5.6 Sol produced
 one false negative at low reasoning with the sequence prompt.  GPT-5.4 produced
-between two and eleven false negatives among 72 resonance present decisions in
-each prompt and reasoning cell.
+between two and eleven false negatives among 72 evaluations of measurements
+containing a resonance for each combination of prompt and reasoning effort.
 
 Complete point estimates, confidence intervals obtained by bootstrap resampling
 of measurements, predictions, and analysis notes are available from the

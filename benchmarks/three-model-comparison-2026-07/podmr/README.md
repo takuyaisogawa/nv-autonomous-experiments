@@ -17,8 +17,9 @@ measurements are in
 
 ## Expected signal prompt
 
-The table gives false positives among 216 resonance absent decisions and false
-negatives among 72 resonance present decisions in each cell.
+Each cell reports false positives among 216 evaluations of measurements
+without a resonance and false negatives among 72 evaluations of measurements
+containing a resonance.
 
 | Reasoning effort | GPT-5.4 FP / FN | GPT-5.5 FP / FN | GPT-5.6 Sol FP / FN |
 | --- | ---: | ---: | ---: |

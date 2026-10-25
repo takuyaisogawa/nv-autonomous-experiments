@@ -46,8 +46,8 @@ conditions.
 
 ## Ramsey checkpoint comparison
 
-Each model was evaluated at five checkpoints, four reasoning effort settings,
-and twenty replicates for each checkpoint and effort pair.
+For each model, we ran 20 evaluations for each combination of five checkpoints
+and four reasoning effort settings.
 
 | Model | Low | Medium | High | X-high |
 | --- | ---: | ---: | ---: | ---: |
@@ -81,8 +81,8 @@ The main cross-model result is that the expected signal prompt kept false
 positive rates between 0 and 3.7 percent across all model and reasoning
 combinations.  GPT-5.5 had no false negatives.  GPT-5.6 Sol had one false
 negative at low reasoning with the sequence prompt.  GPT-5.4 had between two and
-eleven false negatives among the 72 resonance decisions in each prompt and
-reasoning cell.
+eleven false negatives among 72 evaluations of measurements containing a
+resonance for each combination of prompt and reasoning effort.
 
 ## Compact note record generation
 

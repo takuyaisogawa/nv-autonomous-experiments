@@ -34,7 +34,8 @@ called for by the current project state, evidence, or memory index.
 The split makes the system easier to inspect and safer to revise.
 
 - Each agent run begins by reading the current operating instructions.
-- Old lessons do not silently dominate every new decision.
+- The agent is instructed to read only the knowledge sections relevant to its
+  current task.
 - A wrong or outdated lesson can be corrected in knowledge without rewriting
   the operating instructions.
 - A new hard rule can be promoted into memory when it should apply to every

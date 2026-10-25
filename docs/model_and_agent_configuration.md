@@ -29,7 +29,7 @@ MATLAB layers own the operational boundaries:
 - The agent authors scientific intent and interpretation; verified bridge
   submit specs and live execution remain behind deterministic validation.
 
-## Memory And Knowledge Surface
+## Memory And Knowledge
 
 The project-execution agent reads the compact NV startup memory at each wake
 and reads detailed knowledge sections on demand:
@@ -38,15 +38,15 @@ and reads detailed knowledge sections on demand:
 - Knowledge index: `docs/nv_research_knowledge_index.md`
 - Representative knowledge excerpt: `docs/nv_research_knowledge_excerpt.md`
 
-This split is part of the public provenance for the self-updating agent loop:
-memory provides the wake contract and routing rules, while knowledge stores
-reusable experimental lessons and prior-operation guidance.
+Memory contains the instructions read at the start of each run and explains
+how to find relevant knowledge. Knowledge records lessons from earlier
+experiments.
 
 ## Case Provenance
 
 | Case | Project-execution agent | Model | Thinking level | Notes |
 | --- | --- | --- | --- | --- |
-| `image145844` | `nv-researcher` | `openai-codex/gpt-5.5` | `xhigh` | The archived `project.json` uses an earlier startup metadata shape, so the model fields are recorded in the case README and `case.yaml` for this public release. |
+| `image145844` | `nv-researcher` | `openai-codex/gpt-5.5` | `xhigh` | The archived `project.json` uses an older metadata format, so the model fields are recorded in the case README and `case.yaml` for this public release. |
 | `image172647` | `nv-researcher` | `openai-codex/gpt-5.5` | `xhigh` | The archived `project.json` records `nv-researcher` and the same project-execution route, but not the explicit model fields; the public case metadata records them. |
 | `image231924` | `nv-researcher` | `openai-codex/gpt-5.5` | `xhigh` | The archived `project.json` includes `project_execution_agent_model` and `project_execution_agent_thinking` fields. |
 

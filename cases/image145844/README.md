@@ -1,8 +1,8 @@
 # Case: image145844
 
-Latest completed case study for an aligned NV candidate selected from the
-`image145844` region, including pODMR screening, Ramsey follow-up, and revised
-Ramsey frequency reanalysis.
+This case covers the selection of an NV center aligned with the magnetic field
+in the `image145844` region, pODMR screening, Ramsey measurements, and subsequent
+reanalysis of the Ramsey data.
 
 ## Start Here
 
@@ -31,8 +31,8 @@ pODMR measurements, then varied the conditions of subsequent Ramsey measurements
 | Model | `openai-codex/gpt-5.5` |
 | Thinking level | `xhigh` |
 
-The archived `project.json` for this case uses an earlier startup metadata
-shape, so the explicit model fields are recorded here and in `case.yaml` for
+The archived `project.json` for this case uses an older metadata
+format, so the explicit model fields are recorded here and in `case.yaml` for
 the public release. See
 [model and agent configuration](../../docs/model_and_agent_configuration.md).
 
@@ -50,5 +50,5 @@ the Ramsey frequency after considering a residual calibration error.
 | --- | --- |
 | [Candidate selection figure](project/work/artifacts/figures/image145844_reimage_candidate_selection_20260513_1550.png) | Shows the re-image candidate map used before r01/r02/r03 screening |
 | [Accepted r03 strong-pi pODMR review](project/work/artifacts/figures/image145844_reimage_r03_strong_podmr_raw_review_20260513_1741.png) | Alignment-screen evidence for the accepted candidate |
-| [Final refreshed-center Ramsey review](project/work/artifacts/figures/image145844_reimage_r03_ramsey_refreshed_center_terminal_review_20260514_0938.png) | Main final Ramsey dataset review |
+| [Final Ramsey measurement after recalibration](project/work/artifacts/figures/image145844_reimage_r03_ramsey_refreshed_center_terminal_review_20260514_0938.png) | Main final Ramsey dataset review |
 | [Ramsey reanalysis figure](project/work/artifacts/figures/image145844_reimage_r03_ramsey_refreshed_center_shifted_sideband_reanalysis_20260514_1308.png) | Revised Ramsey frequency interpretation after considering a residual calibration offset |
