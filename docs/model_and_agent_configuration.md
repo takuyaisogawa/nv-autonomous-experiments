@@ -10,7 +10,7 @@ project-execution agent in the included autonomous NV case studies.
 | Agent id | `nv-researcher` |
 | Model | `openai-codex/gpt-5.5` |
 | Thinking level | `xhigh` |
-| Role | Scientific reasoning, experiment design, evidence synthesis, model comparison, and claim-boundary decisions |
+| Role | Interpreting results, designing experiments, comparing models, and deciding which conclusions the evidence supports |
 
 The `nv-researcher` project-execution agent is separate from the direct-chat
 `main` agent. The two roles may use the same model family, but they are

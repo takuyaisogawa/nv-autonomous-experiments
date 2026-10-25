@@ -7,9 +7,8 @@ manager source in `python/openclaw_nv_execution_source/nv_project_manager.py`.
 
 ## Role Split
 
-- `nv-researcher` owns research judgment, experiment-design reasoning,
-  evidence synthesis, model comparison, finding scope, and agenda/backlog
-  expansion.
+- `nv-researcher` interprets results, designs experiments, compares models,
+  decides which conclusions the evidence supports, and plans further work.
 - Python owns durable state, queue safety, audit logs, wake pacing, completion
   markers, and hard hardware/code safety boundaries.
 - The MATLAB bridge checks each job before execution. The agent must not bypass
@@ -65,7 +64,7 @@ Every-wake rules and routing belonged in `NV_RESEARCH_MEMORY.md`.
 
 ## Intent And Safety
 
-For bridge-touching experiments, the intended flow was:
+For experiments submitted to the MATLAB bridge, the intended flow was:
 
 ```text
 agent-authored scientific intent

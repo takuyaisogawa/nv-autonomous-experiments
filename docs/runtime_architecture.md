@@ -14,8 +14,8 @@ sequence design, and report building.
 
 ## MATLAB Side
 
-`matlab/analysis` contains the runnable helper subset for savedexperiment
-inspection and the image-axis normalization contract used by the cases.
+`matlab/analysis` contains helpers for inspecting saved measurements
+and reordering image data to the axis order (Y, X, Z).
 
 `matlab/manifests` and `matlab/sequences` contain the case-relevant manifest
 and XML records needed to inspect what was requested.

@@ -50,5 +50,5 @@ the Ramsey frequency after considering a residual calibration error.
 | --- | --- |
 | [Candidate selection figure](project/work/artifacts/figures/image145844_reimage_candidate_selection_20260513_1550.png) | Shows the re-image candidate map used before r01/r02/r03 screening |
 | [Accepted r03 strong-pi pODMR review](project/work/artifacts/figures/image145844_reimage_r03_strong_podmr_raw_review_20260513_1741.png) | Alignment-screen evidence for the accepted candidate |
-| [Final Ramsey measurement after recalibration](project/work/artifacts/figures/image145844_reimage_r03_ramsey_refreshed_center_terminal_review_20260514_0938.png) | Main final Ramsey dataset review |
+| [Final Ramsey measurement after recalibration](project/work/artifacts/figures/image145844_reimage_r03_ramsey_refreshed_center_terminal_review_20260514_0938.png) | Analysis of the final Ramsey measurement |
 | [Ramsey reanalysis figure](project/work/artifacts/figures/image145844_reimage_r03_ramsey_refreshed_center_shifted_sideband_reanalysis_20260514_1308.png) | Revised Ramsey frequency interpretation after considering a residual calibration offset |

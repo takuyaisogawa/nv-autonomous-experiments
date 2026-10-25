@@ -11,7 +11,7 @@ selection, and how to find relevant knowledge sections.
 
 In practice, memory answers questions such as:
 
-- What role is this wake running?
+- What role should the agent perform in this run?
 - Which project files must be read first?
 - What boundaries are hard constraints?
 - Which knowledge sections are likely relevant?

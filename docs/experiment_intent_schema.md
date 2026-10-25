@@ -74,7 +74,7 @@ agree before any result is considered evidence.
 
 The intent record is useful scientifically and operationally.
 
-Scientifically, it preserves the hypothesis-like step before the measurement:
+Scientifically, it preserves the reasoning recorded before the measurement:
 what was expected, what comparison was intended, and what would count as useful
 evidence.
 

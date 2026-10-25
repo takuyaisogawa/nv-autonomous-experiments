@@ -62,6 +62,6 @@ the same interactions explain the Ramsey components.
 | [Rejected c01 pODMR review](project/work/artifacts/figures/reimage1804_c01_podmr_terminal_4avg_20260514_1859.png) | pODMR scan with adequate photon counts but no clear resonance |
 | [Accepted c02 strong-pi pODMR review](project/work/artifacts/figures/reimage1804_c02_podmr_terminal_4avg_20260514_1957.png) | Alignment-screen evidence for the accepted branch |
 | [Weak-pi pODMR refinement](project/work/artifacts/figures/reimage1804_c02_weak_pi_podmr_terminal_4avg_20260514_2251.png) | Resonant frequency refinement used for later Ramsey and CPMG planning |
-| [det=1.0 Ramsey terminal review](project/work/artifacts/figures/reimage1804_c02_ramsey_det1_terminal_16avg_20260515_0245.png) | T2star estimate and weak frequency components in the Ramsey spectrum |
-| [det=1.25 Ramsey terminal review](project/work/artifacts/figures/reimage1804_c02_ramsey_det1p25_terminal_16avg_20260515_0645.png) | Ramsey measurement at a third detuning to test how the weak frequency components shift |
+| [Ramsey measurement at 1.0 MHz detuning](project/work/artifacts/figures/reimage1804_c02_ramsey_det1_terminal_16avg_20260515_0245.png) | T2star estimate and weak frequency components in the Ramsey spectrum |
+| [Ramsey measurement at 1.25 MHz detuning](project/work/artifacts/figures/reimage1804_c02_ramsey_det1p25_terminal_16avg_20260515_0645.png) | Ramsey measurement at a third detuning to test how the weak frequency components shift |
 | [CPMG N=8 target-region review](project/work/artifacts/figures/reimage1804_c02_cpmg_n8_terminal_target_region_20260515_0945.png) | CPMG response that the agent interpreted as supporting a possible 13C contribution |

@@ -101,10 +101,10 @@ measurement at a time using one of three prompts.
 | Facts | Sequence information plus compact experimental setup facts |
 | Expected signal | Facts plus a requirement to calculate the expected signal before judging resonance presence |
 
-Sequence information alone produced more false positive resonance judgments at
-higher reasoning effort.  Requiring an expected signal calculation kept the
-false positive rate between 0 and 3.70 percent across all three models and all
-reasoning settings.  GPT-5.5 produced no false negatives.  GPT-5.6 Sol produced
+With the sequence prompt, models were more likely to report a resonance
+incorrectly at higher reasoning effort.  Requiring an expected signal calculation
+kept the false positive rate between 0 and 3.70 percent across all three models
+and all reasoning settings.  GPT-5.5 produced no false negatives.  GPT-5.6 Sol produced
 one false negative at low reasoning with the sequence prompt.  GPT-5.4 produced
 between two and eleven false negatives among 72 evaluations of measurements
 containing a resonance for each combination of prompt and reasoning effort.

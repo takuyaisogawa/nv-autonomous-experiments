@@ -50,4 +50,4 @@ nearby 13C nucleus in the repeated Ramsey measurement.
 | [Candidate map](project/work/artifacts/figures/image231924_candidate_map.png) | Candidate selection context for the image region |
 | [Strong-pi pODMR retry review](project/work/artifacts/figures/image231924_c01_strong_podmr_retry1_review.png) | Alignment-screen evidence after recovery from the invalid first acquisition |
 | [Narrow weak-pi pODMR review](project/work/artifacts/figures/image231924_c01_narrow_weak_podmr_after_ramsey_20260512_025521_review.png) | Resonant frequency refinement used before the repeated Ramsey measurement |
-| [Corrected-center Ramsey terminal review](project/work/artifacts/figures/image231924_c01_corrected_center_ramsey_repeat_terminal_review.png) | Final Ramsey dataset used to estimate T2star and assess possible 13C coupling |
+| [Ramsey measurement after recalibration](project/work/artifacts/figures/image231924_c01_corrected_center_ramsey_repeat_terminal_review.png) | Final Ramsey dataset used to estimate T2star and assess possible 13C coupling |

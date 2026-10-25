@@ -137,8 +137,8 @@ a PASS/FAIL label and a short rationale for each of the 400 runs. The aggregated
 values used for the figure are in
 `results/figures/reasoning_effort_sweep_low_to_xhigh_summary.csv`.
 
-The manuscript three model values and the corresponding GPT-5.4 and GPT-5.6
-Sol per-run records are in
+The results for the three models reported in the manuscript and the corresponding
+GPT-5.4 and GPT-5.6 Sol per-run records are in
 `../three-model-comparison-2026-07/ramsey/`.
 
 The automatic score script is retained as a first-pass helper.  Borderline

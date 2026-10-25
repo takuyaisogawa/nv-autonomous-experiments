@@ -71,8 +71,9 @@ Each model was evaluated on 96 measurements from two NV centers using three
 prompts, four reasoning effort settings, and three replicates. Each model, prompt,
 and effort cell therefore contains 288 binary decisions.
 
-The combined measurement bootstrap values used in the manuscript are in
+The combined results used in the manuscript are in
 [`podmr/three_model_case_bootstrap.csv`](podmr/three_model_case_bootstrap.csv).
+Confidence intervals were obtained by bootstrap resampling of measurements.
 Each new model folder contains all 3,456 joined predictions, completion audits,
 replicate summaries, case difficulty summaries, measurement bootstrap results,
 and compact prediction records with the corresponding analysis note text.
