@@ -1,0 +1,1392 @@
+{
+  "models": [
+    "GPT-5.4",
+    "GPT-5.5",
+    "GPT-5.6 Sol",
+    "GPT-6.1 Sol",
+    "GPT-6.1 Terra",
+    "GPT-6 Astra"
+  ],
+  "conditions": [
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp01",
+      "passes": 7,
+      "total": 20,
+      "pass_rate": 0.35
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp02",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp03",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp05",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp01",
+      "passes": 10,
+      "total": 20,
+      "pass_rate": 0.5
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp02",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp03",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp05",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp01",
+      "passes": 14,
+      "total": 20,
+      "pass_rate": 0.7
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp02",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp03",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp05",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp01",
+      "passes": 17,
+      "total": 20,
+      "pass_rate": 0.85
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp02",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp03",
+      "passes": 3,
+      "total": 20,
+      "pass_rate": 0.15
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp05",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp01",
+      "passes": 4,
+      "total": 20,
+      "pass_rate": 0.2
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp02",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp03",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp05",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp01",
+      "passes": 10,
+      "total": 20,
+      "pass_rate": 0.5
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp02",
+      "passes": 5,
+      "total": 20,
+      "pass_rate": 0.25
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp03",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp05",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp01",
+      "passes": 9,
+      "total": 20,
+      "pass_rate": 0.45
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp02",
+      "passes": 4,
+      "total": 20,
+      "pass_rate": 0.2
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp03",
+      "passes": 5,
+      "total": 20,
+      "pass_rate": 0.25
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp05",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp01",
+      "passes": 11,
+      "total": 20,
+      "pass_rate": 0.55
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp02",
+      "passes": 4,
+      "total": 20,
+      "pass_rate": 0.2
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp03",
+      "passes": 10,
+      "total": 20,
+      "pass_rate": 0.5
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp05",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp01",
+      "passes": 9,
+      "total": 20,
+      "pass_rate": 0.45
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp02",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp03",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp05",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp01",
+      "passes": 16,
+      "total": 20,
+      "pass_rate": 0.8
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp02",
+      "passes": 4,
+      "total": 20,
+      "pass_rate": 0.2
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp03",
+      "passes": 11,
+      "total": 20,
+      "pass_rate": 0.55
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp05",
+      "passes": 5,
+      "total": 20,
+      "pass_rate": 0.25
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp01",
+      "passes": 19,
+      "total": 20,
+      "pass_rate": 0.95
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp02",
+      "passes": 9,
+      "total": 20,
+      "pass_rate": 0.45
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp03",
+      "passes": 14,
+      "total": 20,
+      "pass_rate": 0.7
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp05",
+      "passes": 11,
+      "total": 20,
+      "pass_rate": 0.55
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp01",
+      "passes": 19,
+      "total": 20,
+      "pass_rate": 0.95
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp02",
+      "passes": 4,
+      "total": 20,
+      "pass_rate": 0.2
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp03",
+      "passes": 11,
+      "total": 20,
+      "pass_rate": 0.55
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp05",
+      "passes": 10,
+      "total": 20,
+      "pass_rate": 0.5
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp01",
+      "passes": 15,
+      "total": 20,
+      "pass_rate": 0.75
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp02",
+      "passes": 1,
+      "total": 20,
+      "pass_rate": 0.05
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp03",
+      "passes": 7,
+      "total": 20,
+      "pass_rate": 0.35
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp05",
+      "passes": 3,
+      "total": 20,
+      "pass_rate": 0.15
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp01",
+      "passes": 18,
+      "total": 20,
+      "pass_rate": 0.9
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp02",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp03",
+      "passes": 3,
+      "total": 20,
+      "pass_rate": 0.15
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp05",
+      "passes": 9,
+      "total": 20,
+      "pass_rate": 0.45
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp01",
+      "passes": 18,
+      "total": 20,
+      "pass_rate": 0.9
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp02",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp03",
+      "passes": 3,
+      "total": 20,
+      "pass_rate": 0.15
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp05",
+      "passes": 6,
+      "total": 20,
+      "pass_rate": 0.3
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp01",
+      "passes": 14,
+      "total": 20,
+      "pass_rate": 0.7
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp02",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp03",
+      "passes": 4,
+      "total": 20,
+      "pass_rate": 0.2
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp05",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp01",
+      "passes": 9,
+      "total": 20,
+      "pass_rate": 0.45
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp02",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp03",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp05",
+      "passes": 8,
+      "total": 20,
+      "pass_rate": 0.4
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp01",
+      "passes": 14,
+      "total": 20,
+      "pass_rate": 0.7
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp02",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp03",
+      "passes": 4,
+      "total": 20,
+      "pass_rate": 0.2
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp05",
+      "passes": 10,
+      "total": 20,
+      "pass_rate": 0.5
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp01",
+      "passes": 14,
+      "total": 20,
+      "pass_rate": 0.7
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp02",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp03",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp04",
+      "passes": 1,
+      "total": 20,
+      "pass_rate": 0.05
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp05",
+      "passes": 12,
+      "total": 20,
+      "pass_rate": 0.6
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp01",
+      "passes": 15,
+      "total": 20,
+      "pass_rate": 0.75
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp02",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp03",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp05",
+      "passes": 11,
+      "total": 20,
+      "pass_rate": 0.55
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp01",
+      "passes": 17,
+      "total": 20,
+      "pass_rate": 0.85
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp02",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp03",
+      "passes": 1,
+      "total": 20,
+      "pass_rate": 0.05
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp04",
+      "passes": 3,
+      "total": 20,
+      "pass_rate": 0.15
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "low",
+      "checkpoint_id": "cp05",
+      "passes": 4,
+      "total": 20,
+      "pass_rate": 0.2
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp01",
+      "passes": 19,
+      "total": 20,
+      "pass_rate": 0.95
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp02",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp03",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "medium",
+      "checkpoint_id": "cp05",
+      "passes": 6,
+      "total": 20,
+      "pass_rate": 0.3
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp01",
+      "passes": 19,
+      "total": 20,
+      "pass_rate": 0.95
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp02",
+      "passes": 1,
+      "total": 20,
+      "pass_rate": 0.05
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp03",
+      "passes": 2,
+      "total": 20,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp04",
+      "passes": 1,
+      "total": 20,
+      "pass_rate": 0.05
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "high",
+      "checkpoint_id": "cp05",
+      "passes": 8,
+      "total": 20,
+      "pass_rate": 0.4
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp01",
+      "passes": 17,
+      "total": 20,
+      "pass_rate": 0.85
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp02",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp03",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 20,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "xhigh",
+      "checkpoint_id": "cp05",
+      "passes": 1,
+      "total": 20,
+      "pass_rate": 0.05
+    }
+  ],
+  "effort_totals": [
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "low",
+      "passes": 7,
+      "total": 100,
+      "pass_rate": 0.07
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "medium",
+      "passes": 10,
+      "total": 100,
+      "pass_rate": 0.1
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "high",
+      "passes": 16,
+      "total": 100,
+      "pass_rate": 0.16
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "xhigh",
+      "passes": 22,
+      "total": 100,
+      "pass_rate": 0.22
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "low",
+      "passes": 4,
+      "total": 100,
+      "pass_rate": 0.04
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "medium",
+      "passes": 17,
+      "total": 100,
+      "pass_rate": 0.17
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "high",
+      "passes": 18,
+      "total": 100,
+      "pass_rate": 0.18
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "xhigh",
+      "passes": 27,
+      "total": 100,
+      "pass_rate": 0.27
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "low",
+      "passes": 15,
+      "total": 100,
+      "pass_rate": 0.15
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "passes": 36,
+      "total": 100,
+      "pass_rate": 0.36
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "high",
+      "passes": 53,
+      "total": 100,
+      "pass_rate": 0.53
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "xhigh",
+      "passes": 44,
+      "total": 100,
+      "pass_rate": 0.44
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "low",
+      "passes": 26,
+      "total": 100,
+      "pass_rate": 0.26
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "medium",
+      "passes": 32,
+      "total": 100,
+      "pass_rate": 0.32
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "high",
+      "passes": 29,
+      "total": 100,
+      "pass_rate": 0.29
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "xhigh",
+      "passes": 22,
+      "total": 100,
+      "pass_rate": 0.22
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "low",
+      "passes": 17,
+      "total": 100,
+      "pass_rate": 0.17
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "medium",
+      "passes": 28,
+      "total": 100,
+      "pass_rate": 0.28
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "high",
+      "passes": 29,
+      "total": 100,
+      "pass_rate": 0.29
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "xhigh",
+      "passes": 26,
+      "total": 100,
+      "pass_rate": 0.26
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "low",
+      "passes": 27,
+      "total": 100,
+      "pass_rate": 0.27
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "medium",
+      "passes": 27,
+      "total": 100,
+      "pass_rate": 0.27
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "high",
+      "passes": 31,
+      "total": 100,
+      "pass_rate": 0.31
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "xhigh",
+      "passes": 18,
+      "total": 100,
+      "pass_rate": 0.18
+    }
+  ],
+  "checkpoint_totals": [
+    {
+      "model": "GPT-5.4",
+      "checkpoint_id": "cp01",
+      "passes": 48,
+      "total": 80,
+      "pass_rate": 0.6
+    },
+    {
+      "model": "GPT-5.4",
+      "checkpoint_id": "cp02",
+      "passes": 2,
+      "total": 80,
+      "pass_rate": 0.025
+    },
+    {
+      "model": "GPT-5.4",
+      "checkpoint_id": "cp03",
+      "passes": 5,
+      "total": 80,
+      "pass_rate": 0.0625
+    },
+    {
+      "model": "GPT-5.4",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 80,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.4",
+      "checkpoint_id": "cp05",
+      "passes": 0,
+      "total": 80,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "checkpoint_id": "cp01",
+      "passes": 34,
+      "total": 80,
+      "pass_rate": 0.425
+    },
+    {
+      "model": "GPT-5.5",
+      "checkpoint_id": "cp02",
+      "passes": 13,
+      "total": 80,
+      "pass_rate": 0.1625
+    },
+    {
+      "model": "GPT-5.5",
+      "checkpoint_id": "cp03",
+      "passes": 17,
+      "total": 80,
+      "pass_rate": 0.2125
+    },
+    {
+      "model": "GPT-5.5",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 80,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.5",
+      "checkpoint_id": "cp05",
+      "passes": 2,
+      "total": 80,
+      "pass_rate": 0.025
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "checkpoint_id": "cp01",
+      "passes": 63,
+      "total": 80,
+      "pass_rate": 0.7875
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "checkpoint_id": "cp02",
+      "passes": 19,
+      "total": 80,
+      "pass_rate": 0.2375
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "checkpoint_id": "cp03",
+      "passes": 38,
+      "total": 80,
+      "pass_rate": 0.475
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 80,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "checkpoint_id": "cp05",
+      "passes": 28,
+      "total": 80,
+      "pass_rate": 0.35
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "checkpoint_id": "cp01",
+      "passes": 65,
+      "total": 80,
+      "pass_rate": 0.8125
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "checkpoint_id": "cp02",
+      "passes": 7,
+      "total": 80,
+      "pass_rate": 0.0875
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "checkpoint_id": "cp03",
+      "passes": 17,
+      "total": 80,
+      "pass_rate": 0.2125
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "checkpoint_id": "cp04",
+      "passes": 0,
+      "total": 80,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "checkpoint_id": "cp05",
+      "passes": 20,
+      "total": 80,
+      "pass_rate": 0.25
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "checkpoint_id": "cp01",
+      "passes": 52,
+      "total": 80,
+      "pass_rate": 0.65
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "checkpoint_id": "cp02",
+      "passes": 0,
+      "total": 80,
+      "pass_rate": 0.0
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "checkpoint_id": "cp03",
+      "passes": 6,
+      "total": 80,
+      "pass_rate": 0.075
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "checkpoint_id": "cp04",
+      "passes": 1,
+      "total": 80,
+      "pass_rate": 0.0125
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "checkpoint_id": "cp05",
+      "passes": 41,
+      "total": 80,
+      "pass_rate": 0.5125
+    },
+    {
+      "model": "GPT-6 Astra",
+      "checkpoint_id": "cp01",
+      "passes": 72,
+      "total": 80,
+      "pass_rate": 0.9
+    },
+    {
+      "model": "GPT-6 Astra",
+      "checkpoint_id": "cp02",
+      "passes": 5,
+      "total": 80,
+      "pass_rate": 0.0625
+    },
+    {
+      "model": "GPT-6 Astra",
+      "checkpoint_id": "cp03",
+      "passes": 3,
+      "total": 80,
+      "pass_rate": 0.0375
+    },
+    {
+      "model": "GPT-6 Astra",
+      "checkpoint_id": "cp04",
+      "passes": 4,
+      "total": 80,
+      "pass_rate": 0.05
+    },
+    {
+      "model": "GPT-6 Astra",
+      "checkpoint_id": "cp05",
+      "passes": 19,
+      "total": 80,
+      "pass_rate": 0.2375
+    }
+  ],
+  "overall": [
+    {
+      "model": "GPT-5.4",
+      "passes": 55,
+      "total": 400,
+      "pass_rate": 0.1375
+    },
+    {
+      "model": "GPT-5.5",
+      "passes": 66,
+      "total": 400,
+      "pass_rate": 0.165
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "passes": 148,
+      "total": 400,
+      "pass_rate": 0.37
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "passes": 109,
+      "total": 400,
+      "pass_rate": 0.2725
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "passes": 100,
+      "total": 400,
+      "pass_rate": 0.25
+    },
+    {
+      "model": "GPT-6 Astra",
+      "passes": 103,
+      "total": 400,
+      "pass_rate": 0.2575
+    }
+  ]
+}

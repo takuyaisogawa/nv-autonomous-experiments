@@ -1,0 +1,470 @@
+{
+  "verified_additional_counts": {
+    "GPT-6.1 Sol": {
+      "ramsey": 400,
+      "podmr": 3456
+    },
+    "GPT-6.1 Terra": {
+      "ramsey": 400,
+      "podmr": 3456
+    },
+    "GPT-6 Astra": {
+      "ramsey": 400,
+      "podmr": 864
+    }
+  },
+  "sequence": [
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "low",
+      "total": 216,
+      "TN": 213,
+      "FP": 3,
+      "parse_failed": 0,
+      "false_positive_rate": 0.013888888888888888,
+      "false_positive_rate_ci_low": 0.0,
+      "false_positive_rate_ci_high": 0.032407
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "medium",
+      "total": 216,
+      "TN": 209,
+      "FP": 7,
+      "parse_failed": 0,
+      "false_positive_rate": 0.032407407407407406,
+      "false_positive_rate_ci_low": 0.013889,
+      "false_positive_rate_ci_high": 0.055556
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "high",
+      "total": 216,
+      "TN": 201,
+      "FP": 15,
+      "parse_failed": 0,
+      "false_positive_rate": 0.06944444444444445,
+      "false_positive_rate_ci_low": 0.032407,
+      "false_positive_rate_ci_high": 0.111111
+    },
+    {
+      "model": "GPT-5.4",
+      "reasoning_effort": "xhigh",
+      "total": 216,
+      "TN": 180,
+      "FP": 36,
+      "parse_failed": 0,
+      "false_positive_rate": 0.16666666666666666,
+      "false_positive_rate_ci_low": 0.106481,
+      "false_positive_rate_ci_high": 0.231481
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "low",
+      "total": 216,
+      "TN": 184,
+      "FP": 32,
+      "parse_failed": 0,
+      "false_positive_rate": 0.14814814814814814,
+      "false_positive_rate_ci_low": 0.087963,
+      "false_positive_rate_ci_high": 0.212963
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "medium",
+      "total": 216,
+      "TN": 145,
+      "FP": 71,
+      "parse_failed": 0,
+      "false_positive_rate": 0.3287037037037037,
+      "false_positive_rate_ci_low": 0.25,
+      "false_positive_rate_ci_high": 0.412037
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "high",
+      "total": 216,
+      "TN": 120,
+      "FP": 96,
+      "parse_failed": 0,
+      "false_positive_rate": 0.4444444444444444,
+      "false_positive_rate_ci_low": 0.356481,
+      "false_positive_rate_ci_high": 0.537037
+    },
+    {
+      "model": "GPT-5.5",
+      "reasoning_effort": "xhigh",
+      "total": 216,
+      "TN": 101,
+      "FP": 115,
+      "parse_failed": 0,
+      "false_positive_rate": 0.5324074074074074,
+      "false_positive_rate_ci_low": 0.435185,
+      "false_positive_rate_ci_high": 0.62963
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "low",
+      "total": 216,
+      "TN": 158,
+      "FP": 58,
+      "parse_failed": 0,
+      "false_positive_rate": 0.26851851851851855,
+      "false_positive_rate_ci_low": 0.189815,
+      "false_positive_rate_ci_high": 0.351852
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "medium",
+      "total": 216,
+      "TN": 130,
+      "FP": 86,
+      "parse_failed": 0,
+      "false_positive_rate": 0.39814814814814814,
+      "false_positive_rate_ci_low": 0.310185,
+      "false_positive_rate_ci_high": 0.486111
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "high",
+      "total": 216,
+      "TN": 117,
+      "FP": 99,
+      "parse_failed": 0,
+      "false_positive_rate": 0.4583333333333333,
+      "false_positive_rate_ci_low": 0.361111,
+      "false_positive_rate_ci_high": 0.560185
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "reasoning_effort": "xhigh",
+      "total": 216,
+      "TN": 118,
+      "FP": 98,
+      "parse_failed": 0,
+      "false_positive_rate": 0.4537037037037037,
+      "false_positive_rate_ci_low": 0.356481,
+      "false_positive_rate_ci_high": 0.550926
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "low",
+      "total": 216,
+      "TN": 200,
+      "FP": 16,
+      "parse_failed": 0,
+      "false_positive_rate": 0.07407407407407407,
+      "false_positive_rate_ci_low": 0.023148148148148147,
+      "false_positive_rate_ci_high": 0.13425925925925924
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "medium",
+      "total": 216,
+      "TN": 202,
+      "FP": 14,
+      "parse_failed": 0,
+      "false_positive_rate": 0.06481481481481481,
+      "false_positive_rate_ci_low": 0.018518518518518517,
+      "false_positive_rate_ci_high": 0.12037037037037036
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "high",
+      "total": 216,
+      "TN": 203,
+      "FP": 13,
+      "parse_failed": 0,
+      "false_positive_rate": 0.06018518518518518,
+      "false_positive_rate_ci_low": 0.018518518518518517,
+      "false_positive_rate_ci_high": 0.11574074074074073
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "reasoning_effort": "xhigh",
+      "total": 216,
+      "TN": 208,
+      "FP": 8,
+      "parse_failed": 0,
+      "false_positive_rate": 0.037037037037037035,
+      "false_positive_rate_ci_low": 0.009259259259259259,
+      "false_positive_rate_ci_high": 0.07870370370370369
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "low",
+      "total": 216,
+      "TN": 196,
+      "FP": 20,
+      "parse_failed": 0,
+      "false_positive_rate": 0.09259259259259259,
+      "false_positive_rate_ci_low": 0.037037037037037035,
+      "false_positive_rate_ci_high": 0.15740740740740738
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "medium",
+      "total": 216,
+      "TN": 191,
+      "FP": 25,
+      "parse_failed": 0,
+      "false_positive_rate": 0.11574074074074074,
+      "false_positive_rate_ci_low": 0.05555555555555555,
+      "false_positive_rate_ci_high": 0.18518518518518517
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "high",
+      "total": 216,
+      "TN": 190,
+      "FP": 26,
+      "parse_failed": 0,
+      "false_positive_rate": 0.12037037037037036,
+      "false_positive_rate_ci_low": 0.05555555555555555,
+      "false_positive_rate_ci_high": 0.19444444444444445
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "reasoning_effort": "xhigh",
+      "total": 216,
+      "TN": 192,
+      "FP": 24,
+      "parse_failed": 0,
+      "false_positive_rate": 0.1111111111111111,
+      "false_positive_rate_ci_low": 0.05092592592592592,
+      "false_positive_rate_ci_high": 0.18055555555555555
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "low",
+      "total": 216,
+      "TN": 198,
+      "FP": 18,
+      "parse_failed": 0,
+      "false_positive_rate": 0.08333333333333333,
+      "false_positive_rate_ci_low": 0.032407407407407406,
+      "false_positive_rate_ci_high": 0.1435185185185185
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "medium",
+      "total": 216,
+      "TN": 197,
+      "FP": 19,
+      "parse_failed": 0,
+      "false_positive_rate": 0.08796296296296297,
+      "false_positive_rate_ci_low": 0.032407407407407406,
+      "false_positive_rate_ci_high": 0.1527777777777778
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "high",
+      "total": 216,
+      "TN": 197,
+      "FP": 19,
+      "parse_failed": 0,
+      "false_positive_rate": 0.08796296296296297,
+      "false_positive_rate_ci_low": 0.032407407407407406,
+      "false_positive_rate_ci_high": 0.1527777777777778
+    },
+    {
+      "model": "GPT-6 Astra",
+      "reasoning_effort": "xhigh",
+      "total": 216,
+      "TN": 203,
+      "FP": 13,
+      "parse_failed": 0,
+      "false_positive_rate": 0.06018518518518518,
+      "false_positive_rate_ci_low": 0.018518518518518517,
+      "false_positive_rate_ci_high": 0.1111111111111111
+    }
+  ],
+  "points": [
+    {
+      "model": "GPT-5.4",
+      "effort": "low",
+      "ramsey": 0.07,
+      "fpr": 0.013888888888888888
+    },
+    {
+      "model": "GPT-5.4",
+      "effort": "medium",
+      "ramsey": 0.1,
+      "fpr": 0.032407407407407406
+    },
+    {
+      "model": "GPT-5.4",
+      "effort": "high",
+      "ramsey": 0.16,
+      "fpr": 0.06944444444444445
+    },
+    {
+      "model": "GPT-5.4",
+      "effort": "xhigh",
+      "ramsey": 0.22,
+      "fpr": 0.16666666666666666
+    },
+    {
+      "model": "GPT-5.5",
+      "effort": "low",
+      "ramsey": 0.04,
+      "fpr": 0.14814814814814814
+    },
+    {
+      "model": "GPT-5.5",
+      "effort": "medium",
+      "ramsey": 0.17,
+      "fpr": 0.3287037037037037
+    },
+    {
+      "model": "GPT-5.5",
+      "effort": "high",
+      "ramsey": 0.18,
+      "fpr": 0.4444444444444444
+    },
+    {
+      "model": "GPT-5.5",
+      "effort": "xhigh",
+      "ramsey": 0.27,
+      "fpr": 0.5324074074074074
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "effort": "low",
+      "ramsey": 0.15,
+      "fpr": 0.26851851851851855
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "effort": "medium",
+      "ramsey": 0.36,
+      "fpr": 0.39814814814814814
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "effort": "high",
+      "ramsey": 0.53,
+      "fpr": 0.4583333333333333
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "effort": "xhigh",
+      "ramsey": 0.44,
+      "fpr": 0.4537037037037037
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "effort": "low",
+      "ramsey": 0.26,
+      "fpr": 0.07407407407407407
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "effort": "medium",
+      "ramsey": 0.32,
+      "fpr": 0.06481481481481481
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "effort": "high",
+      "ramsey": 0.29,
+      "fpr": 0.06018518518518518
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "effort": "xhigh",
+      "ramsey": 0.22,
+      "fpr": 0.037037037037037035
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "effort": "low",
+      "ramsey": 0.17,
+      "fpr": 0.09259259259259259
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "effort": "medium",
+      "ramsey": 0.28,
+      "fpr": 0.11574074074074074
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "effort": "high",
+      "ramsey": 0.29,
+      "fpr": 0.12037037037037036
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "effort": "xhigh",
+      "ramsey": 0.26,
+      "fpr": 0.1111111111111111
+    },
+    {
+      "model": "GPT-6 Astra",
+      "effort": "low",
+      "ramsey": 0.27,
+      "fpr": 0.08333333333333333
+    },
+    {
+      "model": "GPT-6 Astra",
+      "effort": "medium",
+      "ramsey": 0.27,
+      "fpr": 0.08796296296296297
+    },
+    {
+      "model": "GPT-6 Astra",
+      "effort": "high",
+      "ramsey": 0.31,
+      "fpr": 0.08796296296296297
+    },
+    {
+      "model": "GPT-6 Astra",
+      "effort": "xhigh",
+      "ramsey": 0.18,
+      "fpr": 0.06018518518518518
+    }
+  ],
+  "individual_correlations": [
+    {
+      "model": "GPT-5.4",
+      "pearson_r": 0.9686001301242323
+    },
+    {
+      "model": "GPT-5.5",
+      "pearson_r": 0.9689830791013445
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "pearson_r": 0.9763708973606212
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "pearson_r": 0.6247367304650563
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "pearson_r": 0.9950345261175598
+    },
+    {
+      "model": "GPT-6 Astra",
+      "pearson_r": 0.9547895675145853
+    }
+  ],
+  "centered_r": 0.805902520619575,
+  "uncentered_r": 0.4414929482388648,
+  "slope": 0.7443575121802485,
+  "leave_one_model_out": {
+    "GPT-5.4": 0.7877397009420155,
+    "GPT-5.5": 0.8997895018777083,
+    "GPT-5.6 Sol": 0.8111967971806701,
+    "GPT-6.1 Sol": 0.8145555034121917,
+    "GPT-6.1 Terra": 0.8184754408916743,
+    "GPT-6 Astra": 0.8181761499733781
+  },
+  "astra_bootstrap": {
+    "seed": 20261028,
+    "resamples": 20000,
+    "unit": "measurement, with all three repetitions"
+  }
+}

@@ -1,0 +1,5 @@
+You are evaluating one pODMR benchmark case. Use only the files in this working directory and the attached image. Do not use labels, previous outputs, sibling cases, web search, or external context. The raw measurement export is `measurement.json`; it contains the raw readouts, stored per-average data, parameters, and the sequence XML. The attached `raw_readouts.png` is a rendering of the same measurement. You may use local shell and Python tools for quantitative inspection or scratch calculations.
+
+<CONDITION_PROMPT>
+
+Write a concise analysis note to `analysis_note.md`. Then return a concise handoff containing the same analysis. Put exactly one of these labels on the final line: `resonance_present` or `resonance_absent`.

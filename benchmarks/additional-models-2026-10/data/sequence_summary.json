@@ -1,0 +1,218 @@
+[
+  {
+    "model": "GPT-5.4",
+    "reasoning_effort": "low",
+    "total": 216,
+    "TN": 213,
+    "FP": 3,
+    "parse_failed": 0,
+    "false_positive_rate": 0.013888888888888888
+  },
+  {
+    "model": "GPT-5.4",
+    "reasoning_effort": "medium",
+    "total": 216,
+    "TN": 209,
+    "FP": 7,
+    "parse_failed": 0,
+    "false_positive_rate": 0.032407407407407406
+  },
+  {
+    "model": "GPT-5.4",
+    "reasoning_effort": "high",
+    "total": 216,
+    "TN": 201,
+    "FP": 15,
+    "parse_failed": 0,
+    "false_positive_rate": 0.06944444444444445
+  },
+  {
+    "model": "GPT-5.4",
+    "reasoning_effort": "xhigh",
+    "total": 216,
+    "TN": 180,
+    "FP": 36,
+    "parse_failed": 0,
+    "false_positive_rate": 0.16666666666666666
+  },
+  {
+    "model": "GPT-5.5",
+    "reasoning_effort": "low",
+    "total": 216,
+    "TN": 184,
+    "FP": 32,
+    "parse_failed": 0,
+    "false_positive_rate": 0.14814814814814814
+  },
+  {
+    "model": "GPT-5.5",
+    "reasoning_effort": "medium",
+    "total": 216,
+    "TN": 145,
+    "FP": 71,
+    "parse_failed": 0,
+    "false_positive_rate": 0.3287037037037037
+  },
+  {
+    "model": "GPT-5.5",
+    "reasoning_effort": "high",
+    "total": 216,
+    "TN": 120,
+    "FP": 96,
+    "parse_failed": 0,
+    "false_positive_rate": 0.4444444444444444
+  },
+  {
+    "model": "GPT-5.5",
+    "reasoning_effort": "xhigh",
+    "total": 216,
+    "TN": 101,
+    "FP": 115,
+    "parse_failed": 0,
+    "false_positive_rate": 0.5324074074074074
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "low",
+    "total": 216,
+    "TN": 158,
+    "FP": 58,
+    "parse_failed": 0,
+    "false_positive_rate": 0.26851851851851855
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "medium",
+    "total": 216,
+    "TN": 130,
+    "FP": 86,
+    "parse_failed": 0,
+    "false_positive_rate": 0.39814814814814814
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "high",
+    "total": 216,
+    "TN": 117,
+    "FP": 99,
+    "parse_failed": 0,
+    "false_positive_rate": 0.4583333333333333
+  },
+  {
+    "model": "GPT-5.6 Sol",
+    "reasoning_effort": "xhigh",
+    "total": 216,
+    "TN": 118,
+    "FP": 98,
+    "parse_failed": 0,
+    "false_positive_rate": 0.4537037037037037
+  },
+  {
+    "model": "GPT-6.1 Sol",
+    "reasoning_effort": "low",
+    "total": 216,
+    "TN": 200,
+    "FP": 16,
+    "parse_failed": 0,
+    "false_positive_rate": 0.07407407407407407
+  },
+  {
+    "model": "GPT-6.1 Sol",
+    "reasoning_effort": "medium",
+    "total": 216,
+    "TN": 202,
+    "FP": 14,
+    "parse_failed": 0,
+    "false_positive_rate": 0.06481481481481481
+  },
+  {
+    "model": "GPT-6.1 Sol",
+    "reasoning_effort": "high",
+    "total": 216,
+    "TN": 203,
+    "FP": 13,
+    "parse_failed": 0,
+    "false_positive_rate": 0.06018518518518518
+  },
+  {
+    "model": "GPT-6.1 Sol",
+    "reasoning_effort": "xhigh",
+    "total": 216,
+    "TN": 208,
+    "FP": 8,
+    "parse_failed": 0,
+    "false_positive_rate": 0.037037037037037035
+  },
+  {
+    "model": "GPT-6.1 Terra",
+    "reasoning_effort": "low",
+    "total": 216,
+    "TN": 196,
+    "FP": 20,
+    "parse_failed": 0,
+    "false_positive_rate": 0.09259259259259259
+  },
+  {
+    "model": "GPT-6.1 Terra",
+    "reasoning_effort": "medium",
+    "total": 216,
+    "TN": 191,
+    "FP": 25,
+    "parse_failed": 0,
+    "false_positive_rate": 0.11574074074074074
+  },
+  {
+    "model": "GPT-6.1 Terra",
+    "reasoning_effort": "high",
+    "total": 216,
+    "TN": 190,
+    "FP": 26,
+    "parse_failed": 0,
+    "false_positive_rate": 0.12037037037037036
+  },
+  {
+    "model": "GPT-6.1 Terra",
+    "reasoning_effort": "xhigh",
+    "total": 216,
+    "TN": 192,
+    "FP": 24,
+    "parse_failed": 0,
+    "false_positive_rate": 0.1111111111111111
+  },
+  {
+    "model": "GPT-6 Astra",
+    "reasoning_effort": "low",
+    "total": 216,
+    "TN": 198,
+    "FP": 18,
+    "parse_failed": 0,
+    "false_positive_rate": 0.08333333333333333
+  },
+  {
+    "model": "GPT-6 Astra",
+    "reasoning_effort": "medium",
+    "total": 216,
+    "TN": 197,
+    "FP": 19,
+    "parse_failed": 0,
+    "false_positive_rate": 0.08796296296296297
+  },
+  {
+    "model": "GPT-6 Astra",
+    "reasoning_effort": "high",
+    "total": 216,
+    "TN": 197,
+    "FP": 19,
+    "parse_failed": 0,
+    "false_positive_rate": 0.08796296296296297
+  },
+  {
+    "model": "GPT-6 Astra",
+    "reasoning_effort": "xhigh",
+    "total": 216,
+    "TN": 203,
+    "FP": 13,
+    "parse_failed": 0,
+    "false_positive_rate": 0.06018518518518518
+  }
+]

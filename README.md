@@ -31,6 +31,7 @@ The order below follows the current manuscript.
 | Supplementary case studies and analyses | Two additional completed autonomous runs, representative pODMR inputs, deterministic checks, and detailed benchmark tables | [Additional cases](cases/README.md), [benchmark records](benchmarks/three-model-comparison-2026-07/README.md) |
 | Supplementary Note 4. Human reference workflow | Archived human NV selection and characterization from September 2023, with the experimental purpose and selection criteria | [Original log and context](human_reference/2023-09_nv_selection/README.md) |
 | Supplementary Note 5. Ramsey judge validation | 96% agreement and the confusion matrix | [Judge and validation records](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/) |
+| Supplementary Note 6. Additional model evaluations | GPT-6.1 Sol, GPT-6.1 Terra, GPT-6 Astra, and the relationship between the benchmarks | [Additional evaluations](benchmarks/additional-models-2026-10/) |
 
 ## Public Scope
 
@@ -55,7 +56,7 @@ folder records the data, decisions, analyses, and final interpretation.
 
 ## Offline Benchmarks
 
-For each benchmark, GPT-5.4, GPT-5.5, and GPT-5.6 Sol were evaluated using
+For the main comparison, GPT-5.4, GPT-5.5, and GPT-5.6 Sol were evaluated using
 the same input files, prompts, reasoning effort settings, number of replicates,
 and scoring rules. Model identifiers, execution dates, and links
 to each model's records are listed in the
@@ -65,6 +66,16 @@ to each model's records are listed in the
 | --- | --- | ---: |
 | [Ramsey checkpoint benchmark](benchmarks/three-model-comparison-2026-07/ramsey/) | Five chronological checkpoints, four reasoning effort settings, and twenty replicates per checkpoint and effort for each model | 1,200 runs |
 | [pODMR data evaluation benchmark](benchmarks/three-model-comparison-2026-07/podmr/) | 96 measurements from two NV centers, three prompts, four reasoning effort settings, and three replicates for each model | 10,368 decisions |
+
+The [additional evaluations](benchmarks/additional-models-2026-10/) contain
+400 Ramsey responses each for GPT-6.1 Sol, GPT-6.1 Terra, and GPT-6 Astra.
+We evaluated Sol and Terra on the full pODMR benchmark. For Astra, we used
+only the 72 measurements without a resonance and the sequence only prompt.
+Across the four settings within each model, higher Ramsey pass rates tended
+to accompany higher false positive rates in the pODMR benchmark with the
+sequence only prompt. The additional release provides the records,
+comparisons, and figure code for Supplementary
+Note 6.
 
 ### Ramsey checkpoint benchmark
 
