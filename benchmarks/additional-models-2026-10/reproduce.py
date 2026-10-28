@@ -8,7 +8,6 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.lines import Line2D
-from matplotlib.patches import Rectangle
 import fitz
 
 ROOT=Path(__file__).resolve().parent
@@ -103,54 +102,67 @@ def export(fig,name):
     fig.savefig(OUT/(name+'.pdf'));plt.close(fig)
     d=fitz.open(OUT/(name+'.pdf'));d[0].get_pixmap(matrix=fitz.Matrix(2,2)).save(OUT/(name+'.png'));d.close()
 
-fig=plt.figure(figsize=(7,6.6))
-gs=fig.add_gridspec(3,3,height_ratios=[1.1,1,1],left=.095,right=.89,top=.9,bottom=.075,hspace=.65,wspace=.32)
+# Supplementary performance figures show only the three additional models.
+# The original three models remain in the main-text figures.
+extra=MODELS[3:]
+fig=plt.figure(figsize=(7,3.9))
+gs=fig.add_gridspec(2,3,height_ratios=[1,1],left=.095,right=.89,top=.86,bottom=.10,hspace=.82,wspace=.30)
 ax=fig.add_subplot(gs[0,:]);xx=np.arange(4)
-for i,m in enumerate(MODELS):
+for j,m in enumerate(extra):
+    i=MODELS.index(m)
     vals=[sum(ri[m,e,c]['passes'] for c in CPS) for e in EFFORTS]
-    bars=ax.bar(xx+(i-2.5)*.13,np.array(vals)/100,width=.13,color=COLORS[i],hatch=HATCHES[i],edgecolor='white',lw=.4,label=m)
-    for b,v in zip(bars,vals):ax.text(b.get_x()+b.get_width()/2,b.get_height()+.01,str(v),ha='center',fontsize=5.8)
-ax.set(xticks=xx,xticklabels=LABELS,ylim=(0,.65),yticks=np.arange(0,.61,.1),ylabel='Pass rate',xlabel='Reasoning effort');style(ax);label(ax,'a')
-fig.legend(*ax.get_legend_handles_labels(),loc='upper center',ncol=3,frameon=False,bbox_to_anchor=(.5,.99))
+    bars=ax.bar(xx+(j-1)*.23,np.array(vals)/100,width=.23,color=COLORS[i],hatch=HATCHES[i],edgecolor='white',lw=.4,label=m)
+    for b,v in zip(bars,vals):ax.text(b.get_x()+b.get_width()/2,b.get_height()+.012,str(v),ha='center',fontsize=7)
+ax.set(xticks=xx,xticklabels=LABELS,ylim=(0,.65),yticks=np.arange(0,.61,.2),ylabel='Pass rate',xlabel='Reasoning effort');style(ax);label(ax,'a')
+fig.legend(*ax.get_legend_handles_labels(),loc='upper center',ncol=3,frameon=False,bbox_to_anchor=(.5,1))
 cmap=LinearSegmentedColormap.from_list('ramsey',['#F3F6F8','#B8DDE8','#2A91B8','#1F5A7A'])
-for i,m in enumerate(MODELS):
-    a=fig.add_subplot(gs[1+i//3,i%3]);v=np.array([[ri[m,e,c]['passes'] for c in CPS] for e in EFFORTS])
+for j,m in enumerate(extra):
+    a=fig.add_subplot(gs[1,j]);v=np.array([[ri[m,e,c]['passes'] for c in CPS] for e in EFFORTS])
     im=a.imshow(v/20,vmin=0,vmax=1,cmap=cmap,aspect='auto');a.set_title(m,pad=6)
     a.set_xticks(range(5),CPS);a.set_yticks(range(4),LABELS);a.tick_params(length=0,pad=2)
-    a.set_xlabel('Checkpoint');
-    if i%3==0:a.set_ylabel('Reasoning effort')
+    a.set_xlabel('Checkpoint')
+    if j==0:a.set_ylabel('Reasoning effort')
     for sp in a.spines.values():sp.set_visible(False)
     for yy in range(4):
-        for xx in range(5):a.text(xx,yy,f'{v[yy,xx]}/20',ha='center',va='center',fontsize=5.7,color='white' if v[yy,xx]>=13 else '#263238')
-    label(a,chr(98+i))
-ca=fig.add_axes([.91,.075,.012,.48]);fig.colorbar(im,cax=ca,label='Pass rate')
+        for xx in range(5):a.text(xx,yy,f'{v[yy,xx]}/20',ha='center',va='center',fontsize=6,color='white' if v[yy,xx]>=13 else '#263238')
+    label(a,chr(98+j))
+ca=fig.add_axes([.91,.10,.012,.28]);fig.colorbar(im,cax=ca,label='Pass rate')
 export(fig,'additional_ramsey')
 
-fig,ax=plt.subplots(figsize=(6.6,3.3));fig.subplots_adjust(left=.10,right=.98,bottom=.17,top=.80)
-for i,m in enumerate(MODELS):
-    rows=[si[m,e] for e in EFFORTS];v=np.array([z['false_positive_rate'] for z in rows])*100
-    lo=np.array([z['false_positive_rate_ci_low'] for z in rows])*100;hi=np.array([z['false_positive_rate_ci_high'] for z in rows])*100
-    ax.errorbar(np.arange(4)+(i-2.5)*.035,v,yerr=np.maximum(0,np.vstack([v-lo,hi-v])),
-                color=COLORS[i],marker=MARKERS[i],ms=4,lw=1.1,elinewidth=.6,capsize=1.7,label=m)
-ax.set(xticks=range(4),xticklabels=LABELS,xlim=(-.3,3.3),ylim=(0,70),ylabel='False positive rate (%)',xlabel='Reasoning effort');style(ax)
-fig.legend(*ax.get_legend_handles_labels(),loc='upper center',ncol=3,frameon=False,bbox_to_anchor=(.5,.99))
+fig,axes=plt.subplots(1,3,figsize=(7,2.65),sharey=True)
+fig.subplots_adjust(left=.09,right=.98,bottom=.21,top=.72,wspace=.18)
+for j,(ax,c,title) in enumerate(zip(axes,['context_0','context_A','context_B'],['Sequence only','Setup information','Expected signal'])):
+    for k,m in enumerate(extra if c=='context_0' else extra[:2]):
+        i=MODELS.index(m)
+        rows=[si[m,e] if c=='context_0' else pi[m,c,e] for e in EFFORTS]
+        v=np.array([z['false_positive_rate'] for z in rows])*100
+        lo=np.array([z['false_positive_rate_ci_low'] for z in rows])*100;hi=np.array([z['false_positive_rate_ci_high'] for z in rows])*100
+        ax.errorbar(np.arange(4)+(k-1)*.055,v,yerr=np.maximum(0,np.vstack([v-lo,hi-v])),
+                    color=COLORS[i],marker=MARKERS[i],ms=4,lw=1.1,elinewidth=.6,capsize=1.7,label=m)
+    ax.set(xticks=range(4),xticklabels=LABELS,xlim=(-.3,3.3),ylim=(0,22),yticks=[0,5,10,15,20],xlabel='Reasoning effort',title=title)
+    style(ax);label(ax,chr(97+j))
+axes[0].set_ylabel('False positive rate (%)')
+fig.legend(*axes[0].get_legend_handles_labels(),loc='upper center',ncol=3,frameon=False,bbox_to_anchor=(.5,1))
 export(fig,'additional_podmr_sequence')
 
-fig,axes=plt.subplots(1,2,figsize=(7,3.6));fig.subplots_adjust(left=.09,right=.98,top=.82,bottom=.23,wspace=.32)
-for a,lims in zip(axes,[(-25,20,-25,22),(-9,6,-4.5,3)]):
-    a.axhline(0,color='#999999',lw=.6);a.axvline(0,color='#999999',lw=.6)
-    xx=np.linspace(lims[0],lims[1],100);a.plot(xx,slope*xx,'--',color='#666666',lw=.8)
+# Display the raw association and the association within models, not a duplicate zoom.
+fig,axes=plt.subplots(1,2,figsize=(7,3.5))
+fig.subplots_adjust(left=.10,right=.98,top=.77,bottom=.25,wspace=.40)
+raw_r=float(np.corrcoef(x,y)[0,1])
+for j,(a,xx,yy) in enumerate(zip(axes,[x*100,xc*100],[y*100,yc*100])):
     for i,m in enumerate(MODELS):
-        for j,e in enumerate(EFFORTS):
-            k=next(k for k,p in enumerate(points) if p['model']==m and p['effort']==e)
-            a.scatter(xc[k]*100,yc[k]*100,c=COLORS[i],marker=['o','s','^','D'][j],s=23,edgecolors='white',linewidth=.3,zorder=3)
-    a.set(xlim=lims[:2],ylim=lims[2:],xlabel='Ramsey pass rate minus model mean\n(percentage points)');style(a)
-axes[0].set_ylabel('False positive rate minus model mean\n(percentage points)');axes[0].text(.03,.95,f'$r={r:.3f}$',transform=axes[0].transAxes,va='top')
-axes[0].add_patch(Rectangle((-9,-4.5),15,7.5,fill=False,ls=':',lw=.6,color='#888888'))
-axes[1].set_title('Central region',fontsize=8,pad=6)
-label(axes[0],'a');label(axes[1],'b')
+        for k,e in enumerate(EFFORTS):
+            q=next(q for q,p in enumerate(points) if p['model']==m and p['effort']==e)
+            a.scatter(xx[q],yy[q],c=COLORS[i],marker=['o','s','^','D'][k],s=27,edgecolors='white',linewidth=.3,zorder=3)
+    if j==0:
+        a.set(xlim=(0,60),ylim=(0,60),xlabel='Ramsey pass rate (%)',ylabel='False positive rate (%)',title='Observed rates')
+    else:
+        a.axhline(0,color='#999999',lw=.6);a.axvline(0,color='#999999',lw=.6)
+        line=np.linspace(-25,20,100);a.plot(line,slope*line,'--',color='#666666',lw=.8)
+        a.set(xlim=(-25,20),ylim=(-25,25),xlabel='Ramsey pass rate minus model mean\n(percentage points)',ylabel='False positive rate minus model mean\n(percentage points)',title='After subtracting model means')
+    a.text(.04,.95,f'$r={[raw_r,r][j]:.3f}$',transform=a.transAxes,va='top');style(a);label(a,chr(97+j))
 handles=[Line2D([],[],color=c,marker='o',ls='',ms=4,label=m) for m,c in zip(MODELS,COLORS)]
-fig.legend(handles=handles,loc='upper center',ncol=3,frameon=False,bbox_to_anchor=(.5,1))
+fig.legend(handles=handles,loc='upper center',ncol=3,frameon=False,bbox_to_anchor=(.5,1.01))
 eh=[Line2D([],[],color='#444444',marker=k,ls='',ms=4,label=e) for k,e in zip(['o','s','^','D'],LABELS)]
 fig.legend(handles=eh,loc='lower center',ncol=4,frameon=False,bbox_to_anchor=(.5,.005))
 export(fig,'additional_benchmark_correlation')

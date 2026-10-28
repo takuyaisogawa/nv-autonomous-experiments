@@ -1,8 +1,8 @@
 # Additional Model Evaluations
 
 This directory contains the additional evaluations in Supplementary Note 6:
-GPT-6.1 Sol, GPT-6.1 Terra, and GPT-6 Astra. The figures compare them with
-the three models in the main text. Model and reasoning settings affect the
+GPT-6.1 Sol, GPT-6.1 Terra, and GPT-6 Astra. The performance figures show
+these three additional models; the correlation figure uses all six models. Model and reasoning settings affect the
 two benchmarks differently; greater reasoning effort does not consistently
 improve Ramsey performance or increase pODMR false positives in these
 additional models.
@@ -65,9 +65,9 @@ python benchmarks/additional-models-2026-10/reproduce.py
 This reads saved responses and judgments without making model calls. It
 checks the additional results against the summary tables and writes:
 
-- `reproduced/additional_ramsey.pdf`: six-model pass rates and checkpoint counts.
-- `reproduced/additional_podmr_sequence.pdf`: false positive rates for pODMR with the sequence only prompt.
-- `reproduced/additional_benchmark_correlation.pdf`: association after subtracting each model's mean.
+- `reproduced/additional_ramsey.pdf`: pass rates and checkpoint counts for the three additional models.
+- `reproduced/additional_podmr_sequence.pdf`: pODMR false positive rates for the additional models with all three prompts (Astra: sequence only).
+- `reproduced/additional_benchmark_correlation.pdf`: association before and after subtracting each model's mean.
 - Matching PNG previews, `analysis.json`, and LaTeX table rows.
 
 The pODMR error bars use 20,000 bootstrap resamples of measurements, retaining
