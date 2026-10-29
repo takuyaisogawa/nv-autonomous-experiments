@@ -47,8 +47,9 @@ knowledge sections instead of loading every prior lesson into every wake.
 submitting a measurement to the MATLAB bridge. It records the objective,
 submit spec, safety assumptions, expected evidence, and verification status.
 
-`evidence ledger` is append-only provenance. It links analysis outputs, figures,
-bridge results, notes, and reports to the claims they support or reject.
+The `evidence ledger` is a log that links claims to the records used to assess
+them, including analysis outputs, figures, measurement results, notes, and
+reports. New entries are added without changing earlier ones.
 
 ## Wake Loop
 

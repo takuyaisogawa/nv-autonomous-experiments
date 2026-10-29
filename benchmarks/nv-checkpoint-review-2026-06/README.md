@@ -31,7 +31,7 @@ Create ramsey_review.md ...
 Then reply with a short handoff summary, the next action, and a compact Project note.
 ```
 
-## Reported Sweep
+## Original Three-Model Evaluation
 
 - Models: GPT-5.4, GPT-5.5, GPT-5.6 Sol
 - Checkpoints: `cp01` through `cp05`
@@ -44,6 +44,8 @@ This package contains the shared inputs, prompt text, run scripts, scoring
 helpers, and the original GPT-5.5 records.  The GPT-5.4 and GPT-5.6 Sol records
 and the combined figure source table are in the
 [three model comparison release](../three-model-comparison-2026-07/README.md).
+The current manuscript also includes GPT-6.1 Sol, GPT-6.1 Terra, and GPT-6 Astra;
+see the [six-model results and current figures](../additional-models-2026-10/).
 
 Each model run is launched in a temporary directory containing only one
 checkpoint snapshot and the task prompt. The runner uses a writable sandbox
@@ -120,10 +122,11 @@ delivery, use the provider-neutral per-case runner in the pODMR benchmark.
 
 ## Current manuscript scores
 
-The manuscript uses the fixed [GPT-6.1 Sol/high LLM judge](../three-model-comparison-2026-07/ramsey/llm_judge/).
-Its 1,200 labels, full prompt, execution settings, and human validation
-(96/100 agreement) are released there. The previous scores below are preserved
-and compared with the judge results; they are not the human validation labels.
+The manuscript uses GPT-6.1 Sol at high reasoning effort as the LLM judge.
+The [judge records for the original three models](../three-model-comparison-2026-07/ramsey/llm_judge/)
+contain 1,200 labels, the full prompt, execution settings, and human validation
+with 96/100 agreement. The [additional evaluations](../additional-models-2026-10/ramsey/)
+contain the other 1,200 labels. Previous scores are preserved below for comparison.
 
 ## Previous scoring workflow
 
@@ -131,14 +134,14 @@ and compared with the judge results; they are not the human validation labels.
 python scripts\score_outputs.py results\model_outputs.jsonl
 ```
 
-The original GPT-5.5 sweep uses manual scores in
+The original GPT-5.5 evaluation used manual scores in
 `results/manual_calibration_residual_scores_2026-07-11.csv`.  This file contains
 a PASS/FAIL label and a short rationale for each of the 400 runs. The aggregated
-values used for the figure are in
+values used for the previous GPT-5.5 figure are in
 `results/figures/reasoning_effort_sweep_low_to_xhigh_summary.csv`.
 
-The results for the three models reported in the manuscript and the corresponding
-GPT-5.4 and GPT-5.6 Sol per-run records are in
+The results for the original three models and the corresponding
+GPT-5.4 and GPT-5.6 Sol records are in
 `../three-model-comparison-2026-07/ramsey/`.
 
 The automatic score script is retained as a first-pass helper.  Borderline

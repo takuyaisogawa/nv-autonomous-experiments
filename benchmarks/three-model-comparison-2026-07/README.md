@@ -1,9 +1,12 @@
 # Three Model Benchmark Comparison
 
-This directory is the manuscript hub for the GPT-5.4, GPT-5.5, and GPT-5.6 Sol
-benchmark comparison.  The three models are presented in parallel through
-model specific record indexes.  The indexes retain the original source
-locations, so the GPT-5.5 records do not need to be duplicated.
+This directory contains benchmark records for the original three models,
+GPT-5.4, GPT-5.5, and GPT-5.6 Sol. The current manuscript compares six models;
+the [combined results and current figures](../additional-models-2026-10/)
+also include GPT-6.1 Sol, GPT-6.1 Terra, and GPT-6 Astra.
+
+The model indexes below link to the original files, including the GPT-5.5
+records stored in the earlier benchmark directories.
 
 - [Ramsey checkpoint benchmark](../nv-checkpoint-review-2026-06/README.md)
 - [pODMR data evaluation benchmark](../podmr-model-first-resonance-2026-05/README.md)
@@ -100,6 +103,7 @@ judge outputs, human validation records and reproducible scoring procedure.
 
 ## Figure reproduction
 
-The scripts, source tables, and vector artwork needed to reproduce the
-quantitative panels and final layouts of manuscript Figs. 3 and 4 are described
-in [REPRODUCE_FIGURES.md](REPRODUCE_FIGURES.md).
+For the current six-model Figs. 3–5, use the
+[current figure instructions](../additional-models-2026-10/#reproduce-the-analysis-and-figures).
+[REPRODUCE_FIGURES.md](REPRODUCE_FIGURES.md) describes the earlier three-model
+versions of Figs. 3 and 4.

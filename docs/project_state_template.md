@@ -80,18 +80,3 @@ Bridge-job JSON should contain execution contracts only: sequence/manifest, scan
 numeric variables, hard limits, queue/execute opt-in, target labels, and Markdown
 note pointers. Scientific interpretation belongs in this file and `work/notes/`.
 ```
-
-## Why This Matters
-
-The template keeps the project's status easy to read and makes the recording
-requirements explicit:
-
-- keep the current state readable;
-- write small retrievable notes;
-- separate backend execution contracts from scientific interpretation;
-- mark uncertain interpretations honestly;
-- cite evidence ids or artifacts for important claims.
-
-This is the practical meaning of the "vibe physics" section in the released
-case folders: intuition can start a hypothesis, but the project record must
-show what was actually checked and what evidence supports the result.

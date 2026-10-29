@@ -1,8 +1,10 @@
 # Ramsey checkpoint scoring with a fixed LLM judge
 
-The manuscript uses GPT-6.1 Sol (`gpt-6.1-sol`) at high reasoning effort to
-score all 1,200 archived responses. The fixed prompt includes the existing
-GitHub scoring guide verbatim. Each response was graded once in a fresh
+This directory contains GPT-6.1 Sol (`gpt-6.1-sol`) judgments at high reasoning
+effort for the 1,200 responses from the original three models. Scores for the
+other three models are in the [additional evaluations](../../../additional-models-2026-10/ramsey/).
+The fixed prompt includes the existing GitHub scoring guide verbatim.
+Each response was graded once in a fresh
 Codex CLI session with tools disabled. The input contained the task context,
 complete final response and project note. Model identities and reasoning
 settings were withheld.
@@ -37,8 +39,8 @@ Each cell contains 100 responses (five checkpoints, twenty replicates).
   comparison, reading aids and four disagreement cases.
 - `legacy_comparison/`: previous labels and reasons, comparison and 53
   disagreements. Agreement with previous labels is 1,147/1,200 (95.6%).
-- `figures/`: manuscript Figure 3 and the unchanged previous figure.
-- `checkpoint_summary.csv`: the 60 model/effort/checkpoint cells used in Figure 3.
+- `figures/`: earlier three-model versions of Figure 3 using judge and previous scores.
+- `checkpoint_summary.csv`: pass counts for the original three models, grouped by reasoning setting and checkpoint.
 
 The task context was reconstructed from the archived task prompt and runner.
 The final response and project note are the complete texts supplied to the
@@ -53,8 +55,8 @@ records, reproduce the sample, and recompute agreement and pass counts:
 python scripts/reproduce.py
 ```
 
-Outputs go to `reproduced/`. To rebuild Figure 3 using the repository's
-plotting dependencies (Matplotlib, NumPy and PyMuPDF):
+Outputs go to `reproduced/`. To rebuild the earlier three-model Figure 3 using
+the repository's plotting dependencies (Matplotlib, NumPy and PyMuPDF):
 
 ```shell
 python scripts/make_figure.py

@@ -1,6 +1,8 @@
 # Ramsey Checkpoint Benchmark Across Three Models
 
-The model columns below follow the comparison used in Fig. 3 of the manuscript.
+This directory contains Ramsey records for the original three models.
+The [current six-model comparison](../../additional-models-2026-10/)
+includes these results and provides the code for the current Fig. 3.
 
 |  | GPT-5.4 | GPT-5.5 | GPT-5.6 Sol |
 | --- | --- | --- | --- |
@@ -13,8 +15,8 @@ The model columns below follow the comparison used in Fig. 3 of the manuscript.
 All 1,200 responses were scored by the fixed [GPT-6.1 Sol/high judge](llm_judge/).
 Human validation gave 96% agreement on 100 responses.
 
-Values are passing runs out of 100 across five checkpoints and twenty
-replicates per checkpoint at each reasoning effort.
+Each value is the number of passing responses out of 100 for one model
+and reasoning setting, with 20 responses from each of five checkpoints.
 
 | Reasoning effort | GPT-5.4 | GPT-5.5 | GPT-5.6 Sol |
 | --- | ---: | ---: | ---: |

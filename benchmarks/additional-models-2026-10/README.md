@@ -20,19 +20,16 @@ measurement was evaluated three times per prompt and reasoning setting.
 The sequence only comparison uses the same 72 measurements without a
 resonance for all six models, giving 216 judgments per model and setting.
 
-Astra's full pODMR record retains the 864 previously published judgments
-and adds the remaining 2,592. The earlier responses and scores are unchanged.
-
 The additional runs used Codex CLI `0.164.0-alpha.11.1`, with local analysis
 tools available and web search disabled. The CLI and tool configuration
 were shared by the three additional models but differed from those used
 in the original three-model comparison. Inputs, task prompts, and scoring
 criteria were unchanged. Each run started in a fresh session.
 
-Astra's pODMR runs used two builds of the same CLI version. The first 864
-judgments used the app-distributed build; the remaining 2,592 used the
-official release. Both executable hashes and the changes in concurrency
-are recorded in `podmr/gpt-6-astra/execution_settings.json`.
+Astra's pODMR runs used two builds of the same CLI version. The 864 previously
+published judgments used the app-distributed build and are retained unchanged.
+The remaining 2,592 used the official release. Both executable hashes and the
+changes in concurrency are recorded in `podmr/gpt-6-astra/execution_settings.json`.
 
 All Ramsey responses were scored with the same GPT-6.1 Sol judge at high
 reasoning effort, using the [fixed prompts](prompts/). The judge received
@@ -77,8 +74,8 @@ command recreates the current manuscript figures in `reproduced/main_figures/`:
 
 - `figure3_ramsey_benchmark.pdf`: pass rates and checkpoint counts for all six models.
 - `figure4_podmr_benchmark.pdf`: false positive rates and accuracy for all six models and prompts.
-- `figure5_benchmark_relationship.pdf`: the 24 pairs after subtracting each model's mean.
-- `benchmark_observed_rates.pdf`: the same pairs before subtracting model means.
+- `figure5_benchmark_relationship.pdf`: Ramsey pass rates and pODMR false positive rates after subtracting each model's mean.
+- `benchmark_observed_rates.pdf`: the same rates before subtracting model means.
 
 The original vector artwork for panels 3a and 4a is retained in `figure_sources/`.
 Matching PNG previews, counts, correlations, and source hashes are saved with

@@ -3,9 +3,8 @@
 ## Overview
 
 This repository contains the data and code accompanying a manuscript on an
-LLM agent for autonomous nitrogen-vacancy center experiments.  The OpenClaw
-platform provided the agent and project management layer around the NV
-instrument control stack.
+LLM agent for autonomous experiments with nitrogen-vacancy centers. OpenClaw
+ran the agent and managed the experimental project.
 
 The manuscript has two connected contributions.  First, it demonstrates an
 autonomous experimental workflow that combines persistent project records,
@@ -25,7 +24,7 @@ The order below follows the current manuscript.
 | Manuscript component | What it shows | Repository entry point |
 | --- | --- | --- |
 | Figure 1. Autonomous NV workflow | The boundary between LLM reasoning, persistent project state, analysis tools, deterministic validation, and hardware control | [System overview](docs/system_overview.md), [runtime architecture](docs/runtime_architecture.md) |
-| Figure 2. Main autonomous experiment | NV candidate selection, pODMR screening and calibration, Ramsey measurements, and a CPMG measurement to investigate a possible carbon-13 contribution to the weak frequency components in the Ramsey spectra | [Main experiment `image172647`](cases/image172647/README.md) |
+| Figure 2. Main autonomous experiment | Measurements and decisions during the main autonomous experiment | [Main experiment `image172647`](cases/image172647/README.md) |
 | Figure 3. Ramsey checkpoint benchmark | Whether six models identify a possible error in the calibrated resonance frequency | [Six-model results and figure code](benchmarks/additional-models-2026-10/), [original three-model records](benchmarks/three-model-comparison-2026-07/ramsey/) |
 | Figure 4. pODMR benchmark | Effects of prompts, reasoning effort, and model identity on resonance judgments across six models | [Six-model results and figure code](benchmarks/additional-models-2026-10/), [original three-model records](benchmarks/three-model-comparison-2026-07/podmr/) |
 | Figure 5. Relationship between the benchmarks | Ramsey pass rates and pODMR false positive rates after subtracting each model's mean | [Analysis and figures](benchmarks/additional-models-2026-10/reproduced/main_figures/) |
@@ -49,11 +48,11 @@ used an N=8 CPMG measurement to investigate a possible carbon-13 contribution
 to the weak frequency components in the Ramsey spectra. The released project
 folder records the data, decisions, analyses, and final interpretation.
 
-| Case | Role in the manuscript | Summary | Status |
-| --- | --- | --- | --- |
-| [`image172647`](cases/image172647/README.md) | Main autonomous workflow demonstration | New imaging after loss of the initial candidate, candidate selection, pODMR calibration, Ramsey measurements at multiple detunings, and a CPMG N=8 check | Completed |
-| [`image145844`](cases/image145844/README.md) | Additional case study | Aligned NV selection, pODMR screening, repeated Ramsey diagnostics, and later frequency reanalysis | Completed |
-| [`image231924`](cases/image231924/README.md) | Additional case study | Aligned NV selection, resonant frequency refinement, a repeated Ramsey measurement, and a final report on the `T2*` estimate and its limitations | Completed |
+| Case | Role in the manuscript |
+| --- | --- |
+| [`image172647`](cases/image172647/README.md) | Main autonomous experiment described above |
+| [`image145844`](cases/image145844/README.md) | Additional case in which human advice led the agent to reanalyze the Ramsey data |
+| [`image231924`](cases/image231924/README.md) | Additional case in which the agent estimated `T2*` after recovering from a failed measurement |
 
 ## Offline Benchmarks
 
@@ -181,7 +180,7 @@ docs/
 | --- | --- |
 | Public boundary | [docs/public_scope.md](docs/public_scope.md), [docs/source_release_boundary.md](docs/source_release_boundary.md) |
 | System architecture | [docs/system_overview.md](docs/system_overview.md), [docs/runtime_architecture.md](docs/runtime_architecture.md) |
-| Model and agent configuration | [docs/model_and_agent_configuration.md](docs/model_and_agent_configuration.md), [three model run conditions](benchmarks/three-model-comparison-2026-07/run_conditions.json) |
+| Model and agent configuration | [Model settings and links to all six models](docs/model_and_agent_configuration.md) |
 | Case guide | [docs/case_walkthrough.md](docs/case_walkthrough.md), [cases/README.md](cases/README.md) |
 | Memory and knowledge | [docs/memory_knowledge.md](docs/memory_knowledge.md), [docs/nv_research_memory.md](docs/nv_research_memory.md), [docs/nv_research_knowledge_index.md](docs/nv_research_knowledge_index.md) |
 | Project state and intents | [docs/project_state_template.md](docs/project_state_template.md), [docs/experiment_intent_schema.md](docs/experiment_intent_schema.md) |

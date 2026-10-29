@@ -1,7 +1,8 @@
 # pODMR Benchmark Across Three Models
 
-The model columns below follow the comparison used in Fig. 4 and Supplementary
-Tables S1--S5 of the manuscript.
+This directory contains pODMR records for the original three models.
+The [current six-model comparison](../../additional-models-2026-10/)
+includes these results and provides the code for the current Fig. 4.
 
 |  | GPT-5.4 | GPT-5.5 | GPT-5.6 Sol |
 | --- | --- | --- | --- |

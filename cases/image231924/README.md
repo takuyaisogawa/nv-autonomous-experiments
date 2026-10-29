@@ -1,7 +1,7 @@
 # Case: image231924
 
-Completed aligned-NV and T2star case study with resonant frequency refinement,
-a repeated Ramsey measurement, and a final report.
+This case records how the agent selected an NV center aligned with the
+magnetic field, calibrated its resonance frequency, and estimated T2star.
 
 ## Start Here
 
@@ -18,10 +18,10 @@ a repeated Ramsey measurement, and a final report.
 
 ## Reading Summary
 
-The agent recovered from an invalid first pODMR acquisition, re-established
-trackability, passed a strong-pi pODMR alignment screen, refined the resonant
-frequency with weak-pi pODMR, and repeated the Ramsey measurement using the
-refined microwave frequency.
+After a failed pODMR measurement, the agent restored tracking and used
+strong-pi pODMR to identify an NV center aligned with the magnetic field.
+It refined the resonance frequency with weak-pi pODMR and repeated the
+Ramsey measurement using the updated microwave frequency.
 
 ## Model Provenance
 

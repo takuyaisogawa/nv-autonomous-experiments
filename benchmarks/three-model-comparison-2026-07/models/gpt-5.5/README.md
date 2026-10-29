@@ -17,9 +17,11 @@ those records.
 ## Ramsey checkpoint benchmark
 
 - [Benchmark method and inputs](../../../nv-checkpoint-review-2026-06/)
-- [Per run manual scores and rationales](../../../nv-checkpoint-review-2026-06/results/manual_calibration_residual_scores_2026-07-11.csv)
-- [Aggregate score table](../../../nv-checkpoint-review-2026-06/results/manual_calibration_residual_summary_2026-07-11.csv)
-- [Combined three model checkpoint table](../../ramsey/three_model_checkpoint_summary.csv)
+- [LLM-judge scores used in the current manuscript](../../ramsey/llm_judge/)
+- [Checkpoint counts from the LLM judge for the original three models](../../ramsey/llm_judge/checkpoint_summary.csv)
+- [Previous manual scores and rationales](../../../nv-checkpoint-review-2026-06/results/manual_calibration_residual_scores_2026-07-11.csv)
+- [Previous manual scores grouped by checkpoint and reasoning setting](../../../nv-checkpoint-review-2026-06/results/manual_calibration_residual_summary_2026-07-11.csv)
+- [Previous checkpoint scores for all three models](../../ramsey/three_model_checkpoint_summary.csv)
 
 ## pODMR data evaluation benchmark
 

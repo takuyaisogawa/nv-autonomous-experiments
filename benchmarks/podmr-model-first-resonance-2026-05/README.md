@@ -1,8 +1,8 @@
 # pODMR Data Evaluation Benchmark
 
-This benchmark evaluates whether an agent can judge resonance presence in
-previously acquired pODMR measurements, and how prompt context and reasoning
-effort affect that judgment.
+The agent is asked to determine whether a resonance is present in previously
+acquired pODMR data. The benchmark tests how the prompt and reasoning effort
+affect its judgments.
 
 The dataset contains 96 strong-pi pODMR measurements from two NV centers:
 
@@ -18,9 +18,12 @@ corresponding transition lay outside that window.
 Failed acquisitions and tracking failures are excluded rather than labeled as
 resonance absent.
 
-Each prompt was evaluated with GPT-5.4, GPT-5.5, and GPT-5.6 Sol for
-three replicates at four reasoning-effort settings: `low`, `medium`, `high`,
-and `xhigh`.
+The original evaluation used GPT-5.4, GPT-5.5, and GPT-5.6 Sol. Each
+measurement was evaluated three times for every combination of model,
+prompt, and reasoning setting (`low`, `medium`, `high`, and `xhigh`).
+The current manuscript also includes GPT-6.1 Sol, GPT-6.1 Terra, and GPT-6 Astra;
+see the
+[six-model results and current figures](../additional-models-2026-10/).
 
 ## Main Results
 
@@ -57,10 +60,9 @@ The table below reports the original GPT-5.5 sweep.
 The expected signal prompt differs from the facts prompt by adding a
 requirement to establish the expected physical signal with a simulation or
 explicit quantitative model calculation before deciding whether a resonance is
-present. In this dataset, increasing reasoning effort alone increases
-false-positive resonance calls with the sequence prompt, while the expected
-signal prompt keeps false positives low across reasoning-effort settings and
-all three models.
+present. For GPT-5.5, increasing reasoning effort increased false positive
+rates with the sequence only prompt. The expected signal prompt kept false
+positive rates low across reasoning settings in all three original models.
 
 Non-LLM signal-processing baselines are summarized in
 `results/non_llm_signal_baseline_summary.md`.

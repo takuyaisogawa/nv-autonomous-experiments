@@ -18,21 +18,18 @@ separate sessions with different initial instructions and memory documents.
 
 ## Deterministic Runtime Roles
 
-The LLM agent does not directly control hardware. Deterministic Python and
-MATLAB layers own the operational boundaries:
+The agent proposes measurements and interprets results. Python and MATLAB
+check measurement requests before execution.
 
-- Python project-management code owns durable state, backlog updates, wake
-  records, audit logs, completion markers, queue checks, and hard safety
-  boundaries.
-- The MATLAB bridge and manifest layer owns experiment validation, hardware
-  limits, submit-spec execution, and result/status artifacts.
-- The agent authors scientific intent and interpretation; verified bridge
-  submit specs and live execution remain behind deterministic validation.
+- Python saves project state and run logs, tracks pending and completed tasks,
+  and checks the measurement queue and safety constraints.
+- The MATLAB bridge checks requests against the sequence manifests and
+  hardware limits, executes accepted jobs, and saves their status and results.
 
 ## Memory And Knowledge
 
-The project-execution agent reads the compact NV startup memory at each wake
-and reads detailed knowledge sections on demand:
+The agent reads the NV memory document at the start of each run and reads
+knowledge sections relevant to its current task:
 
 - Startup memory: `docs/nv_research_memory.md`
 - Knowledge index: `docs/nv_research_knowledge_index.md`
@@ -55,20 +52,26 @@ The public execution-source copy also records these defaults in
 
 ## Offline Benchmark Configuration
 
-The autonomous case studies above used GPT-5.5.  The offline Ramsey and pODMR
-benchmarks were subsequently evaluated with three model variants under the
-same inputs, prompts, reasoning effort settings, and replicate structure.
+The autonomous case studies above used GPT-5.5. The current manuscript
+compares six models on both offline benchmarks, using the same inputs,
+prompts, reasoning effort settings, number of replicates, and scoring rules.
 
-| Manuscript name | Model argument | Benchmark role |
-| --- | --- | --- |
-| GPT-5.4 | `gpt-5.4` | Ramsey and pODMR comparison sweep |
-| GPT-5.5 | `gpt-5.5` | Original Ramsey and pODMR sweep |
-| GPT-5.6 Sol | `gpt-5.6-sol` | Ramsey and pODMR comparison sweep |
+| Manuscript name | Model argument |
+| --- | --- |
+| GPT-5.4 | `gpt-5.4` |
+| GPT-5.5 | `gpt-5.5` |
+| GPT-5.6 Sol | `gpt-5.6-sol` |
+| GPT-6.1 Sol | `gpt-6.1-sol` |
+| GPT-6.1 Terra | `gpt-6.1-terra` |
+| GPT-6 Astra | `gpt-6-astra` |
 
-The GPT-5.4 run used the alias available through Codex with ChatGPT
-authentication at execution time.  Full run counts and public audit records
-are documented in
-`benchmarks/three-model-comparison-2026-07/README.md`.
+Each model has 400 Ramsey responses and 3,456 pODMR judgments. Records for
+the [original three models](../benchmarks/three-model-comparison-2026-07/)
+and the [three added in October](../benchmarks/additional-models-2026-10/)
+document their execution settings. The latter directory also contains the
+combined results and describes differences in the CLI and tool configuration.
+GPT-5.4 used the alias available through Codex with ChatGPT authentication
+at execution time.
 
 ## Reporting Convention
 

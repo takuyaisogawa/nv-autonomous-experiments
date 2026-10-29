@@ -12,7 +12,9 @@
 ## Ramsey checkpoint benchmark
 
 - [Model records](../../ramsey/gpt-5.4/)
-- [Combined three model checkpoint table](../../ramsey/three_model_checkpoint_summary.csv)
+- [LLM-judge scores used in the current manuscript](../../ramsey/llm_judge/)
+- [Checkpoint counts from the LLM judge for the original three models](../../ramsey/llm_judge/checkpoint_summary.csv)
+- [Previous checkpoint scores, retained for comparison](../../ramsey/three_model_checkpoint_summary.csv)
 
 ## pODMR data evaluation benchmark
 
