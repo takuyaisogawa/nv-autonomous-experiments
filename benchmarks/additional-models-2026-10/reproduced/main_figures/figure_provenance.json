@@ -1,0 +1,18 @@
+{
+  "sources": {
+    "data/podmr_summary.json": "482b612a89dbb9f75501e4966e2b26fa2684e15934f4f79ad347dc1551c1cf76",
+    "data/ramsey_summary.json": "bc2307dd9ddc187d240a13954e9fd03201b5fa4af566251fb2e7e989b04dc24e",
+    "data/sequence_summary.json": "22d8de966b3acd6d2ef0d1c96662273ecb639c6102d40b39dfa4cafcc8864fe0",
+    "figure_sources/figure3_original.pdf": "e51da05f870aa8b77eb50dede78effd64b732043752bba7107666bf2d0f8b3ed",
+    "figure_sources/figure4_original.pdf": "fd40142f97d1a3d8f4cee02b1ffee572d1dce72710bed735f2b2c956e9007ea6",
+    "make_main_figures.py": "1dea373c65db0ff2d1860491e6c6f315070d0e6b28a3235a13035f7ca31ef9c7"
+  },
+  "outputs": {
+    "benchmark_observed_rates.pdf": "d9ee2890bd1d4a8b83e545611db2557f6cf0399409ee41aa622da0a755ddb674",
+    "figure3_ramsey_benchmark.pdf": "b304beed7e35a14ab56bf3882dfa528047a65bde4a0ee23e0c07fbbba026d853",
+    "figure4_podmr_benchmark.pdf": "b3fd258d28afda46c032d1d67dc7559bca40f9796dcde46d39f6030c7cd479a0",
+    "figure5_benchmark_relationship.pdf": "3d48062a498a66e1f2db0100186612c17a908d1b02d54306a8441f8d3b8b63d8"
+  },
+  "responses_and_scores_modified": false,
+  "bootstrap_intervals": "Retained from the verified comparison summaries."
+}

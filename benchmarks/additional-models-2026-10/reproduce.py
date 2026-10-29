@@ -27,7 +27,7 @@ seq=load(ROOT/'data/sequence_summary.json')
 ri={(r['model'],r['reasoning_effort'],r['checkpoint_id']):r for r in ramsey['conditions']}
 si={(r['model'],r['reasoning_effort']):r for r in seq}
 pi={(r['model'],r['context_id'],r['reasoning_effort']):r for r in podmr}
-assert len(ri)==120 and len(si)==24 and len(pi)==60
+assert len(ri)==120 and len(si)==24 and len(pi)==72
 new_counts={}
 for model,mid in zip(MODELS[3:],IDS):
     rr=lines(ROOT/'ramsey'/mid/'responses.jsonl'); jj=load(ROOT/'ramsey'/mid/'judgments.json')
@@ -40,37 +40,24 @@ for model,mid in zip(MODELS[3:],IDS):
             assert len(group)==20
             assert sum(r['verdict']=='PASS' for r in group)==ri[model,e,cp]['passes']
     pp=lines(ROOT/'podmr'/mid/'responses.jsonl')
-    assert len(pp)==(864 if mid=='gpt-6-astra' else 3456)
+    assert len(pp)==3456
     assert len({(r['case_id'],r['context_id'],r['reasoning_effort'],r['replicate']) for r in pp})==len(pp)
-    for c in (['context_0'] if mid=='gpt-6-astra' else ['context_0','context_A','context_B']):
+    for c in ['context_0','context_A','context_B']:
         for e in EFFORTS:
             group=[r for r in pp if r['context_id']==c and r['reasoning_effort']==e]
             ct=Counter(r['outcome'] for r in group)
             assert ct['FP']+ct['TN']==216
-            if mid!='gpt-6-astra':
-                assert len(group)==288 and ct['TP']+ct['FN']==72
-                assert all(ct[k]==pi[model,c,e][k] for k in ['TP','TN','FP','FN'])
+            assert len(group)==288 and ct['TP']+ct['FN']==72
+            assert all(ct[k]==pi[model,c,e][k] for k in ['TP','TN','FP','FN'])
             if c=='context_0':assert ct['FP']==si[model,e]['FP']
     new_counts[model]={'ramsey':len(rr),'podmr':len(pp)}
 
-# Preserve published bootstrap intervals for five models; add Astra with the same procedure.
-for model in MODELS[:5]:
+# Retain the intervals used in the manuscript for all six models.
+for model in MODELS:
     for e in EFFORTS:
         row=pi[model,'context_0',e]
-        for k in ['false_positive_rate_ci_low','false_positive_rate_ci_high']:si[model,e][k]=row[k]
-rng=np.random.default_rng(20261028)
-astra=lines(ROOT/'podmr/gpt-6-astra/responses.jsonl')
-for e in EFFORTS:
-    rr=[r for r in astra if r['reasoning_effort']==e]
-    ids=sorted({r['case_id'] for r in rr});assert len(ids)==72
-    vals=[]
-    for cid in ids:
-        g=[r for r in rr if r['case_id']==cid]
-        assert len(g)==3 and all(r['gold_label']=='absent' for r in g)
-        vals.append(sum(r['outcome']=='FP' for r in g)/3)
-    vals=np.array(vals)
-    lo,hi=np.quantile(vals[rng.integers(0,72,size=(20000,72))].mean(axis=1),[.025,.975])
-    si['GPT-6 Astra',e].update(false_positive_rate_ci_low=float(lo),false_positive_rate_ci_high=float(hi))
+        for k in ['false_positive_rate_ci_low','false_positive_rate_ci_high']:
+            si[model,e][k]=row[k]
 
 points=[]
 for m in MODELS:
@@ -102,8 +89,8 @@ def export(fig,name):
     fig.savefig(OUT/(name+'.pdf'));plt.close(fig)
     d=fitz.open(OUT/(name+'.pdf'));d[0].get_pixmap(matrix=fitz.Matrix(2,2)).save(OUT/(name+'.png'));d.close()
 
-# Supplementary performance figures show only the three additional models.
-# The original three models remain in the main-text figures.
+# These supplementary plots show the three additional models.
+# make_main_figures.py recreates the current six-model manuscript figures.
 extra=MODELS[3:]
 fig=plt.figure(figsize=(7,3.9))
 gs=fig.add_gridspec(2,3,height_ratios=[1,1],left=.095,right=.89,top=.86,bottom=.10,hspace=.82,wspace=.30)
@@ -132,7 +119,7 @@ export(fig,'additional_ramsey')
 fig,axes=plt.subplots(1,3,figsize=(7,2.65),sharey=True)
 fig.subplots_adjust(left=.09,right=.98,bottom=.21,top=.72,wspace=.18)
 for j,(ax,c,title) in enumerate(zip(axes,['context_0','context_A','context_B'],['Sequence only','Setup information','Expected signal'])):
-    for k,m in enumerate(extra if c=='context_0' else extra[:2]):
+    for k,m in enumerate(extra):
         i=MODELS.index(m)
         rows=[si[m,e] if c=='context_0' else pi[m,c,e] for e in EFFORTS]
         v=np.array([z['false_positive_rate'] for z in rows])*100
@@ -171,7 +158,7 @@ export(fig,'additional_benchmark_correlation')
 rows=[]
 for c,title in [('context_0','Sequence only'),('context_A','Setup information'),('context_B','Expected signal')]:
     rows.append(r'\multicolumn{8}{l}{\textbf{'+title+r'}} \\')
-    for m in MODELS[3:5]:
+    for m in MODELS[3:]:
         for e in EFFORTS:
             z=pi[m,c,e]
             fpr=f"{100*z['false_positive_rate']:.1f} [{100*z['false_positive_rate_ci_low']:.1f}, {100*z['false_positive_rate_ci_high']:.1f}]"

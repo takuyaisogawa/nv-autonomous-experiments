@@ -1,8 +1,6 @@
 {
   "model": "gpt-6-astra",
   "cli_version": "codex-cli 0.164.0-alpha.11.1",
-  "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
-  "workers": 20,
   "timeout_seconds": 1800,
   "max_infrastructure_attempts": 3,
   "retry_delays_seconds": [
@@ -86,5 +84,62 @@
       "<workspace>/raw_readouts.png",
       "-"
     ]
+  },
+  "max_workers": 24,
+  "execution_groups": [
+    {
+      "name": "previous_sequence_absent",
+      "responses": 864,
+      "selection": {
+        "context_id": "context_0",
+        "gold_label": "absent"
+      },
+      "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
+      "workers": 20
+    },
+    {
+      "name": "additional_conditions",
+      "responses": 2592,
+      "selection": "All remaining combinations of measurement, prompt, reasoning effort, and replicate.",
+      "cli_sha256": "4fd2f057bad603bf53dc202457ffd0c3591de62e867a8b01e73816e3fbce5a73",
+      "official_release": {
+        "release": "https://github.com/openai/codex/releases/tag/rust-v0.164.0-alpha.11.1",
+        "asset": "https://github.com/openai/codex/releases/download/rust-v0.164.0-alpha.11.1/codex-x86_64-pc-windows-msvc.exe.zip",
+        "archive_digest": "sha256:db2e343aa9784b13f50819c050c385e1923b7ad95365c895a21dc151dd4da21c"
+      },
+      "max_workers": 24
+    }
+  ],
+  "worker_limit_changes": [
+    {
+      "changed_utc": "2026-10-28T19:55:13.152949+00:00",
+      "previous_workers": 4,
+      "workers": 8,
+      "completed": 918
+    },
+    {
+      "changed_utc": "2026-10-28T19:57:05.651935+00:00",
+      "previous_workers": 8,
+      "workers": 12,
+      "completed": 941
+    },
+    {
+      "changed_utc": "2026-10-28T19:59:03.588739+00:00",
+      "previous_workers": 12,
+      "workers": 24,
+      "completed": 974
+    }
+  ],
+  "scope": {
+    "measurements": 96,
+    "prompts": 3,
+    "reasoning_settings": [
+      "low",
+      "medium",
+      "high",
+      "xhigh"
+    ],
+    "replicates": 3,
+    "responses": 3456
   }
 }

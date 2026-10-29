@@ -1,12 +1,16 @@
-# Reproducing Manuscript Figures 3 and 4
+# Reproducing the Earlier Three-Model Figures
+
+The current manuscript uses six models in Figs. 3–5. See the
+[current figure instructions](../additional-models-2026-10/#reproduce-the-analysis-and-figures).
+This guide preserves the earlier three-model figures.
 
 This workflow reconstructs the quantitative panels and final layouts of
 manuscript Figs. 3 and 4.  It reads the released benchmark source tables and
 reuses the existing vector artwork for panels 3a and 4a.
 
-## Current Figure 3 (LLM judge)
+## Three-Model Figure 3 (LLM judge)
 
-The manuscript now uses [LLM-judge scores](ramsey/llm_judge/). Reproduce the
+This version uses [LLM-judge scores](ramsey/llm_judge/). Reproduce the
 counts and the updated Figure 3 from the repository root with:
 
 ```shell

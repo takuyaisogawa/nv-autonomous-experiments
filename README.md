@@ -26,12 +26,13 @@ The order below follows the current manuscript.
 | --- | --- | --- |
 | Figure 1. Autonomous NV workflow | The boundary between LLM reasoning, persistent project state, analysis tools, deterministic validation, and hardware control | [System overview](docs/system_overview.md), [runtime architecture](docs/runtime_architecture.md) |
 | Figure 2. Main autonomous experiment | NV candidate selection, pODMR screening and calibration, Ramsey measurements, and a CPMG measurement to investigate a possible carbon-13 contribution to the weak frequency components in the Ramsey spectra | [Main experiment `image172647`](cases/image172647/README.md) |
-| Figure 3. Ramsey checkpoint benchmark | Whether GPT-5.4, GPT-5.5, and GPT-5.6 Sol identify a possible error in the calibrated resonance frequency | [Three model Ramsey comparison](benchmarks/three-model-comparison-2026-07/ramsey/) |
-| Figure 4. pODMR benchmark | Effects of prompts, reasoning effort, and model identity on resonance judgments | [Three model pODMR comparison](benchmarks/three-model-comparison-2026-07/podmr/) |
+| Figure 3. Ramsey checkpoint benchmark | Whether six models identify a possible error in the calibrated resonance frequency | [Six-model results and figure code](benchmarks/additional-models-2026-10/), [original three-model records](benchmarks/three-model-comparison-2026-07/ramsey/) |
+| Figure 4. pODMR benchmark | Effects of prompts, reasoning effort, and model identity on resonance judgments across six models | [Six-model results and figure code](benchmarks/additional-models-2026-10/), [original three-model records](benchmarks/three-model-comparison-2026-07/podmr/) |
+| Figure 5. Relationship between the benchmarks | Ramsey pass rates and pODMR false positive rates after subtracting each model's mean | [Analysis and figures](benchmarks/additional-models-2026-10/reproduced/main_figures/) |
 | Supplementary case studies and analyses | Two additional completed autonomous runs, representative pODMR inputs, deterministic checks, and detailed benchmark tables | [Additional cases](cases/README.md), [benchmark records](benchmarks/three-model-comparison-2026-07/README.md) |
 | Supplementary Note 4. Human reference workflow | Archived human NV selection and characterization from September 2023, with the experimental purpose and selection criteria | [Original log and context](human_reference/2023-09_nv_selection/README.md) |
 | Supplementary Note 5. Ramsey judge validation | 96% agreement and the confusion matrix | [Judge and validation records](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/) |
-| Supplementary Note 6. Additional model evaluations | GPT-6.1 Sol, GPT-6.1 Terra, GPT-6 Astra, and the relationship between the benchmarks | [Additional evaluations](benchmarks/additional-models-2026-10/) |
+| Supplementary Note 6. Further benchmark analyses | Execution environments, observed rates, and correlations within models | [Evaluation records and analysis](benchmarks/additional-models-2026-10/) |
 
 ## Public Scope
 
@@ -56,26 +57,24 @@ folder records the data, decisions, analyses, and final interpretation.
 
 ## Offline Benchmarks
 
-For the main comparison, GPT-5.4, GPT-5.5, and GPT-5.6 Sol were evaluated using
-the same input files, prompts, reasoning effort settings, number of replicates,
-and scoring rules. Model identifiers, execution dates, and links
-to each model's records are listed in the
-[model comparison](benchmarks/three-model-comparison-2026-07/README.md).
+We evaluated GPT-5.4, GPT-5.5, GPT-5.6 Sol, GPT-6.1 Sol, GPT-6.1 Terra,
+and GPT-6 Astra using the same input files, prompts, reasoning effort settings,
+number of replicates, and scoring rules. Records are split between the
+[original three models](benchmarks/three-model-comparison-2026-07/README.md)
+and the [three models added in October](benchmarks/additional-models-2026-10/).
+The latter directory also contains the combined results and documents the
+differences in execution environments.
 
 | Benchmark | Design | Total size |
 | --- | --- | ---: |
-| [Ramsey checkpoint benchmark](benchmarks/three-model-comparison-2026-07/ramsey/) | Five chronological checkpoints, four reasoning effort settings, and twenty replicates per checkpoint and effort for each model | 1,200 runs |
-| [pODMR data evaluation benchmark](benchmarks/three-model-comparison-2026-07/podmr/) | 96 measurements from two NV centers, three prompts, four reasoning effort settings, and three replicates for each model | 10,368 decisions |
+| [Ramsey checkpoint benchmark](benchmarks/additional-models-2026-10/) | Five chronological checkpoints, four reasoning effort settings, and twenty replicates per checkpoint and effort for each model | 2,400 responses |
+| [pODMR data evaluation benchmark](benchmarks/additional-models-2026-10/) | 96 measurements from two NV centers, three prompts, four reasoning effort settings, and three replicates for each model | 20,736 judgments |
 
-The [additional evaluations](benchmarks/additional-models-2026-10/) contain
-400 Ramsey responses each for GPT-6.1 Sol, GPT-6.1 Terra, and GPT-6 Astra.
-We evaluated Sol and Terra on the full pODMR benchmark. For Astra, we used
-only the 72 measurements without a resonance and the sequence only prompt.
+Every model has 400 Ramsey responses and 3,456 pODMR judgments.
 Across the four settings within each model, higher Ramsey pass rates tended
-to accompany higher false positive rates in the pODMR benchmark with the
-sequence only prompt. The additional release provides the records,
-comparisons, and figure code for Supplementary
-Note 6.
+to accompany higher false positive rates when the pODMR task provided only
+pulse sequence information alongside the measurement data. Figure 5 shows
+this relationship after subtracting each model's mean across the four settings.
 
 ### Ramsey checkpoint benchmark
 
@@ -89,14 +88,18 @@ were excluded from the files supplied to the agent.
 | GPT-5.4 | 7/100 | 10/100 | 16/100 | 22/100 |
 | GPT-5.5 | 4/100 | 17/100 | 18/100 | 27/100 |
 | GPT-5.6 Sol | 15/100 | 36/100 | 53/100 | 44/100 |
+| GPT-6.1 Sol | 26/100 | 32/100 | 29/100 | 22/100 |
+| GPT-6.1 Terra | 17/100 | 28/100 | 29/100 | 26/100 |
+| GPT-6 Astra | 27/100 | 27/100 | 31/100 | 18/100 |
 
 These results use the fixed GPT-6.1 Sol/high LLM judge. Human validation
 gave 96/100 agreement (Cohen's kappa 0.901).
 The [judge release](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/)
-contains all scores, prompts, validation records, and a comparison with the
-unchanged previous scores.
+contains scores for the original three models, prompts, validation records,
+and a comparison with the unchanged previous scores. Scores for the other
+three models are in the [additional evaluations](benchmarks/additional-models-2026-10/ramsey/).
 
-![Figure 3. Ramsey checkpoint benchmark with LLM-judge scores](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/figures/figure3_ramsey_benchmark.png)
+![Figure 3. Ramsey checkpoint benchmark across six models](benchmarks/additional-models-2026-10/reproduced/main_figures/figure3_ramsey_benchmark.png)
 
 ### pODMR data evaluation benchmark
 
@@ -108,23 +111,24 @@ measurement at a time using one of three prompts.
 
 | Prompt | Information available to the agent |
 | --- | --- |
-| Sequence | Raw export, raw readout figure, and pulse sequence information |
-| Facts | Sequence information plus compact experimental setup facts |
-| Expected signal | Facts plus a requirement to calculate the expected signal before judging resonance presence |
+| Sequence only | Raw export, raw readout figure, and pulse sequence information |
+| Setup information | Sequence information plus experimental setup information |
+| Expected signal | Setup information plus a requirement to calculate the expected signal before judging whether a resonance is present |
 
-With the sequence prompt, models were more likely to report a resonance
-incorrectly at higher reasoning effort.  Requiring an expected signal calculation
-kept the false positive rate between 0 and 3.70 percent across all three models
-and all reasoning settings.  GPT-5.5 produced no false negatives.  GPT-5.6 Sol produced
-one false negative at low reasoning with the sequence prompt.  GPT-5.4 produced
-between two and eleven false negatives among 72 evaluations of measurements
-containing a resonance for each combination of prompt and reasoning effort.
+With the sequence only prompt, false positive rates did not consistently
+increase with reasoning effort across the six models. Requiring an expected
+signal calculation kept false positive rates between 0 and 3.70 percent
+across all six models and all reasoning settings. Astra's false positive
+rates with this prompt ranged from 0 to 1.39 percent.
 
 Complete point estimates, confidence intervals obtained by bootstrap resampling
 of measurements, predictions, and analysis notes are available from the
-[pODMR comparison directory](benchmarks/three-model-comparison-2026-07/podmr/).
+[combined results](benchmarks/additional-models-2026-10/data/podmr_summary.json)
+and the two record directories linked above.
 
-![Figure 4. pODMR benchmark across three models](benchmarks/three-model-comparison-2026-07/figures/podmr_benchmark_summary.png)
+![Figure 4. pODMR benchmark across six models](benchmarks/additional-models-2026-10/reproduced/main_figures/figure4_podmr_benchmark.png)
+
+![Figure 5. Relationship between the benchmarks after subtracting model means](benchmarks/additional-models-2026-10/reproduced/main_figures/figure5_benchmark_relationship.png)
 
 Representative pODMR measurements used in the Supplementary Information are
 available in the [original benchmark records](benchmarks/podmr-model-first-resonance-2026-05/README.md).
@@ -137,6 +141,11 @@ cases/
   image172647/
   image231924/
 benchmarks/
+  additional-models-2026-10/
+    data/
+    podmr/
+    ramsey/
+    reproduced/main_figures/
   three-model-comparison-2026-07/
     models/
       gpt-5.4/
@@ -184,10 +193,11 @@ docs/
 The released records support audit, offline analysis, and reconstruction of the
 reported benchmark values and selected figures.
 
-The quantitative panels and final layouts of manuscript Figs. 3 and 4 can be
-reproduced from the released source tables and vector artwork.  See the
-[figure reproduction guide](benchmarks/three-model-comparison-2026-07/REPRODUCE_FIGURES.md)
-for the environment, commands, inputs, and expected outputs.
+The quantitative panels and final layouts of manuscript Figs. 3–5 can be
+reproduced from the released source tables and vector artwork. See the
+[current figure instructions](benchmarks/additional-models-2026-10/#reproduce-the-analysis-and-figures).
+The [earlier figure guide](benchmarks/three-model-comparison-2026-07/REPRODUCE_FIGURES.md)
+preserves the original three-model workflow.
 
 ## License
 

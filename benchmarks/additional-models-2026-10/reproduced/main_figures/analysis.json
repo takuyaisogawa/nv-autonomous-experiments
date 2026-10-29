@@ -1,0 +1,233 @@
+{
+  "ramsey_responses": 2400,
+  "ramsey_passes": 581,
+  "podmr_judgments": 20736,
+  "centered_r": 0.805902520619575,
+  "raw_r": 0.4414929482388648,
+  "slope": 0.7443575121802485,
+  "points": [
+    {
+      "model": "GPT-5.4",
+      "effort": "low",
+      "ramsey": 0.07,
+      "fpr": 0.013888888888888888
+    },
+    {
+      "model": "GPT-5.4",
+      "effort": "medium",
+      "ramsey": 0.1,
+      "fpr": 0.032407407407407406
+    },
+    {
+      "model": "GPT-5.4",
+      "effort": "high",
+      "ramsey": 0.16,
+      "fpr": 0.06944444444444445
+    },
+    {
+      "model": "GPT-5.4",
+      "effort": "xhigh",
+      "ramsey": 0.22,
+      "fpr": 0.16666666666666666
+    },
+    {
+      "model": "GPT-5.5",
+      "effort": "low",
+      "ramsey": 0.04,
+      "fpr": 0.14814814814814814
+    },
+    {
+      "model": "GPT-5.5",
+      "effort": "medium",
+      "ramsey": 0.17,
+      "fpr": 0.3287037037037037
+    },
+    {
+      "model": "GPT-5.5",
+      "effort": "high",
+      "ramsey": 0.18,
+      "fpr": 0.4444444444444444
+    },
+    {
+      "model": "GPT-5.5",
+      "effort": "xhigh",
+      "ramsey": 0.27,
+      "fpr": 0.5324074074074074
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "effort": "low",
+      "ramsey": 0.15,
+      "fpr": 0.26851851851851855
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "effort": "medium",
+      "ramsey": 0.36,
+      "fpr": 0.39814814814814814
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "effort": "high",
+      "ramsey": 0.53,
+      "fpr": 0.4583333333333333
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "effort": "xhigh",
+      "ramsey": 0.44,
+      "fpr": 0.4537037037037037
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "effort": "low",
+      "ramsey": 0.26,
+      "fpr": 0.07407407407407407
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "effort": "medium",
+      "ramsey": 0.32,
+      "fpr": 0.06481481481481481
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "effort": "high",
+      "ramsey": 0.29,
+      "fpr": 0.06018518518518518
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "effort": "xhigh",
+      "ramsey": 0.22,
+      "fpr": 0.037037037037037035
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "effort": "low",
+      "ramsey": 0.17,
+      "fpr": 0.09259259259259259
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "effort": "medium",
+      "ramsey": 0.28,
+      "fpr": 0.11574074074074074
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "effort": "high",
+      "ramsey": 0.29,
+      "fpr": 0.12037037037037036
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "effort": "xhigh",
+      "ramsey": 0.26,
+      "fpr": 0.1111111111111111
+    },
+    {
+      "model": "GPT-6 Astra",
+      "effort": "low",
+      "ramsey": 0.27,
+      "fpr": 0.08333333333333333
+    },
+    {
+      "model": "GPT-6 Astra",
+      "effort": "medium",
+      "ramsey": 0.27,
+      "fpr": 0.08796296296296297
+    },
+    {
+      "model": "GPT-6 Astra",
+      "effort": "high",
+      "ramsey": 0.31,
+      "fpr": 0.08796296296296297
+    },
+    {
+      "model": "GPT-6 Astra",
+      "effort": "xhigh",
+      "ramsey": 0.18,
+      "fpr": 0.06018518518518518
+    }
+  ],
+  "individual_correlations": [
+    {
+      "model": "GPT-5.4",
+      "pearson_r": 0.9686001301242323
+    },
+    {
+      "model": "GPT-5.5",
+      "pearson_r": 0.9689830791013445
+    },
+    {
+      "model": "GPT-5.6 Sol",
+      "pearson_r": 0.9763708973606212
+    },
+    {
+      "model": "GPT-6.1 Sol",
+      "pearson_r": 0.6247367304650563
+    },
+    {
+      "model": "GPT-6.1 Terra",
+      "pearson_r": 0.9950345261175598
+    },
+    {
+      "model": "GPT-6 Astra",
+      "pearson_r": 0.9547895675145853
+    }
+  ],
+  "leave_one_model_out": {
+    "GPT-5.4": 0.7877397009420155,
+    "GPT-5.5": 0.8997895018777083,
+    "GPT-5.6 Sol": 0.8111967971806701,
+    "GPT-6.1 Sol": 0.8145555034121917,
+    "GPT-6.1 Terra": 0.8184754408916743,
+    "GPT-6 Astra": 0.8181761499733781
+  },
+  "model_effort_pass_counts": {
+    "GPT-5.4": [
+      7,
+      10,
+      16,
+      22
+    ],
+    "GPT-5.5": [
+      4,
+      17,
+      18,
+      27
+    ],
+    "GPT-5.6 Sol": [
+      15,
+      36,
+      53,
+      44
+    ],
+    "GPT-6.1 Sol": [
+      26,
+      32,
+      29,
+      22
+    ],
+    "GPT-6.1 Terra": [
+      17,
+      28,
+      29,
+      26
+    ],
+    "GPT-6 Astra": [
+      27,
+      27,
+      31,
+      18
+    ]
+  },
+  "checkpoint_pass_counts": {
+    "cp01": 334,
+    "cp02": 46,
+    "cp03": 86,
+    "cp04": 5,
+    "cp05": 110
+  }
+}
