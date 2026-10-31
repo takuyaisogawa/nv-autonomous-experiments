@@ -18,7 +18,7 @@
 ## pODMR data evaluation benchmark
 
 - [Model records](../../podmr/gpt-5.6-sol/)
-- [Combined three model measurement bootstrap table](../../podmr/three_model_case_bootstrap.csv)
+- [pODMR results and bootstrap confidence intervals for the original three models](../../podmr/three_model_case_bootstrap.csv)
 
 Shared conditions, including the accepted rerun configuration, are in
 [run_conditions.json](../../run_conditions.json).

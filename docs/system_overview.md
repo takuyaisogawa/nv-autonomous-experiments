@@ -1,9 +1,8 @@
 # System Overview
 
-This release is organized around an auditable autonomous-experiment loop. The
-completed NV runs used the OpenClaw platform as the agent/project-management
-layer, and this repository exposes the case-referenced source and completed
-project records needed to inspect those runs.
+OpenClaw ran the agent and managed the experimental projects. This repository
+contains the code and records needed to inspect how the agent analyzed data,
+planned measurements, and updated its conclusions.
 
 ```text
 human request / project brief
@@ -12,19 +11,19 @@ human request / project brief
 project state + backlog + memory/knowledge context
         |
         v
-scheduler wake decision -> agent wake record
+scheduler starts the agent and records the run
         |
         v
 agent reads state, evidence, advice, and relevant knowledge
         |
         v
-analysis, experiment intent, or closeout decision
+agent analyzes data, plans a measurement, or ends the project
         |
         v
-intent verification -> bridge boundary
+software checks measurement requests before submission
         |
         v
-bridge/result artifacts -> evidence ledger -> updated project state
+measurement results -> evidence log -> updated project state
 ```
 
 ## Core Objects
@@ -39,9 +38,9 @@ records are stored under `.manager/`.
 `backlog` is an execution queue and audit trail, not the full scientific plan.
 It captures bounded work items, external blockers, and completed decisions.
 
-`memory / knowledge` separates wake-start operating rules from accumulated
-domain lessons. In the live system, memory routes the agent to the relevant
-knowledge sections instead of loading every prior lesson into every wake.
+`memory` contains instructions read at the start of each run. It directs the
+agent to relevant sections of `knowledge`, which contains lessons from earlier
+experiments.
 
 `experiment intent` is the scientific plan prepared by the agent before
 submitting a measurement to the MATLAB bridge. It records the objective,
@@ -55,14 +54,14 @@ reports. New entries are added without changing earlier ones.
 
 A "wake" is one invocation of the project agent by the scheduler.
 
-The scheduler inspects project state, bridge/result activity, backlog, and
-recent agent-run records. If work is actionable, it writes a wake record and
-dispatches the project agent. The public cases preserve the wake records and
-the retained OpenClaw project-manager source at
-`python/openclaw_nv_execution_source/nv_project_manager.py`; scheduler startup
-wiring is outside this focused public subset.
+The scheduler checks the project state, measurement status, pending tasks, and
+recent runs. When the agent can proceed with a task, the scheduler starts it
+and records the run. These records are included with each experiment. The
+project manager's code is in
+`python/openclaw_nv_execution_source/nv_project_manager.py`. Scripts that
+automatically start the scheduler on the laboratory computer are not included.
 
-## Backend Boundary
+## Hardware Execution
 
 Hardware execution is disabled in the public code. See
 [Public scope](public_scope.md) for the included records and excluded components.

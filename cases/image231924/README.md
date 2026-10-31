@@ -19,9 +19,15 @@ magnetic field, calibrated its resonance frequency, and estimated T2star.
 ## Reading Summary
 
 After a failed pODMR measurement, the agent restored tracking and used
-strong-pi pODMR to identify an NV center aligned with the magnetic field.
+strong-pi pODMR to identify `image231924_c01` as aligned with the magnetic field.
 It refined the resonance frequency with weak-pi pODMR and repeated the
 Ramsey measurement using the updated microwave frequency.
+
+The agent estimated T2star at about `4 us`. It did not resolve coupling to an
+individual nearby 13C nucleus in the repeated Ramsey measurement.
+
+The final report is
+[closeout_20260512_0525.pdf](project/summaries/closeout_20260512_0525.pdf).
 
 ## Model Provenance
 
@@ -36,18 +42,11 @@ The archived `project.json` for this case includes
 `research_architecture`. See
 [model and agent configuration](../../docs/model_and_agent_configuration.md).
 
-The final report is
-[closeout_20260512_0525.pdf](project/summaries/closeout_20260512_0525.pdf).
-
-The agent identified `image231924_c01` as aligned with the magnetic field and
-estimated T2star at about `4 us`. It did not resolve coupling to an individual
-nearby 13C nucleus in the repeated Ramsey measurement.
-
 ## Representative Artifacts
 
 | Artifact | Role |
 | --- | --- |
 | [Candidate map](project/work/artifacts/figures/image231924_candidate_map.png) | Candidate selection context for the image region |
-| [Strong-pi pODMR retry review](project/work/artifacts/figures/image231924_c01_strong_podmr_retry1_review.png) | Alignment-screen evidence after recovery from the invalid first acquisition |
+| [Repeated strong-pi pODMR measurement](project/work/artifacts/figures/image231924_c01_strong_podmr_retry1_review.png) | pODMR data used to assess alignment after the failed first measurement |
 | [Narrow weak-pi pODMR review](project/work/artifacts/figures/image231924_c01_narrow_weak_podmr_after_ramsey_20260512_025521_review.png) | Resonant frequency refinement used before the repeated Ramsey measurement |
 | [Ramsey measurement after recalibration](project/work/artifacts/figures/image231924_c01_corrected_center_ramsey_repeat_terminal_review.png) | Final Ramsey dataset used to estimate T2star and assess possible 13C coupling |

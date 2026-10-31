@@ -1,24 +1,23 @@
 # Runtime Architecture
 
-The public release exposes the OpenClaw-based NV project-management path and
-completed case records for audit.
+This document describes the code used to manage the autonomous NV experiments
+and analyze their data.
 
 ## Python Side
 
-`python/openclaw_nv_execution_source` contains the case-referenced project
-manager, batch runner, bridge runtime watcher, and direct enqueue helpers.
+`python/openclaw_nv_execution_source` contains the project manager and code
+for running batches of measurements, monitoring jobs, and adding jobs to the queue.
 
-`python/openclaw_runtime` contains publishable runtime helpers for MATLAB data
-parsing, MATLAB wrapper support, project schema / submit-spec handling,
-sequence design, and report building.
+`python/openclaw_runtime` contains helpers for reading MATLAB data, preparing
+measurement requests, calling MATLAB, designing pulse sequences, and building reports.
 
 ## MATLAB Side
 
 `matlab/analysis` contains helpers for inspecting saved measurements
 and reordering image data to the axis order (Y, X, Z).
 
-`matlab/manifests` and `matlab/sequences` contain the case-relevant manifest
-and XML records needed to inspect what was requested.
+`matlab/manifests` lists pulse sequences and their permitted settings.
+`matlab/sequences` contains the XML definitions of those sequences.
 
 ## Agent Instructions
 

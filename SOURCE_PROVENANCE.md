@@ -1,6 +1,7 @@
 # Source Provenance
 
-Record every nontrivial copied artifact here before public release.
+This table records the sources of the published files and any changes made
+when preparing them for release.
 
 | Public path | Source location | Case(s) | Treatment | Notes |
 | --- | --- | --- | --- | --- |
@@ -9,18 +10,18 @@ Record every nontrivial copied artifact here before public release.
 | `.gitignore` | Authored for this release | all | public | Ignore local/generated files under `.openclaw/`. |
 | `LICENSE` | Authored for this release | all | public | Split license statement: code under MIT, documentation and public case-study artifacts under CC BY 4.0. |
 | `CITATION.cff` | Authored for this release | all | public | Citation metadata for the public release. |
-| `requirements.txt` | Authored for this release | all | public | Minimal Python dependencies for public analysis scripts: NumPy, SciPy, Matplotlib. |
-| `docs/runtime_architecture.md` | Authored for this release | all | public | Runtime layer overview for the current execution-source release. |
-| `docs/public_scope.md` | Authored for this release | all | public | Explicit public boundary: current execution source public for audit, no hardware control, real completed case artifacts included. |
-| `docs/system_overview.md` | Authored for this release from execution-source structure and case folders | all | public | One-page overview of the agent wake loop, state, memory/knowledge split, intents, backend boundary, and evidence ledger. |
-| `docs/model_and_agent_configuration.md` | Authored for this release from project-manager source, case metadata, and public case records | all | public | Model, thinking-level, agent-role, and deterministic-boundary provenance for the included cases. |
-| `docs/memory_knowledge.md` | Authored for this release from the NV project-operation design | all | public | Explanation of the memory/knowledge split used by self-updating agent wakes. |
+| `requirements.txt` | Authored for this release | all | public | Python dependencies for the analysis and figure scripts, including NumPy, SciPy, Matplotlib, and PyMuPDF. |
+| `docs/runtime_architecture.md` | Authored for this release | all | public | Overview of the code used to manage experiments and analyze their data. |
+| `docs/public_scope.md` | Authored for this release | all | public | Lists the published code and records, the excluded components, and the restrictions on hardware execution. |
+| `docs/system_overview.md` | Authored for this release from the experiment code and project folders | all | public | Explains how the agent reads project records, plans work, requests measurements, and records evidence. |
+| `docs/model_and_agent_configuration.md` | Authored for this release from project-manager source, case metadata, and public case records | all | public | Model settings and agent roles for the experiments and benchmarks, with links to execution records. |
+| `docs/memory_knowledge.md` | Authored for this release from the NV project-operation design | all | public | Explains how the agent uses and updates memory and knowledge documents. |
 | `docs/nv_research_memory.md` | Sanitized from live workspace `NV_RESEARCH_MEMORY.md` | all | sanitized | Public copy of the compact every-wake NV project-execution contract; local paths and operator-channel wording replaced with placeholders/general terms. |
 | `docs/nv_research_knowledge_index.md` | Authored for this release from live workspace `NV_RESEARCH_KNOWLEDGE.md` section map | all | public | Public index of reusable NV research knowledge sections and read policy. |
 | `docs/nv_research_knowledge_excerpt.md` | Excerpted and sanitized from live workspace `NV_RESEARCH_KNOWLEDGE.md` | all | excerpted | Representative reusable lessons showing how the agent uses accumulated experiment knowledge. |
 | `docs/project_state_template.md` | Authored for this release from the NV project-state initialization template | all | public | Public version of the `work/state.md` template, including the Vibe Physics operating pattern and evidence-citation convention. |
 | `docs/agent_prompt_context.md` | Authored for this release from live workspace `skills/nv-project-manager/SKILL.md` | all | summarized | Public summary of the project-manager prompt context; the runtime skill folder and thin wrapper script are omitted to avoid confusion with the real source. |
-| `docs/experiment_intent_schema.md` | Authored for this release from execution-source intent handling and case intent artifacts | all | public | Explanation of the intent -> verification -> backend boundary flow. |
+| `docs/experiment_intent_schema.md` | Authored for this release from the measurement-request code and saved requests | all | public | Explains how the agent records a planned measurement and how software checks the request before submission. |
 | `docs/case_walkthrough.md` | Authored for this release from case `work/state.md` files and closeout artifacts | `image145844`, `image172647`, `image231924` | public | Reader guide to the three case studies and where to inspect their evidence. |
 | `docs/safety_boundary.md` | Authored for this release | all | public | Public safety boundary for the release. |
 | `cases/README.md` | Authored for this release | all | public | Case-study entry point and audit path guide. |
@@ -52,18 +53,27 @@ Record every nontrivial copied artifact here before public release.
 | `benchmarks/podmr-model-first-resonance-2026-05/scripts/run_batch_context_main_inputs.py` | Authored for the appendix batch pODMR condition | all | public | Runner for reproducing the batch-context summary from the released pODMR inputs and prompts. |
 | `benchmarks/three-model-comparison-2026-07/ramsey/` | GPT-5.4 and GPT-5.6 Sol Ramsey checkpoint runs, with the original GPT-5.5 records linked from the existing benchmark | `image145844` | sanitized | Completion audits, checkpoint summaries, previous per-run manual scores and rationales, and compact scoring records containing returned handoffs and project notes. Absolute user paths are replaced with placeholders. |
 | `benchmarks/three-model-comparison-2026-07/podmr/` | GPT-5.4 and GPT-5.6 Sol pODMR benchmark runs, with the original GPT-5.5 records linked from the existing benchmark | all | sanitized | Joined predictions, per-run analysis notes, replicate and case summaries, completion audits, and three model measurement bootstrap values. Absolute user paths are replaced with placeholders. |
-| `benchmarks/three-model-comparison-2026-07/figures/` | Rendered from the manuscript benchmark figures using the released three model source tables | all | public | PNG previews of manuscript Figures 3 and 4 used in the repository README. |
+| `benchmarks/three-model-comparison-2026-07/figures/` | Rendered from the earlier three-model benchmark figures | all | public | PNG previews of the earlier Figures 3 and 4. The current six-model figures are listed below. |
+| `benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/` | Saved judge outputs and human validation records for the original three models | `image145844` | public | Includes the fixed prompts, 1,200 judgments, original human annotations, sampling records, comparisons with previous scores, and reproduction scripts. |
+| `benchmarks/additional-models-2026-10/` | Saved benchmark runs for GPT-6.1 Sol, GPT-6.1 Terra, and GPT-6 Astra | all | sanitized | Complete responses, project notes, scores, and execution settings for the three additional models. Personal directory prefixes are replaced with placeholders. Source hashes and the treatment of Astra's earlier 864 pODMR judgments are recorded in `provenance.json`. |
+| `benchmarks/additional-models-2026-10/data/` | Aggregated from the published responses, predictions, and judge scores | all | public | Combined results for all six models, covering 2,400 Ramsey responses and 20,736 pODMR judgments. |
+| `benchmarks/additional-models-2026-10/{reproduce.py,make_main_figures.py,verify_astra_intervals.py}` | Authored for the six-model comparison | all | public | Scripts for checking the saved results, reproducing analyses and figures, and verifying Astra's confidence intervals. |
+| `benchmarks/additional-models-2026-10/figure_sources/` | Vector artwork from the manuscript figures | all | public | Source PDFs used for panels 3a and 4a. |
+| `benchmarks/additional-models-2026-10/reproduced/main_figures/` | Generated from the published source tables and vector artwork | all | public | Current manuscript Figures 3–5 in PDF and PNG, the plot of observed rates, and records of figure inputs. |
 | `benchmarks/three-model-comparison-2026-07/scripts/build_podmr_note_records.py` | Authored for this release | all | public | Builds compact prediction and note records from joined predictions and per-run Markdown notes while replacing absolute user paths. |
 | `python/openclaw_runtime/matlab_bridge_client.py` | Live workspace `matlab_bridge_client.py` | all | sanitized | Default workspace path made environment-variable based. |
 | `python/openclaw_runtime/tools_mat_parse.py` | Live workspace `tools_mat_parse.py` | all | sanitized | Default MATLAB/cache paths made environment-variable based. |
 | `python/openclaw_runtime/project_schema.py` | Live workspace `project_schema.py` | all | public | Project schema helper. |
-| `python/openclaw_runtime/submit_spec_utils.py` | Live workspace `submit_spec_utils.py` | all | public | Submit-spec helper retained as dependency of the case-referenced enqueue and batch-run source. |
+| `python/openclaw_runtime/submit_spec_utils.py` | Live workspace `submit_spec_utils.py` | all | public | Helper for preparing the measurement specifications used by the job submission and batch scripts. |
 | `python/openclaw_runtime/{design_nv_sequence.py,latex_report_build.py}` | Live workspace helper scripts | all | sanitized | Sequence-design and report-build helpers referenced by the case records; local defaults made environment-variable or placeholder based. |
 | `matlab/analysis/{claw_export_savedexperiment_mat_raw.m,claw_summarize_savedexperiment_mat.m,claw_analyze_saved_scan.m}` | `23-C/claw/` | all | sanitized | Savedexperiment and saved-scan analysis helpers; local cache paths made environment-variable or placeholder based. |
-| `python/openclaw_nv_execution_source/` | Live workspace production Python scripts | all | sanitized | Case-referenced execution-path source copy: project manager, batch runner, bridge runtime watcher, and direct enqueue helpers. Local paths are replaced with placeholders; direct CLI execution is disabled. |
+| `python/openclaw_nv_execution_source/` | Live workspace production Python scripts | all | sanitized | Code used to manage projects, run batches, monitor jobs, and add jobs to the queue. Local paths are replaced with placeholders, and direct CLI execution is disabled. |
 
-The current manuscript uses the LLM-judge scores in the
-[Ramsey judge release](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/).
+The current manuscript uses LLM-judge scores from the
+[original three models](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/)
+and the [three additional models](benchmarks/additional-models-2026-10/ramsey/).
+Current figures and reproduction instructions are in the
+[six-model comparison](benchmarks/additional-models-2026-10/#reproduce-the-analysis-and-figures).
 
 ## Treatment Values
 

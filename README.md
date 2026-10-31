@@ -6,16 +6,12 @@ This repository contains the data and code accompanying a manuscript on an
 LLM agent for autonomous experiments with nitrogen-vacancy centers. OpenClaw
 ran the agent and managed the experimental project.
 
-The manuscript has two connected contributions.  First, it demonstrates an
-autonomous experimental workflow that combines persistent project records,
-quantitative calculation and data analysis tools, and deterministic experiment
-control.  Second, it evaluates scientific reasoning separately from laboratory
-execution through Ramsey checkpoint and pODMR data evaluation benchmarks.
+The agent uses project records and numerical tools to plan measurements and
+interpret results. Two offline benchmarks evaluate how agents identify possible
+calibration errors in Ramsey data and judge whether pODMR data contain a resonance.
 
-The release contains completed project records, evidence logs, bridge records,
-figures, reports, benchmark inputs, labels, predictions, per run analysis notes,
-LLM-judge outputs, human validation labels, previous scores, and analysis code
-needed to check the reported results.
+The release includes experimental records, benchmark data and scores, and code
+for reproducing the analyses and figures.
 
 ## Paper and Repository Map
 
@@ -70,10 +66,6 @@ differences in execution environments.
 | [pODMR data evaluation benchmark](benchmarks/additional-models-2026-10/) | 96 measurements from two NV centers, three prompts, four reasoning effort settings, and three replicates for each model | 20,736 judgments |
 
 Every model has 400 Ramsey responses and 3,456 pODMR judgments.
-Across the four settings within each model, higher Ramsey pass rates tended
-to accompany higher false positive rates when the pODMR task provided only
-pulse sequence information alongside the measurement data. Figure 5 shows
-this relationship after subtracting each model's mean across the four settings.
 
 ### Ramsey checkpoint benchmark
 
@@ -111,8 +103,8 @@ measurement at a time using one of three prompts.
 | Prompt | Information available to the agent |
 | --- | --- |
 | Sequence only | Raw export, raw readout figure, and pulse sequence information |
-| Setup information | Sequence information plus experimental setup information |
-| Expected signal | Setup information plus a requirement to calculate the expected signal before judging whether a resonance is present |
+| Setup information | Same inputs as sequence only, plus experimental setup information |
+| Expected signal | Same inputs as setup information, plus a requirement to calculate the expected signal before judging whether a resonance is present |
 
 With the sequence only prompt, false positive rates did not consistently
 increase with reasoning effort across the six models. Requiring an expected
@@ -127,10 +119,17 @@ and the two record directories linked above.
 
 ![Figure 4. pODMR benchmark across six models](benchmarks/additional-models-2026-10/reproduced/main_figures/figure4_podmr_benchmark.png)
 
-![Figure 5. Relationship between the benchmarks after subtracting model means](benchmarks/additional-models-2026-10/reproduced/main_figures/figure5_benchmark_relationship.png)
-
 Representative pODMR measurements used in the Supplementary Information are
 available in the [original benchmark records](benchmarks/podmr-model-first-resonance-2026-05/README.md).
+
+### Relationship between the benchmarks
+
+Across the four settings within each model, higher Ramsey pass rates tended
+to accompany higher false positive rates when the pODMR task provided only
+pulse sequence information alongside the measurement data. Figure 5 shows
+this relationship after subtracting each model's mean across the four settings.
+
+![Figure 5. Relationship between the benchmarks after subtracting model means](benchmarks/additional-models-2026-10/reproduced/main_figures/figure5_benchmark_relationship.png)
 
 ## Repository Layout
 

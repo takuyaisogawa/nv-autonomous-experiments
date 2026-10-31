@@ -1,46 +1,38 @@
 # Experiment Intent Schema
 
-An experiment intent is the agent-authored record between a scientific decision
-and backend action.
-
-The intent says: this is the measurement I want, this is why it is justified,
-this is what evidence it should produce, these are the stop conditions, and this
-is the backend boundary that must be verified before submission.
+Before requesting a measurement, the agent records its purpose, settings,
+expected results, and stopping conditions in an `experiment_intent` record.
 
 ## Flow
 
 ```text
-agent scientific decision
+agent plans a measurement
         |
         v
-experiment intent
+agent writes experiment_intent
         |
         v
-schema and boundary verification
+software checks request fields and safety constraints
         |
         v
-bridge boundary / execution-source layer
+accepted request is submitted to the MATLAB bridge
         |
         v
-result artifact
+measurement results
         |
         v
-evidence ledger and project state update
+agent updates the evidence log and project state
 ```
-
-This layer prevents the agent from jumping directly from a scientific thought
-to backend action.
 
 ## Minimal Fields
 
-The case folders contain completed intents under:
+These measurement requests are stored under:
 
 ```text
 cases/<case>/project/experiment_intents/
 ```
 
-The practical schema is intentionally document-like rather than a tiny command
-object. Important fields include:
+The main fields are:
 
 | Field | Purpose |
 | --- | --- |
@@ -56,28 +48,14 @@ object. Important fields include:
 | `success_criteria` | Conditions for interpreting the run as useful. |
 | `stop_conditions` | Conditions that should prevent or halt the action. |
 | `planned_measurement` | Measurement family, sequence, target, and planned parameters. |
-| `submit_spec` or `submit_spec_path` | Deterministic backend-facing measurement specification. |
-| `safety_contract` | Human-readable boundary between agent reasoning and backend action. |
-| `safety_verification` | Machine-readable record of checks required before submission. |
+| `submit_spec` or `submit_spec_path` | Measurement parameters submitted to the bridge, or the path to the file containing them. |
+| `safety_contract` | Safety constraints and checks required before the measurement. |
+| `safety_verification` | Results of the checks performed before submission. |
 
-## Backend Boundary
+## Validation and Submission
 
-The public release exposes the intent and submit-spec records plus the
-execution-source boundary. Direct public execution is disabled, and private live
-queue roots/configuration are excluded.
-
-That boundary is part of the intent design. A reviewer can inspect whether the
-agent's scientific plan, the deterministic submit spec, and the backend boundary
-agree before any result is considered evidence.
-
-## Why It Matters
-
-The intent record is useful scientifically and operationally.
-
-Scientifically, it preserves the reasoning recorded before the measurement:
-what was expected, what comparison was intended, and what would count as useful
-evidence.
-
-Operationally, it gives deterministic code a narrow job: check project state,
-schema shape, and backend boundary. The agent keeps responsibility for research
-judgment, while code enforces the parts that should not depend on judgment.
+The verification code checks the request fields, project state, measurement
+queue, and safety constraints before a request can be submitted. Readers can
+compare the planned measurement with the saved parameters and verification
+records. Hardware execution is disabled in this release; see
+[Public scope](public_scope.md).

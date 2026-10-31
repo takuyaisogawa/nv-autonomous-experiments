@@ -1,37 +1,24 @@
 # Public Scope
 
-This repository is a public case-study and project-management source release.
-
-## Scope Statement
-
-The case-referenced NV project-management source is public for audit.
-
-This repository cannot control hardware.
-
-Real completed case artifacts are included.
+This repository contains experimental records, benchmark data, and code for
+inspection and offline analysis. Hardware execution is disabled.
 
 ## What Is Public
 
-- Durable project state and project-manager logic.
-- Scheduler wake records and agent completion records.
-- Backlog, evidence ledger, and experiment-intent handling.
-- Submit-spec validation.
-- Sanitized source copies of the case-referenced NV project-manager,
-  batch-runner, bridge-watch, and direct-enqueue layers, with execution
-  disabled.
-- A public summary of the project-manager prompt context.
-- Sanitized copies of three completed NV-center autonomous-agent projects.
-- MATLAB/Python analysis helpers, raw data copies, figures, and reports
-  needed to inspect the included cases.
+- Records from three completed autonomous NV experiments, including project
+  state, run logs, pending and completed tasks, evidence, and measurement requests.
+- Python code used to manage projects, validate requests, submit measurements,
+  and monitor jobs, with private settings removed.
+- A summary of the agent's instructions, along with memory and knowledge documents.
+- MATLAB and Python analysis helpers, raw data, figures, and reports.
+- Inputs, responses, scores, and analysis code for the six-model benchmark
+  comparison, including judge and human validation records.
 
 ## What Is Not Public
 
-- Live instrument control as a runnable public entry point.
-- Live laboratory queue mutation as a runnable public entry point.
+- Code that can directly operate instruments or modify the laboratory's
+  measurement queue.
 - Hardware drivers and lab-specific device configuration.
-- MATLAB live-lab backend source.
-- Automatic startup wiring for a real experiment machine.
-- Operator-channel integration.
-
-The public code is meant to make the autonomy loop auditable. It is not a
-turnkey lab-control package.
+- MATLAB code used to run the laboratory hardware.
+- Scripts that automatically start the system on the laboratory computer.
+- Connections to the operator's messaging channels.

@@ -1,8 +1,7 @@
-# Source Copy Boundary
+# Published Source Code
 
-This release includes the case-referenced project-management source needed to
-audit the autonomous NV workflow records, while keeping direct laboratory
-execution disabled.
+This release includes code used to manage the autonomous NV experiments and
+analyze their data, along with a summary of the agent's instructions.
 
 ## Included Source
 

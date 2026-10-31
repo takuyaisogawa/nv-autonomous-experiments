@@ -1,14 +1,12 @@
 # MATLAB
 
-Public MATLAB subset for inspecting data export and analysis used in the case
-studies.
+MATLAB helpers and pulse sequence definitions used in the three experiments.
 
-- `analysis/`: savedexperiment export, savedexperiment summary, saved scan
-  analysis, and image-axis normalization.
-- `manifests/`: case-relevant sequence manifests.
+- `analysis/`: helpers for exporting and summarizing saved measurements,
+  analyzing scans, and reordering image axes.
+- `manifests/`: pulse sequences and their permitted settings.
 - `sequences/`: sequence XML files referenced by the public manifests and case
   records.
 
-Live hardware execution and the MATLAB lab backend source are not included in
-this release. Instrument control and live bridge queue mutation are outside the
-public execution surface.
+The MATLAB code that controls instruments and modifies the laboratory's
+measurement queue is not included.

@@ -1,15 +1,11 @@
 # Method
 
-This benchmark holds retrospective checkpoint evidence fixed and varies only
-model reasoning effort.
+Within each checkpoint, the input files and task prompt are held fixed while
+reasoning effort is varied.
 
-The checkpoint construction is pre-analysis by design. For each target Ramsey,
-the project snapshot is taken from immediately after that Ramsey job was
-launched. The benchmark then adds only the terminal raw measurement data and
-bridge job metadata for that target Ramsey. It does not add the original
-post-measurement review, autosave reviews for that same target, figures, notes,
-model-comparison artifacts, or the subsequent action chosen by the original
-agent.
+Each checkpoint combines project files saved just after the measurement started
+with the completed measurement data and bridge metadata. The original agent's
+analyses of that measurement and its next action are excluded.
 
 Each checkpoint package contains:
 

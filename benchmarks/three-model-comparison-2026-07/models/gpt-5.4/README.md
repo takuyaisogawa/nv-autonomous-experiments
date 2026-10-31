@@ -19,7 +19,7 @@
 ## pODMR data evaluation benchmark
 
 - [Model records](../../podmr/gpt-5.4/)
-- [Combined three model measurement bootstrap table](../../podmr/three_model_case_bootstrap.csv)
+- [pODMR results and bootstrap confidence intervals for the original three models](../../podmr/three_model_case_bootstrap.csv)
 
 The [GPT-5.4 run manifest](../../gpt-5.4_run_manifest.json) records that the
 supported `gpt-5.4` alias was used rather than a fixed API snapshot identifier.

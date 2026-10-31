@@ -1,13 +1,11 @@
 # Python
 
-Python source for the public case-study release.
+Python code used in the three autonomous NV experiments.
 
-- `openclaw_runtime/`: case-referenced runtime and analysis helpers copied
-  from the live NV automation workspace: MATLAB parsing, MATLAB wrapper support,
-  project schema / submit-spec support, sequence design, and report building.
-- `openclaw_nv_execution_source/`: sanitized case-referenced execution-path
-  source for project management, batch execution, bridge runtime watch, and
-  direct enqueue helpers.
+- `openclaw_runtime/`: helpers for reading MATLAB data, preparing measurement
+  requests, calling MATLAB, designing pulse sequences, and building reports.
+- `openclaw_nv_execution_source/`: code for managing projects, running batches
+  of measurements, monitoring jobs, and adding jobs to the queue.
 
-Direct execution of the execution-source files is disabled in this public
-release.
+Private settings have been removed. Direct execution of the files that submit
+and manage experiments is disabled in this release.

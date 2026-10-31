@@ -30,7 +30,7 @@ those records.
 - [Medium reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-medium/)
 - [High reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-high/)
 - [X-high reasoning records](../../../podmr-model-first-resonance-2026-05/results/gpt-5.5-xhigh/)
-- [Combined three model measurement bootstrap table](../../podmr/three_model_case_bootstrap.csv)
+- [pODMR results and bootstrap confidence intervals for the original three models](../../podmr/three_model_case_bootstrap.csv)
 
 Shared conditions and the execution dates recovered from the released output
 timestamps are in [run_conditions.json](../../run_conditions.json).
