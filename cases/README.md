@@ -35,8 +35,8 @@ Useful audit paths repeated across the cases:
 | --- | --- |
 | `project/work/state.md` | Current and final scientific state |
 | `project/.manager/evidence.jsonl` | Evidence ledger |
-| `project/experiment_intents/` | Agent-authored intent lifecycle |
-| `project/work/bridge_jobs/` | Bridge submit/status/result records |
+| `project/experiment_intents/` | Measurement requests written by the agent and their status |
+| `project/work/bridge_jobs/` | Records of job submissions, status updates, and results |
 | `project/work/artifacts/analysis/` | Analysis JSON and scripts |
 | `project/work/artifacts/figures/` | Generated review figures |
 | `project/work/reports/` or `project/summaries/` | Closeout reports |

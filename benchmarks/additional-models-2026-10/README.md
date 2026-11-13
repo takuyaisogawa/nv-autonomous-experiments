@@ -99,8 +99,10 @@ To recompute and check Astra's intervals from the saved judgments, run
 
 ## Relationship between the benchmarks
 
-For each model and reasoning setting, the Ramsey rate uses 100 responses
-and the pODMR false positive rate uses 216 judgments. The raw correlation
+We compared Ramsey pass rates with pODMR false positive rates obtained
+using the sequence only prompt. For each model and reasoning setting, the
+Ramsey rate uses 100 responses and the false positive rate uses 216 judgments.
+The raw correlation
 across the 24 pairs is 0.441. Subtracting each model's mean across its four
 settings from both rates gives Pearson's r = 0.806. Omitting one model at
 a time gives r = 0.788 to 0.900. Each model also has a positive correlation

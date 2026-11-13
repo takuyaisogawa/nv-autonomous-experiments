@@ -44,21 +44,21 @@ The table below reports the original GPT-5.5 sweep.
 
 | Reasoning | Prompt | TP | TN | FP | FN | Accuracy | False-positive rate | False-negative rate |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| low | Sequence | 72 | 184 | 32 | 0 | 88.9% | 14.81% | 0.00% |
-| low | Facts | 72 | 201 | 15 | 0 | 94.8% | 6.94% | 0.00% |
+| low | Sequence only | 72 | 184 | 32 | 0 | 88.9% | 14.81% | 0.00% |
+| low | Setup information | 72 | 201 | 15 | 0 | 94.8% | 6.94% | 0.00% |
 | low | Expected signal | 72 | 208 | 8 | 0 | 97.2% | 3.70% | 0.00% |
-| medium | Sequence | 72 | 145 | 71 | 0 | 75.3% | 32.87% | 0.00% |
-| medium | Facts | 72 | 196 | 20 | 0 | 93.1% | 9.26% | 0.00% |
+| medium | Sequence only | 72 | 145 | 71 | 0 | 75.3% | 32.87% | 0.00% |
+| medium | Setup information | 72 | 196 | 20 | 0 | 93.1% | 9.26% | 0.00% |
 | medium | Expected signal | 72 | 215 | 1 | 0 | 99.7% | 0.46% | 0.00% |
-| high | Sequence | 72 | 120 | 96 | 0 | 66.7% | 44.44% | 0.00% |
-| high | Facts | 72 | 190 | 26 | 0 | 91.0% | 12.04% | 0.00% |
+| high | Sequence only | 72 | 120 | 96 | 0 | 66.7% | 44.44% | 0.00% |
+| high | Setup information | 72 | 190 | 26 | 0 | 91.0% | 12.04% | 0.00% |
 | high | Expected signal | 72 | 215 | 1 | 0 | 99.7% | 0.46% | 0.00% |
-| xhigh | Sequence | 72 | 101 | 115 | 0 | 60.1% | 53.24% | 0.00% |
-| xhigh | Facts | 72 | 202 | 14 | 0 | 95.1% | 6.48% | 0.00% |
+| xhigh | Sequence only | 72 | 101 | 115 | 0 | 60.1% | 53.24% | 0.00% |
+| xhigh | Setup information | 72 | 202 | 14 | 0 | 95.1% | 6.48% | 0.00% |
 | xhigh | Expected signal | 72 | 215 | 1 | 0 | 99.7% | 0.46% | 0.00% |
 
-The expected signal prompt differs from the facts prompt by adding a
-requirement to establish the expected physical signal with a simulation or
+The expected signal prompt differs from the setup information prompt by
+adding a requirement to establish the expected physical signal with a simulation or
 explicit quantitative model calculation before deciding whether a resonance is
 present. For GPT-5.5, increasing reasoning effort increased false positive
 rates with the sequence only prompt. The expected signal prompt kept false

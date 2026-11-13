@@ -59,8 +59,9 @@ section is used as the note text in `model_outputs.jsonl`.
 ## Layout
 
 - `inputs/checkpoints/`: agent-visible checkpoint snapshots with neutral names.
-  Each checkpoint has `project/`, `md/`, launch-time `evidence/`, and terminal
-  target-Ramsey `measurement/`.
+  Each checkpoint has `project/` and `md/` folders, an `evidence/` folder with
+  information available when the measurement started, and a `measurement/`
+  folder with data from the completed Ramsey measurement.
 - `inputs/checkpoint_index.csv`: checkpoint provenance and leakage-audit status.
 - `prompts/task.md`: exact benchmark task prompt.
 - `labels/scoring_guide.md`: binary scoring rubric.
@@ -84,19 +85,19 @@ python scripts\build_inputs.py
 Run one effort:
 
 ```powershell
-python scripts\run_sweep.py --model gpt-5.5 --reasoning-effort high --replicates 10
+python scripts\run_sweep.py --model gpt-5.5 --reasoning-effort high --replicates 20
 ```
 
 Run all four efforts:
 
 ```powershell
-python scripts\run_sweep.py --model gpt-5.5 --reasoning-effort all --replicates 10
+python scripts\run_sweep.py --model gpt-5.5 --reasoning-effort all --replicates 20
 ```
 
 Resume only failed or missing runs in an existing result file:
 
 ```powershell
-python scripts\run_sweep.py --model gpt-5.5 --reasoning-effort all --replicates 10 --retry-failed
+python scripts\run_sweep.py --model gpt-5.5 --reasoning-effort all --replicates 20 --retry-failed
 ```
 
 Run a small Claude pilot:
