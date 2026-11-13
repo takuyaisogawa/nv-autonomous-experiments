@@ -1,4 +1,4 @@
-"""Generate Figs. 3--5 and the supplementary scatter from frozen summaries.
+"""Generate Figs. 3--5 and plot the rates before subtracting model means.
 
 The original conceptual panels remain vector artwork. No responses or labels
 are changed. Run from any directory with Python, numpy, matplotlib and PyMuPDF.

@@ -64,12 +64,20 @@ present. For GPT-5.5, increasing reasoning effort increased false positive
 rates with the sequence only prompt. The expected signal prompt kept false
 positive rates low across reasoning settings in all three original models.
 
-Non-LLM signal-processing baselines are summarized in
-`results/non_llm_signal_baseline_summary.md`.
+## Results for Tables S1–S4
 
-The appendix batch comparison, in which all 96 unlabeled measurements were
-provided in one prompt, is summarized in
-`results/batch_context_main_inputs_summary.md`.
+- [Table S1](../additional-models-2026-10/data/podmr_summary.json) gives counts,
+  false positive rates, accuracy, and confidence intervals for all six models.
+- [Table S2](results/tool_use_audit_summary.csv) uses the `analysis_python_runs`
+  column for the number of GPT-5.5 runs that used Python to analyze the data
+  and `runs` for the number with complete logs.
+- [Table S3](results/non_llm_signal_baseline_summary.md#fixed-baselines) reports
+  the results of deterministic methods applied to the 96 measurements.
+- [Table S4](results/batch_context_main_inputs_summary.md) reports the GPT-5.5
+  results when all 96 unlabeled measurements were provided in one prompt.
+
+The files for Tables S2 and S4 use `Sequence` and `Facts` for the prompts
+called `Sequence only` and `Setup information` in the manuscript.
 
 ## Reconstructed Per-Case Runner
 
@@ -139,10 +147,8 @@ one prepared workspace without invoking a model.
 - `labels/`: physical resonance labels used for scoring.
 - `prompts/`: exact prompt text.
 - `results/figures/`: benchmark summary figure as PNG and PDF.
-- `results/`: Original GPT-5.5 predictions, summaries, and per-run analysis notes for
-  `low`, `medium`, `high`, and `xhigh` reasoning efforts, plus tool use audit,
-  deterministic baseline summaries, and the batch comparison used in the
-  manuscript appendix.
+- `results/`: Original GPT-5.5 predictions and analysis notes, plus the
+  [source files for Tables S2–S4](#results-for-tables-s1s4).
 - `scripts/`: isolated per-case execution, scoring, and package verification
   helpers.
 - `../three-model-comparison-2026-07/`: GPT-5.4 and GPT-5.6 Sol predictions,

@@ -3,8 +3,10 @@
 This directory contains the complete Ramsey and pODMR evaluations for
 GPT-6.1 Sol, GPT-6.1 Terra, and GPT-6 Astra. Together with the original
 three-model records, these results form the six-model comparison in
-manuscript Figs. 3–5. Supplementary Note 6 describes the execution
-environments and further analyses of the relationship between the benchmarks.
+manuscript Figs. 3–5. Supplementary Note 6 reports correlations for each
+model and after omitting one model at a time. The
+[evaluation conditions below](#evaluation-conditions) describe the software
+and tools used for these runs.
 
 ## Evaluation conditions
 
@@ -75,7 +77,9 @@ command recreates the current manuscript figures in `reproduced/main_figures/`:
 - `figure3_ramsey_benchmark.pdf`: pass rates and checkpoint counts for all six models.
 - `figure4_podmr_benchmark.pdf`: false positive rates and accuracy for all six models and prompts.
 - `figure5_benchmark_relationship.pdf`: Ramsey pass rates and pODMR false positive rates after subtracting each model's mean.
-- `benchmark_observed_rates.pdf`: the same rates before subtracting model means.
+
+The command also saves a scatter plot of the rates before subtracting model
+means in [`benchmark_observed_rates.pdf`](reproduced/main_figures/benchmark_observed_rates.pdf).
 
 The original vector artwork for panels 3a and 4a is retained in `figure_sources/`.
 Matching PNG previews, counts, correlations, and source hashes are saved with

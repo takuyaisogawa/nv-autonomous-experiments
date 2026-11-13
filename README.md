@@ -24,10 +24,11 @@ The order below follows the current manuscript.
 | Figure 3. Ramsey checkpoint benchmark | Whether six models identify a possible error in the calibrated resonance frequency | [Six-model results and figure code](benchmarks/additional-models-2026-10/), [original three-model records](benchmarks/three-model-comparison-2026-07/ramsey/) |
 | Figure 4. pODMR benchmark | Effects of prompts, reasoning effort, and model identity on resonance judgments across six models | [Six-model results and figure code](benchmarks/additional-models-2026-10/), [original three-model records](benchmarks/three-model-comparison-2026-07/podmr/) |
 | Figure 5. Relationship between the benchmarks | Ramsey pass rates and pODMR false positive rates after subtracting each model's mean | [Analysis and figures](benchmarks/additional-models-2026-10/reproduced/main_figures/) |
-| Supplementary case studies and analyses | Two additional completed autonomous runs, representative pODMR inputs, deterministic checks, and detailed benchmark tables | [Additional cases](cases/README.md), [benchmark records](benchmarks/three-model-comparison-2026-07/README.md) |
+| Supplementary Note 2. Additional Autonomous NV Case Studies | Records from two additional autonomous experiments | [Additional cases](cases/README.md) |
+| Supplementary Note 3. pODMR Benchmark Results | Source files for Tables S1–S4 | [pODMR results by table](benchmarks/podmr-model-first-resonance-2026-05/README.md#results-for-tables-s1s4) |
 | Supplementary Note 4. Human reference workflow | Archived human NV selection and characterization from September 2023, with the experimental purpose and selection criteria | [Original log and context](human_reference/2023-09_nv_selection/README.md) |
 | Supplementary Note 5. Ramsey judge validation | 96% agreement and the confusion matrix | [Judge and validation records](benchmarks/three-model-comparison-2026-07/ramsey/llm_judge/) |
-| Supplementary Note 6. Further benchmark analyses | Execution environments, observed rates, and correlations within models | [Evaluation records and analysis](benchmarks/additional-models-2026-10/) |
+| Supplementary Note 6. Correlation Between the Benchmarks | Correlations for each model and after omitting one model at a time | [Correlation analysis](benchmarks/additional-models-2026-10/README.md#relationship-between-the-benchmarks) |
 
 ## Public Scope
 
